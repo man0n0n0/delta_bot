@@ -64,8 +64,8 @@ axes:
   y:
     steps_per_mm: 40
     max_rate_mm_per_min: 8000.000
-    acceleration_mm_per_sec2: 70.000
-    max_travel_mm: 1250.000
+    acceleration_mm_per_sec2: 1000
+    max_travel_mm: 2500.000
     soft_limits: false
     homing:
       cycle: 3
@@ -97,10 +97,10 @@ axes:
         disable_pin: I2SO.12
 
   z:
-    steps_per_mm: 200.000
+    steps_per_mm: 40
     max_rate_mm_per_min: 8000.000
-    acceleration_mm_per_sec2: 60.000
-    max_travel_mm: 80.000
+    acceleration_mm_per_sec2: 1000
+    max_travel_mm: 2500.000
     soft_limits: false
     homing:
       cycle: 1
