@@ -70,7 +70,7 @@
   #define TOOL4_ENABLE_PIN   34
   #define TOOL4_DOUT_PIN     26
   #define TOOL4_AIN_PIN      A14
-  #define VACUUM_PIN         32 //// connected to the pump or soleinoid valve (activate <ith M4(pick) and M5(place))
+  #define VACUUM_PIN         47 //// connected to the pump or soleinoid valve (activate <ith M4(pick) and M5(place))
 
   #define HEATER_1_PIN       46 //Spare / un-connected pin!  This is a hack until I've added the logic to handle non-hotend E axis... Right now this would error out if set to -1
   #define TEMP_1_PIN         14 // A14 // ANALOG NUMBERING!! Extruder 1
@@ -163,7 +163,7 @@
   #define TOOL4_ENABLE_PIN   34
   #define TOOL4_DOUT_PIN     26
   #define TOOL4_AIN_PIN      A14
-  #define VACUUM_PIN         26 //
+  #define VACUUM_PIN         47 //
 
   #define HEATER_1_PIN       46 //Spare / un-connected pin!  This is a hack until I've added the logic to handle non-hotend E axis... Right now this would error out if set to -1
   #define TEMP_1_PIN         14 // A14 // ANALOG NUMBERING!! Extruder 1

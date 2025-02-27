@@ -212,7 +212,7 @@
 #define DELTA_E         155.885 // End effector length
 #define DELTA_F         514.200 // Base length == to calculate
 #define DELTA_RE        550.000 // Carbon rod length
-#define DELTA_RF         280.000 // Servo horn length
+#define DELTA_RF         300.750 // Servo horn length
 //#define DELTA_Z_OFFSET  293.000 // Distance from delta 8mm rod/pulley to table/bed.
 
 //NOTE: For OpenPnP, set the zero to be about 25mm above the bed...
@@ -225,7 +225,7 @@
 #define TOOL_OFFSET      30.500 // Distance between end effector ball joint plane and tip of tool (PnP)
 #define Z_CALC_OFFSET  ((DELTA_Z_OFFSET - TOOL_OFFSET - DELTA_EE_OFFS) * -1)
 
-#define Z_HOME_ANGLE    -30 // This is the angle where the arms hit the endstop sensor
+#define Z_HOME_ANGLE    -15 // This is the angle where the arms hit the endstop sensor
 #define Z_HOME_OFFS    (((DELTA_Z_OFFSET - TOOL_OFFSET - DELTA_EE_OFFS) - 182.002) - 0.5)
                                 // This is calculated from the above angle, after applying forward 
                                 // kinematics, and adding the Z calc offset to it.
@@ -263,12 +263,12 @@
 #endif
 
 // The pullups are needed if you directly connect a mechanical endswitch between the signal and ground pins.
-const bool X_MIN_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
-const bool Y_MIN_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
-const bool Z_MIN_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
-const bool X_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
-const bool Y_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
-const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
+const bool X_MIN_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
+const bool Y_MIN_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
+const bool Z_MIN_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
+const bool X_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
+const bool Y_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
+const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
 
 //#define DISABLE_MAX_ENDSTOPS
 //#define DISABLE_MIN_ENDSTOPS
