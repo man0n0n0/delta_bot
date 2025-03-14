@@ -7,8 +7,6 @@
   <maintainer email="dennis@arducam.com">pi</maintainer>
   <license>Apache License, Version 2.0</license>
 
-  <buildtool_depend>ament_python</buildtool_depend>
-
   <exec_depend>rclpy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
