@@ -6,15 +6,15 @@ def generate_launch_description():
         launch_ros.actions.Node(
             package='grbl_ros',
             executable='grbl_node',
-            name='gcode sender'),
+            name='gcode_sender'),
 
         launch_ros.actions.Node(
         package='arducam_rclpy_tof_pointcloud',
         executable='tof_pointcloud',
-        name='arducamTOF activation'),
+        name='arducamTOF_activation'),
         
         launch_ros.actions.Node(
         package='delta_ros',
         executable='effector_to_closest',
-        name='open cv process'),
+        name='opencv_process'),
   ])
