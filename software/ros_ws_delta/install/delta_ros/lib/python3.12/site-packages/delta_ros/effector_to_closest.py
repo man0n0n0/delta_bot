@@ -62,13 +62,18 @@ class EffectorToClosestNode(Node):
             min_depth = np.min(masked_depth)
             min_coords = np.where(masked_depth == min_depth)
             
-            # Only proceed if the minimum depth is within our threshold
-            if min_depth > self.min_distance_threshold:
-                self.get_logger().info(f"Closest point at {min_depth:.3f}m, beyond threshold of {self.min_distance_threshold}m")
-                return
-            
             # Get the x, y coordinates of the closest point
             y, x = min_coords[0][0], min_coords[1][0]
+            
+            # Print the image coordinates of the closest point
+            print("\n=== CLOSEST POINT DETECTED ===")
+            print(f"Image coordinates: x={x}, y={y}")
+            print(f"Depth value: {min_depth:.4f} meters")
+            
+            # Only proceed if the minimum depth is within our threshold
+            if min_depth > self.min_distance_threshold:
+                print(f"Point is beyond threshold of {self.min_distance_threshold}m - not moving effector")
+                return
             
             # Convert image coordinates to world coordinates
             # This is a simplification - you might need camera calibration parameters
@@ -77,15 +82,24 @@ class EffectorToClosestNode(Node):
             x_normalized = (x - width/2) / (width/2)  # Range: -1 to 1
             y_normalized = (y - height/2) / (height/2)  # Range: -1 to 1
             
+            # Print normalized coordinates
+            print(f"Normalized coordinates: x={x_normalized:.4f}, y={y_normalized:.4f}")
+            
             # Scale normalized coordinates to machine coordinates (mm)
             # Adjust these scale factors to match your machine's working area
             x_machine = x_normalized * 100.0  # Scale -1,1 to -100,100 mm
             y_machine = y_normalized * 100.0  # Scale -1,1 to -100,100 mm
             z_machine = min_depth * 1000.0    # Convert meters to mm
             
+            # Print machine coordinates
+            print(f"Machine coordinates: X={x_machine:.2f}mm, Y={y_machine:.2f}mm, Z={z_machine:.2f}mm")
+            
             # Generate G-code to point to the closest zone
             # Format the command according to GRBL standards
             gcode_command = f"G1 X{x_machine:.2f} Y{y_machine:.2f} F1000"
+            
+            print(f"G-code command: {gcode_command}")
+            print("============================\n")
             
             self.get_logger().info(f"Sending GRBL command: {gcode_command}")
             

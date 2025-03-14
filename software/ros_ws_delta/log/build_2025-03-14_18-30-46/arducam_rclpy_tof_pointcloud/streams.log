@@ -1,0 +1,36 @@
+[3.121s] Invoking command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/arducam_rclpy_tof_pointcloud': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/arducam_rclpy_tof_pointcloud build --build-base /home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/build install --record /home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/install.log --single-version-externally-managed install_data
+[4.042s] running egg_info
+[4.043s] creating ../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info
+[4.090s] writing ../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info/PKG-INFO
+[4.090s] writing dependency_links to ../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info/dependency_links.txt
+[4.091s] writing entry points to ../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info/entry_points.txt
+[4.091s] writing requirements to ../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info/requires.txt
+[4.092s] writing top-level names to ../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info/top_level.txt
+[4.092s] writing manifest file '../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info/SOURCES.txt'
+[4.187s] reading manifest file '../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info/SOURCES.txt'
+[4.189s] writing manifest file '../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info/SOURCES.txt'
+[4.189s] running build
+[4.190s] running build_py
+[4.190s] creating /home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/build
+[4.190s] creating /home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/build/lib
+[4.190s] creating /home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/build/lib/arducam_rclpy_tof_pointcloud
+[4.191s] copying arducam_rclpy_tof_pointcloud/tof_pointcloud.py -> /home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/build/lib/arducam_rclpy_tof_pointcloud
+[4.192s] copying arducam_rclpy_tof_pointcloud/__init__.py -> /home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/build/lib/arducam_rclpy_tof_pointcloud
+[4.193s] running install
+[4.206s] running install_lib
+[4.260s] creating /home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/lib/python3.12/site-packages/arducam_rclpy_tof_pointcloud
+[4.260s] copying /home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/build/lib/arducam_rclpy_tof_pointcloud/tof_pointcloud.py -> /home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/lib/python3.12/site-packages/arducam_rclpy_tof_pointcloud
+[4.260s] copying /home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/build/lib/arducam_rclpy_tof_pointcloud/__init__.py -> /home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/lib/python3.12/site-packages/arducam_rclpy_tof_pointcloud
+[4.262s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/lib/python3.12/site-packages/arducam_rclpy_tof_pointcloud/tof_pointcloud.py to tof_pointcloud.cpython-312.pyc
+[4.265s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/lib/python3.12/site-packages/arducam_rclpy_tof_pointcloud/__init__.py to __init__.cpython-312.pyc
+[4.265s] running install_data
+[4.266s] creating /home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/share/ament_index
+[4.266s] creating /home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/share/ament_index/resource_index
+[4.267s] creating /home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/share/ament_index/resource_index/packages
+[4.267s] copying resource/arducam_rclpy_tof_pointcloud -> /home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/share/ament_index/resource_index/packages
+[4.267s] copying package.xml -> /home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/share/arducam_rclpy_tof_pointcloud
+[4.268s] running install_egg_info
+[4.318s] Copying ../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info to /home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/lib/python3.12/site-packages/arducam_rclpy_tof_pointcloud-0.0.1-py3.12.egg-info
+[4.320s] running install_scripts
+[4.575s] Installing tof_pointcloud script to /home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/lib/arducam_rclpy_tof_pointcloud
+[4.575s] writing list of installed files to '/home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/install.log'

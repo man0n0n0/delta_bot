@@ -1,0 +1,22 @@
+[2.870s] Invoking command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/delta_ros': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/svevqx/delta_bot/software/ros_ws_delta/build/delta_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/delta_ros build --build-base /home/svevqx/delta_bot/software/ros_ws_delta/build/delta_ros/build install --record /home/svevqx/delta_bot/software/ros_ws_delta/build/delta_ros/install.log --single-version-externally-managed install_data
+[3.577s] running egg_info
+[3.579s] creating ../../build/delta_ros/depth_processing_launch.egg-info
+[3.637s] writing ../../build/delta_ros/depth_processing_launch.egg-info/PKG-INFO
+[3.638s] writing dependency_links to ../../build/delta_ros/depth_processing_launch.egg-info/dependency_links.txt
+[3.638s] writing entry points to ../../build/delta_ros/depth_processing_launch.egg-info/entry_points.txt
+[3.638s] writing requirements to ../../build/delta_ros/depth_processing_launch.egg-info/requires.txt
+[3.639s] writing top-level names to ../../build/delta_ros/depth_processing_launch.egg-info/top_level.txt
+[3.639s] writing manifest file '../../build/delta_ros/depth_processing_launch.egg-info/SOURCES.txt'
+[3.753s] reading manifest file '../../build/delta_ros/depth_processing_launch.egg-info/SOURCES.txt'
+[3.756s] adding license file 'LICENSE'
+[3.757s] writing manifest file '../../build/delta_ros/depth_processing_launch.egg-info/SOURCES.txt'
+[3.758s] running build
+[3.758s] running build_py
+[3.758s] copying delta_ros/effector_to_closest.py -> /home/svevqx/delta_bot/software/ros_ws_delta/build/delta_ros/build/lib/delta_ros
+[3.758s] running install
+[3.777s] running install_lib
+[3.833s] copying /home/svevqx/delta_bot/software/ros_ws_delta/build/delta_ros/build/lib/delta_ros/effector_to_closest.py -> /home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros/lib/python3.12/site-packages/delta_ros
+[3.835s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros/lib/python3.12/site-packages/delta_ros/effector_to_closest.py to effector_to_closest.cpython-312.pyc
+[3.841s] running install_data
+[3.842s] error: can't copy 'resource/depth_processing_launch': doesn't exist or not a regular file
+[3.894s] Invoked command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/delta_ros' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/svevqx/delta_bot/software/ros_ws_delta/build/delta_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/delta_ros build --build-base /home/svevqx/delta_bot/software/ros_ws_delta/build/delta_ros/build install --record /home/svevqx/delta_bot/software/ros_ws_delta/build/delta_ros/install.log --single-version-externally-managed install_data

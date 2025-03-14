@@ -3,7 +3,6 @@ import os
 from glob import glob 
 
 package_name = 'delta_ros'
-package_name = 'depth_processing_launch'
 
 setup(
     name=package_name,
