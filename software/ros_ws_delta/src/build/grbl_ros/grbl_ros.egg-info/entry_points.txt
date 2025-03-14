@@ -1,0 +1,4 @@
+[console_scripts]
+grbl_manager = grbl_ros.manager:main
+grbl_node = grbl_ros.device:main
+grbl_service = grbl_ros.service:main

@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: grbl-ros
+Version: 0.0.16
+Summary: ROS2 package to interface with a GRBL serial device
+Maintainer: Evan Flynn
+Maintainer-email: evanflynn.msu@gmail.com
+License: MIT
+License-File: LICENSE

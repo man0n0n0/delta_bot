@@ -1,0 +1,77 @@
+[1.302s] Invoking command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/grbl_ros': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/grbl_ros build --build-base /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build install --record /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/install.log --install-scripts $base/lib/grbl_ros --single-version-externally-managed install_data
+[1.494s] /usr/lib/python3/dist-packages/setuptools/dist.py:744: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[1.495s] !!
+[1.495s] 
+[1.495s]         ********************************************************************************
+[1.495s]         Usage of dash-separated 'script-dir' will not be supported in future
+[1.495s]         versions. Please use the underscore name 'script_dir' instead.
+[1.496s] 
+[1.496s]         This deprecation is overdue, please update your project and remove deprecated
+[1.496s]         calls to avoid build errors in the future.
+[1.496s] 
+[1.496s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[1.497s]         ********************************************************************************
+[1.497s] 
+[1.497s] !!
+[1.497s]   opt = self.warn_dash_deprecation(opt, section)
+[1.739s] running egg_info
+[1.739s] creating ../build/grbl_ros/grbl_ros.egg-info
+[1.772s] writing ../build/grbl_ros/grbl_ros.egg-info/PKG-INFO
+[1.772s] writing dependency_links to ../build/grbl_ros/grbl_ros.egg-info/dependency_links.txt
+[1.773s] writing entry points to ../build/grbl_ros/grbl_ros.egg-info/entry_points.txt
+[1.773s] writing requirements to ../build/grbl_ros/grbl_ros.egg-info/requires.txt
+[1.773s] writing top-level names to ../build/grbl_ros/grbl_ros.egg-info/top_level.txt
+[1.773s] writing manifest file '../build/grbl_ros/grbl_ros.egg-info/SOURCES.txt'
+[1.846s] reading manifest file '../build/grbl_ros/grbl_ros.egg-info/SOURCES.txt'
+[1.846s] adding license file 'LICENSE'
+[1.846s] writing manifest file '../build/grbl_ros/grbl_ros.egg-info/SOURCES.txt'
+[1.847s] running build
+[1.847s] running build_py
+[1.847s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build
+[1.847s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib
+[1.847s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros
+[1.848s] copying grbl_ros/service.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros
+[1.848s] copying grbl_ros/_control.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros
+[1.848s] copying grbl_ros/_logging.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros
+[1.848s] copying grbl_ros/_command.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros
+[1.849s] copying grbl_ros/manager.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros
+[1.849s] copying grbl_ros/_configure.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros
+[1.849s] copying grbl_ros/device.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros
+[1.849s] copying grbl_ros/__init__.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros
+[1.849s] running install
+[1.859s] running install_lib
+[1.895s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros
+[1.895s] copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros/service.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros
+[1.895s] copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros/_control.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros
+[1.895s] copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros/_logging.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros
+[1.896s] copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros/_command.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros
+[1.896s] copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros/manager.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros
+[1.896s] copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros/_configure.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros
+[1.896s] copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros/device.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros
+[1.897s] copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build/lib/grbl_ros/__init__.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros
+[1.898s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros/service.py to service.cpython-312.pyc
+[1.898s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros/_control.py to _control.cpython-312.pyc
+[1.899s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros/_logging.py to _logging.cpython-312.pyc
+[1.901s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros/_command.py to _command.cpython-312.pyc
+[1.903s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros/manager.py to manager.cpython-312.pyc
+[1.904s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros/_configure.py to _configure.cpython-312.pyc
+[1.905s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros/device.py to device.cpython-312.pyc
+[1.908s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros/__init__.py to __init__.cpython-312.pyc
+[1.908s] running install_data
+[1.909s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/share/ament_index
+[1.909s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/share/ament_index/resource_index
+[1.909s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/share/ament_index/resource_index/packages
+[1.909s] copying resource/grbl_ros -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/share/ament_index/resource_index/packages
+[1.910s] copying package.xml -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/share/grbl_ros
+[1.910s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/share/grbl_ros/launch
+[1.911s] copying launch/grbl_ros.launch.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/share/grbl_ros/launch
+[1.911s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/share/grbl_ros/config
+[1.911s] copying config/cnc001.yaml -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/share/grbl_ros/config
+[1.911s] running install_egg_info
+[1.955s] Copying ../build/grbl_ros/grbl_ros.egg-info to /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages/grbl_ros-0.0.16-py3.12.egg-info
+[1.957s] running install_scripts
+[2.190s] Installing grbl_manager script to /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/grbl_ros
+[2.191s] Installing grbl_node script to /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/grbl_ros
+[2.191s] Installing grbl_service script to /home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/grbl_ros
+[2.191s] writing list of installed files to '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/install.log'
+[2.235s] Invoked command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/grbl_ros' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/grbl_ros build --build-base /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/build install --record /home/svevqx/delta_bot/software/ros_ws_delta/src/build/grbl_ros/install.log --install-scripts $base/lib/grbl_ros --single-version-externally-managed install_data
