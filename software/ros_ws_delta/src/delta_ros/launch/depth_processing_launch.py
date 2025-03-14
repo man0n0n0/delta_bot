@@ -5,16 +5,13 @@ def generate_launch_description():
     return launch.LaunchDescription([
         launch_ros.actions.Node(
             package='grbl_ros',
-            executable='grbl_node',
-            name='gcode_sender'),
+            executable='grbl_node'),
 
         launch_ros.actions.Node(
-        package='arducam_rclpy_tof_pointcloud',
-        executable='tof_pointcloud',
-        name='arducamTOF_activation'),
+            package='arducam_rclpy_tof_pointcloud',
+            executable='tof_pointcloud'),
         
         launch_ros.actions.Node(
-        package='delta_ros',
-        executable='effector_to_closest',
-        name='opencv_process'),
+            package='delta_ros',
+            executable='effector_to_closest'),
   ])
