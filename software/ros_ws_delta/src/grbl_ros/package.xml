@@ -10,7 +10,6 @@
   <depend>rclpy</depend>
   <depend>grbl_msgs</depend>
   <depend>std_msgs</depend>
-  <depend>launch_ros</depend>
 
   <build_depend>python3-serial</build_depend>
 
