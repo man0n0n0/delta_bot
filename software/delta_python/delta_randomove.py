@@ -30,7 +30,7 @@ try :
 	Yl = np.random.randint(-Y, Y)
 	Zl = np.random.randint(Z[0],Z[1])
 	Fl = np.random.randint(F_min,F_max)
-	toSend = "G1 X{Xl} Y{Yl} Z{Zl} F{Fl}\n"
+	toSend = f"G1 X{Xl} Y{Yl} Z{Zl} F{Fl}\n"
 	toSend = toSend.encode()
 	s.write(toSend)
 	print(toSend)
