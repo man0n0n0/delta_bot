@@ -6,6 +6,22 @@ import cv2
 import numpy as np
 import math
 
+def detect_closest_object(matrix :: Float32MultiArray)
+    # pre process of the matrix
+
+    # detect closet zone
+
+    # detect center of the zone and return it 
+    pass
+
+def gcode_producer(point :: tuple)
+    # define values of the workspace
+
+    # limit checking
+
+    # return gcode 
+    pass
+
 def float_array_callback(msg, node):
     """
     Callback function for Float32MultiArray messages that visualizes the data as a colored matrix.
