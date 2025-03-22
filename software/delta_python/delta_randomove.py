@@ -26,18 +26,19 @@ grbl_out = s.read_until(b'ok\n')
 
 '''gcode line processing'''
 try : 
-	Xl = np.random.randint(-X, X + 1)
-	Yl = np.random.randint(-Y, Y)
-	Zl = np.random.randint(Z[0],Z[1])
-	Fl = np.random.randint(F_min,F_max)
-	toSend = f"G1 X{Xl} Y{Yl} Z{Zl} F{Fl}\n"
-	toSend = toSend.encode()
-	s.write(toSend)
-	print(toSend)
+	while True :
+		Xl = np.random.randint(-X, X + 1)
+		Yl = np.random.randint(-Y, Y)
+		Zl = np.random.randint(Z[0],Z[1])
+		Fl = np.random.randint(F_min,F_max)
+		toSend = f"G1 X{Xl} Y{Yl} Z{Zl} F{Fl}\n"
+		toSend = toSend.encode()
+		s.write(toSend)
+		print(toSend)
 
-	grbl_out = s.read_until(b'ok\n')
-	#grbl_out = s.readline() # Wait for response with carriage return
-	print(grbl_out.decode('utf_8'))
+		grbl_out = s.read_until(b'ok\n')
+		#grbl_out = s.readline() # Wait for response with carriage return
+		print(grbl_out.decode('utf_8'))
 
 except Error as e :
 	print(e)
