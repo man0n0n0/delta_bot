@@ -12,7 +12,7 @@ F_max = 4000
 F_min = 100
 
 '''init connection'''
-s = serial.Serial('/dev/ttyUSB0', 115200)
+s = serial.Serial('/dev/ttyACM0', 115200)
 s.write(b"\r\n\r\n") 
 sleep(3)
 s.flushInput()  # Flush startup text in serial input
