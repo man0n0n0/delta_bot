@@ -19,7 +19,7 @@ s.flushInput()  # Flush startup text in serial input
 
 '''send homing command'''
 toSend = "G28\n"
-toSend.encode()
+toSend = toSend.encode()
 s.write(toSend)
 grbl_out = s.read_until(b'ok\n')
 
@@ -30,7 +30,7 @@ try :
 	Zl = np.random.randint(Z[0],Z[1])
 	Fl = np.random.randint(F_min,F_max)
 	toSend = "G1 X{Xl} Y{Yl} Z{Zl} F{Fl}\n"
-	toSend.encode()
+	toSend = toSend.encode()
 	s.write(toSend)
 
 	grbl_out = s.read_until(b'ok\n')
