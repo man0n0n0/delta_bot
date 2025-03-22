@@ -18,7 +18,7 @@ sleep(3)
 s.flushInput()  # Flush startup text in serial input
 
 '''send homing command'''
-s.write(b"G28\n".format(seq))
+s.write("G28\n".format(seq))
 grbl_out = s.read_until(b'ok\n')
 
 '''gcode line processing'''
@@ -27,7 +27,7 @@ try :
 	Yl = np.random.randint(-Y, Y)
 	Zl = np.random.randint(Z[0],Z[1])
 	Fl = np.random.randint(F_min,F_max)
-	s.write(b"G1 X{Xl} Y{Yl} Z{Zl} F{Fl}\n")
+	s.write("G1 X{Xl} Y{Yl} Z{Zl} F{Fl}\n")
 
 	grbl_out = s.read_until(b'ok\n')
 	#grbl_out = s.readline() # Wait for response with carriage return
