@@ -21,6 +21,7 @@ s.flushInput()  # Flush startup text in serial input
 toSend = "G28\n"
 toSend = toSend.encode()
 s.write(toSend)
+print(toSend)
 grbl_out = s.read_until(b'ok\n')
 
 '''gcode line processing'''
@@ -32,6 +33,7 @@ try :
 	toSend = "G1 X{Xl} Y{Yl} Z{Zl} F{Fl}\n"
 	toSend = toSend.encode()
 	s.write(toSend)
+	print(toSend)
 
 	grbl_out = s.read_until(b'ok\n')
 	#grbl_out = s.readline() # Wait for response with carriage return
