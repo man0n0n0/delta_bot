@@ -1,0 +1,21 @@
+[2.978s] Invoking command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/arducam_rclpy_tof_pointcloud': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/arducam_rclpy_tof_pointcloud build --build-base /home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/build install --record /home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/install.log --single-version-externally-managed install_data
+[3.638s] running egg_info
+[3.690s] writing ../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info/PKG-INFO
+[3.695s] writing dependency_links to ../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info/dependency_links.txt
+[3.695s] writing entry points to ../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info/entry_points.txt
+[3.695s] writing requirements to ../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info/requires.txt
+[3.696s] writing top-level names to ../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info/top_level.txt
+[3.834s] reading manifest file '../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info/SOURCES.txt'
+[3.841s] writing manifest file '../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info/SOURCES.txt'
+[3.842s] running build
+[3.842s] running build_py
+[3.844s] running install
+[3.870s] running install_lib
+[3.953s] running install_data
+[3.954s] running install_egg_info
+[4.046s] removing '/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/lib/python3.12/site-packages/arducam_rclpy_tof_pointcloud-0.0.1-py3.12.egg-info' (and everything under it)
+[4.049s] Copying ../../build/arducam_rclpy_tof_pointcloud/arducam_rclpy_tof_pointcloud.egg-info to /home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/lib/python3.12/site-packages/arducam_rclpy_tof_pointcloud-0.0.1-py3.12.egg-info
+[4.051s] running install_scripts
+[4.481s] Installing tof_pointcloud script to /home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/lib/arducam_rclpy_tof_pointcloud
+[4.482s] writing list of installed files to '/home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/install.log'
+[4.535s] Invoked command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/arducam_rclpy_tof_pointcloud' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/arducam_rclpy_tof_pointcloud build --build-base /home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/build install --record /home/svevqx/delta_bot/software/ros_ws_delta/build/arducam_rclpy_tof_pointcloud/install.log --single-version-externally-managed install_data
