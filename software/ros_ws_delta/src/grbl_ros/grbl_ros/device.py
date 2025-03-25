@@ -55,13 +55,13 @@ class grbl_node(Node):
         self.declare_parameters(
             namespace='',
             parameters=[
-                ('machine_id', 'cnc_001'),
-                ('port', '/dev/ttyUSB0'),
-                ('baudrate', 115200),
+                ('machine_id', 'delta_marlin'),
+                ('port', '/dev/ttyACM0'),
+                ('baudrate', 250000),
                 ('acceleration', 50),  # mm / min^2
-                ('x_max', 300),  # mm
+                ('x_max', 200),  # mm
                 ('y_max', 200),  # mm
-                ('z_max', 150),  # mm
+                ('z_max', 100),  # mm
                 ('default_v', 100),  # mm / min
                 ('x_max_v', 150),  # mm / min
                 ('y_max_v', 150),  # mm / min
