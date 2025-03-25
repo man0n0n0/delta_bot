@@ -49,7 +49,7 @@ class EffectorToClosestPointCloudNode(Node):
             {"command": command}
         ]
         
-        self.get_logger().info(f"Executing: {' '.join(ros2_command)}")
+        #self.get_logger().info(f"Executing: {' '.join(ros2_command)}")
         
         process = subprocess.Popen(
             ros2_command,
