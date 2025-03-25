@@ -34,7 +34,7 @@ class EffectorToClosestPointCloudNode(Node):
             self.pointcloud_callback,
             10)
 
-        time.sleep(1)
+        time.sleep(5)
         self.send_grbl_command("$X")
         self.send_grbl_command("$G0Z0")
         
