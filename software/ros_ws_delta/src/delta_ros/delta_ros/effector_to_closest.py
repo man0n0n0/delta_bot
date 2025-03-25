@@ -126,18 +126,11 @@ class EffectorToClosestPointCloudNode(Node):
             self.get_logger().info("go to the point")
             
             # Wait a moment to ensure movement is complete
-            time.sleep(5)
-            
-            # Send homing command
-            self.send_grbl_command("$G28")
-            self.get_logger().info("homing message send to machine")
-            
-            # Sleep for 5 seconds after homing
-            time.sleep(5)
+            time.sleep(2)
 
             self.send_grbl_command("$G1X0Y0Z0F1000")
 
-            time.sleep(3)
+            time.sleep(2)
             
         except Exception as e:
             self.get_logger().error(f"Error processing point cloud: {str(e)}")
