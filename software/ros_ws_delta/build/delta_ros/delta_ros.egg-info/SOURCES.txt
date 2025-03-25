@@ -11,6 +11,7 @@ setup.py
 ../../build/delta_ros/delta_ros.egg-info/zip-safe
 delta_ros/__init__.py
 delta_ros/effector_to_closest.py
+launch/_launch.xml
 launch/depth_processing_launch.py
 resource/delta_ros
 test/test_copyright.py
