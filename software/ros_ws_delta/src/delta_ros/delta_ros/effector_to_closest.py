@@ -46,7 +46,7 @@ class EffectorToClosestPointCloudNode(Node):
             self.grbl_action_name,
             "grbl_msgs/action/SendGcodeCmd",
             #f"{{command: {command}}}"
-            "\'" + {"command": command} + "\'"
+            {"command": command}
         ]
         
         self.get_logger().info(f"Executing: {' '.join(ros2_command)}")
