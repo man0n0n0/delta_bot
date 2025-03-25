@@ -34,7 +34,9 @@ class EffectorToClosestPointCloudNode(Node):
             self.pointcloud_callback,
             10)
 
-      
+        time.sleep(5)
+        self.send_grbl_command(f"G0Z0")
+        
         # Last processing time to control the rate
         self.last_process_time = self.get_clock().now()
         
