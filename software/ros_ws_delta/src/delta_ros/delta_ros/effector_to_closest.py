@@ -110,7 +110,7 @@ class EffectorToClosestPointCloudNode(Node):
             
             # Only proceed if the average distance is within our threshold
             if average_distance > self.min_distance_threshold:
-                self.send_grbl_command("$G1Z0F1000")
+                self.send_grbl_command("$G1X0Y0Z0F1000")
                 return
             
             # Convert point coordinates to machine coordinates (mm)
