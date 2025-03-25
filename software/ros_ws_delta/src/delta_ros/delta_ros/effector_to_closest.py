@@ -81,8 +81,7 @@ class EffectorToClosestPointCloudNode(Node):
             average_distance = np.mean(distances[closest_points_indices])
             
             # Print the closest points information
-            self.get_logger().info("\n=== CLOSEST POINTS DETECTED ===")
-            print(f"Average point coordinates: X={average_point[0]:.4f}, Y={average_point[1]:.4f}, Z={average_point[2]:.4f}")
+            self.get_logger().info(f"Average point coordinates: X={average_point[0]:.4f}, Y={average_point[1]:.4f}, Z={average_point[2]:.4f}")
             print(f"Average distance: {average_distance:.4f} meters")
             
             # Only proceed if the average distance is within our threshold
