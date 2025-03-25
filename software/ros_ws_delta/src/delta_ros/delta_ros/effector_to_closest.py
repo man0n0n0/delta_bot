@@ -119,12 +119,14 @@ class EffectorToClosestPointCloudNode(Node):
             
             # Send movement command
             self.send_grbl_command(f"G1 X{x_machine:.2f} Y{y_machine:.2f} Z{z_machine:.2f} F1000")
+            self.get_logger().info("go to the point")
             
             # Wait a moment to ensure movement is complete
             time.sleep(1)
             
             # Send homing command
             self.send_grbl_command("G28")
+            self.get_logger().info("homing message send to machine")
             
             # Sleep for 5 seconds after homing
             time.sleep(5)
