@@ -1,5 +1,5 @@
 <launch>
   <node pkg="grbl_ros" exec="grbl_node" name="machine_control"/>
-  <node pkg="arducam_rclpy_tof_pointcloud" exec="tof_pointcloud" name="cloudpoint_maker"/>
+  <node pkg="arducam_rclpy_tof_pointcloud" exec="tof_pointcloud"/>
   <node pkg="delta_ros" exec="effector_to_closest" name="cv2_process"/>
 </launch>
