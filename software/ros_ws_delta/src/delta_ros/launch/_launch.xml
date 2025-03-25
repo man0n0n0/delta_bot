@@ -1,5 +1,6 @@
 <launch>
-  <node pkg="grbl_ros" exec="grbl_node"/>
+  <node pkg="grbl_ros" exec="grbl_node" parameters="/delta_bot/software/ros_ws_delta/src/grbl_ros/config/delta_marlin.yaml"/>
+  </node>
   <node pkg="arducam_rclpy_tof_pointcloud" exec="tof_pointcloud"/>
   <node pkg="delta_ros" exec="effector_to_closest"/>
 </launch>
