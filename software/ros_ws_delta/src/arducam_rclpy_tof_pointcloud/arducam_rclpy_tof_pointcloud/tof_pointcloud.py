@@ -138,7 +138,7 @@ class TOFPublisher(Node):
 def main(args=None):
     rclpy.init(args=args)
     parser = ArgumentParser()
-    parser.add_argument("--cfg", type=str, help="Path to camera configuration file")
+    parser.add_argument("--ros-args", type=str, help="Path to camera configuration file")
     
     ns = parser.parse_args()
     
