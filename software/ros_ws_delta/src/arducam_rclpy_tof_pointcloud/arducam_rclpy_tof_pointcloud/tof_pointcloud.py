@@ -137,15 +137,6 @@ class TOFPublisher(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    parser = ArgumentParser()
-    parser.add_argument("--ros-args", type=str, help="Path to camera configuration file")
-    
-    ns = parser.parse_args()
-    
-    options = Option()
-    options.cfg = ns.cfg
-    
-    tof_publisher = TOFPublisher(options)
 
     rclpy.spin(tof_publisher)
     rclpy.shutdown()
