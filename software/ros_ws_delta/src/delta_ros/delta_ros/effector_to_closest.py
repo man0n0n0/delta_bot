@@ -37,8 +37,7 @@ class EffectorToClosestNode(Node):
         # Last processing time to control the rate
         self.last_process_time = self.get_clock().now()
         
-        self.get_logger().info("Effector to closest point node initialized!")
-        print("testtt")
+        self.get_logger().info("Effector to closest point node initialized!") #NB: print doesnt work
 
     def depth_callback(self, depth_msg):
         # Control processing rate
@@ -51,7 +50,7 @@ class EffectorToClosestNode(Node):
             # Convert ROS Image message to OpenCV image
             # depth_image = self.bridge.imgmsg_to_cv2(depth_msg, desired_encoding="passthrough")
             depth_image = depth_msg
-            print(depth_msg)
+            self.get_logger().info(type(depth_msg))
 
             # Find the closest point in the depth map
             # Ignore NaN and zero values which often represent invalid measurements
