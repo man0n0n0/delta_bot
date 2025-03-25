@@ -6,6 +6,7 @@ import numpy as np
 import sensor_msgs.msg
 import subprocess
 import struct
+import time
 import sensor_msgs_py.point_cloud2 as pc2
 
 class EffectorToClosestPointCloudNode(Node):
@@ -37,6 +38,31 @@ class EffectorToClosestPointCloudNode(Node):
         self.last_process_time = self.get_clock().now()
         
         self.get_logger().info("Effector to closest point cloud node initialized!")
+
+    def send_grbl_command(self, command):
+        """Helper method to send GRBL commands via ros2 action"""
+        ros2_command = [
+            "ros2", "action", "send_goal",
+            self.grbl_action_name,
+            "grbl_msgs/action/SendGcodeCmd",
+            f"{{command: '{command}'}}"
+        ]
+        
+        self.get_logger().info(f"Executing: {' '.join(ros2_command)}")
+        
+        process = subprocess.Popen(
+            ros2_command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True
+        )
+        
+        # Wait for the command to complete
+        process.wait()
+        stdout, stderr = process.communicate()
+        
+        if process.returncode != 0:
+            self.get_logger().error(f"Error executing command: {stderr}")
 
     def pointcloud_callback(self, pointcloud_msg):
         # Control processing rate
@@ -91,39 +117,17 @@ class EffectorToClosestPointCloudNode(Node):
             y_machine = average_point[1] * 1000.0  # Convert to mm
             z_machine = average_point[2] * 1000.0  # Convert to mm
             
-            # Generate G-code to point to the average point
-            gcode_command = f"G1 X{x_machine:.2f} Y{y_machine:.2f} Z{z_machine:.2f} F1000"
-                      
-            self.get_logger().info(f"Sending GRBL command: {gcode_command}")
+            # Send movement command
+            self.send_grbl_command(f"G1 X{x_machine:.2f} Y{y_machine:.2f} Z{z_machine:.2f} F1000")
             
-            # Use subprocess to call ros2 action send_goal command
-            command = [
-                "ros2", "action", "send_goal",
-                self.grbl_action_name,
-                "grbl_msgs/action/SendGcodeCmd",
-                f"{{command: '{gcode_command}'}}"
-            ]
+            # Wait a moment to ensure movement is complete
+            time.sleep(1)
             
-            self.get_logger().info(f"Executing: {' '.join(command)}")
+            # Send homing command
+            self.send_grbl_command("G28")
             
-            # Execute the command asynchronously
-            process = subprocess.Popen(
-                command,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                text=True
-            )
-            
-            # Optional: Handle the process in a non-blocking way
-            def check_process():
-                return_code = process.poll()
-                if return_code is not None:
-                    stdout, stderr = process.communicate()
-                    return True
-                return False
-                
-            # Add a timer to check the process (non-blocking)
-            self.create_timer(0.1, lambda: check_process() and None)
+            # Sleep for 5 seconds after homing
+            time.sleep(5)
             
         except Exception as e:
             self.get_logger().error(f"Error processing point cloud: {str(e)}")
