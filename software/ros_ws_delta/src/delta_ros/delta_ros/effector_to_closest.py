@@ -27,6 +27,8 @@ class EffectorToClosestPointCloudNode(Node):
         self.processing_rate = self.get_parameter('processing_rate').value
         self.num_closest_points = self.get_parameter('num_closest_points').value
         
+        self.send_grbl_command("$G0Z0")
+
         # Subscribe to point cloud
         self.pointcloud_sub = self.create_subscription(
             sensor_msgs.msg.PointCloud2,
