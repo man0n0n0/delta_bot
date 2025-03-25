@@ -54,8 +54,7 @@ class EffectorToClosestPointCloudNode(Node):
             
             # Log point cloud information
             total_points = len(points_list)
-            self.get_logger().info(f"Total point cloud size: {total_points} points")
-            
+                        
             # Check if point cloud is empty
             if total_points == 0:
                 self.get_logger().warn("Empty point cloud received")
@@ -82,11 +81,9 @@ class EffectorToClosestPointCloudNode(Node):
             
             # Print the closest points information
             self.get_logger().info(f"Average point coordinates: X={average_point[0]:.4f}, Y={average_point[1]:.4f}, Z={average_point[2]:.4f}")
-            print(f"Average distance: {average_distance:.4f} meters")
             
             # Only proceed if the average distance is within our threshold
             if average_distance > self.min_distance_threshold:
-                print(f"Points are beyond threshold of {self.min_distance_threshold}m - not moving effector")
                 return
             
             # Convert point coordinates to machine coordinates (mm)
@@ -94,15 +91,9 @@ class EffectorToClosestPointCloudNode(Node):
             y_machine = average_point[1] * 1000.0  # Convert to mm
             z_machine = average_point[2] * 1000.0  # Convert to mm
             
-            # Print machine coordinates
-            print(f"Machine coordinates: X={x_machine:.2f}mm, Y={y_machine:.2f}mm, Z={z_machine:.2f}mm")
-            
             # Generate G-code to point to the average point
             gcode_command = f"G1 X{x_machine:.2f} Y{y_machine:.2f} Z{z_machine:.2f} F1000"
-            
-            print(f"G-code command: {gcode_command}")
-            print("============================\n")
-            
+                      
             self.get_logger().info(f"Sending GRBL command: {gcode_command}")
             
             # Use subprocess to call ros2 action send_goal command
@@ -128,10 +119,6 @@ class EffectorToClosestPointCloudNode(Node):
                 return_code = process.poll()
                 if return_code is not None:
                     stdout, stderr = process.communicate()
-                    if return_code == 0:
-                        self.get_logger().info(f"Command succeeded: {stdout.strip()}")
-                    else:
-                        self.get_logger().error(f"Command failed with code {return_code}: {stderr.strip()}")
                     return True
                 return False
                 
