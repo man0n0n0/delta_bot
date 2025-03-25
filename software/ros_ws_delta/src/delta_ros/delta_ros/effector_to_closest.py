@@ -36,7 +36,7 @@ class EffectorToClosestPointCloudNode(Node):
 
         time.sleep(5)
         self.send_grbl_command("$X")
-        self.send_grbl_command("$G0Z0")
+        self.send_grbl_command(f"$G{0}Z{0}")
         
         # Last processing time to control the rate
         self.last_process_time = self.get_clock().now()
