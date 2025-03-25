@@ -47,9 +47,7 @@ class EffectorToClosestPointCloudNode(Node):
             "grbl_msgs/action/SendGcodeCmd",
             {"command" : command}
         ]
-        
-        self.get_logger().info(f"Executing: {' '.join(str(ros2_command))}")
-        
+                
         process = subprocess.Popen(
             ros2_command,
             stdout=subprocess.PIPE,
