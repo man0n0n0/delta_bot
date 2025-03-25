@@ -66,7 +66,8 @@ class EffectorToClosestNode(Node):
             y, x = min_coords[0][0], min_coords[1][0]
             
             # Print the image coordinates of the closest point
-            print("\n=== CLOSEST POINT DETECTED ===")
+            self.get_logger().info("\n=== CLOSEST POINT DETECTED ===")
+
             print(f"Image coordinates: x={x}, y={y}")
             print(f"Depth value: {min_depth:.4f} meters")
             
