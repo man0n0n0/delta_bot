@@ -1,1 +1,4 @@
 venv/
+software/ros_ws_delta/build/*
+software/ros_ws_delta/log/*
+software/ros_ws_delta/install/*
