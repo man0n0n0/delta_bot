@@ -3,43 +3,42 @@
 import rclpy
 from rclpy.node import Node
 import numpy as np
-from sensor_msgs.msg import Image
-from cv_bridge import CvBridge
+import sensor_msgs.msg
 import subprocess
-import time
+import struct
+import sensor_msgs_py.point_cloud2 as pc2
 
-class EffectorToClosestNode(Node):
+class EffectorToClosestPointCloudNode(Node):
     def __init__(self):
-        super().__init__('effector_to_closest')
+        super().__init__('effector_to_closest_pointcloud')
         
         # Declare parameters
-        self.declare_parameter('depth_topic', '/depth_frame')
+        self.declare_parameter('pointcloud_topic', '/point_cloud')
         self.declare_parameter('grbl_action_name', '/cnc_001/send_gcode_cmd')
         self.declare_parameter('min_distance_threshold', 0.1)  # Minimum distance in meters to trigger action
-        self.declare_parameter('processing_rate', 1.0)  # How often to process depth frames (Hz)
+        self.declare_parameter('processing_rate', 1.0)  # How often to process point clouds (Hz)
+        self.declare_parameter('num_closest_points', 100)  # Number of closest points to average
         
         # Get parameters
-        self.depth_topic = self.get_parameter('depth_topic').value
+        self.pointcloud_topic = self.get_parameter('pointcloud_topic').value
         self.grbl_action_name = self.get_parameter('grbl_action_name').value
         self.min_distance_threshold = self.get_parameter('min_distance_threshold').value
         self.processing_rate = self.get_parameter('processing_rate').value
+        self.num_closest_points = self.get_parameter('num_closest_points').value
         
-        # CV Bridge for converting ROS Image messages to OpenCV format
-        self.bridge = CvBridge()
-        
-        # Subscribe to depth image
-        self.depth_sub = self.create_subscription(
-            Image,
-            self.depth_topic,
-            self.depth_callback,
+        # Subscribe to point cloud
+        self.pointcloud_sub = self.create_subscription(
+            sensor_msgs.msg.PointCloud2,
+            self.pointcloud_topic,
+            self.pointcloud_callback,
             10)
         
         # Last processing time to control the rate
         self.last_process_time = self.get_clock().now()
         
-        self.get_logger().info("Effector to closest point node initialized!") #NB: print doesnt work
+        self.get_logger().info("Effector to closest point cloud node initialized!")
 
-    def depth_callback(self, depth_msg):
+    def pointcloud_callback(self, pointcloud_msg):
         # Control processing rate
         current_time = self.get_clock().now()
         if (current_time - self.last_process_time).nanoseconds / 1e9 < 1.0 / self.processing_rate:
@@ -47,59 +46,60 @@ class EffectorToClosestNode(Node):
         self.last_process_time = current_time
         
         try:
-            # Convert ROS Image message to OpenCV image
-            # depth_image = self.bridge.imgmsg_to_cv2(depth_msg, desired_encoding="passthrough")
-            depth_image = depth_msg
-            self.get_logger().info(type(depth_msg))
-
-            # Find the closest point in the depth map
-            # Ignore NaN and zero values which often represent invalid measurements
-            masked_depth = np.ma.masked_array(depth_image, mask=(np.isnan(depth_image) | (depth_image == 0)))
+            # Convert point cloud to numpy array with explicit coordinate extraction
+            points_list = []
+            for point in pc2.read_points(pointcloud_msg, skip_nans=True):
+                # Explicitly extract x, y, z coordinates
+                points_list.append((point[0], point[1], point[2]))
             
-            if masked_depth.count() == 0:
-                self.get_logger().warn("No valid depth data found")
-                return
-                
-            # Find the minimum depth value and its coordinates
-            min_depth = np.min(masked_depth)
-            min_coords = np.where(masked_depth == min_depth)
+            # Log point cloud information
+            total_points = len(points_list)
+            self.get_logger().info(f"Total point cloud size: {total_points} points")
             
-            # Get the x, y coordinates of the closest point
-            y, x = min_coords[0][0], min_coords[1][0]
-            
-            # Print the image coordinates of the closest point
-            self.get_logger().info("\n=== CLOSEST POINT DETECTED ===")
-
-            print(f"Image coordinates: x={x}, y={y}")
-            print(f"Depth value: {min_depth:.4f} meters")
-            
-            # Only proceed if the minimum depth is within our threshold
-            if min_depth > self.min_distance_threshold:
-                print(f"Point is beyond threshold of {self.min_distance_threshold}m - not moving effector")
+            # Check if point cloud is empty
+            if total_points == 0:
+                self.get_logger().warn("Empty point cloud received")
                 return
             
-            # Convert image coordinates to world coordinates
-            # This is a simplification - you might need camera calibration parameters
-            # to properly convert from image to world coordinates
-            height, width = depth_image.shape
-            x_normalized = (x - width/2) / (width/2)  # Range: -1 to 1
-            y_normalized = (y - height/2) / (height/2)  # Range: -1 to 1
+            # Convert to numpy array of floats
+            points_array = np.array(points_list, dtype=np.float64)
             
-            # Print normalized coordinates
-            print(f"Normalized coordinates: x={x_normalized:.4f}, y={y_normalized:.4f}")
+            # Calculate distances from origin
+            distances = np.linalg.norm(points_array, axis=1)
             
-            # Scale normalized coordinates to machine coordinates (mm)
-            # Adjust these scale factors to match your machine's working area
-            x_machine = x_normalized * 100.0  # Scale -1,1 to -100,100 mm
-            y_machine = y_normalized * 100.0  # Scale -1,1 to -100,100 mm
-            z_machine = min_depth * 1000.0    # Convert meters to mm
+            # Sort points by distance
+            sorted_indices = np.argsort(distances)
+            
+            # Take the n closest points
+            closest_points_indices = sorted_indices[:self.num_closest_points]
+            closest_points = points_array[closest_points_indices]
+            
+            # Calculate the average of the closest points
+            average_point = np.mean(closest_points, axis=0)
+            
+            # Calculate average distance of the closest points
+            average_distance = np.mean(distances[closest_points_indices])
+            
+            # Print the closest points information
+            self.get_logger().info("\n=== CLOSEST POINTS DETECTED ===")
+            print(f"Average point coordinates: X={average_point[0]:.4f}, Y={average_point[1]:.4f}, Z={average_point[2]:.4f}")
+            print(f"Average distance: {average_distance:.4f} meters")
+            
+            # Only proceed if the average distance is within our threshold
+            if average_distance > self.min_distance_threshold:
+                print(f"Points are beyond threshold of {self.min_distance_threshold}m - not moving effector")
+                return
+            
+            # Convert point coordinates to machine coordinates (mm)
+            x_machine = average_point[0] * 1000.0  # Convert to mm
+            y_machine = average_point[1] * 1000.0  # Convert to mm
+            z_machine = average_point[2] * 1000.0  # Convert to mm
             
             # Print machine coordinates
             print(f"Machine coordinates: X={x_machine:.2f}mm, Y={y_machine:.2f}mm, Z={z_machine:.2f}mm")
             
-            # Generate G-code to point to the closest zone
-            # Format the command according to GRBL standards
-            gcode_command = f"G1 X{x_machine:.2f} Y{y_machine:.2f} F1000"
+            # Generate G-code to point to the average point
+            gcode_command = f"G1 X{x_machine:.2f} Y{y_machine:.2f} Z{z_machine:.2f} F1000"
             
             print(f"G-code command: {gcode_command}")
             print("============================\n")
@@ -140,11 +140,13 @@ class EffectorToClosestNode(Node):
             self.create_timer(0.1, lambda: check_process() and None)
             
         except Exception as e:
-            self.get_logger().error(f"Error processing depth image: {str(e)}")
+            self.get_logger().error(f"Error processing point cloud: {str(e)}")
+            import traceback
+            traceback.print_exc()
 
 def main(args=None):
     rclpy.init(args=args)
-    node = EffectorToClosestNode()
+    node = EffectorToClosestPointCloudNode()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
