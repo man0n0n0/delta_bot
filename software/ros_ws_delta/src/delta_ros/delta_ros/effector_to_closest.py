@@ -33,6 +33,10 @@ class EffectorToClosestPointCloudNode(Node):
             self.pointcloud_topic,
             self.pointcloud_callback,
             10)
+
+        time.sleep(1)
+        self.send_grbl_command("$X")
+        self.send_grbl_command("$G0Z0")
         
         # Last processing time to control the rate
         self.last_process_time = self.get_clock().now()
@@ -48,7 +52,7 @@ class EffectorToClosestPointCloudNode(Node):
             f"{{command: {command}}}"
         ]
         
-        #self.get_logger().info(f"Executing: {' '.join(ros2_command)}")
+        self.get_logger().info(f"Executing: {' '.join(ros2_command)}")
         
         process = subprocess.Popen(
             ros2_command,
@@ -110,7 +114,6 @@ class EffectorToClosestPointCloudNode(Node):
             
             # Only proceed if the average distance is within our threshold
             if average_distance > self.min_distance_threshold:
-                self.send_grbl_command("$G1X0Y0Z0F1000")
                 return
             
             # Convert point coordinates to machine coordinates (mm)
@@ -131,6 +134,10 @@ class EffectorToClosestPointCloudNode(Node):
             
             # Sleep for 5 seconds after homing
             time.sleep(5)
+
+            self.send_grbl_command("$G1X0Y0Z0F1000")
+
+            time.sleep(3)
             
         except Exception as e:
             self.get_logger().error(f"Error processing point cloud: {str(e)}")
