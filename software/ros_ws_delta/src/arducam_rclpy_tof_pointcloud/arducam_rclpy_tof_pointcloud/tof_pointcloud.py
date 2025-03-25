@@ -137,6 +137,8 @@ class TOFPublisher(Node):
 
 def main(args=None):
     rclpy.init(args=args)
+   
+    tof_publisher = TOFPublisher()
 
     rclpy.spin(tof_publisher)
     rclpy.shutdown()
