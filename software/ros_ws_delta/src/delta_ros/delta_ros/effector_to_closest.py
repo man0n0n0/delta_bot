@@ -13,7 +13,7 @@ class EffectorToClosestNode(Node):
         super().__init__('effector_to_closest')
         
         # Declare parameters
-        self.declare_parameter('depth_topic', '/camera/depth/image_raw')
+        self.declare_parameter('depth_topic', '/depth_frame')
         self.declare_parameter('grbl_action_name', '/cnc_001/send_gcode_cmd')
         self.declare_parameter('min_distance_threshold', 0.1)  # Minimum distance in meters to trigger action
         self.declare_parameter('processing_rate', 1.0)  # How often to process depth frames (Hz)
