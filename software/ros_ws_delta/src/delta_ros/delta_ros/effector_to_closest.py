@@ -74,8 +74,8 @@ class EffectorToClosestPointCloudNode(Node):
             points_list = []
             for point in pc2.read_points(pointcloud_msg, skip_nans=True):
                 # Mirror the x-coordinate (change the sign)
-                # This effectively flips the point cloud horizontally
-                points_list.append((-point[0], point[1], point[2]))
+                # This effectively flips the point cloud to adapt
+                points_list.append((-point[0], -point[1], -point[2]))
             
             # Log point cloud information
             total_points = len(points_list)
@@ -115,10 +115,10 @@ class EffectorToClosestPointCloudNode(Node):
             x_machine = average_point[0] * 1000.0 # Convert to mm 
             y_machine = average_point[1] * 1000.0 # Convert to mm 
             #TODO: create a function to correct lens distortion for small distances
-            z_machine = (average_point[2] * 1000.0) + 100  # Convert to mm and add a correction 
+            z_machine = (average_point[2] * 1000.0)  # Convert to mm and add a correction 
             
             # Send movement command
-            self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z-{z_machine:.0f}F5000")
+            self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z{z_machine:.0f}F5000")
                         
             # Wait a moment to ensure movement is complete
             time.sleep(2)
