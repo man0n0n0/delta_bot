@@ -36,10 +36,18 @@ class EffectorToClosestPointCloudNode(Node):
        
         # Last processing time to control the rate
         self.last_process_time = self.get_clock().now()
-
-        self.send_grbl_command("$G0X0Y0Z0")
+        
+        # Create a timer to send reset command after a short delay
+        self.create_timer(1.0, self.send_reset_command)
         
         self.get_logger().info("Effector to closest point cloud node initialized!")
+
+    def send_reset_command(self):
+        """Send reset command and stop the timer"""
+        self.send_grbl_command("$G0X0Y0Z0")
+        # Destroy the timer after sending the command
+        self.destroy_timer(self.timers[0])
+        self.get_logger().info("Reset command sent to effector")
 
     def send_grbl_command(self, command):
         """Helper method to send GRBL commands via ros2 action"""
