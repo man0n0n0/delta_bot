@@ -128,10 +128,10 @@ class EffectorToClosestPointCloudNode(Node):
                 self.prev_average_point = average_point 
 
                 # Print the closest points information
-                self.get_logger().info(f"Average point coordinates: X={x_machine:.1f}, Y={y_machine:.1f}, -Z={z_machine:.1f}")
+                self.get_logger().info(f"Average point coordinates: X={x_machine:.1f}, Y={y_machine:.1f}, Z={z_machine:.1f}")
                 
                 # Send movement command
-                self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z{z_machine:.0f}F6000")
+                self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}-Z{z_machine:.0f}F6000")
 
 
             
