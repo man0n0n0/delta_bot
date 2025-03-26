@@ -79,7 +79,7 @@ class EffectorToClosestPointCloudNode(Node):
                 # Mirror the x-coordinate (change the sign)
                 # This effectively flips the point cloud to adapt 
                 # y x order inverted  
-                points_list.append((-1 * point[1], -1 * point[0], -1 * point[2]))
+                points_list.append((-1 * point[1], -1 * point[0], point[2]))
             
             # Log point cloud information
             total_points = len(points_list)
@@ -118,7 +118,7 @@ class EffectorToClosestPointCloudNode(Node):
                 y_machine = (self.prev_average_point[1] + average_point[1]) * 1000.0 # Convert to mm 
                 
                 #TODO: create a function to correct lens distortion for small distances
-                if average_point[3] < self.min_distance_threshold :
+                if average_point[2] < self.min_distance_threshold :
                     # if the object is close = go forward to maintain the offset distance
                     z_machine = (self.prev_average_point[2] - (self.min_distance_threshold - average_point[2])) * 1000.0 # Convert to mm and add a correction
                 else :
@@ -127,7 +127,7 @@ class EffectorToClosestPointCloudNode(Node):
                 self.prev_average_point = average_point 
 
                 # Print the closest points information
-                self.get_logger().info(f"Average point coordinates: X={x_machine:.1f}, Y={y_machine:.1f}, Z={z_machine:.1f}")
+                self.get_logger().info(f"Average point coordinates: X={x_machine:.1f}, Y={y_machine:.1f}, -Z={z_machine:.1f}")
                 
                 # Send movement command
                 self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z{z_machine:.0f}F6000")
