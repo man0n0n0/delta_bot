@@ -114,7 +114,7 @@ class EffectorToClosestPointCloudNode(Node):
             
             # Convert point coordinates to machine coordinates (mm)
             x_machine = average_point[0] * 1000.0  # Convert to mm
-            y_machine = average_point[1] * 1000.0  # Convert to mm
+            y_machine = average_point[1] * 1000.0 * -1  # Convert to mm and send the oposite (inversion )
             z_machine = average_point[2] * 1000.0  # Convert to mm
             
             # Send movement command
