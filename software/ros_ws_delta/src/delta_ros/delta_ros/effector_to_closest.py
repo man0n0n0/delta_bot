@@ -122,11 +122,11 @@ class EffectorToClosestPointCloudNode(Node):
             self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z{z_machine:.0f}F6000")
                         
             # Wait a moment to ensure movement is complete
-            time.sleep(1)
+            #time.sleep(1)
 
             self.send_grbl_command("$G1X0Y0Z0F6000")
 
-            time.sleep(1)
+            #time.sleep(1)
             
         except Exception as e:
             self.get_logger().error(f"Error processing point cloud: {str(e)}")
