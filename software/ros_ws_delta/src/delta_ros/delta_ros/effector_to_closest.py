@@ -48,7 +48,7 @@ class EffectorToClosestPointCloudNode(Node):
             f"{{command: {command}}}"
         ]
         
-        self.get_logger().info(f"Executing: {' '.join(ros2_command)}")
+        # self.get_logger().info(f"Executing: {' '.join(ros2_command)}")
         
         process = subprocess.Popen(
             ros2_command,
@@ -105,12 +105,12 @@ class EffectorToClosestPointCloudNode(Node):
             # Calculate average distance of the closest points
             average_distance = np.mean(distances[closest_points_indices])
             
-            # Print the closest points information
-            self.get_logger().info(f"Average point coordinates: X={average_point[0]:.4f}, Y={average_point[1]:.4f}, Z={average_point[2]:.4f}")
-            
             # Only proceed if the average distance is within our threshold
             if average_distance > self.min_distance_threshold:
                 return
+            
+            # Print the closest points information
+            self.get_logger().info(f"Average point coordinates: X={average_point[0]:.4f}, Y={average_point[1]:.4f}, Z={average_point[2]:.4f}")
             
             # Convert point coordinates to machine coordinates (mm)
             x_machine = average_point[0] * 1000.0 # Convert to mm 
@@ -120,8 +120,7 @@ class EffectorToClosestPointCloudNode(Node):
             
             # Send movement command
             self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z-{z_machine:.0f}F5000")
-            self.get_logger().info("go to the point")
-            
+                        
             # Wait a moment to ensure movement is complete
             time.sleep(2)
 
