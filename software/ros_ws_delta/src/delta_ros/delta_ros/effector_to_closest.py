@@ -115,7 +115,7 @@ class EffectorToClosestPointCloudNode(Node):
             # Convert point coordinates to machine coordinates (mm)
             x_machine = average_point[0] * 1000.0 * -1 # Convert to mm and convert to the opposite (inversion of the camera)
             y_machine = average_point[1] * 1000.0  # Convert to mm 
-            z_machine = average_point[2] * 1000.0 + 50  # Convert to mm and add a correction
+            z_machine = (average_point[2] * 1000.0) + 50  # Convert to mm and add a correction
             
             # Send movement command
             self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z-{z_machine:.0f}F1000")
