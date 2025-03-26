@@ -109,7 +109,7 @@ class EffectorToClosestPointCloudNode(Node):
             # average_distance = np.mean(distances[closest_points_indices])
 
             # Only proceed if the average distance is within our threshold
-            if self.min_distance_threshold < average_point[3] < self.max_distance_threshold :
+            if self.min_distance_threshold < average_point[2] < self.max_distance_threshold :
 
                 # Convert point coordinates to machine coordinates (mm)
                 x_machine = (self.prev_average_point[0] + average_point[0])* 1000.0 # Convert to mm 
