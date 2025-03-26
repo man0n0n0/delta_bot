@@ -16,8 +16,9 @@ class EffectorToClosestPointCloudNode(Node):
         # Declare parameters
         self.declare_parameter('pointcloud_topic', '/point_cloud')
         self.declare_parameter('grbl_action_name', '/delta_marlin/send_gcode_cmd')
-        self.declare_parameter('min_distance_threshold', 0.2)  # Minimum distance in meters to trigger action
-        self.declare_parameter('processing_rate', 2.0)  # How often to process point clouds (Hz)
+        self.declare_parameter('min_distance_threshold', 0.05)  # Minimum distance in meters to trigger action
+        self.declare_parameter('max_distance_threshold', 0.2)  # maximum distance in meters to trigger action
+        self.declare_parameter('processing_rate', 1.0)  # How often to process point clouds (Hz)
         self.declare_parameter('num_closest_points', 300)  # Number of closest points to average
         
         # Get parameters
@@ -36,6 +37,8 @@ class EffectorToClosestPointCloudNode(Node):
        
         # Last processing time to control the rate
         self.last_process_time = self.get_clock().now()
+
+        self.prev_average_point = [0,0,0]
         
         self.get_logger().info("Effector to closest point cloud node initialized!")
 
@@ -103,35 +106,30 @@ class EffectorToClosestPointCloudNode(Node):
             average_point = np.mean(closest_points, axis=0)
             
             # Calculate average distance of the closest points
-            average_distance = np.mean(distances[closest_points_indices])
+            # average_distance = np.mean(distances[closest_points_indices])
 
             # Only proceed if the average distance is within our threshold
-            if average_distance > self.min_distance_threshold:
-                return
+            if self.min_distance_threshold < average_point[3] < self.max_distance_threshold :
 
-            try :
                 # Convert point coordinates to machine coordinates (mm)
                 x_machine = (self.prev_average_point[0] + average_point[0])* 1000.0 # Convert to mm 
                 y_machine = (self.prev_average_point[1] + average_point[1]) * 1000.0 # Convert to mm 
                 #TODO: create a function to correct lens distortion for small distances
-                z_machine = (self.prev_average_point[2] + average_point[2]) * 1000.0 # Convert to mm and add a correction
+                if average_point[3] < self.min_distance_threshold :
+                    # if the object is close = go forward to maintain the offset distance
+                    z_machine = (self.prev_average_point[2] - (self.min_distance_threshold - average_point[2])) * 1000.0 # Convert to mm and add a correction
+                else :
+                    z_machine = (self.prev_average_point[2] + average_point[2]) * 1000.0 # Convert to mm and add a correction
 
                 self.prev_average_point = average_point 
 
-            except : 
-                # Convert point coordinates to machine coordinates (mm)
-                x_machine = average_point[0] * 1000.0 # Convert to mm 
-                y_machine = average_point[1] * 1000.0 # Convert to mm 
-                #TODO: create a function to correct lens distortion for small distances
-                z_machine = average_point[2] * 1000.0 # Convert to mm and add a correction
+                # Print the closest points information
+                self.get_logger().info(f"Average point coordinates: X={x_machine:.1f}, Y={y_machine:.1f}, Z={z_machine:.1f}")
+                
+                # Send movement command
+                self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z{z_machine:.0f}F6000")
 
-                self.prev_average_point = average_point 
 
-            # Print the closest points information
-            self.get_logger().info(f"Average point coordinates: X={x_machine:.1f}, Y={y_machine:.1f}, Z={z_machine:.1f}")
-            
-            # Send movement command
-            self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z{z_machine:.0f}F6000")
             
         except Exception as e:
             self.get_logger().error(f"Error processing point cloud: {str(e)}")
