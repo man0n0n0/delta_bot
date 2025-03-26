@@ -91,6 +91,7 @@ class EffectorToClosestPointCloudNode(Node):
             
             # Calculate distances from origin
             distances = np.linalg.norm(points_array, axis=1)
+
             # Sort points by distance
             sorted_indices = np.argsort(distances)
             
@@ -110,12 +111,12 @@ class EffectorToClosestPointCloudNode(Node):
 
             try :
                 # Convert point coordinates to machine coordinates (mm)
-                x_machine = (prev_average_point[0] + average_point[0])* 1000.0 # Convert to mm 
-                y_machine = (prev_average_point[1] + average_point[1]) * 1000.0 # Convert to mm 
+                x_machine = (self.prev_average_point[0] + average_point[0])* 1000.0 # Convert to mm 
+                y_machine = (self.prev_average_point[1] + average_point[1]) * 1000.0 # Convert to mm 
                 #TODO: create a function to correct lens distortion for small distances
-                z_machine = (prev_average_point[2] + average_point[2]) * 1000.0 # Convert to mm and add a correction
+                z_machine = (self.prev_average_point[2] + average_point[2]) * 1000.0 # Convert to mm and add a correction
 
-                prev_average_point = average_point 
+                self.prev_average_point = average_point 
 
             except : 
                 # Convert point coordinates to machine coordinates (mm)
@@ -124,7 +125,7 @@ class EffectorToClosestPointCloudNode(Node):
                 #TODO: create a function to correct lens distortion for small distances
                 z_machine = average_point[2] * 1000.0 # Convert to mm and add a correction
 
-                prev_average_point = average_point 
+                self.prev_average_point = average_point 
 
             # Print the closest points information
             self.get_logger().info(f"Average point coordinates: X={x_machine:.1f}, Y={y_machine:.1f}, Z={z_machine:.1f}")
