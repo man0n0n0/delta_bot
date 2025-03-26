@@ -75,7 +75,7 @@ class EffectorToClosestPointCloudNode(Node):
             for point in pc2.read_points(pointcloud_msg, skip_nans=True):
                 # Mirror the x-coordinate (change the sign)
                 # This effectively flips the point cloud to adapt
-                points_list.append((-1 * point[0], -1 * point[1], -1 * point[2]))
+                points_list.append((-1 * point[0], point[1], -1 * point[2]))
             
             # Log point cloud information
             total_points = len(points_list)
