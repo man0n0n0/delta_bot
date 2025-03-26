@@ -18,7 +18,7 @@ class EffectorToClosestPointCloudNode(Node):
         self.declare_parameter('grbl_action_name', '/delta_marlin/send_gcode_cmd')
         self.declare_parameter('min_distance_threshold', 0.6)  # Minimum distance in meters to trigger action
         self.declare_parameter('processing_rate', 1.0)  # How often to process point clouds (Hz)
-        self.declare_parameter('num_closest_points', 200)  # Number of closest points to average
+        self.declare_parameter('num_closest_points', 300)  # Number of closest points to average
         
         # Get parameters
         self.pointcloud_topic = self.get_parameter('pointcloud_topic').value
@@ -136,9 +136,9 @@ class EffectorToClosestPointCloudNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = EffectorToClosestPointCloudNode()
-    node.send_grbl_command("$G0X0Y0Z0")
     try:
         rclpy.spin(node)
+        node.send_grbl_command("$G0X0Y0Z0")
     except KeyboardInterrupt:
         pass
     finally:
