@@ -110,15 +110,14 @@ class EffectorToClosestPointCloudNode(Node):
 
             try :
                 # Convert point coordinates to machine coordinates (mm)
-                x_machine = (average_point[0] - prev_average_point[0])* 1000.0 # Convert to mm 
-                y_machine = (average_point[1] - prev_average_point[1]) * 1000.0 # Convert to mm 
+                x_machine = (prev_average_point[0] - average_point[0])* 1000.0 # Convert to mm 
+                y_machine = (prev_average_point[1] - average_point[1]) * 1000.0 # Convert to mm 
                 #TODO: create a function to correct lens distortion for small distances
-                z_machine = (average_point[2] - prev_average_point[2]) * 1000.0 - 110 # Convert to mm and add a correction
+                z_machine = (prev_average_point[2] - average_point[2]) * 1000.0 - 110 # Convert to mm and add a correction
 
                 prev_average_point = average_point 
 
             except : 
-
                 # Convert point coordinates to machine coordinates (mm)
                 x_machine = average_point[0] * 1000.0 # Convert to mm 
                 y_machine = average_point[1] * 1000.0 # Convert to mm 
