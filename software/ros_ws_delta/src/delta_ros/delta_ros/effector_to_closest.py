@@ -136,6 +136,7 @@ class EffectorToClosestPointCloudNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = EffectorToClosestPointCloudNode()
+    node.send_grbl_command("$G0X0Y0Z0")
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
