@@ -107,15 +107,15 @@ class EffectorToClosestPointCloudNode(Node):
             # Only proceed if the average distance is within our threshold
             if average_distance > self.min_distance_threshold:
                 return
-            
-            # Print the closest points information
-            self.get_logger().info(f"Average point coordinates: X={average_point[0]:.4f}, Y={average_point[1]:.4f}, Z={average_point[2]:.4f}")
-            
+                      
             # Convert point coordinates to machine coordinates (mm)
             x_machine = average_point[0] * 1000.0 # Convert to mm 
             y_machine = average_point[1] * 1000.0 # Convert to mm 
             #TODO: create a function to correct lens distortion for small distances
             z_machine = (average_point[2] * 1000.0)  # Convert to mm and add a correction 
+
+            # Print the closest points information
+            self.get_logger().info(f"Average point coordinates: X={x_machine:.1f}, Y={y_machine:.1f}, Z={z_machine:.1f}")
             
             # Send movement command
             self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z{z_machine:.0f}F5000")
