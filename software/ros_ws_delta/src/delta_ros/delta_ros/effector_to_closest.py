@@ -38,7 +38,7 @@ class EffectorToClosestPointCloudNode(Node):
         self.last_process_time = self.get_clock().now()
         
         # Store the timer reference
-        self.reset_timer = self.create_timer(1.0, self.send_reset_command)
+        self.reset_timer = self.create_timer(10.0, self.send_reset_command)
         
         self.get_logger().info("Effector to closest point cloud node initialized!")
 
