@@ -48,8 +48,6 @@ class EffectorToClosestPointCloudNode(Node):
             f"{{command: {command}}}"
         ]
         
-        # self.get_logger().info(f"Executing: {' '.join(ros2_command)}")
-        
         process = subprocess.Popen(
             ros2_command,
             stdout=subprocess.PIPE,
@@ -75,8 +73,9 @@ class EffectorToClosestPointCloudNode(Node):
             # Convert point cloud to numpy array with explicit coordinate extraction
             points_list = []
             for point in pc2.read_points(pointcloud_msg, skip_nans=True):
-                # Explicitly extract x, y, z coordinates
-                points_list.append((point[0], point[1], point[2]))
+                # Mirror the x-coordinate (change the sign)
+                # This effectively flips the point cloud horizontally
+                points_list.append((-point[0], point[1], point[2]))
             
             # Log point cloud information
             total_points = len(points_list)
@@ -113,8 +112,8 @@ class EffectorToClosestPointCloudNode(Node):
             self.get_logger().info(f"Average point coordinates: X={average_point[0]:.4f}, Y={average_point[1]:.4f}, Z={average_point[2]:.4f}")
             
             # Convert point coordinates to machine coordinates (mm)
-            x_machine = average_point[0] * 1000.0 * -1 # Convert to mm 
-            y_machine = average_point[1] * 1000.0 * -1 # Convert to mm 
+            x_machine = average_point[0] * 1000.0 # Convert to mm 
+            y_machine = average_point[1] * 1000.0 # Convert to mm 
             #TODO: create a function to correct lens distortion for small distances
             z_machine = (average_point[2] * 1000.0) + 100  # Convert to mm and add a correction 
             
