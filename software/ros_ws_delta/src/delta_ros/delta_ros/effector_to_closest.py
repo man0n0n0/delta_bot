@@ -36,6 +36,8 @@ class EffectorToClosestPointCloudNode(Node):
        
         # Last processing time to control the rate
         self.last_process_time = self.get_clock().now()
+
+        self.send_grbl_command("$G0X0Y0Z0")
         
         self.get_logger().info("Effector to closest point cloud node initialized!")
 
@@ -138,7 +140,6 @@ def main(args=None):
     node = EffectorToClosestPointCloudNode()
     try:
         rclpy.spin(node)
-        node.send_grbl_command("$G0X0Y0Z0")
     except KeyboardInterrupt:
         pass
     finally:
