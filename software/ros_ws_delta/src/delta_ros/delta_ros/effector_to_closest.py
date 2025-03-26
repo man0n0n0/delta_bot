@@ -108,12 +108,15 @@ class EffectorToClosestPointCloudNode(Node):
             # Calculate average distance of the closest points
             # average_distance = np.mean(distances[closest_points_indices])
 
+            self.get_logger().info(f"{average_point}")
+
             # Only proceed if the average distance is within our threshold
             if self.min_distance_threshold < average_point[2] < self.max_distance_threshold :
 
                 # Convert point coordinates to machine coordinates (mm)
                 x_machine = (self.prev_average_point[0] + average_point[0])* 1000.0 # Convert to mm 
                 y_machine = (self.prev_average_point[1] + average_point[1]) * 1000.0 # Convert to mm 
+                
                 #TODO: create a function to correct lens distortion for small distances
                 if average_point[3] < self.min_distance_threshold :
                     # if the object is close = go forward to maintain the offset distance
