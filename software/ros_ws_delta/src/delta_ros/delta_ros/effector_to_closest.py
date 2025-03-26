@@ -16,9 +16,9 @@ class EffectorToClosestPointCloudNode(Node):
         # Declare parameters
         self.declare_parameter('pointcloud_topic', '/point_cloud')
         self.declare_parameter('grbl_action_name', '/delta_marlin/send_gcode_cmd')
-        self.declare_parameter('min_distance_threshold', 0.3)  # Minimum distance in meters to trigger action
+        self.declare_parameter('min_distance_threshold', 0.2)  # Minimum distance in meters to trigger action
         self.declare_parameter('processing_rate', 1.0)  # How often to process point clouds (Hz)
-        self.declare_parameter('num_closest_points', 100)  # Number of closest points to average
+        self.declare_parameter('num_closest_points', 300)  # Number of closest points to average
         
         # Get parameters
         self.pointcloud_topic = self.get_parameter('pointcloud_topic').value
@@ -122,7 +122,9 @@ class EffectorToClosestPointCloudNode(Node):
                 x_machine = average_point[0] * 1000.0 # Convert to mm 
                 y_machine = average_point[1] * 1000.0 # Convert to mm 
                 #TODO: create a function to correct lens distortion for small distances
-                z_machine = average_point[2] * 1000.0 - 110 # Convert to mm and add a correction
+                z_machine = average_point[2] * 1000.0 # Convert to mm and add a correction
+
+                prev_average_point = average_point 
 
             # Print the closest points information
             self.get_logger().info(f"Average point coordinates: X={x_machine:.1f}, Y={y_machine:.1f}, Z={z_machine:.1f}")
