@@ -113,7 +113,7 @@ class EffectorToClosestPointCloudNode(Node):
             x_machine = average_point[0] * 1000.0 # Convert to mm 
             y_machine = average_point[1] * 1000.0 # Convert to mm 
             #TODO: create a function to correct lens distortion for small distances
-            z_machine = average_point[2] * 1000.0 * 1.1 # Convert to mm and add a correction + inceased 10 %
+            z_machine = average_point[2] * 1000.0 + 70 # Convert to mm and add a correction + inceased 10 %
 
             # Print the closest points information
             self.get_logger().info(f"Average point coordinates: X={x_machine:.1f}, Y={y_machine:.1f}, Z={z_machine:.1f}")
