@@ -230,11 +230,11 @@ class grbl_node(Node):
             send_goal_future = self.action_client_send_gcode_.send_goal_async(
                     gcode_msg, feedback_callback=self.file_feedback)
             send_goal_future.add_done_callback(self.line_response_callback)
-            # wait for send gcode action to be done
-            self.action_done_event.wait()
+            # # wait for send gcode action to be done
+            # self.action_done_event.wait()
 
-            status_msg = SendGcodeFile.Feedback()
-
+            # status_msg = SendGcodeFile.Feedback()
+            
             # dont send another line until its done running
             # status_msg.status = '[ ' + str(line_num) + ' / ' + str(file_length) + \
             #    ' ] Running ' + str(line)
