@@ -59,12 +59,12 @@ class EffectorToClosestPointCloudNode(Node):
             text=True
         )
         
-        # Wait for the command to complete
-        process.wait()
-        stdout, stderr = process.communicate()
+        # # Wait for the command to complete
+        # process.wait()
+        # stdout, stderr = process.communicate()
         
-        if process.returncode != 0:
-            self.get_logger().error(f"Error executing command: {stderr}")
+        # if process.returncode != 0:
+        #     self.get_logger().error(f"Error executing command: {stderr}")
 
     def pointcloud_callback(self, pointcloud_msg):
         # Control processing rate
