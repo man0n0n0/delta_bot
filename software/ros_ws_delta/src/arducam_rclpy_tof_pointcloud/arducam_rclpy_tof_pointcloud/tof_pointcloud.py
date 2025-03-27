@@ -7,7 +7,7 @@ from sensor_msgs_py import point_cloud2
 from std_msgs.msg import Float32MultiArray, Header
 import numpy as np
 from threading import Thread
-
+import sys
 
 from ArducamDepthCamera import (
     ArducamCamera,
@@ -20,8 +20,6 @@ from ArducamDepthCamera import (
 
 class Option:
     cfg: Optional[str]
-    
-
 
 class TOFPublisher(Node):
     def __init__(self, options: Option):
@@ -118,7 +116,6 @@ class TOFPublisher(Node):
                 self.tof_.releaseFrame(frame)
 
     def update(self):
-        # self.__generateSensorPointCloud()
         if self.points is None:
             return
         self.header.stamp = self.get_clock().now().to_msg()
@@ -134,23 +131,35 @@ class TOFPublisher(Node):
         self.tof_.stop()
         self.tof_.close()
 
-
 def main(args=None):
-    rclpy.init(args=args)
+    # Filter out ROS-specific arguments
+    ros_args = [arg for arg in sys.argv if not arg.startswith('--ros-args')]
+    
+    # Initialize rclpy with filtered arguments
+    rclpy.init(args=ros_args)
+    
+    # Create argument parser
     parser = ArgumentParser()
     parser.add_argument("--cfg", type=str, help="Path to camera configuration file")
     
-    ns = parser.parse_args()
+    # Parse arguments, ignoring ROS-specific arguments
+    ns, unknown = parser.parse_known_args(ros_args[1:])
     
+    # Create options
     options = Option()
     options.cfg = ns.cfg
     
+    # Create and spin the node
     tof_publisher = TOFPublisher(options)
 
-    rclpy.spin(tof_publisher)
-    rclpy.shutdown()
-    tof_publisher.stop()
-
+    try:
+        rclpy.spin(tof_publisher)
+    except KeyboardInterrupt:
+        print("Interrupted by user, shutting down...")
+    finally:
+        # Clean up
+        tof_publisher.stop()
+        rclpy.shutdown()
 
 if __name__ == "__main__":
     main()

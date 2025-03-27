@@ -16,16 +16,14 @@ class EffectorToClosestPointCloudNode(Node):
         # Declare parameters
         self.declare_parameter('pointcloud_topic', '/point_cloud')
         self.declare_parameter('grbl_action_name', '/delta_marlin/send_gcode_cmd')
-        self.declare_parameter('min_distance_threshold', 0.1)  # Minimum distance in meters to trigger action
-        self.declare_parameter('max_distance_threshold', 0.3)  # maximum distance in meters to trigger action
-        self.declare_parameter('processing_rate', 1.0)  # How often to process point clouds (Hz)
-        self.declare_parameter('num_closest_points', 300)  # Number of closest points to average
+        self.declare_parameter('min_distance_threshold', 0.3)  # Minimum distance in meters to trigger action
+        self.declare_parameter('processing_rate', 10.0)  # How often to process point clouds (Hz)
+        self.declare_parameter('num_closest_points', 100)  # Number of closest points to average
         
         # Get parameters
         self.pointcloud_topic = self.get_parameter('pointcloud_topic').value
         self.grbl_action_name = self.get_parameter('grbl_action_name').value
         self.min_distance_threshold = self.get_parameter('min_distance_threshold').value
-        self.max_distance_threshold = self.get_parameter('max_distance_threshold').value
         self.processing_rate = self.get_parameter('processing_rate').value
         self.num_closest_points = self.get_parameter('num_closest_points').value
 
@@ -38,8 +36,6 @@ class EffectorToClosestPointCloudNode(Node):
        
         # Last processing time to control the rate
         self.last_process_time = self.get_clock().now()
-
-        self.prev_average_point = [0,0,0]
         
         self.get_logger().info("Effector to closest point cloud node initialized!")
 
@@ -80,7 +76,7 @@ class EffectorToClosestPointCloudNode(Node):
                 # Mirror the x-coordinate (change the sign)
                 # This effectively flips the point cloud to adapt 
                 # y x order inverted  
-                points_list.append((-1 * point[1], -1 * point[0], point[2]))
+                points_list.append((-1 * point[1], -1 * point[0], -1 * point[2]))
             
             # Log point cloud information
             total_points = len(points_list)
@@ -95,7 +91,6 @@ class EffectorToClosestPointCloudNode(Node):
             
             # Calculate distances from origin
             distances = np.linalg.norm(points_array, axis=1)
-
             # Sort points by distance
             sorted_indices = np.argsort(distances)
             
@@ -107,33 +102,30 @@ class EffectorToClosestPointCloudNode(Node):
             average_point = np.mean(closest_points, axis=0)
             
             # Calculate average distance of the closest points
-            # average_distance = np.mean(distances[closest_points_indices])
-
-            self.get_logger().info(f"{average_point}")
-
+            average_distance = np.mean(distances[closest_points_indices])
+            
             # Only proceed if the average distance is within our threshold
-            if self.min_distance_threshold < average_point[2] < self.max_distance_threshold :
+            if average_distance > self.min_distance_threshold:
+                return
+                      
+            # Convert point coordinates to machine coordinates (mm)
+            x_machine = average_point[0] * 1000.0 # Convert to mm 
+            y_machine = average_point[1] * 1000.0 # Convert to mm 
+            #TODO: create a function to correct lens distortion for small distances
+            z_machine = average_point[2] * 1000.0 - 110 # Convert to mm and add a correction
 
-                # Convert point coordinates to machine coordinates (mm)
-                x_machine = (self.prev_average_point[0] + average_point[0])* 1000.0 # Convert to mm 
-                y_machine = (self.prev_average_point[1] + average_point[1]) * 1000.0 # Convert to mm 
-                
-                #TODO: create a function to correct lens distortion for small distances
-                if average_point[2] < self.min_distance_threshold :
-                    # if the object is close = go forward to maintain the offset distance
-                    z_machine = (self.prev_average_point[2] - (self.min_distance_threshold - average_point[2])) * 1000.0 # Convert to mm and add a correction
-                else :
-                    z_machine = (self.prev_average_point[2] + average_point[2]) * 1000.0 # Convert to mm and add a correction
+            # Print the closest points information
+            self.get_logger().info(f"Average point coordinates: X={x_machine:.1f}, Y={y_machine:.1f}, Z={z_machine:.1f}")
+            
+            # Send movement command
+            self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z{z_machine:.0f}F6000")
+                        
+            # Wait a moment to ensure movement is complete
+            #time.sleep(1)
 
-                self.prev_average_point = average_point 
+            self.send_grbl_command("$G1X0Y0Z0F6000")
 
-                # Print the closest points information
-                self.get_logger().info(f"Average point coordinates: X={x_machine:.1f}, Y={y_machine:.1f}, Z=-{z_machine:.1f}")
-                
-                # Send movement command
-                self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z-{z_machine:.0f}F6000")
-
-
+            #time.sleep(1)
             
         except Exception as e:
             self.get_logger().error(f"Error processing point cloud: {str(e)}")

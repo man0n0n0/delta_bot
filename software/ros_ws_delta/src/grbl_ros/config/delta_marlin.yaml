@@ -1,12 +1,12 @@
 /**:
   ros__parameters:
-    machine_id: delta_marlin
-    port: /dev/ttyUSB0
-    baudrate: 115200
+    machine_id: deltamarlin
+    port: /dev/ttyACM0
+    baudrate: 250000
     accleration: 50 # mm / min^2
-    x_max: 300  # mm
-    y_max: 200  # mm
-    z_max: 150  # mm
+    x_max: 60  # mm
+    y_max: 60  # mm
+    z_max: 100  # mm
     default_v: 100  # mm / min
     x_max_v: 150  # mm / min
     y_max_v: 150  # mm / min
