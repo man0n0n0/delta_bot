@@ -97,11 +97,6 @@ class EffectorToClosestPointCloudNode(Node):
             self.send_grbl_command(f"$G1X{Xl}Y{Yl}Z-{Zl}F6000")
 
 
-        except Exception as e:
-            self.get_logger().error(f"Error processing point cloud: {str(e)}")
-            import traceback
-            traceback.print_exc()
-
 def main(args=None):
     rclpy.init(args=args)
     node = EffectorToClosestPointCloudNode()
