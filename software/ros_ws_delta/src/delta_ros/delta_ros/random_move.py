@@ -7,7 +7,6 @@ import sensor_msgs.msg
 import subprocess
 import struct
 import time
-import sensor_msgs_py.point_cloud2 as pc2
 
 class EffectorToClosestPointCloudNode(Node):
     def __init__(self):
