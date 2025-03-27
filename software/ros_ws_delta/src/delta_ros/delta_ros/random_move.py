@@ -39,14 +39,12 @@ class EffectorRandomMovementNode(Node):
             stderr=subprocess.PIPE,
             text=True
         )
-        
+
         # Wait for the command to complete
         process.wait()
         stdout, stderr = process.communicate()
         if process.returncode != 0:
         self.get_logger().error(f"Error executing command: {stderr}")
-
-def pointcloud_callback(self, pointcloud_msg):
 
     def perform_random_movement(self):
         # Define absolute max value per axis
