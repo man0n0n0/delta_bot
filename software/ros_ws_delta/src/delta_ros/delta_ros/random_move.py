@@ -86,10 +86,10 @@ class EffectorToClosestPointCloudNode(Node):
             Zl = np.random.randint(Z[0],Z[1])
 
             # Print the closest points information
-            self.get_logger().info(f"Random coordinate: X={Xl}, Y={Yl}, Z=-{Zl}")
+            self.get_logger().info(f"Random coordinate: X={Xl}, Y={Yl}, Z={Zl}")
             
             # Send movement command
-            self.send_grbl_command(f"$G1X{Xl}Y{Yl}Z-{Zl}F6000")
+            self.send_grbl_command(f"$G1X{Xl}Y{Yl}Z{Zl}F6000")
 
 
 def main(args=None):
