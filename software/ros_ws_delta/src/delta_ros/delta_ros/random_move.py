@@ -75,9 +75,12 @@ class EffectorToClosestPointCloudNode(Node):
 
         #Define absolute max value per axis
         X = Y = 60
-        Z = [-10,90]
+        Z = [-10,90]       
 
-        try:
+        # Send movement command
+        self.send_grbl_command(f"$G28")
+
+        for i in range(5) :
             Xl = np.random.randint(-X, X + 1)
             Yl = np.random.randint(-Y, Y)
             Zl = np.random.randint(Z[0],Z[1])
@@ -94,7 +97,6 @@ class EffectorToClosestPointCloudNode(Node):
             self.send_grbl_command(f"$G1X{Xl}Y{Yl}Z-{Zl}F6000")
 
 
-            
         except Exception as e:
             self.get_logger().error(f"Error processing point cloud: {str(e)}")
             import traceback

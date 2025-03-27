@@ -24,7 +24,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'effector_to_closest = delta_ros.effector_to_closest:main'
+            'effector_to_closest = delta_ros.effector_to_closest:main',
+            'random_move = delta_ros.random_move:main'
         ],
     },
 )
