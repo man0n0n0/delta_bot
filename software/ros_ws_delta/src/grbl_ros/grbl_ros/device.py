@@ -181,7 +181,6 @@ class grbl_node(Node):
         elif(status.find('ok') > -1):
             # grbl device running command
             # check state
-            self.machine.send(str('?'))
             if(self.machine.state.name.upper() == self.machine.STATE.RUN.name):
                 # machine still running command
                 # wait until machine is idle
