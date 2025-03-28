@@ -44,11 +44,11 @@ class EffectorRandomMovementNode(Node):
         )
 
         # get machine info
-        self.get_logger().info(f"{process.communicate()}")
+        stdout, stderr = process.communicate()
+        self.get_logger().info(f"{stdout}")
 
         if waiting :
             process.wait()
-            stdout, stderr = process.communicate()
             if process.returncode != 0:
                 self.get_logger().error(f"Error executing command: {stderr}")
 
