@@ -44,7 +44,6 @@ class EffectorRandomMovementNode(Node):
         )
 
         if waiting :
-            Wait for the command to complete
             process.wait()
             stdout, stderr = process.communicate()
             if process.returncode != 0:
