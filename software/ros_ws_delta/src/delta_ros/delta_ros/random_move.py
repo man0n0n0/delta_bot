@@ -23,6 +23,9 @@ class EffectorRandomMovementNode(Node):
         # Create a timer to periodically trigger random movements
         self.timer = self.create_timer(1.0 / self.processing_rate, self.perform_random_movement)
         
+        # Send homing command
+        self.send_grbl_command("$G28")
+
         self.get_logger().info("Effector random movement node initialized!")
 
     def send_grbl_command(self, command):
@@ -50,9 +53,6 @@ class EffectorRandomMovementNode(Node):
         # Define absolute max value per axis
         X = Y = 60
         Z = [-10, 90]
-
-        # Send homing command
-        self.send_grbl_command("$G28")
 
         for i in range(6):
 
