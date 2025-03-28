@@ -43,6 +43,9 @@ class EffectorRandomMovementNode(Node):
             text=True
         )
 
+        # get machine info
+        self.get_logger().info(f"{process.communicate()}")
+
         if waiting :
             process.wait()
             stdout, stderr = process.communicate()
