@@ -44,10 +44,10 @@ class EffectorRandomMovementNode(Node):
         )
 
         # Wait for the command to complete
-        process.wait()
-        stdout, stderr = process.communicate()
-        if process.returncode != 0:
-            self.get_logger().error(f"Error executing command: {stderr}")
+        # process.wait()
+        # stdout, stderr = process.communicate()
+        # if process.returncode != 0:
+        #     self.get_logger().error(f"Error executing command: {stderr}")
 
     def perform_random_movement(self):
         # Define absolute max value per axis
