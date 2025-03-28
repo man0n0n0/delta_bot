@@ -11,7 +11,7 @@ class EffectorRandomMovementNode(Node):
         
         # Declare parameters
         self.declare_parameter('grbl_action_name', '/delta_marlin/send_gcode_cmd')
-        self.declare_parameter('processing_rate', 4.0)  # How often to move (Hz)
+        self.declare_parameter('processing_rate', 2.0)  # How often to move (Hz)
         
         # Get parameters
         self.grbl_action_name = self.get_parameter('grbl_action_name').value
@@ -64,7 +64,7 @@ class EffectorRandomMovementNode(Node):
         self.get_logger().info(f"Random coordinate: X={Xl}, Y={Yl}, Z={Zl}")
         
         # Send movement command
-        self.send_grbl_command(f"$G1X{Xl}Y{Yl}Z{Zl}F6000", waiting = False)
+        self.send_grbl_command(f"$G1X{Xl}Y{Yl}Z{Zl}F6000", waiting = True)
 
 def main(args=None):
     rclpy.init(args=args)
