@@ -189,9 +189,6 @@ class grbl_node(Node):
                 while self.machine.state.name.upper() == self.machine.STATE.RUN.name:
                     # poll status, publish position
                     time.sleep(0.01)
-                    self.machine.send(str('?'))
-                    status_msg.status = 'Running ' + str(goal_handle.request.command)
-                    goal_handle.publish_feedback(status_msg)
             # elif(self.machine.state.name.upper() == self.machine.STATE.ALARM.name):
                 # machine alarm is still active
                 # self.get_logger().warn('ALARM')
