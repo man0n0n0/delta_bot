@@ -176,7 +176,7 @@ class grbl_node(Node):
         if(status.find('error') > -1):
             # grbl device returned error code
             # decode error
-            self.decode_error(status)
+            selfgoal_handle.decode_error(status)
             result.success = False
         elif(status.find('ok') > -1):
             # grbl device running command

@@ -28,5 +28,5 @@ class control(object):
     """Control class to hold all control functions for the grbl device class."""
 
     def home(self):
-        """Home the GRBL device."""
-        self.send(self, '$H')
+        """Home the marlin device."""
+        self.send(self, '$G28')
