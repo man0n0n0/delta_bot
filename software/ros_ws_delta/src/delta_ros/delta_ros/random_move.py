@@ -24,11 +24,11 @@ class EffectorRandomMovementNode(Node):
         self.timer = self.create_timer(1.0 / self.processing_rate, self.perform_random_movement)
         
         # Send homing command
-        self.send_grbl_command("$G28")
+        self.send_grbl_command("$G28", waiting = True)
 
         self.get_logger().info("Effector random movement node initialized!")
 
-    def send_grbl_command(self, command):
+    def send_grbl_command(self, command, waiting):
         """Helper method to send GRBL commands via ros2 action"""
         ros2_command = [
             "ros2", "action", "send_goal",
@@ -43,11 +43,12 @@ class EffectorRandomMovementNode(Node):
             text=True
         )
 
-        # Wait for the command to complete
-        # process.wait()
-        # stdout, stderr = process.communicate()
-        # if process.returncode != 0:
-        #     self.get_logger().error(f"Error executing command: {stderr}")
+        if waiting :
+            Wait for the command to complete
+            process.wait()
+            stdout, stderr = process.communicate()
+            if process.returncode != 0:
+                self.get_logger().error(f"Error executing command: {stderr}")
 
     def perform_random_movement(self):
         # Define absolute max value per axis
@@ -63,7 +64,7 @@ class EffectorRandomMovementNode(Node):
         self.get_logger().info(f"Random coordinate: X={Xl}, Y={Yl}, Z={Zl}")
         
         # Send movement command
-        self.send_grbl_command(f"$G1X{Xl}Y{Yl}Z{Zl}F6000")
+        self.send_grbl_command(f"$G1X{Xl}Y{Yl}Z{Zl}F6000", waiting = False)
 
 def main(args=None):
     rclpy.init(args=args)
