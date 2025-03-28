@@ -24,9 +24,9 @@ namespace remote_serial {
 
 Port::Port(rclcpp::Node *node)
     : Implementation(node), port_settings_(new PortSettings()) {
-  node_->declare_parameter("serial_dev_name", "/dev/ttyS0");
+  node_->declare_parameter("serial_dev_name", "/dev/ttyACM0");
   node_->declare_parameter("serial_skip_init", false);
-  node_->declare_parameter("serial_baud_rate", 115200);
+  node_->declare_parameter("serial_baud_rate", 250000);
   node_->declare_parameter("serial_data", 8);
   node_->declare_parameter("serial_parity", false);
   node_->declare_parameter("serial_stop", 1);
@@ -144,6 +144,9 @@ int PortSettings::setup(int old_fd) {
         cfsetispeed(&tty, B115200);
         break;
       case 230400:
+        cfsetispeed(&tty, B230400);
+        break;
+      case 250000:
         cfsetispeed(&tty, B230400);
         break;
       // case 460800:
