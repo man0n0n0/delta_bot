@@ -235,10 +235,10 @@ class grbl_node(Node):
 
             status_msg = SendGcodeFile.Feedback()
 
-            # dont send another line until its done running
-            # status_msg.status = '[ ' + str(line_num) + ' / ' + str(file_length) + \
-            #    ' ] Running ' + str(line)
-            # goal_handle.publish_feedback(status_msg)
+            dont send another line until its done running
+            status_msg.status = '[ ' + str(line_num) + ' / ' + str(file_length) + \
+               ' ] Running ' + str(line)
+            goal_handle.publish_feedback(status_msg)
 
             line_num += 1
 
