@@ -11,7 +11,7 @@ class EffectorRandomMovementNode(Node):
         
         # Declare parameters
         self.declare_parameter('grbl_action_name', '/delta_marlin/send_gcode_cmd')
-        self.declare_parameter('processing_rate', 3.0)  # How often to move (Hz)
+        self.declare_parameter('processing_rate', 1.0)  # How often to move (Hz)
         
         # Get parameters
         self.grbl_action_name = self.get_parameter('grbl_action_name').value
@@ -54,6 +54,7 @@ class EffectorRandomMovementNode(Node):
         # Define absolute max value per axis
         X = Y = 60
         Z = [-10, 90]
+        incr = 5
 
         # Generate and send random coordinates
         Xl = np.random.randint(-X, X)
