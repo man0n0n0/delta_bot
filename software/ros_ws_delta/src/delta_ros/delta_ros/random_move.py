@@ -64,7 +64,7 @@ class EffectorRandomMovementNode(Node):
         self.get_logger().info(f"Random coordinate: X={Xl}, Y={Yl}, Z={Zl}")
         
         # Send movement command
-        self.send_grbl_command(f"$G1X{Xl}Y{Yl}Z{Zl}F6000", waiting = True)
+        self.send_grbl_command(f"$G1X{Xl}Y{Yl}Z{Zl}F6000", waiting = False)
 
 def main(args=None):
     rclpy.init(args=args)
