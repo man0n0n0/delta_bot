@@ -73,7 +73,7 @@ class EffectorToClosestPointCloudNode(Node):
         # Convert point cloud to numpy array with explicit coordinate extraction
         points_list = []
         for point in pc2.read_points(pointcloud_msg, skip_nans=True):
-            points_list.append((point[1], point[0], point[2]))
+            points_list.append((-1 * point[1], -1 * point[0], point[2]))
 
         total_points = len(points_list)
                     
