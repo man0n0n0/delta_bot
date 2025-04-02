@@ -25,7 +25,8 @@ setup(
     entry_points={
         'console_scripts': [
             'effector_to_closest = delta_ros.effector_to_closest:main',
-            'random_move = delta_ros.random_move:main'
+            'random_move = delta_ros.random_move:main',
+            'over_closest = delta_ros.over_closest:main',
         ],
     },
 )
