@@ -76,7 +76,9 @@ class EffectorToClosestPointCloudNode(Node):
             points_list.append((-1 * point[1], -1 * point[0], point[2]))
 
         total_points = len(points_list)
-                    
+        
+        self.get_logger().info(f"{total_points}")
+        
         if total_points == 0:
             self.get_logger().warn("Empty point cloud received")
             return
