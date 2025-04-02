@@ -16,7 +16,7 @@ class EffectorToClosestPointCloudNode(Node):
         # Declare parameters
         self.declare_parameter('pointcloud_topic', '/point_cloud')
         self.declare_parameter('grbl_action_name', '/delta_marlin/send_gcode_cmd')
-        self.declare_parameter('min_distance_threshold', 0.1)  # Minimum distance in meters to trigger action
+        self.declare_parameter('min_distance_threshold', 0.01)  # Minimum distance in meters to trigger action
         self.declare_parameter('max_distance_threshold', 0.3)  # maximum distance in meters to trigger action
         self.declare_parameter('processing_rate', 1.0)  # How often to process point clouds (Hz)
         self.declare_parameter('num_closest_points', 300)  # Number of closest points to average
