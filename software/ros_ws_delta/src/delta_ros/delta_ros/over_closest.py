@@ -62,80 +62,61 @@ class EffectorToClosestPointCloudNode(Node):
             text=True
         )
         
-        # Wait for the command to complete
-        process.wait()
-        stdout, stderr = process.communicate()
-        
-        if process.returncode != 0:
-            self.get_logger().error(f"Error executing command: {stderr}")
 
     def pointcloud_callback(self, pointcloud_msg):
-        # Control processing rate
-        current_time = self.get_clock().now()
-        if (current_time - self.last_process_time).nanoseconds / 1e9 < 1.0 / self.processing_rate:
-            return
-        self.last_process_time = current_time
+        # Convert point cloud to numpy array with explicit coordinate extraction
+        points_list = []
+        for point in pc2.read_points(pointcloud_msg, skip_nans=True):
+            # Mirror the x-coordinate (change the sign)
+            # This effectively flips the point cloud to adapt 
+            # y x order inverted  
+            points_list.append((-1 * point[1], -1 * point[0], point[2]))
         
-        try:
-            # Convert point cloud to numpy array with explicit coordinate extraction
-            points_list = []
-            for point in pc2.read_points(pointcloud_msg, skip_nans=True):
-                # Mirror the x-coordinate (change the sign)
-                # This effectively flips the point cloud to adapt 
-                # y x order inverted  
-                points_list.append((-1 * point[1], -1 * point[0], point[2]))
+        # Log point cloud information
+        total_points = len(points_list)
+                    
+        # Check if point cloud is empty
+        if total_points == 0:
+            self.get_logger().warn("Empty point cloud received")
+            return
+        
+        # Convert to numpy array of floats
+        points_array = np.array(points_list, dtype=np.float64)
+        
+        # Calculate distances from origin
+        distances = np.linalg.norm(points_array, axis=1)
+
+        # Sort points by distance
+        sorted_indices = np.argsort(distances)
+        
+        # Take the n closest points
+        closest_points_indices = sorted_indices[:self.num_closest_points]
+        closest_points = points_array[closest_points_indices]
+        
+        # Calculate the average of the closest points
+        average_point = np.mean(closest_points, axis=0)
+        
+        # Calculate average distance of the closest points
+        # average_distance = np.mean(distances[closest_points_indices])
+
+        self.get_logger().info(f"{average_point}")
+
+        # Only proceed if the average distance is within our threshold
+        if self.min_distance_threshold < average_point[2] < self.max_distance_threshold :
+
+            # Convert point coordinates to machine coordinates (mm)
+            x_machine = (self.prev_average_point[0] + average_point[0])* 1000.0 # Convert to mm 
+            y_machine = (self.prev_average_point[1] + average_point[1]) * 1000.0 # Convert to mm 
+            z_machine = 70
+
+            self.prev_average_point = average_point 
+
+            # Print the closest points information
+            self.get_logger().info(f"Average point coordinates: X={x_machine:.0f}, Y={y_machine:.0f}, Z={z_machine:.0f}")
             
-            # Log point cloud information
-            total_points = len(points_list)
-                        
-            # Check if point cloud is empty
-            if total_points == 0:
-                self.get_logger().warn("Empty point cloud received")
-                return
-            
-            # Convert to numpy array of floats
-            points_array = np.array(points_list, dtype=np.float64)
-            
-            # Calculate distances from origin
-            distances = np.linalg.norm(points_array, axis=1)
+            # Send movement command
+            self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z{z_machine:.0f}F6000")
 
-            # Sort points by distance
-            sorted_indices = np.argsort(distances)
-            
-            # Take the n closest points
-            closest_points_indices = sorted_indices[:self.num_closest_points]
-            closest_points = points_array[closest_points_indices]
-            
-            # Calculate the average of the closest points
-            average_point = np.mean(closest_points, axis=0)
-            
-            # Calculate average distance of the closest points
-            # average_distance = np.mean(distances[closest_points_indices])
-
-            self.get_logger().info(f"{average_point}")
-
-            # Only proceed if the average distance is within our threshold
-            if self.min_distance_threshold < average_point[2] < self.max_distance_threshold :
-
-                # Convert point coordinates to machine coordinates (mm)
-                x_machine = (self.prev_average_point[0] + average_point[0])* 1000.0 # Convert to mm 
-                y_machine = (self.prev_average_point[1] + average_point[1]) * 1000.0 # Convert to mm 
-                z_machine = 70
-
-                self.prev_average_point = average_point 
-
-                # Print the closest points information
-                self.get_logger().info(f"Average point coordinates: X={x_machine:.1f}, Y={y_machine:.1f}, Z={z_machine:.1f}")
-                
-                # Send movement command
-                self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z{z_machine:.0f}F6000")
-
-
-            
-        except Exception as e:
-            self.get_logger().error(f"Error processing point cloud: {str(e)}")
-            import traceback
-            traceback.print_exc()
 
 def main(args=None):
     rclpy.init(args=args)
