@@ -93,6 +93,7 @@ class EffectorToClosestPointCloudNode(Node):
         
         average_point = np.mean(closest_points, axis=0)
 
+        self.get_logger().info(f"{average_point}")
 
         x_machine = (average_point[0])* 1000.0 # Convert to mm 
         y_machine = (average_point[1]) * 1000.0 # Convert to mm 
