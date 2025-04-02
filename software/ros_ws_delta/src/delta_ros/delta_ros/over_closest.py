@@ -69,6 +69,7 @@ class EffectorToClosestPointCloudNode(Node):
         self.send_grbl_command("$G28")
         time.sleep(1)
 
+
         # Convert point cloud to numpy array with explicit coordinate extraction
         points_list = []
         for point in pc2.read_points(pointcloud_msg, skip_nans=True):
@@ -91,8 +92,7 @@ class EffectorToClosestPointCloudNode(Node):
         closest_points = points_array[closest_points_indices]
         
         average_point = np.mean(closest_points, axis=0)
-        
-        self.get_logger().info(f"{average_point}")
+
 
         x_machine = (average_point[0])* 1000.0 # Convert to mm 
         y_machine = (average_point[1]) * 1000.0 # Convert to mm 
