@@ -19,6 +19,8 @@ class EffectorToClosestPointCloudNode(Node):
         self.declare_parameter('min_distance_threshold', 0.005)  # Minimum distance in meters to trigger action
         self.declare_parameter('processing_rate', 1.0)  # How often to process point clouds (Hz)
         self.declare_parameter('num_closest_points', 300)  # Number of closest points to average
+        self.declare_parameter('x_limit', )  # Number of closest points to average
+
         
         # Get parameters
         self.pointcloud_topic = self.get_parameter('pointcloud_topic').value
@@ -102,7 +104,7 @@ class EffectorToClosestPointCloudNode(Node):
         # Convert point coordinates to machine coordinates (mm)
         x_machine = (self.prev_average_point[0] + average_point[0])* 1000.0 # Convert to mm 
         y_machine = (self.prev_average_point[1] + average_point[1]) * 1000.0 # Convert to mm 
-        z_machine = 70
+        z_machine = 110
 
         self.prev_average_point = average_point 
 
