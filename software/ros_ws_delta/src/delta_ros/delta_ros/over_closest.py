@@ -16,8 +16,7 @@ class EffectorToClosestPointCloudNode(Node):
         # Declare parameters
         self.declare_parameter('pointcloud_topic', '/point_cloud')
         self.declare_parameter('grbl_action_name', '/delta_marlin/send_gcode_cmd')
-        self.declare_parameter('min_distance_threshold', 0.01)  # Minimum distance in meters to trigger action
-        self.declare_parameter('max_distance_threshold', 0.3)  # maximum distance in meters to trigger action
+        self.declare_parameter('min_distance_threshold', 0.005)  # Minimum distance in meters to trigger action
         self.declare_parameter('processing_rate', 1.0)  # How often to process point clouds (Hz)
         self.declare_parameter('num_closest_points', 300)  # Number of closest points to average
         
@@ -25,7 +24,6 @@ class EffectorToClosestPointCloudNode(Node):
         self.pointcloud_topic = self.get_parameter('pointcloud_topic').value
         self.grbl_action_name = self.get_parameter('grbl_action_name').value
         self.min_distance_threshold = self.get_parameter('min_distance_threshold').value
-        self.max_distance_threshold = self.get_parameter('max_distance_threshold').value
         self.processing_rate = self.get_parameter('processing_rate').value
         self.num_closest_points = self.get_parameter('num_closest_points').value
 
@@ -102,7 +100,7 @@ class EffectorToClosestPointCloudNode(Node):
         self.get_logger().info(f"{average_point}")
 
         # Only proceed if the average distance is within our threshold
-        if self.min_distance_threshold < average_point[2] < self.max_distance_threshold :
+        if self.min_distance_threshold < average_point[2] :
 
             # Convert point coordinates to machine coordinates (mm)
             x_machine = (self.prev_average_point[0] + average_point[0])* 1000.0 # Convert to mm 
