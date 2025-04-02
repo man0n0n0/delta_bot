@@ -17,17 +17,17 @@ class EffectorToClosestPointCloudNode(Node):
         self.declare_parameter('pointcloud_topic', '/point_cloud')
         self.declare_parameter('grbl_action_name', '/delta_marlin/send_gcode_cmd')
         self.declare_parameter('min_distance_threshold', 0.005)  # Minimum distance in meters to trigger action
-        #self.declare_parameter('processing_rate', 0.25)  # How often to process point clouds (Hz)
-        self.declare_parameter('num_closest_points', 5000)  # Number of closest points to average
-        self.declare_parameter('x_limit', )  # Number of closest points to average
-
+        self.declare_parameter('num_closest_points', 5000)  # Max number of points to consider
+        self.declare_parameter('height_tolerance', 0.005)  # Tolerance for grouping points by height (in meters)
+        self.declare_parameter('min_cluster_size', 50)  # Minimum number of points in a cluster
         
         # Get parameters
         self.pointcloud_topic = self.get_parameter('pointcloud_topic').value
         self.grbl_action_name = self.get_parameter('grbl_action_name').value
         self.min_distance_threshold = self.get_parameter('min_distance_threshold').value
-        #self.processing_rate = self.get_parameter('processing_rate').value
         self.num_closest_points = self.get_parameter('num_closest_points').value
+        self.height_tolerance = self.get_parameter('height_tolerance').value
+        self.min_cluster_size = self.get_parameter('min_cluster_size').value
 
         # Subscribe to point cloud
         self.pointcloud_sub = self.create_subscription(
@@ -39,9 +39,9 @@ class EffectorToClosestPointCloudNode(Node):
         # Send homing command
         self.send_grbl_command("$G28")
 
-        self.prev_average_point = [0,0,0]
+        self.prev_target_point = [0, 0, 0]
         
-        self.get_logger().info("Effector to closest point cloud node initialized!")
+        self.get_logger().info("Effector to closest dense zone node initialized!")
 
     def send_grbl_command(self, command):
         """Helper method to send GRBL commands via ros2 action"""
@@ -58,14 +58,41 @@ class EffectorToClosestPointCloudNode(Node):
             stderr=subprocess.PIPE,
             text=True
         )
+
+    def find_dense_zones(self, points_array, height_tolerance, min_cluster_size):
+        """
+        Find zones with at least min_cluster_size points at the same height (within tolerance)
+        Returns a list of (center_point, num_points, distance_to_origin) for each zone
+        """
+        # Round z-coordinates to group by height within tolerance
+        z_rounded = np.round(points_array[:, 2] / height_tolerance) * height_tolerance
         
+        # Find unique heights and count points at each height
+        unique_heights, indices, counts = np.unique(z_rounded, return_inverse=True, return_counts=True)
+        
+        dense_zones = []
+        
+        # For each height with enough points
+        for i, height in enumerate(unique_heights):
+            if counts[i] >= min_cluster_size:
+                # Get all points at this height
+                height_points = points_array[z_rounded == height]
+                
+                # Calculate centroid of these points
+                centroid = np.mean(height_points, axis=0)
+                
+                # Calculate distance to origin
+                distance = np.linalg.norm(centroid)
+                
+                dense_zones.append((centroid, counts[i], distance))
+        
+        return dense_zones
 
     def pointcloud_callback(self, pointcloud_msg):
-        '''go home / take snapshot / go 10mm over closest point'''
+        '''go home / take snapshot / go 10mm over closest dense zone'''
         
         self.send_grbl_command("$G28")
         time.sleep(5)
-
 
         # Convert point cloud to numpy array with explicit coordinate extraction
         points_list = []
@@ -74,7 +101,7 @@ class EffectorToClosestPointCloudNode(Node):
 
         total_points = len(points_list)
         
-        self.get_logger().info(f"{total_points}")
+        self.get_logger().info(f"Total points: {total_points}")
 
         if total_points == 0:
             self.get_logger().warn("Empty point cloud received")
@@ -82,25 +109,36 @@ class EffectorToClosestPointCloudNode(Node):
         
         points_array = np.array(points_list, dtype=np.float64)
         
+        # Get the closest N points to consider for processing
         distances = np.linalg.norm(points_array, axis=1)
-
         sorted_indices = np.argsort(distances)
-        
-        # Take the n closest points
         closest_points_indices = sorted_indices[:self.num_closest_points]
         closest_points = points_array[closest_points_indices]
         
-        average_point = np.mean(closest_points, axis=0)
-
-        self.get_logger().info(f"{average_point}")
-
-        x_machine = (average_point[0])* 1000.0 # Convert to mm 
-        y_machine = (average_point[1]) * 1000.0 # Convert to mm 
-        z_machine = 10 + (average_point[2]* 1000.0) # Convert to mm // take to acocunt that atm the machine z0 isnt touching the plate
-
-        self.prev_average_point = average_point 
-
-        self.get_logger().info(f"Average point coordinates: X={x_machine:.0f}, Y={y_machine:.0f}, Z={z_machine:.0f}")
+        # Find dense zones in the closest points
+        dense_zones = self.find_dense_zones(closest_points, self.height_tolerance, self.min_cluster_size)
+        
+        if not dense_zones:
+            self.get_logger().warn("No dense zones found with at least 50 points at the same height")
+            return
+            
+        # Sort dense zones by distance to origin
+        dense_zones.sort(key=lambda x: x[2])
+        
+        # Get the closest dense zone
+        closest_dense_zone = dense_zones[0]
+        target_point = closest_dense_zone[0]
+        point_count = closest_dense_zone[1]
+        
+        self.get_logger().info(f"Found closest dense zone with {point_count} points at height {target_point[2]:.4f}m")
+        
+        x_machine = target_point[0] * 1000.0  # Convert to mm 
+        y_machine = target_point[1] * 1000.0  # Convert to mm 
+        z_machine = 10 + (target_point[2] * 1000.0)  # Convert to mm + 10mm offset
+        
+        self.prev_target_point = target_point
+        
+        self.get_logger().info(f"Moving to dense zone at: X={x_machine:.0f}, Y={y_machine:.0f}, Z={z_machine:.0f}")
         self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z{z_machine:.0f}F6000")                
         time.sleep(5)
 
