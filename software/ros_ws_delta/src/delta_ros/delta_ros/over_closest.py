@@ -26,7 +26,7 @@ class EffectorToClosestPointCloudNode(Node):
         self.pointcloud_topic = self.get_parameter('pointcloud_topic').value
         self.grbl_action_name = self.get_parameter('grbl_action_name').value
         self.min_distance_threshold = self.get_parameter('min_distance_threshold').value
-        self.processing_rate = self.get_parameter('processing_rate').value
+        #self.processing_rate = self.get_parameter('processing_rate').value
         self.num_closest_points = self.get_parameter('num_closest_points').value
 
         # Subscribe to point cloud
