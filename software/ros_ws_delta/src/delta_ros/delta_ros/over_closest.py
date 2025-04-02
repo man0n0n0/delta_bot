@@ -40,7 +40,7 @@ class EffectorToClosestPointCloudNode(Node):
         self.last_process_time = self.get_clock().now()
 
         # Send homing command
-        self.send_grbl_command("$G28", waiting = True)
+        self.send_grbl_command("$G28")
 
         self.prev_average_point = [0,0,0]
         
