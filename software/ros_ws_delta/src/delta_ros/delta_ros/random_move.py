@@ -16,6 +16,7 @@ class EffectorRandomMovementNode(Node):
         # Get parameters
         self.grbl_action_name = self.get_parameter('grbl_action_name').value
         self.processing_rate = self.get_parameter('processing_rate').value
+        self.prev_pos = [0,0,0]
         
         # Last processing time to control the rate
         self.last_process_time = self.get_clock().now()
@@ -55,17 +56,28 @@ class EffectorRandomMovementNode(Node):
         X = Y = 60
         Z = [-10, 90]
         incr = 5
+        output = ""
 
-        # Generate and send random coordinates
-        Xl = np.random.randint(-X, X)
-        Yl = np.random.randint(-Y, Y)
-        Zl = np.random.randint(Z[0], Z[1])
+        # # Generate and send random coordinates
+        # Xl = np.random.randint(-X, X)
+        # Yl = np.random.randint(-Y, Y)
+        # Zl = np.random.randint(Z[0], Z[1])
 
-        # Print the random coordinate
-        self.get_logger().info(f"Random coordinate: X={Xl}, Y={Yl}, Z={Zl}")
-        
-        # Send movement command
-        self.send_grbl_command(f"$G1X{Xl}Y{Yl}Z{Zl}F6000", waiting = False)
+        # # Generate and send random coordindirections
+        # Xd= np.random.randint(-1, 1)
+        # Yd = np.random.randint(-1, 1)
+        # Zd = np.random.randint(-1, 1)
+
+        for i in range(np.random.randint(X)) :
+            # Print the random coordinate
+            self.get_logger().info(f"Random target: X={Xl}, Y={Yl}, Z={Zl}")
+            
+            output += f"$G1X{Xd + prev_pos[0]}Y{Yd + rev_pos[1]+i}Z{Zd + prev_pos[2]}F6000\n"
+            
+            # Send movement command
+            self.send_grbl_command(output, waiting = False)
+
+        self.prev_pos = [Yl,Yl,Zl]
 
 def main(args=None):
     rclpy.init(args=args)
