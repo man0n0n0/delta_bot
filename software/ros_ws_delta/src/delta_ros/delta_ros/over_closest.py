@@ -20,7 +20,10 @@ class EffectorToClosestPointCloudNode(Node):
         self.declare_parameter('num_closest_points', 5000)  # Max number of points to consider
         self.declare_parameter('height_tolerance', 0.005)  # Tolerance for grouping points by height (in meters)
         self.declare_parameter('min_cluster_size', 50)  # Minimum number of points in a cluster
-        
+        self.declare_parameter('x_limit', (-150,150))  
+        self.declare_parameter('y_limit', (-150,150))  
+        self.declare_parameter('z_limit', (0,110))  
+
         # Get parameters
         self.pointcloud_topic = self.get_parameter('pointcloud_topic').value
         self.grbl_action_name = self.get_parameter('grbl_action_name').value
@@ -28,6 +31,9 @@ class EffectorToClosestPointCloudNode(Node):
         self.num_closest_points = self.get_parameter('num_closest_points').value
         self.height_tolerance = self.get_parameter('height_tolerance').value
         self.min_cluster_size = self.get_parameter('min_cluster_size').value
+        self.x_limit = self.get_parameter('x_limit').value
+        self.y_limit = self.get_parameter('y_limit').value
+        self.z_limit = self.get_parameter('z_limit').value
 
         # Subscribe to point cloud
         self.pointcloud_sub = self.create_subscription(
@@ -138,9 +144,14 @@ class EffectorToClosestPointCloudNode(Node):
         
         self.prev_target_point = target_point
         
-        self.get_logger().info(f"Moving to dense zone at: X={x_machine:.0f}, Y={y_machine:.0f}, Z={z_machine:.0f}")
-        self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z{z_machine:.0f}F6000")                
-        time.sleep(5)
+        if self.x_limit[0] < x_machine < self.x_limit[1] and self.y_limit[0] < y_machine < self.y_limit[1] and self.z_limit[0] < z_machine < self.z_limit[1] :
+            self.get_logger().info(f"Moving to dense zone at: X={x_machine:.0f}, Y={y_machine:.0f}, Z={z_machine:.0f}")
+            self.send_grbl_command(f"$G1X{x_machine:.0f}Y{y_machine:.0f}Z{z_machine:.0f}F6000")                
+            time.sleep(5)
+        
+        else :
+            self.get_logger().info(f"Dected cluster out of the machine physical limits")
+            return
 
 
 def main(args=None):
