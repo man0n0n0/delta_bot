@@ -18,7 +18,7 @@ class EffectorToClosestPointCloudNode(Node):
         self.declare_parameter('grbl_action_name', '/delta_marlin/send_gcode_cmd')
         self.declare_parameter('min_distance_threshold', 0.005)  # Minimum distance in meters to trigger action
         #self.declare_parameter('processing_rate', 0.25)  # How often to process point clouds (Hz)
-        self.declare_parameter('num_closest_points', 100)  # Number of closest points to average
+        self.declare_parameter('num_closest_points', 1000)  # Number of closest points to average
         self.declare_parameter('x_limit', )  # Number of closest points to average
 
         
@@ -78,7 +78,7 @@ class EffectorToClosestPointCloudNode(Node):
         total_points = len(points_list)
         
         self.get_logger().info(f"{total_points}")
-        
+
         if total_points == 0:
             self.get_logger().warn("Empty point cloud received")
             return
