@@ -70,7 +70,7 @@ class EffectorToClosestPointCloudNode(Node):
             # Mirror the x-coordinate (change the sign)
             # This effectively flips the point cloud to adapt 
             # y x order inverted  
-            points_list.append((-1 * point[1], -1 * point[0], point[2]))
+            points_list.append((point[1], point[0], point[2]))
         
         # Log point cloud information
         total_points = len(points_list)
