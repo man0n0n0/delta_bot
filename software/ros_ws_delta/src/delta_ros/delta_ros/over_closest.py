@@ -19,7 +19,7 @@ class EffectorToClosestPointCloudNode(Node):
         self.declare_parameter('min_distance_threshold', 0.005)  # Minimum distance in meters to trigger action
         self.declare_parameter('num_closest_points', 1000)  # Max number of points to consider
         self.declare_parameter('height_tolerance', 0.005)  # Tolerance for grouping points by height (in meters)
-        self.declare_parameter('min_cluster_size', 50)  # Minimum number of points in a cluster
+        self.declare_parameter('min_cluster_size', 200)  # Minimum number of points in a cluster
         self.declare_parameter('x_limit', (-150,150))  
         self.declare_parameter('y_limit', (-150,150))  
         self.declare_parameter('z_limit', (0,110))  
