@@ -10,7 +10,6 @@
   <depend>rclpy</depend>
   <depend>cv_bridge</depend>
   <depend>python-open3d-pip</depend>
-  <depend>python-sklearn</depend>
  
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
