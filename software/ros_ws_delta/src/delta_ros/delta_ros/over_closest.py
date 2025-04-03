@@ -17,7 +17,7 @@ class EffectorToClosestPointCloudNode(Node):
         self.declare_parameter('pointcloud_topic', '/point_cloud')
         self.declare_parameter('grbl_action_name', '/delta_marlin/send_gcode_cmd')
         self.declare_parameter('min_distance_threshold', 0.005)  # Minimum distance in meters to trigger action
-        self.declare_parameter('num_closest_points', 5000)  # Max number of points to consider
+        self.declare_parameter('num_closest_points', 1000)  # Max number of points to consider
         self.declare_parameter('height_tolerance', 0.005)  # Tolerance for grouping points by height (in meters)
         self.declare_parameter('min_cluster_size', 50)  # Minimum number of points in a cluster
         self.declare_parameter('x_limit', (-150,150))  
@@ -112,7 +112,7 @@ class EffectorToClosestPointCloudNode(Node):
         if total_points == 0:
             self.get_logger().warn("Empty point cloud received")
             return
-        
+         
         points_array = np.array(points_list, dtype=np.float64)
         
         # Get the closest N points to consider for processing
