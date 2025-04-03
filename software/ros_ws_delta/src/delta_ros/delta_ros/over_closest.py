@@ -17,9 +17,9 @@ class EffectorToClosestPointCloudNode(Node):
         self.declare_parameter('pointcloud_topic', '/point_cloud')
         self.declare_parameter('grbl_action_name', '/delta_marlin/send_gcode_cmd')
         self.declare_parameter('min_distance_threshold', 0.005)  # Minimum distance in meters to trigger action
-        self.declare_parameter('num_closest_points', 1000)  # Max number of points to consider
+        self.declare_parameter('num_closest_points', 10000)  # Max number of points to consider
         self.declare_parameter('height_tolerance', 0.005)  # Tolerance for grouping points by height (in meters)
-        self.declare_parameter('min_cluster_size', 200)  # Minimum number of points in a cluster
+        self.declare_parameter('min_cluster_size', 500)  # Minimum number of points in a cluster
         self.declare_parameter('x_limit', (-150,150))  
         self.declare_parameter('y_limit', (-150,150))  
         self.declare_parameter('z_limit', (0,110))  
@@ -140,7 +140,9 @@ class EffectorToClosestPointCloudNode(Node):
         
         x_machine = target_point[0] * 1000.0  # Convert to mm 
         y_machine = target_point[1] * 1000.0  # Convert to mm 
-        z_machine = 10 + (target_point[2] * 1000.0)  # Convert to mm + 10mm offset
+        #z_machine = 10 + (target_point[2] * 1000.0)  # Convert to mm + 10mm offset
+        z_machine = 70
+
         
         self.prev_target_point = target_point
         
