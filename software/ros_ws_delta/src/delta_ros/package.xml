@@ -9,7 +9,7 @@
 
   <depend>rclpy</depend>
   <depend>cv_bridge</depend>
-  <depend>python3-open3d</depend>
+  <depend>open3d</depend>
   <depend>python-sklearn</depend>
  
   <test_depend>ament_copyright</test_depend>
