@@ -8,7 +8,7 @@ import subprocess
 import time
 import sensor_msgs_py.point_cloud2 as pc2
 from sklearn.cluster import DBSCAN
-import open3d as o3d
+import open3d-python as o3d
 from collections import deque
 
 class ClosestObjectDetectionNode(Node):
