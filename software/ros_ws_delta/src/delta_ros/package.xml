@@ -9,6 +9,8 @@
 
   <depend>rclpy</depend>
   <depend>cv_bridge</depend>
+  <depend>libopen3d-dev</depend>
+  <depend>python-sklearn</depend>
  
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
