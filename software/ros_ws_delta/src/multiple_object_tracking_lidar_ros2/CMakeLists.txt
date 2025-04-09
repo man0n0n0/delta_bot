@@ -20,6 +20,7 @@ find_package(ament_cmake REQUIRED)
 find_package(pcl_ros REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(cv_bridge REQUIRED)
+find_package(visualization_msgs REQUIRED)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -41,6 +42,7 @@ ament_target_dependencies(multiple_object_tracking_lidar
     "rclcpp"
     "sensor_msgs"
     "cv_bridge"
+    "visualization_msgs"
 )
 
 rclcpp_components_register_nodes(multiple_object_tracking_lidar "multiple_object_tracking_lidar::MultipleObjectTrackingLidar")
@@ -50,6 +52,7 @@ add_executable(multiple_object_tracking_lidar_node
     src/multiple_object_tracking_lidar_node.cpp)
 target_link_libraries(multiple_object_tracking_lidar_node
     multiple_object_tracking_lidar
+    ${OpenCV_LIBS}
 )
 
 install(
