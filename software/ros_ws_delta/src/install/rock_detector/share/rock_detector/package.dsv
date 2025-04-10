@@ -1,0 +1,8 @@
+source;share/rock_detector/hook/cmake_prefix_path.ps1
+source;share/rock_detector/hook/cmake_prefix_path.dsv
+source;share/rock_detector/hook/cmake_prefix_path.sh
+source;share/rock_detector/local_setup.bash
+source;share/rock_detector/local_setup.dsv
+source;share/rock_detector/local_setup.ps1
+source;share/rock_detector/local_setup.sh
+source;share/rock_detector/local_setup.zsh

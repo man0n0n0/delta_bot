@@ -1,0 +1,123 @@
+[0.024s] Invoking command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/svevqx/delta_bot/software/ros_ws_delta/src/rock_detector -DCMAKE_INSTALL_PREFIX=/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector
+[0.110s] -- The C compiler identification is GNU 13.3.0
+[0.260s] -- The CXX compiler identification is GNU 13.3.0
+[0.292s] -- Detecting C compiler ABI info
+[0.439s] -- Detecting C compiler ABI info - done
+[0.457s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.458s] -- Detecting C compile features
+[0.459s] -- Detecting C compile features - done
+[0.481s] -- Detecting CXX compiler ABI info
+[0.623s] -- Detecting CXX compiler ABI info - done
+[0.649s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.651s] -- Detecting CXX compile features
+[0.653s] -- Detecting CXX compile features - done
+[0.672s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.978s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.240s] -- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.346s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.382s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.426s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.473s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.664s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.675s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.832s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.873s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.920s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.086s] -- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[2.261s] -- Found pcl_conversions: 2.6.2 (/opt/ros/jazzy/share/pcl_conversions/cmake)
+[2.490s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+[2.490s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[2.490s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[2.490s]   cmake_policy command to set the policy and suppress this warning.
+[2.491s] 
+[2.491s]   CMake variable FLANN_ROOT is set to:
+[2.491s] 
+[2.492s]     /usr
+[2.492s] 
+[2.492s]   For compatibility, find_package is ignoring the variable, but code in a
+[2.492s]   .cmake module might still use it.
+[2.493s] Call Stack (most recent call first):
+[2.493s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+[2.493s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+[2.493s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+[2.494s]   /opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[2.494s]   /opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[2.494s]   CMakeLists.txt:12 (find_package)
+[2.495s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.495s] [0m
+[2.495s] -- Found flann version 1.9.2
+[3.150s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[3.151s] -- Found OpenMP: TRUE (found version "4.5") found components: CXX 
+[5.670s] -- Checking for module 'libusb-1.0'
+[5.698s] --   Found libusb-1.0, version 1.0.27
+[5.756s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[5.759s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[5.856s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[5.865s] -- Could NOT find Pcap (missing: PCAP_LIBRARIES PCAP_INCLUDE_DIRS) 
+[5.899s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")  
+[5.939s] -- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.43") 
+[6.848s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[6.858s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[7.757s] -- Found Qhull version 8.0.2
+[8.593s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[9.508s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[9.510s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[9.512s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[9.514s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[9.517s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[9.519s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[9.519s] -- Found PCL_2D: /usr/include/pcl-1.14  
+[9.520s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.14  
+[9.522s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[9.525s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[9.527s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[9.530s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[9.532s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[9.535s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[9.537s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[9.539s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[9.542s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[9.547s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[9.551s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[9.555s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[9.558s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.14  
+[9.559s] -- Found PCL_MODELER: /usr/include/pcl-1.14  
+[9.561s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.14  
+[9.564s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[9.568s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[9.584s] -- Found pcl_ros: 2.6.2 (/opt/ros/jazzy/share/pcl_ros/cmake)
+[9.991s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[9.995s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[9.995s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[10.012s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[10.233s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[10.234s] -- Configured cppcheck include dirs: 
+[10.234s] -- Configured cppcheck exclude dirs and/or files: 
+[10.238s] -- Added test 'lint_cmake' to check CMake code style
+[10.243s] -- Added test 'uncrustify' to check C / C++ code style
+[10.244s] -- Configured uncrustify additional arguments: 
+[10.248s] -- Added test 'xmllint' to check XML markup files
+[10.261s] -- Configuring done (10.2s)
+[10.280s] -- Generating done (0.0s)
+[10.287s] -- Build files have been written to: /home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector
+[10.329s] Invoked command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/svevqx/delta_bot/software/ros_ws_delta/src/rock_detector -DCMAKE_INSTALL_PREFIX=/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector
+[10.334s] Invoking command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector -- -j4 -l4
+[10.416s] Invoked command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector -- -j4 -l4
+[10.434s] Invoking command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector
+[10.449s] -- Install configuration: ""
+[10.450s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/ament_index/resource_index/package_run_dependencies/rock_detector
+[10.450s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/ament_index/resource_index/parent_prefix_path/rock_detector
+[10.451s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/environment/ament_prefix_path.sh
+[10.452s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/environment/ament_prefix_path.dsv
+[10.452s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/environment/path.sh
+[10.453s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/environment/path.dsv
+[10.453s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/local_setup.bash
+[10.454s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/local_setup.sh
+[10.456s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/local_setup.zsh
+[10.456s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/local_setup.dsv
+[10.456s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/package.dsv
+[10.457s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/ament_index/resource_index/packages/rock_detector
+[10.457s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/cmake/rock_detectorConfig.cmake
+[10.457s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/cmake/rock_detectorConfig-version.cmake
+[10.457s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/package.xml
+[10.460s] Invoked command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector

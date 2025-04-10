@@ -1,0 +1,16 @@
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/lib/rock_detector/rock_detector_node
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/ament_index/resource_index/package_run_dependencies/rock_detector
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/ament_index/resource_index/parent_prefix_path/rock_detector
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/environment/ament_prefix_path.sh
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/environment/ament_prefix_path.dsv
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/environment/path.sh
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/environment/path.dsv
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/local_setup.bash
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/local_setup.sh
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/local_setup.zsh
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/local_setup.dsv
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/package.dsv
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/ament_index/resource_index/packages/rock_detector
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/cmake/rock_detectorConfig.cmake
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/cmake/rock_detectorConfig-version.cmake
+/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/package.xml

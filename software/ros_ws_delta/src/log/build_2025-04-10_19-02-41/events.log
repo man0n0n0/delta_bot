@@ -1,0 +1,510 @@
+[0.000000] (-) TimerEvent: {}
+[0.000780] (-) JobUnselected: {'identifier': 'arducam_rclpy_tof_pointcloud'}
+[0.000842] (-) JobUnselected: {'identifier': 'delta_ros'}
+[0.000881] (-) JobUnselected: {'identifier': 'grbl_ros'}
+[0.000913] (-) JobUnselected: {'identifier': 'multiple_object_tracking_lidar'}
+[0.000945] (-) JobUnselected: {'identifier': 'remote_serial'}
+[0.000978] (rock_detector) JobQueued: {'identifier': 'rock_detector', 'dependencies': OrderedDict()}
+[0.001013] (rock_detector) JobStarted: {'identifier': 'rock_detector'}
+[0.020302] (rock_detector) JobProgress: {'identifier': 'rock_detector', 'progress': 'cmake'}
+[0.021816] (rock_detector) JobProgress: {'identifier': 'rock_detector', 'progress': 'build'}
+[0.022895] (rock_detector) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector', '--', '-j4', '-l4'], 'cwd': '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'svevqx', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/svevqx/delta_bot/software/ros_ws_delta/install/multiple_object_tracking_lidar/lib:/home/svevqx/delta_bot/software/ros_ws_delta/install/remote_serial/lib:/home/svevqx/delta_bot/software/ros_ws_delta/install/pcl_object_detection/lib:/home/svevqx/delta_bot/software/ros_ws_delta/install/action_interfaces/lib:/home/svevqx/ros2_ws/install/ldlidar_component/lib:/home/svevqx/ros2_ws/install/examples_rclcpp_wait_set/lib:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_subscriber/lib:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_composition/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/svevqx', 'OLDPWD': '/home/svevqx/delta_bot/software/ros_ws_delta', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1473', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/opt/ros/jazzy/', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/svevqx/delta_bot/software/ros_ws_delta/src/install:/home/svevqx/delta_bot/software/ros_ws_delta/install:/home/svevqx/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'svevqx', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PIP_BREAK_SYSTEM_PACKAGES': '1', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'svevqx', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/home/svevqx/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/svevqx/.local/bin:/home/svevqx/.local/bin', 'SESSION_MANAGER': 'local/svevqx-ThinkPad-S1-Yoga-12:@/tmp/.ICE-unix/1441,unix/svevqx-ThinkPad-S1-Yoga-12:/tmp/.ICE-unix/1441', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/86bcbfe0_d4ab_45c4_bcfd_7b0d892181b0', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.VOV112', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.761', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/multiple_object_tracking_lidar:/home/svevqx/delta_bot/software/ros_ws_delta/install/remote_serial:/home/svevqx/delta_bot/software/ros_ws_delta/install/pcl_object_detection:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/delta_bot/software/ros_ws_delta/install/action_interfaces:/home/svevqx/ros2_ws/install/ldlidar:/home/svevqx/ros2_ws/install/ldlidar_node:/home/svevqx/ros2_ws/install/ldlidar_component:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/home/svevqx/ros2_ws/install/examples_rclcpp_wait_set:/home/svevqx/ros2_ws/install/examples_rclcpp_multithreaded_executor:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_timer:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_service:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_composition:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_client:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclcpp_cbg_executor:/home/svevqx/ros2_ws/install/examples_rclcpp_async_client:/home/svevqx/ros2_ws/install/cpp_pubsub:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros/lib/python3.12/site-packages:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros/lib/python3.12/site-packages:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface/lib/python3.12/site-packages:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/lib/python3.12/site-packages:/home/svevqx/delta_bot/software/ros_ws_delta/install/action_interfaces/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/launch_testing_examples/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/grbl_ros/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_executors/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector:/home/svevqx/delta_bot/software/ros_ws_delta/install/multiple_object_tracking_lidar:/home/svevqx/delta_bot/software/ros_ws_delta/install/remote_serial:/home/svevqx/delta_bot/software/ros_ws_delta/install/pcl_object_detection:/home/svevqx/delta_bot/software/ros_ws_delta/install/action_interfaces:/home/svevqx/ros2_ws/install/ldlidar:/home/svevqx/ros2_ws/install/ldlidar_node:/home/svevqx/ros2_ws/install/ldlidar_component:/home/svevqx/ros2_ws/install/examples_rclcpp_wait_set:/home/svevqx/ros2_ws/install/examples_rclcpp_multithreaded_executor:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_timer:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_service:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_composition:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_client:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclcpp_cbg_executor:/home/svevqx/ros2_ws/install/examples_rclcpp_async_client:/home/svevqx/ros2_ws/install/cpp_pubsub:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy'}), 'shell': False}
+[0.066295] (rock_detector) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099638] (-) TimerEvent: {}
+[0.199971] (-) TimerEvent: {}
+[0.300262] (-) TimerEvent: {}
+[0.400754] (-) TimerEvent: {}
+[0.451804] (rock_detector) StdoutLine: {'line': b'-- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.500877] (-) TimerEvent: {}
+[0.504959] (rock_detector) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.525993] (rock_detector) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.551261] (rock_detector) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.579689] (rock_detector) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.600995] (-) TimerEvent: {}
+[0.701313] (-) TimerEvent: {}
+[0.707190] (rock_detector) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.713767] (rock_detector) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.801445] (-) TimerEvent: {}
+[0.833515] (rock_detector) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.901575] (-) TimerEvent: {}
+[0.959431] (rock_detector) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[1.001706] (-) TimerEvent: {}
+[1.069118] (rock_detector) StdoutLine: {'line': b'-- Found pcl_conversions: 2.6.2 (/opt/ros/jazzy/share/pcl_conversions/cmake)\n'}
+[1.101822] (-) TimerEvent: {}
+[1.164748] (rock_detector) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):\n'}
+[1.165111] (rock_detector) StderrLine: {'line': b'  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT\n'}
+[1.165335] (rock_detector) StderrLine: {'line': b'  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the\n'}
+[1.165544] (rock_detector) StderrLine: {'line': b'  cmake_policy command to set the policy and suppress this warning.\n'}
+[1.165775] (rock_detector) StderrLine: {'line': b'\n'}
+[1.165991] (rock_detector) StderrLine: {'line': b'  CMake variable FLANN_ROOT is set to:\n'}
+[1.166213] (rock_detector) StderrLine: {'line': b'\n'}
+[1.166431] (rock_detector) StderrLine: {'line': b'    /usr\n'}
+[1.166735] (rock_detector) StderrLine: {'line': b'\n'}
+[1.166950] (rock_detector) StderrLine: {'line': b'  For compatibility, find_package is ignoring the variable, but code in a\n'}
+[1.167156] (rock_detector) StderrLine: {'line': b'  .cmake module might still use it.\n'}
+[1.167359] (rock_detector) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.167559] (rock_detector) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)\n'}
+[1.167783] (rock_detector) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)\n'}
+[1.167989] (rock_detector) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)\n'}
+[1.168191] (rock_detector) StderrLine: {'line': b'  /opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[1.168393] (rock_detector) StderrLine: {'line': b'  /opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)\n'}
+[1.168615] (rock_detector) StderrLine: {'line': b'  CMakeLists.txt:11 (find_package)\n'}
+[1.168838] (rock_detector) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.169039] (rock_detector) StderrLine: {'line': b'\x1b[0m\n'}
+[1.169240] (rock_detector) StdoutLine: {'line': b'-- Found flann version 1.9.2\n'}
+[1.201947] (-) TimerEvent: {}
+[1.302294] (-) TimerEvent: {}
+[1.402642] (-) TimerEvent: {}
+[1.503037] (-) TimerEvent: {}
+[1.603505] (-) TimerEvent: {}
+[1.703855] (-) TimerEvent: {}
+[1.804212] (-) TimerEvent: {}
+[1.904577] (-) TimerEvent: {}
+[2.005031] (-) TimerEvent: {}
+[2.105427] (-) TimerEvent: {}
+[2.111908] (rock_detector) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[2.123017] (rock_detector) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[2.129568] (rock_detector) StdoutLine: {'line': b'-- Could NOT find Pcap (missing: PCAP_LIBRARIES PCAP_INCLUDE_DIRS) \n'}
+[2.205562] (-) TimerEvent: {}
+[2.305937] (-) TimerEvent: {}
+[2.406314] (-) TimerEvent: {}
+[2.506744] (-) TimerEvent: {}
+[2.607231] (-) TimerEvent: {}
+[2.707552] (-) TimerEvent: {}
+[2.807891] (-) TimerEvent: {}
+[2.908212] (-) TimerEvent: {}
+[3.008533] (-) TimerEvent: {}
+[3.098699] (rock_detector) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[3.108436] (rock_detector) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[3.108693] (-) TimerEvent: {}
+[3.208948] (-) TimerEvent: {}
+[3.309347] (-) TimerEvent: {}
+[3.409870] (-) TimerEvent: {}
+[3.510729] (-) TimerEvent: {}
+[3.611127] (-) TimerEvent: {}
+[3.711498] (-) TimerEvent: {}
+[3.811874] (-) TimerEvent: {}
+[3.912233] (-) TimerEvent: {}
+[3.983397] (rock_detector) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[4.012351] (-) TimerEvent: {}
+[4.113048] (-) TimerEvent: {}
+[4.214014] (-) TimerEvent: {}
+[4.314348] (-) TimerEvent: {}
+[4.414712] (-) TimerEvent: {}
+[4.515062] (-) TimerEvent: {}
+[4.615424] (-) TimerEvent: {}
+[4.715807] (-) TimerEvent: {}
+[4.816124] (-) TimerEvent: {}
+[4.853271] (rock_detector) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[4.916240] (-) TimerEvent: {}
+[5.016597] (-) TimerEvent: {}
+[5.116973] (-) TimerEvent: {}
+[5.217359] (-) TimerEvent: {}
+[5.317668] (-) TimerEvent: {}
+[5.417963] (-) TimerEvent: {}
+[5.518269] (-) TimerEvent: {}
+[5.618671] (-) TimerEvent: {}
+[5.694833] (rock_detector) StdoutLine: {'line': b'-- Found pcl_ros: 2.6.2 (/opt/ros/jazzy/share/pcl_ros/cmake)\n'}
+[5.718781] (-) TimerEvent: {}
+[5.819183] (-) TimerEvent: {}
+[5.919588] (-) TimerEvent: {}
+[5.959453] (rock_detector) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[5.961867] (rock_detector) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[5.969258] (rock_detector) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at CMakeLists.txt:13 (find_package):\n'}
+[5.969563] (rock_detector) StderrLine: {'line': b'  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.\n'}
+[5.969816] (rock_detector) StderrLine: {'line': b'  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy\n'}
+[5.970039] (rock_detector) StderrLine: {'line': b'  command to set the policy and suppress this warning.\n'}
+[5.970251] (rock_detector) StderrLine: {'line': b'\n'}
+[5.970462] (rock_detector) StderrLine: {'line': b'  CMake variable PCL_ROOT is set to:\n'}
+[5.970680] (rock_detector) StderrLine: {'line': b'\n'}
+[5.970903] (rock_detector) StderrLine: {'line': b'    /usr\n'}
+[5.971114] (rock_detector) StderrLine: {'line': b'\n'}
+[5.971323] (rock_detector) StderrLine: {'line': b'  For compatibility, CMake is ignoring the variable.\n'}
+[5.971552] (rock_detector) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[5.971779] (rock_detector) StderrLine: {'line': b'\x1b[0m\n'}
+[6.019717] (-) TimerEvent: {}
+[6.120070] (-) TimerEvent: {}
+[6.196835] (rock_detector) StdoutLine: {'line': b'-- Configuring done (6.1s)\n'}
+[6.220499] (-) TimerEvent: {}
+[6.321674] (-) TimerEvent: {}
+[6.378994] (rock_detector) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[6.389789] (rock_detector) StdoutLine: {'line': b'-- Build files have been written to: /home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector\n'}
+[6.421778] (-) TimerEvent: {}
+[6.466451] (rock_detector) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/rock_detector_node.dir/src/rock_detector_node.cpp.o\x1b[0m\n'}
+[6.521893] (-) TimerEvent: {}
+[6.622225] (-) TimerEvent: {}
+[6.722583] (-) TimerEvent: {}
+[6.822943] (-) TimerEvent: {}
+[6.923260] (-) TimerEvent: {}
+[7.023604] (-) TimerEvent: {}
+[7.123966] (-) TimerEvent: {}
+[7.224300] (-) TimerEvent: {}
+[7.324673] (-) TimerEvent: {}
+[7.425048] (-) TimerEvent: {}
+[7.525456] (-) TimerEvent: {}
+[7.625852] (-) TimerEvent: {}
+[7.726188] (-) TimerEvent: {}
+[7.826546] (-) TimerEvent: {}
+[7.926897] (-) TimerEvent: {}
+[8.027240] (-) TimerEvent: {}
+[8.127597] (-) TimerEvent: {}
+[8.227987] (-) TimerEvent: {}
+[8.328379] (-) TimerEvent: {}
+[8.428733] (-) TimerEvent: {}
+[8.529110] (-) TimerEvent: {}
+[8.629523] (-) TimerEvent: {}
+[8.729924] (-) TimerEvent: {}
+[8.830301] (-) TimerEvent: {}
+[8.930707] (-) TimerEvent: {}
+[9.031036] (-) TimerEvent: {}
+[9.131444] (-) TimerEvent: {}
+[9.231819] (-) TimerEvent: {}
+[9.332158] (-) TimerEvent: {}
+[9.432521] (-) TimerEvent: {}
+[9.532916] (-) TimerEvent: {}
+[9.633281] (-) TimerEvent: {}
+[9.733615] (-) TimerEvent: {}
+[9.833995] (-) TimerEvent: {}
+[9.934302] (-) TimerEvent: {}
+[10.034629] (-) TimerEvent: {}
+[10.134981] (-) TimerEvent: {}
+[10.235317] (-) TimerEvent: {}
+[10.335692] (-) TimerEvent: {}
+[10.436065] (-) TimerEvent: {}
+[10.536398] (-) TimerEvent: {}
+[10.636762] (-) TimerEvent: {}
+[10.737122] (-) TimerEvent: {}
+[10.837483] (-) TimerEvent: {}
+[10.937870] (-) TimerEvent: {}
+[11.038226] (-) TimerEvent: {}
+[11.138600] (-) TimerEvent: {}
+[11.238969] (-) TimerEvent: {}
+[11.339392] (-) TimerEvent: {}
+[11.439861] (-) TimerEvent: {}
+[11.540302] (-) TimerEvent: {}
+[11.640735] (-) TimerEvent: {}
+[11.741169] (-) TimerEvent: {}
+[11.841582] (-) TimerEvent: {}
+[11.942034] (-) TimerEvent: {}
+[12.042471] (-) TimerEvent: {}
+[12.142917] (-) TimerEvent: {}
+[12.243343] (-) TimerEvent: {}
+[12.344734] (-) TimerEvent: {}
+[12.445213] (-) TimerEvent: {}
+[12.545737] (-) TimerEvent: {}
+[12.646180] (-) TimerEvent: {}
+[12.746595] (-) TimerEvent: {}
+[12.847026] (-) TimerEvent: {}
+[12.947465] (-) TimerEvent: {}
+[13.047924] (-) TimerEvent: {}
+[13.148334] (-) TimerEvent: {}
+[13.248734] (-) TimerEvent: {}
+[13.349141] (-) TimerEvent: {}
+[13.449550] (-) TimerEvent: {}
+[13.549983] (-) TimerEvent: {}
+[13.650405] (-) TimerEvent: {}
+[13.751464] (-) TimerEvent: {}
+[13.851837] (-) TimerEvent: {}
+[13.952223] (-) TimerEvent: {}
+[14.052595] (-) TimerEvent: {}
+[14.152970] (-) TimerEvent: {}
+[14.253338] (-) TimerEvent: {}
+[14.353728] (-) TimerEvent: {}
+[14.454186] (-) TimerEvent: {}
+[14.554555] (-) TimerEvent: {}
+[14.654876] (-) TimerEvent: {}
+[14.755242] (-) TimerEvent: {}
+[14.855658] (-) TimerEvent: {}
+[14.956054] (-) TimerEvent: {}
+[15.056415] (-) TimerEvent: {}
+[15.156731] (-) TimerEvent: {}
+[15.257083] (-) TimerEvent: {}
+[15.362844] (-) TimerEvent: {}
+[15.463167] (-) TimerEvent: {}
+[15.563521] (-) TimerEvent: {}
+[15.663910] (-) TimerEvent: {}
+[15.764313] (-) TimerEvent: {}
+[15.864665] (-) TimerEvent: {}
+[15.965080] (-) TimerEvent: {}
+[16.065398] (-) TimerEvent: {}
+[16.165724] (-) TimerEvent: {}
+[16.266057] (-) TimerEvent: {}
+[16.366495] (-) TimerEvent: {}
+[16.466911] (-) TimerEvent: {}
+[16.567390] (-) TimerEvent: {}
+[16.667916] (-) TimerEvent: {}
+[16.768471] (-) TimerEvent: {}
+[16.868922] (-) TimerEvent: {}
+[16.969846] (-) TimerEvent: {}
+[17.070236] (-) TimerEvent: {}
+[17.170593] (-) TimerEvent: {}
+[17.270988] (-) TimerEvent: {}
+[17.371305] (-) TimerEvent: {}
+[17.471614] (-) TimerEvent: {}
+[17.571969] (-) TimerEvent: {}
+[17.672321] (-) TimerEvent: {}
+[17.772665] (-) TimerEvent: {}
+[17.872998] (-) TimerEvent: {}
+[17.973350] (-) TimerEvent: {}
+[18.073709] (-) TimerEvent: {}
+[18.174042] (-) TimerEvent: {}
+[18.274437] (-) TimerEvent: {}
+[18.374864] (-) TimerEvent: {}
+[18.475227] (-) TimerEvent: {}
+[18.575555] (-) TimerEvent: {}
+[18.675888] (-) TimerEvent: {}
+[18.776227] (-) TimerEvent: {}
+[18.876559] (-) TimerEvent: {}
+[18.976918] (-) TimerEvent: {}
+[19.077258] (-) TimerEvent: {}
+[19.177601] (-) TimerEvent: {}
+[19.277968] (-) TimerEvent: {}
+[19.378288] (-) TimerEvent: {}
+[19.478613] (-) TimerEvent: {}
+[19.578946] (-) TimerEvent: {}
+[19.679346] (-) TimerEvent: {}
+[19.779765] (-) TimerEvent: {}
+[19.880143] (-) TimerEvent: {}
+[19.980505] (-) TimerEvent: {}
+[20.080808] (-) TimerEvent: {}
+[20.181165] (-) TimerEvent: {}
+[20.281518] (-) TimerEvent: {}
+[20.381926] (-) TimerEvent: {}
+[20.482278] (-) TimerEvent: {}
+[20.582619] (-) TimerEvent: {}
+[20.683007] (-) TimerEvent: {}
+[20.783400] (-) TimerEvent: {}
+[20.883836] (-) TimerEvent: {}
+[20.984187] (-) TimerEvent: {}
+[21.084574] (-) TimerEvent: {}
+[21.184933] (-) TimerEvent: {}
+[21.285271] (-) TimerEvent: {}
+[21.385654] (-) TimerEvent: {}
+[21.486004] (-) TimerEvent: {}
+[21.586368] (-) TimerEvent: {}
+[21.686811] (-) TimerEvent: {}
+[21.787793] (-) TimerEvent: {}
+[21.888350] (-) TimerEvent: {}
+[21.988746] (-) TimerEvent: {}
+[22.089185] (-) TimerEvent: {}
+[22.189599] (-) TimerEvent: {}
+[22.291977] (-) TimerEvent: {}
+[22.392379] (-) TimerEvent: {}
+[22.492777] (-) TimerEvent: {}
+[22.593088] (-) TimerEvent: {}
+[22.693488] (-) TimerEvent: {}
+[22.793900] (-) TimerEvent: {}
+[22.894190] (-) TimerEvent: {}
+[22.994573] (-) TimerEvent: {}
+[23.095003] (-) TimerEvent: {}
+[23.195391] (-) TimerEvent: {}
+[23.295721] (-) TimerEvent: {}
+[23.396080] (-) TimerEvent: {}
+[23.496479] (-) TimerEvent: {}
+[23.596948] (-) TimerEvent: {}
+[23.697456] (-) TimerEvent: {}
+[23.798879] (-) TimerEvent: {}
+[23.899278] (-) TimerEvent: {}
+[23.999697] (-) TimerEvent: {}
+[24.103266] (-) TimerEvent: {}
+[24.204379] (-) TimerEvent: {}
+[24.304732] (-) TimerEvent: {}
+[24.405106] (-) TimerEvent: {}
+[24.505483] (-) TimerEvent: {}
+[24.605923] (-) TimerEvent: {}
+[24.706236] (-) TimerEvent: {}
+[24.806583] (-) TimerEvent: {}
+[24.906975] (-) TimerEvent: {}
+[25.007330] (-) TimerEvent: {}
+[25.107710] (-) TimerEvent: {}
+[25.208073] (-) TimerEvent: {}
+[25.308427] (-) TimerEvent: {}
+[25.408808] (-) TimerEvent: {}
+[25.509160] (-) TimerEvent: {}
+[25.609517] (-) TimerEvent: {}
+[25.709901] (-) TimerEvent: {}
+[25.810259] (-) TimerEvent: {}
+[25.910834] (-) TimerEvent: {}
+[26.011262] (-) TimerEvent: {}
+[26.111632] (-) TimerEvent: {}
+[26.212007] (-) TimerEvent: {}
+[26.313178] (-) TimerEvent: {}
+[26.413535] (-) TimerEvent: {}
+[26.514844] (-) TimerEvent: {}
+[26.615188] (-) TimerEvent: {}
+[26.715554] (-) TimerEvent: {}
+[26.815953] (-) TimerEvent: {}
+[26.916294] (-) TimerEvent: {}
+[27.016578] (-) TimerEvent: {}
+[27.116944] (-) TimerEvent: {}
+[27.217335] (-) TimerEvent: {}
+[27.317676] (-) TimerEvent: {}
+[27.420972] (-) TimerEvent: {}
+[27.521419] (-) TimerEvent: {}
+[27.621814] (-) TimerEvent: {}
+[27.722231] (-) TimerEvent: {}
+[27.822633] (-) TimerEvent: {}
+[27.923057] (-) TimerEvent: {}
+[28.024962] (-) TimerEvent: {}
+[28.125380] (-) TimerEvent: {}
+[28.225773] (-) TimerEvent: {}
+[28.326270] (-) TimerEvent: {}
+[28.426722] (-) TimerEvent: {}
+[28.527147] (-) TimerEvent: {}
+[28.627602] (-) TimerEvent: {}
+[28.728095] (-) TimerEvent: {}
+[28.833199] (-) TimerEvent: {}
+[28.933553] (-) TimerEvent: {}
+[29.033963] (-) TimerEvent: {}
+[29.134337] (-) TimerEvent: {}
+[29.234714] (-) TimerEvent: {}
+[29.335124] (-) TimerEvent: {}
+[29.439325] (-) TimerEvent: {}
+[29.539761] (-) TimerEvent: {}
+[29.642873] (-) TimerEvent: {}
+[29.743306] (-) TimerEvent: {}
+[29.843735] (-) TimerEvent: {}
+[29.944142] (-) TimerEvent: {}
+[30.044523] (-) TimerEvent: {}
+[30.144912] (-) TimerEvent: {}
+[30.245278] (-) TimerEvent: {}
+[30.345598] (-) TimerEvent: {}
+[30.445928] (-) TimerEvent: {}
+[30.546259] (-) TimerEvent: {}
+[30.646669] (-) TimerEvent: {}
+[30.746977] (-) TimerEvent: {}
+[30.847312] (-) TimerEvent: {}
+[30.947664] (-) TimerEvent: {}
+[31.047979] (-) TimerEvent: {}
+[31.148315] (-) TimerEvent: {}
+[31.248671] (-) TimerEvent: {}
+[31.349011] (-) TimerEvent: {}
+[31.449346] (-) TimerEvent: {}
+[31.549701] (-) TimerEvent: {}
+[31.652974] (-) TimerEvent: {}
+[31.753371] (-) TimerEvent: {}
+[31.853845] (-) TimerEvent: {}
+[31.954366] (-) TimerEvent: {}
+[31.981465] (rock_detector) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable rock_detector_node\x1b[0m\n'}
+[32.054509] (-) TimerEvent: {}
+[32.155875] (-) TimerEvent: {}
+[32.256227] (-) TimerEvent: {}
+[32.356685] (-) TimerEvent: {}
+[32.457144] (-) TimerEvent: {}
+[32.557513] (-) TimerEvent: {}
+[32.657934] (-) TimerEvent: {}
+[32.758376] (-) TimerEvent: {}
+[32.858865] (-) TimerEvent: {}
+[32.963316] (-) TimerEvent: {}
+[33.063760] (-) TimerEvent: {}
+[33.164152] (-) TimerEvent: {}
+[33.264544] (-) TimerEvent: {}
+[33.364935] (-) TimerEvent: {}
+[33.465331] (-) TimerEvent: {}
+[33.565717] (-) TimerEvent: {}
+[33.666107] (-) TimerEvent: {}
+[33.766571] (-) TimerEvent: {}
+[33.866987] (-) TimerEvent: {}
+[33.967364] (-) TimerEvent: {}
+[34.067735] (-) TimerEvent: {}
+[34.168126] (-) TimerEvent: {}
+[34.268582] (-) TimerEvent: {}
+[34.369055] (-) TimerEvent: {}
+[34.469436] (-) TimerEvent: {}
+[34.569775] (-) TimerEvent: {}
+[34.670130] (-) TimerEvent: {}
+[34.770558] (-) TimerEvent: {}
+[34.871005] (-) TimerEvent: {}
+[34.971521] (-) TimerEvent: {}
+[35.071888] (-) TimerEvent: {}
+[35.172277] (-) TimerEvent: {}
+[35.272908] (-) TimerEvent: {}
+[35.373884] (-) TimerEvent: {}
+[35.474264] (-) TimerEvent: {}
+[35.574641] (-) TimerEvent: {}
+[35.675006] (-) TimerEvent: {}
+[35.775361] (-) TimerEvent: {}
+[35.875750] (-) TimerEvent: {}
+[35.976123] (-) TimerEvent: {}
+[36.076452] (-) TimerEvent: {}
+[36.176883] (-) TimerEvent: {}
+[36.277269] (-) TimerEvent: {}
+[36.383312] (-) TimerEvent: {}
+[36.483729] (-) TimerEvent: {}
+[36.584108] (-) TimerEvent: {}
+[36.684473] (-) TimerEvent: {}
+[36.784891] (-) TimerEvent: {}
+[36.885272] (-) TimerEvent: {}
+[36.985658] (-) TimerEvent: {}
+[37.086036] (-) TimerEvent: {}
+[37.186403] (-) TimerEvent: {}
+[37.286788] (-) TimerEvent: {}
+[37.387193] (-) TimerEvent: {}
+[37.487671] (-) TimerEvent: {}
+[37.588146] (-) TimerEvent: {}
+[37.689369] (-) TimerEvent: {}
+[37.789811] (-) TimerEvent: {}
+[37.890224] (-) TimerEvent: {}
+[37.990629] (-) TimerEvent: {}
+[38.091056] (-) TimerEvent: {}
+[38.191907] (-) TimerEvent: {}
+[38.293384] (-) TimerEvent: {}
+[38.393828] (-) TimerEvent: {}
+[38.494217] (-) TimerEvent: {}
+[38.594710] (-) TimerEvent: {}
+[38.695154] (-) TimerEvent: {}
+[38.795581] (-) TimerEvent: {}
+[38.896016] (-) TimerEvent: {}
+[38.996458] (-) TimerEvent: {}
+[39.096838] (-) TimerEvent: {}
+[39.199310] (-) TimerEvent: {}
+[39.299732] (-) TimerEvent: {}
+[39.400135] (-) TimerEvent: {}
+[39.500588] (-) TimerEvent: {}
+[39.601060] (-) TimerEvent: {}
+[39.707676] (-) TimerEvent: {}
+[39.808049] (-) TimerEvent: {}
+[39.908463] (-) TimerEvent: {}
+[40.008969] (-) TimerEvent: {}
+[40.115609] (-) TimerEvent: {}
+[40.215972] (-) TimerEvent: {}
+[40.316357] (-) TimerEvent: {}
+[40.416703] (-) TimerEvent: {}
+[40.519332] (-) TimerEvent: {}
+[40.619889] (-) TimerEvent: {}
+[40.720257] (-) TimerEvent: {}
+[40.820598] (-) TimerEvent: {}
+[40.921061] (-) TimerEvent: {}
+[41.027579] (-) TimerEvent: {}
+[41.127913] (-) TimerEvent: {}
+[41.228269] (-) TimerEvent: {}
+[41.329288] (-) TimerEvent: {}
+[41.430503] (-) TimerEvent: {}
+[41.533055] (-) TimerEvent: {}
+[41.639673] (-) TimerEvent: {}
+[41.665501] (rock_detector) StdoutLine: {'line': b'[100%] Built target rock_detector_node\n'}
+[41.689309] (rock_detector) CommandEnded: {'returncode': 0}
+[41.691241] (rock_detector) JobProgress: {'identifier': 'rock_detector', 'progress': 'install'}
+[41.707602] (rock_detector) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector'], 'cwd': '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'svevqx', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/svevqx/delta_bot/software/ros_ws_delta/install/multiple_object_tracking_lidar/lib:/home/svevqx/delta_bot/software/ros_ws_delta/install/remote_serial/lib:/home/svevqx/delta_bot/software/ros_ws_delta/install/pcl_object_detection/lib:/home/svevqx/delta_bot/software/ros_ws_delta/install/action_interfaces/lib:/home/svevqx/ros2_ws/install/ldlidar_component/lib:/home/svevqx/ros2_ws/install/examples_rclcpp_wait_set/lib:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_subscriber/lib:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_composition/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/svevqx', 'OLDPWD': '/home/svevqx/delta_bot/software/ros_ws_delta', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1473', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/opt/ros/jazzy/', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/svevqx/delta_bot/software/ros_ws_delta/src/install:/home/svevqx/delta_bot/software/ros_ws_delta/install:/home/svevqx/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'svevqx', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PIP_BREAK_SYSTEM_PACKAGES': '1', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'svevqx', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/home/svevqx/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/svevqx/.local/bin:/home/svevqx/.local/bin', 'SESSION_MANAGER': 'local/svevqx-ThinkPad-S1-Yoga-12:@/tmp/.ICE-unix/1441,unix/svevqx-ThinkPad-S1-Yoga-12:/tmp/.ICE-unix/1441', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/86bcbfe0_d4ab_45c4_bcfd_7b0d892181b0', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.VOV112', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.761', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/multiple_object_tracking_lidar:/home/svevqx/delta_bot/software/ros_ws_delta/install/remote_serial:/home/svevqx/delta_bot/software/ros_ws_delta/install/pcl_object_detection:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/delta_bot/software/ros_ws_delta/install/action_interfaces:/home/svevqx/ros2_ws/install/ldlidar:/home/svevqx/ros2_ws/install/ldlidar_node:/home/svevqx/ros2_ws/install/ldlidar_component:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/home/svevqx/ros2_ws/install/examples_rclcpp_wait_set:/home/svevqx/ros2_ws/install/examples_rclcpp_multithreaded_executor:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_timer:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_service:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_composition:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_client:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclcpp_cbg_executor:/home/svevqx/ros2_ws/install/examples_rclcpp_async_client:/home/svevqx/ros2_ws/install/cpp_pubsub:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros/lib/python3.12/site-packages:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros/lib/python3.12/site-packages:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros/lib/python3.12/site-packages:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface/lib/python3.12/site-packages:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud/lib/python3.12/site-packages:/home/svevqx/delta_bot/software/ros_ws_delta/install/action_interfaces/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/launch_testing_examples/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/grbl_ros/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.12/site-packages:/home/svevqx/ros2_ws/install/examples_rclpy_executors/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector:/home/svevqx/delta_bot/software/ros_ws_delta/install/multiple_object_tracking_lidar:/home/svevqx/delta_bot/software/ros_ws_delta/install/remote_serial:/home/svevqx/delta_bot/software/ros_ws_delta/install/pcl_object_detection:/home/svevqx/delta_bot/software/ros_ws_delta/install/action_interfaces:/home/svevqx/ros2_ws/install/ldlidar:/home/svevqx/ros2_ws/install/ldlidar_node:/home/svevqx/ros2_ws/install/ldlidar_component:/home/svevqx/ros2_ws/install/examples_rclcpp_wait_set:/home/svevqx/ros2_ws/install/examples_rclcpp_multithreaded_executor:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_timer:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_service:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_composition:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_client:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclcpp_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclcpp_cbg_executor:/home/svevqx/ros2_ws/install/examples_rclcpp_async_client:/home/svevqx/ros2_ws/install/cpp_pubsub:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy'}), 'shell': False}
+[41.727457] (rock_detector) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[41.727768] (rock_detector) StdoutLine: {'line': b'-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/lib/rock_detector/rock_detector_node\n'}
+[41.735230] (rock_detector) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/lib/rock_detector/rock_detector_node" to ""\n'}
+[41.736057] (rock_detector) StdoutLine: {'line': b'-- Up-to-date: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/ament_index/resource_index/package_run_dependencies/rock_detector\n'}
+[41.736467] (rock_detector) StdoutLine: {'line': b'-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/ament_index/resource_index/parent_prefix_path/rock_detector\n'}
+[41.736849] (rock_detector) StdoutLine: {'line': b'-- Up-to-date: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/environment/ament_prefix_path.sh\n'}
+[41.737210] (rock_detector) StdoutLine: {'line': b'-- Up-to-date: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/environment/ament_prefix_path.dsv\n'}
+[41.737488] (rock_detector) StdoutLine: {'line': b'-- Up-to-date: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/environment/path.sh\n'}
+[41.737724] (rock_detector) StdoutLine: {'line': b'-- Up-to-date: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/environment/path.dsv\n'}
+[41.737938] (rock_detector) StdoutLine: {'line': b'-- Up-to-date: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/local_setup.bash\n'}
+[41.738131] (rock_detector) StdoutLine: {'line': b'-- Up-to-date: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/local_setup.sh\n'}
+[41.738353] (rock_detector) StdoutLine: {'line': b'-- Up-to-date: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/local_setup.zsh\n'}
+[41.738552] (rock_detector) StdoutLine: {'line': b'-- Up-to-date: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/local_setup.dsv\n'}
+[41.738774] (rock_detector) StdoutLine: {'line': b'-- Up-to-date: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/package.dsv\n'}
+[41.738982] (rock_detector) StdoutLine: {'line': b'-- Up-to-date: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/ament_index/resource_index/packages/rock_detector\n'}
+[41.739192] (rock_detector) StdoutLine: {'line': b'-- Up-to-date: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/cmake/rock_detectorConfig.cmake\n'}
+[41.739431] (rock_detector) StdoutLine: {'line': b'-- Up-to-date: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/cmake/rock_detectorConfig-version.cmake\n'}
+[41.739602] (rock_detector) StdoutLine: {'line': b'-- Up-to-date: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_detector/share/rock_detector/package.xml\n'}
+[41.739780] (-) TimerEvent: {}
+[41.741166] (rock_detector) CommandEnded: {'returncode': 0}
+[41.789090] (rock_detector) JobEnded: {'identifier': 'rock_detector', 'rc': 0}
+[41.790515] (-) EventReactorShutdown: {}

@@ -1,0 +1,10 @@
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector/CMakeFiles/uninstall.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector/CMakeFiles/rock_detector_uninstall.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector/CMakeFiles/rock_detector_node.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector/CMakeFiles/test.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector/CMakeFiles/edit_cache.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector/CMakeFiles/rebuild_cache.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector/CMakeFiles/list_install_components.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector/CMakeFiles/install.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector/CMakeFiles/install/local.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_detector/CMakeFiles/install/strip.dir
