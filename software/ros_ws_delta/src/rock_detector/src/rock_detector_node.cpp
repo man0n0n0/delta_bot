@@ -83,7 +83,7 @@ private:
     std::vector<pcl::PointIndices> cluster_indices;
     pcl::EuclideanClusterExtraction<pcl::PointXYZ> ec;
     ec.setClusterTolerance(0.01);  // how close points need to be to each other to be considered part of the same cluster. 
-    ec.setMinClusterSize(2000);     // Minimum points in a cluster
+    ec.setMinClusterSize(1000);     // Minimum points in a cluster
     ec.setMaxClusterSize(20000);   // Maximum points in a cluster
     ec.setInputCloud(objects);
     
