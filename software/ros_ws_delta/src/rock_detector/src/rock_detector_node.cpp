@@ -42,7 +42,7 @@ private:
     pcl::PassThrough<pcl::PointXYZ> pass;
     pass.setInputCloud(cloud);
     pass.setFilterFieldName("z");  // Assuming z is height above ground
-    pass.setFilterLimits(0.0, 1.5);  // Adjust these values based on your setup
+    pass.setFilterLimits(0.1, 0.7);  // minimal / maximal included point on the z axis
     pass.filter(*cloud_filtered);
 
     // Segment the table plane
@@ -52,7 +52,7 @@ private:
     seg.setOptimizeCoefficients(true);
     seg.setModelType(pcl::SACMODEL_PLANE);
     seg.setMethodType(pcl::SAC_RANSAC);
-    seg.setDistanceThreshold(0.01);  // 1cm threshold
+    seg.setDistanceThreshold(0.30);  // 1cm threshold
     seg.setInputCloud(cloud_filtered);
     seg.segment(*table_inliers, *coefficients);
 
