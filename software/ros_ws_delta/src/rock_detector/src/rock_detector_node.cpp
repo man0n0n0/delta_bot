@@ -143,7 +143,7 @@ private:
       ne.setInputCloud(cluster);
       ne.setSearchMethod(tree);
       pcl::PointCloud<pcl::Normal>::Ptr normals(new pcl::PointCloud<pcl::Normal>);
-      ne.setKSearch(10);  // Use nearest neighbors
+      ne.setKSearch(50);  // Use nearest neighbors
       ne.compute(*normals);
 
       // Find surface points using convex hull
