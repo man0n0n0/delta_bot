@@ -52,7 +52,7 @@ private:
     seg.setOptimizeCoefficients(true);
     seg.setModelType(pcl::SACMODEL_PLANE);
     seg.setMethodType(pcl::SAC_RANSAC);
-    seg.setDistanceThreshold(0.30);  // 1cm threshold
+    seg.setDistanceThreshold(0.01);  // threshold from above the table 
     seg.setInputCloud(cloud_filtered);
     seg.segment(*table_inliers, *coefficients);
 
