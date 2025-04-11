@@ -1,5 +1,7 @@
 #include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/point_cloud2.hpp>
+#include <geometry_msgs/msg/pose_array.hpp>  // For publishing cluster centers
+#include <geometry_msgs/msg/pose.hpp>
 #include <pcl_conversions/pcl_conversions.h>
 #include <pcl/point_types.h>
 #include <pcl/filters/passthrough.h>
@@ -9,6 +11,7 @@
 #include <pcl/features/normal_3d.h>
 #include <pcl/surface/convex_hull.h>
 #include <pcl_ros/transforms.hpp>
+#include <pcl/common/centroid.h>  // For computing centroids
 
 class RockDetectorNode : public rclcpp::Node
 {
@@ -24,6 +27,9 @@ public:
 
     // Publisher for table plane (optional)
     table_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("table_plane", 10);
+    
+    // Publisher for cluster centers
+    centers_publisher_ = this->create_publisher<geometry_msgs::msg::PoseArray>("rock_centers", 10);
 
     RCLCPP_INFO(this->get_logger(), "Rock detector node has started");
   }
@@ -95,6 +101,10 @@ private:
 
     // Prepare combined cloud for all rock surfaces
     pcl::PointCloud<pcl::PointXYZ>::Ptr rock_surfaces_combined(new pcl::PointCloud<pcl::PointXYZ>);
+    
+    // Create a message to hold all cluster centers
+    geometry_msgs::msg::PoseArray centers_msg;
+    centers_msg.header = cloud_msg->header;
 
     // Process each cluster (rock)
     int cluster_id = 0;
@@ -111,12 +121,29 @@ private:
       cluster->height = 1;
       cluster->is_dense = true;
 
+      // Calculate the centroid of the cluster
+      Eigen::Vector4f centroid;
+      pcl::compute3DCentroid(*cluster, centroid);
+      
+      // Create a Pose message for this centroid
+      geometry_msgs::msg::Pose center_pose;
+      center_pose.position.x = centroid[0];
+      center_pose.position.y = centroid[1];
+      center_pose.position.z = centroid[2];
+      center_pose.orientation.w = 1.0; // Default orientation (no rotation)
+      
+      // Add the pose to our PoseArray
+      centers_msg.poses.push_back(center_pose);
+      
+      RCLCPP_INFO(this->get_logger(), "Cluster %d center: x=%.3f, y=%.3f, z=%.3f", 
+                  cluster_id-1, centroid[0], centroid[1], centroid[2]);
+
       // Compute normals
       pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> ne;
       ne.setInputCloud(cluster);
       ne.setSearchMethod(tree);
       pcl::PointCloud<pcl::Normal>::Ptr normals(new pcl::PointCloud<pcl::Normal>);
-      ne.setKSearch(20);  // Use nearest neighbors
+      ne.setKSearch(10);  // Use nearest neighbors
       ne.compute(*normals);
 
       // Find surface points using convex hull
@@ -134,6 +161,9 @@ private:
     pcl::toROSMsg(*rock_surfaces_combined, output_msg);
     output_msg.header = cloud_msg->header;
     publisher_->publish(output_msg);
+    
+    // Publish cluster centers
+    centers_publisher_->publish(centers_msg);
 
     RCLCPP_INFO(this->get_logger(), "Found %ld rock clusters", cluster_indices.size());
   }
@@ -141,6 +171,7 @@ private:
   rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr subscription_;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr publisher_;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr table_publisher_;
+  rclcpp::Publisher<geometry_msgs::msg::PoseArray>::SharedPtr centers_publisher_;
 };
 
 int main(int argc, char * argv[])
