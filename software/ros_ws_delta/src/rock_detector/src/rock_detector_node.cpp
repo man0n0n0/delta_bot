@@ -83,7 +83,7 @@ private:
     std::vector<pcl::PointIndices> cluster_indices;
     pcl::EuclideanClusterExtraction<pcl::PointXYZ> ec;
     ec.setClusterTolerance(0.05);  // how close points need to be to each other to be considered part of the same cluster. 
-    ec.setMinClusterSize(100);     // Minimum points in a cluster
+    ec.setMinClusterSize(50);     // Minimum points in a cluster
     ec.setMaxClusterSize(20000);   // Maximum points in a cluster
     ec.setInputCloud(objects);
     
@@ -116,7 +116,7 @@ private:
       ne.setInputCloud(cluster);
       ne.setSearchMethod(tree);
       pcl::PointCloud<pcl::Normal>::Ptr normals(new pcl::PointCloud<pcl::Normal>);
-      ne.setKSearch(10);  // Use nearest neighbors
+      ne.setKSearch(20);  // Use nearest neighbors
       ne.compute(*normals);
 
       // Find surface points using convex hull
