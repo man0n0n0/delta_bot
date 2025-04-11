@@ -42,7 +42,7 @@ private:
     pcl::PassThrough<pcl::PointXYZ> pass;
     pass.setInputCloud(cloud);
     pass.setFilterFieldName("z");  // Assuming z is height above ground
-    pass.setFilterLimits(0.1, 0.7);  // minimal / maximal included point on the z axis
+    pass.setFilterLimits(0.3, 1.5);  // minimal / maximal included point on the z axis (finetune for each iteration)
     pass.filter(*cloud_filtered);
 
     // Segment the table plane
