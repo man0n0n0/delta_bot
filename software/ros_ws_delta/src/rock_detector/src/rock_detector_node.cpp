@@ -52,7 +52,7 @@ private:
     seg.setOptimizeCoefficients(true);
     seg.setModelType(pcl::SACMODEL_PLANE);
     seg.setMethodType(pcl::SAC_RANSAC);
-    seg.setDistanceThreshold(0.005);  // threshold from above the table 
+    seg.setDistanceThreshold(0.01);  // threshold from above the table 
     seg.setInputCloud(cloud_filtered);
     seg.segment(*table_inliers, *coefficients);
 
@@ -82,7 +82,7 @@ private:
     // Cluster extraction (to separate individual rocks)
     std::vector<pcl::PointIndices> cluster_indices;
     pcl::EuclideanClusterExtraction<pcl::PointXYZ> ec;
-    ec.setClusterTolerance(0.01);  // how close points need to be to each other to be considered part of the same cluster. 
+    ec.setClusterTolerance(0.005);  // how close points need to be to each other to be considered part of the same cluster. 
     ec.setMinClusterSize(500);     // Minimum points in a cluster
     ec.setMaxClusterSize(20000);   // Maximum points in a cluster
     ec.setInputCloud(objects);
