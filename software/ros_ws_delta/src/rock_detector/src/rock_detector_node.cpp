@@ -18,6 +18,15 @@ class RockDetectorNode : public rclcpp::Node
 public:
   RockDetectorNode() : Node("rock_detector_node")
   {
+    // Declare parameters with default values
+    this->declare_parameter("filter_z_min", 0.3);
+    this->declare_parameter("filter_z_max", 1);
+    this->declare_parameter("cluster_tolerance", 0.005);
+    this->declare_parameter("min_cluster_size", 50);
+    this->declare_parameter("max_cluster_size", 20000);
+    this->declare_parameter("plane_threshold", 0.01);
+    this->declare_parameter("k_neighbors", 20);
+
     // Subscribe to point cloud data
     subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
       "input_cloud", 10, std::bind(&RockDetectorNode::cloud_callback, this, std::placeholders::_1));
@@ -32,12 +41,27 @@ public:
     centers_publisher_ = this->create_publisher<geometry_msgs::msg::PoseArray>("rock_centers", 10);
 
     RCLCPP_INFO(this->get_logger(), "Rock detector node has started");
+    
+    // Log the default parameter values
+    double cluster_tolerance = this->get_parameter("cluster_tolerance").as_double();
+    int min_cluster_size = this->get_parameter("min_cluster_size").as_int();
+    RCLCPP_INFO(this->get_logger(), "Default cluster_tolerance: %.3f", cluster_tolerance);
+    RCLCPP_INFO(this->get_logger(), "Default min_cluster_size: %d", min_cluster_size);
   }
 
 private:
   void cloud_callback(const sensor_msgs::msg::PointCloud2::SharedPtr cloud_msg)
   {
     RCLCPP_INFO(this->get_logger(), "Received point cloud with %d points", cloud_msg->height * cloud_msg->width);
+
+    // Get parameters
+    double filter_z_min = this->get_parameter("filter_z_min").as_double();
+    double filter_z_max = this->get_parameter("filter_z_max").as_double();
+    double cluster_tolerance = this->get_parameter("cluster_tolerance").as_double();
+    int min_cluster_size = this->get_parameter("min_cluster_size").as_int();
+    int max_cluster_size = this->get_parameter("max_cluster_size").as_int();
+    double plane_threshold = this->get_parameter("plane_threshold").as_double();
+    int k_neighbors = this->get_parameter("k_neighbors").as_int();
 
     // Convert ROS message to PCL point cloud
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>());
@@ -48,7 +72,7 @@ private:
     pcl::PassThrough<pcl::PointXYZ> pass;
     pass.setInputCloud(cloud);
     pass.setFilterFieldName("z");  // Assuming z is height above ground
-    pass.setFilterLimits(0.3, 1.5);  // minimal / maximal included point on the z axis (finetune for each iteration)
+    pass.setFilterLimits(filter_z_min, filter_z_max);  // minimal / maximal included point on the z axis
     pass.filter(*cloud_filtered);
 
     // Segment the table plane
@@ -58,7 +82,7 @@ private:
     seg.setOptimizeCoefficients(true);
     seg.setModelType(pcl::SACMODEL_PLANE);
     seg.setMethodType(pcl::SAC_RANSAC);
-    seg.setDistanceThreshold(0.01);  // threshold from above the table 
+    seg.setDistanceThreshold(plane_threshold);  // threshold from above the table 
     seg.setInputCloud(cloud_filtered);
     seg.segment(*table_inliers, *coefficients);
 
@@ -88,10 +112,14 @@ private:
     // Cluster extraction (to separate individual rocks)
     std::vector<pcl::PointIndices> cluster_indices;
     pcl::EuclideanClusterExtraction<pcl::PointXYZ> ec;
-    ec.setClusterTolerance(0.004);  // how close points need to be to each other to be considered part of the same cluster. 
-    ec.setMinClusterSize(50);     // Minimum points in a cluster
-    ec.setMaxClusterSize(20000);   // Maximum points in a cluster
+    ec.setClusterTolerance(cluster_tolerance);  // Using parameter
+    ec.setMinClusterSize(min_cluster_size);     // Using parameter
+    ec.setMaxClusterSize(max_cluster_size);     // Using parameter
     ec.setInputCloud(objects);
+    
+    // Log the current parameter values being used
+    RCLCPP_INFO(this->get_logger(), "Using cluster_tolerance: %.3f", cluster_tolerance);
+    RCLCPP_INFO(this->get_logger(), "Using min_cluster_size: %d", min_cluster_size);
     
     // Create KdTree for search
     pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ>);
@@ -143,7 +171,7 @@ private:
       ne.setInputCloud(cluster);
       ne.setSearchMethod(tree);
       pcl::PointCloud<pcl::Normal>::Ptr normals(new pcl::PointCloud<pcl::Normal>);
-      ne.setKSearch(50);  // Use nearest neighbors
+      ne.setKSearch(k_neighbors);  // Using parameter
       ne.compute(*normals);
 
       // Find surface points using convex hull
