@@ -52,7 +52,7 @@ private:
     seg.setOptimizeCoefficients(true);
     seg.setModelType(pcl::SACMODEL_PLANE);
     seg.setMethodType(pcl::SAC_RANSAC);
-    seg.setDistanceThreshold(0.01);  // 1cm threshold
+    seg.setDistanceThreshold(0.10);  // 10cm threshold
     seg.setInputCloud(cloud_filtered);
     seg.segment(*table_inliers, *coefficients);
 
@@ -83,7 +83,7 @@ private:
     std::vector<pcl::PointIndices> cluster_indices;
     pcl::EuclideanClusterExtraction<pcl::PointXYZ> ec;
     ec.setClusterTolerance(0.02);  // 2cm
-    ec.setMinClusterSize(100);     // Minimum points in a cluster
+    ec.setMinClusterSize(1000);     // Minimum points in a cluster
     ec.setMaxClusterSize(25000);   // Maximum points in a cluster
     ec.setInputCloud(objects);
     
