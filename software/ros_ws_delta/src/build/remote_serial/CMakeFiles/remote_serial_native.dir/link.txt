@@ -1,0 +1,2 @@
+/usr/bin/ar qc libremote_serial_native.a CMakeFiles/remote_serial_native.dir/src/node.cpp.o CMakeFiles/remote_serial_native.dir/src/worker.cpp.o CMakeFiles/remote_serial_native.dir/src/port.cpp.o CMakeFiles/remote_serial_native.dir/src/implementation.cpp.o CMakeFiles/remote_serial_native.dir/src/interface.cpp.o CMakeFiles/remote_serial_native.dir/src/interface_remote.cpp.o CMakeFiles/remote_serial_native.dir/src/factory.cpp.o
+/usr/bin/ranlib libremote_serial_native.a

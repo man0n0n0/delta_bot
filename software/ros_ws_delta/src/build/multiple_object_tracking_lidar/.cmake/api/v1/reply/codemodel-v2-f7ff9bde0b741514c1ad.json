@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-14748ab5b95f1a727e10.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "multiple_object_tracking_lidar",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "multiple_object_tracking_lidar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-multiple_object_tracking_lidar-04403d678277018868b0.json",
+					"name" : "multiple_object_tracking_lidar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "multiple_object_tracking_lidar_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-multiple_object_tracking_lidar_node-23f48124f462ddc2918c.json",
+					"name" : "multiple_object_tracking_lidar_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "multiple_object_tracking_lidar_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-multiple_object_tracking_lidar_uninstall-4d45bcf368f011157628.json",
+					"name" : "multiple_object_tracking_lidar_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-f0738b1742cd9d539b52.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/svevqx/delta_bot/software/ros_ws_delta/src/build/multiple_object_tracking_lidar",
+		"source" : "/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

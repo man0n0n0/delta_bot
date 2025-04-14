@@ -1,0 +1,178 @@
+[0.062s] Invoking command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/svevqx/delta_bot/software/ros_ws_delta/src/serial -DCMAKE_INSTALL_PREFIX=/home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial
+[0.373s] -- The C compiler identification is GNU 13.3.0
+[0.665s] -- The CXX compiler identification is GNU 13.3.0
+[0.775s] -- Detecting C compiler ABI info
+[1.180s] -- Detecting C compiler ABI info - done
+[1.240s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.240s] -- Detecting C compile features
+[1.241s] -- Detecting C compile features - done
+[1.286s] -- Detecting CXX compiler ABI info
+[1.909s] -- Detecting CXX compiler ABI info - done
+[1.981s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.984s] -- Detecting CXX compile features
+[1.995s] -- Detecting CXX compile features - done
+[2.027s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.928s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.587s] -- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)
+[3.853s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[3.943s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[4.048s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.160s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.694s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[4.769s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[5.271s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[5.378s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[5.491s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.989s] -- Found std_msgs: 5.3.5 (/opt/ros/jazzy/share/std_msgs/cmake)
+[6.079s] -- Found std_srvs: 5.3.5 (/opt/ros/jazzy/share/std_srvs/cmake)
+[6.219s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[6.375s] -- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[6.451s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[7.105s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.106s] -- Configured cppcheck include dirs: /home/svevqx/delta_bot/software/ros_ws_delta/src/serial/include
+[7.106s] -- Configured cppcheck exclude dirs and/or files: 
+[7.114s] -- Added test 'flake8' to check Python code syntax and style conventions
+[7.115s] -- Configured 'flake8' exclude dirs and/or files: 
+[7.118s] -- Added test 'lint_cmake' to check CMake code style
+[7.124s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[7.133s] -- Added test 'uncrustify' to check C / C++ code style
+[7.133s] -- Configured uncrustify additional arguments: 
+[7.139s] -- Added test 'xmllint' to check XML markup files
+[7.155s] -- Configuring done (7.1s)
+[7.232s] -- Generating done (0.1s)
+[7.253s] -- Build files have been written to: /home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial
+[7.285s] Invoked command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/svevqx/delta_bot/software/ros_ws_delta/src/serial -DCMAKE_INSTALL_PREFIX=/home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial
+[7.286s] Invoking command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial -- -j4 -l4
+[7.572s] [  5%] [32mBuilding CXX object CMakeFiles/remote_serial_native.dir/src/worker.cpp.o[0m
+[7.572s] [ 11%] [32mBuilding CXX object CMakeFiles/remote_serial_standalone.dir/src/main.cpp.o[0m
+[7.626s] [ 17%] [32mBuilding CXX object CMakeFiles/remote_serial_native.dir/src/node.cpp.o[0m
+[7.633s] [ 23%] [32mBuilding CXX object CMakeFiles/remote_serial_standalone.dir/src/node.cpp.o[0m
+[36.856s] [ 29%] [32mBuilding CXX object CMakeFiles/remote_serial_standalone.dir/src/worker.cpp.o[0m
+[37.913s] [ 35%] [32mBuilding CXX object CMakeFiles/remote_serial_native.dir/src/implementation.cpp.o[0m
+[54.041s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/implementation.cpp:[m[K In member function ‘[01m[Kvoid remote_serial::Implementation::[01;32m[Kinit_serial_[m[K()[m[K’:
+[54.055s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/implementation.cpp:42:59:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktypename rclcpp::Service<ServiceT>::SharedPtr rclcpp::Node::[01;32m[Kcreate_service[m[K(const std::string&, CallbackT&&, const rmw_qos_profile_t&, rclcpp::CallbackGroup::SharedPtr) [35m[K[with ServiceT = std_srvs::srv::Empty; CallbackT = std::_Bind<void (remote_serial::Implementation::*(remote_serial::Implementation*, std::_Placeholder<1>, std::_Placeholder<2>))(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)>; typename rclcpp::Service<ServiceT>::SharedPtr = std::shared_ptr<rclcpp::Service<std_srvs::srv::Empty> >; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s; rclcpp::CallbackGroup::SharedPtr = std::shared_ptr<rclcpp::CallbackGroup>][m[K[m[K’ is deprecated: use rclcpp::QoS instead of rmw_qos_profile_t [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[54.055s]    42 |   srv_flush_ = [01;35m[Knode_->create_service<std_srvs::srv::Empty>([m[K
+[54.055s]       |                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[54.056s]    43 | [01;35m[K      prefix + SERIAL_SERVICE_FLUSH,[m[K
+[54.056s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                       
+[54.056s]    44 | [01;35m[K      std::bind(&Implementation::flush_handler_, this, std::placeholders::_1,[m[K
+[54.057s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[54.072s]    45 | [01;35m[K                std::placeholders::_2),[m[K
+[54.072s]       |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~[m[K                    
+[54.072s]    46 | [01;35m[K      ::rmw_qos_profile_default, callback_group_)[m[K;
+[54.073s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K          
+[54.073s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:1663[m[K,
+[54.073s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[54.080s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[54.080s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K,
+[54.081s]                  from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/include/remote_serial/implementation.hpp:16[m[K,
+[54.081s]                  from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/implementation.cpp:10[m[K:
+[54.082s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:192:1:[m[K [01;36m[Knote: [m[Kdeclared here
+[54.082s]   192 | [01;36m[KNode[m[K::create_service(
+[54.083s]       | [01;36m[K^~~~[m[K
+[65.765s] [ 41%] [32mBuilding CXX object CMakeFiles/remote_serial_standalone.dir/src/port.cpp.o[0m
+[84.829s] [ 47%] [32mBuilding CXX object CMakeFiles/remote_serial_standalone.dir/src/implementation.cpp.o[0m
+[92.577s] [ 52%] [32mBuilding CXX object CMakeFiles/remote_serial_native.dir/src/interface.cpp.o[0m
+[100.015s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/implementation.cpp:[m[K In member function ‘[01m[Kvoid remote_serial::Implementation::[01;32m[Kinit_serial_[m[K()[m[K’:
+[100.023s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/implementation.cpp:42:59:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktypename rclcpp::Service<ServiceT>::SharedPtr rclcpp::Node::[01;32m[Kcreate_service[m[K(const std::string&, CallbackT&&, const rmw_qos_profile_t&, rclcpp::CallbackGroup::SharedPtr) [35m[K[with ServiceT = std_srvs::srv::Empty; CallbackT = std::_Bind<void (remote_serial::Implementation::*(remote_serial::Implementation*, std::_Placeholder<1>, std::_Placeholder<2>))(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)>; typename rclcpp::Service<ServiceT>::SharedPtr = std::shared_ptr<rclcpp::Service<std_srvs::srv::Empty> >; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s; rclcpp::CallbackGroup::SharedPtr = std::shared_ptr<rclcpp::CallbackGroup>][m[K[m[K’ is deprecated: use rclcpp::QoS instead of rmw_qos_profile_t [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[100.024s]    42 |   srv_flush_ = [01;35m[Knode_->create_service<std_srvs::srv::Empty>([m[K
+[100.024s]       |                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[100.024s]    43 | [01;35m[K      prefix + SERIAL_SERVICE_FLUSH,[m[K
+[100.025s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                       
+[100.025s]    44 | [01;35m[K      std::bind(&Implementation::flush_handler_, this, std::placeholders::_1,[m[K
+[100.026s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[100.026s]    45 | [01;35m[K                std::placeholders::_2),[m[K
+[100.029s]       |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~[m[K                    
+[100.036s]    46 | [01;35m[K      ::rmw_qos_profile_default, callback_group_)[m[K;
+[100.036s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K          
+[100.036s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:1663[m[K,
+[100.042s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[100.049s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[100.049s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K,
+[100.049s]                  from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/include/remote_serial/implementation.hpp:16[m[K,
+[100.050s]                  from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/implementation.cpp:10[m[K:
+[100.050s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:192:1:[m[K [01;36m[Knote: [m[Kdeclared here
+[100.050s]   192 | [01;36m[KNode[m[K::create_service(
+[100.050s]       | [01;36m[K^~~~[m[K
+[119.499s] [ 58%] [32mBuilding CXX object CMakeFiles/remote_serial_native.dir/src/port.cpp.o[0m
+[143.076s] [ 64%] [32mBuilding CXX object CMakeFiles/remote_serial_native.dir/src/interface_remote.cpp.o[0m
+[146.102s] [ 70%] [32mBuilding CXX object CMakeFiles/remote_serial_standalone.dir/src/interface_remote.cpp.o[0m
+[156.253s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/interface_remote.cpp:[m[K In constructor ‘[01m[Kremote_serial::RemoteInterface::[01;32m[KRemoteInterface[m[K(rclcpp::Node*)[m[K’:
+[156.254s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/interface_remote.cpp:36:58:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktypename rclcpp::Client<ServiceT>::SharedPtr rclcpp::Node::[01;32m[Kcreate_client[m[K(const std::string&, const rmw_qos_profile_t&, rclcpp::CallbackGroup::SharedPtr) [35m[K[with ServiceT = std_srvs::srv::Empty; typename rclcpp::Client<ServiceT>::SharedPtr = std::shared_ptr<rclcpp::Client<std_srvs::srv::Empty> >; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s; rclcpp::CallbackGroup::SharedPtr = std::shared_ptr<rclcpp::CallbackGroup>][m[K[m[K’ is deprecated: use rclcpp::QoS instead of rmw_qos_profile_t [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[156.254s]    36 |   clnt_flush_ = [01;35m[Knode->create_client<std_srvs::srv::Empty>([m[K
+[156.254s]       |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[156.255s]    37 | [01;35m[K      prefix + SERIAL_SERVICE_FLUSH, ::rmw_qos_profile_default,[m[K
+[156.255s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[156.255s]    38 | [01;35m[K      callback_group_)[m[K;
+[156.255s]       |       [01;35m[K~~~~~~~~~~~~~~~~[m[K                                    
+[156.264s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:1663[m[K,
+[156.265s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[156.265s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[156.265s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K,
+[156.266s]                  from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/include/remote_serial/interface_remote.hpp:18[m[K,
+[156.266s]                  from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/interface_remote.cpp:10[m[K:
+[156.266s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:159:1:[m[K [01;36m[Knote: [m[Kdeclared here
+[156.266s]   159 | [01;36m[KNode[m[K::create_client(
+[156.267s]       | [01;36m[K^~~~[m[K
+[158.761s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/interface_remote.cpp:[m[K In constructor ‘[01m[Kremote_serial::RemoteInterface::[01;32m[KRemoteInterface[m[K(rclcpp::Node*)[m[K’:
+[158.775s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/interface_remote.cpp:36:58:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktypename rclcpp::Client<ServiceT>::SharedPtr rclcpp::Node::[01;32m[Kcreate_client[m[K(const std::string&, const rmw_qos_profile_t&, rclcpp::CallbackGroup::SharedPtr) [35m[K[with ServiceT = std_srvs::srv::Empty; typename rclcpp::Client<ServiceT>::SharedPtr = std::shared_ptr<rclcpp::Client<std_srvs::srv::Empty> >; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s; rclcpp::CallbackGroup::SharedPtr = std::shared_ptr<rclcpp::CallbackGroup>][m[K[m[K’ is deprecated: use rclcpp::QoS instead of rmw_qos_profile_t [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[158.775s]    36 |   clnt_flush_ = [01;35m[Knode->create_client<std_srvs::srv::Empty>([m[K
+[158.775s]       |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[158.776s]    37 | [01;35m[K      prefix + SERIAL_SERVICE_FLUSH, ::rmw_qos_profile_default,[m[K
+[158.776s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[158.776s]    38 | [01;35m[K      callback_group_)[m[K;
+[158.776s]       |       [01;35m[K~~~~~~~~~~~~~~~~[m[K                                    
+[158.777s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:1663[m[K,
+[158.777s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[158.777s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[158.778s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K,
+[158.778s]                  from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/include/remote_serial/interface_remote.hpp:18[m[K,
+[158.778s]                  from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/interface_remote.cpp:10[m[K:
+[158.778s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:159:1:[m[K [01;36m[Knote: [m[Kdeclared here
+[158.779s]   159 | [01;36m[KNode[m[K::create_client(
+[158.779s]       | [01;36m[K^~~~[m[K
+[203.733s] [ 76%] [32mBuilding CXX object CMakeFiles/remote_serial_native.dir/src/factory.cpp.o[0m
+[209.423s] [ 82%] [32mBuilding CXX object CMakeFiles/remote_serial_standalone.dir/src/factory.cpp.o[0m
+[227.190s] [ 88%] [32m[1mLinking CXX static library libremote_serial_native.a[0m
+[228.528s] [ 88%] Built target remote_serial_native
+[230.667s] [ 94%] [32mBuilding CXX object CMakeFiles/remote_serial_standalone.dir/src/interface.cpp.o[0m
+[240.512s] [100%] [32m[1mLinking CXX executable remote_serial_standalone[0m
+[241.789s] [100%] Built target remote_serial_standalone
+[241.846s] Invoked command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial -- -j4 -l4
+[241.853s] Invoking command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial
+[241.894s] -- Install configuration: ""
+[241.895s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/lib/remote_serial/remote_serial_standalone
+[241.918s] -- Set non-toolchain portion of runtime path of "/home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/lib/remote_serial/remote_serial_standalone" to ""
+[241.918s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/environment/library_path.sh
+[241.919s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/environment/library_path.dsv
+[241.920s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/lib/libremote_serial_native.a
+[241.997s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/include/remote_serial
+[241.998s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/include/remote_serial/port.hpp
+[241.999s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/include/remote_serial/utils.hpp
+[242.000s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/include/remote_serial/worker.hpp
+[242.001s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/include/remote_serial/node.hpp
+[242.002s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/include/remote_serial/factory.hpp
+[242.002s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/include/remote_serial/implementation.hpp
+[242.002s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/include/remote_serial/interface_remote.hpp
+[242.003s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/include/remote_serial/interface.hpp
+[242.005s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/ament_index/resource_index/package_run_dependencies/remote_serial
+[242.014s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/ament_index/resource_index/parent_prefix_path/remote_serial
+[242.015s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/environment/ament_prefix_path.sh
+[242.015s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/environment/ament_prefix_path.dsv
+[242.016s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/environment/path.sh
+[242.017s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/environment/path.dsv
+[242.018s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/local_setup.bash
+[242.019s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/local_setup.sh
+[242.019s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/local_setup.zsh
+[242.020s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/local_setup.dsv
+[242.020s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/package.dsv
+[242.021s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/ament_index/resource_index/packages/remote_serial
+[242.022s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/cmake/remote_serial_native_libraryExport.cmake
+[242.025s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/cmake/remote_serial_native_libraryExport-noconfig.cmake
+[242.026s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/cmake/ament_cmake_export_targets-extras.cmake
+[242.027s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/cmake/ament_cmake_export_dependencies-extras.cmake
+[242.029s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/cmake/ament_cmake_export_include_directories-extras.cmake
+[242.030s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/cmake/remote_serialConfig.cmake
+[242.031s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/cmake/remote_serialConfig-version.cmake
+[242.038s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/remote_serial/share/remote_serial/package.xml
+[242.045s] Invoked command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial

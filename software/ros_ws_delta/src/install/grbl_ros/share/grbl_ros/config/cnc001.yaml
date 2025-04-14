@@ -1,6 +1,6 @@
 /**:
   ros__parameters:
-    machine_id: cnc_001
+    machine_id: cnc001
     port: /dev/ttyUSB0
     baudrate: 115200
     accleration: 50 # mm / min^2

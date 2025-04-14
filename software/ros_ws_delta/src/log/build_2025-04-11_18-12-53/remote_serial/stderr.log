@@ -1,0 +1,76 @@
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/implementation.cpp:[m[K In member function ‘[01m[Kvoid remote_serial::Implementation::[01;32m[Kinit_serial_[m[K()[m[K’:
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/implementation.cpp:42:59:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktypename rclcpp::Service<ServiceT>::SharedPtr rclcpp::Node::[01;32m[Kcreate_service[m[K(const std::string&, CallbackT&&, const rmw_qos_profile_t&, rclcpp::CallbackGroup::SharedPtr) [35m[K[with ServiceT = std_srvs::srv::Empty; CallbackT = std::_Bind<void (remote_serial::Implementation::*(remote_serial::Implementation*, std::_Placeholder<1>, std::_Placeholder<2>))(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)>; typename rclcpp::Service<ServiceT>::SharedPtr = std::shared_ptr<rclcpp::Service<std_srvs::srv::Empty> >; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s; rclcpp::CallbackGroup::SharedPtr = std::shared_ptr<rclcpp::CallbackGroup>][m[K[m[K’ is deprecated: use rclcpp::QoS instead of rmw_qos_profile_t [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   42 |   srv_flush_ = [01;35m[Knode_->create_service<std_srvs::srv::Empty>([m[K
+      |                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   43 | [01;35m[K      prefix + SERIAL_SERVICE_FLUSH,[m[K
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                       
+   44 | [01;35m[K      std::bind(&Implementation::flush_handler_, this, std::placeholders::_1,[m[K
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   45 | [01;35m[K                std::placeholders::_2),[m[K
+      |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~[m[K                    
+   46 | [01;35m[K      ::rmw_qos_profile_default, callback_group_)[m[K;
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K          
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:1663[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K,
+                 from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/include/remote_serial/implementation.hpp:16[m[K,
+                 from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/implementation.cpp:10[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:192:1:[m[K [01;36m[Knote: [m[Kdeclared here
+  192 | [01;36m[KNode[m[K::create_service(
+      | [01;36m[K^~~~[m[K
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/implementation.cpp:[m[K In member function ‘[01m[Kvoid remote_serial::Implementation::[01;32m[Kinit_serial_[m[K()[m[K’:
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/implementation.cpp:42:59:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktypename rclcpp::Service<ServiceT>::SharedPtr rclcpp::Node::[01;32m[Kcreate_service[m[K(const std::string&, CallbackT&&, const rmw_qos_profile_t&, rclcpp::CallbackGroup::SharedPtr) [35m[K[with ServiceT = std_srvs::srv::Empty; CallbackT = std::_Bind<void (remote_serial::Implementation::*(remote_serial::Implementation*, std::_Placeholder<1>, std::_Placeholder<2>))(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)>; typename rclcpp::Service<ServiceT>::SharedPtr = std::shared_ptr<rclcpp::Service<std_srvs::srv::Empty> >; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s; rclcpp::CallbackGroup::SharedPtr = std::shared_ptr<rclcpp::CallbackGroup>][m[K[m[K’ is deprecated: use rclcpp::QoS instead of rmw_qos_profile_t [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   42 |   srv_flush_ = [01;35m[Knode_->create_service<std_srvs::srv::Empty>([m[K
+      |                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   43 | [01;35m[K      prefix + SERIAL_SERVICE_FLUSH,[m[K
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                       
+   44 | [01;35m[K      std::bind(&Implementation::flush_handler_, this, std::placeholders::_1,[m[K
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   45 | [01;35m[K                std::placeholders::_2),[m[K
+      |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~[m[K                    
+   46 | [01;35m[K      ::rmw_qos_profile_default, callback_group_)[m[K;
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K          
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:1663[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K,
+                 from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/include/remote_serial/implementation.hpp:16[m[K,
+                 from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/implementation.cpp:10[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:192:1:[m[K [01;36m[Knote: [m[Kdeclared here
+  192 | [01;36m[KNode[m[K::create_service(
+      | [01;36m[K^~~~[m[K
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/interface_remote.cpp:[m[K In constructor ‘[01m[Kremote_serial::RemoteInterface::[01;32m[KRemoteInterface[m[K(rclcpp::Node*)[m[K’:
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/interface_remote.cpp:36:58:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktypename rclcpp::Client<ServiceT>::SharedPtr rclcpp::Node::[01;32m[Kcreate_client[m[K(const std::string&, const rmw_qos_profile_t&, rclcpp::CallbackGroup::SharedPtr) [35m[K[with ServiceT = std_srvs::srv::Empty; typename rclcpp::Client<ServiceT>::SharedPtr = std::shared_ptr<rclcpp::Client<std_srvs::srv::Empty> >; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s; rclcpp::CallbackGroup::SharedPtr = std::shared_ptr<rclcpp::CallbackGroup>][m[K[m[K’ is deprecated: use rclcpp::QoS instead of rmw_qos_profile_t [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   36 |   clnt_flush_ = [01;35m[Knode->create_client<std_srvs::srv::Empty>([m[K
+      |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   37 | [01;35m[K      prefix + SERIAL_SERVICE_FLUSH, ::rmw_qos_profile_default,[m[K
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   38 | [01;35m[K      callback_group_)[m[K;
+      |       [01;35m[K~~~~~~~~~~~~~~~~[m[K                                    
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:1663[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K,
+                 from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/include/remote_serial/interface_remote.hpp:18[m[K,
+                 from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/interface_remote.cpp:10[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:159:1:[m[K [01;36m[Knote: [m[Kdeclared here
+  159 | [01;36m[KNode[m[K::create_client(
+      | [01;36m[K^~~~[m[K
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/interface_remote.cpp:[m[K In constructor ‘[01m[Kremote_serial::RemoteInterface::[01;32m[KRemoteInterface[m[K(rclcpp::Node*)[m[K’:
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/interface_remote.cpp:36:58:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktypename rclcpp::Client<ServiceT>::SharedPtr rclcpp::Node::[01;32m[Kcreate_client[m[K(const std::string&, const rmw_qos_profile_t&, rclcpp::CallbackGroup::SharedPtr) [35m[K[with ServiceT = std_srvs::srv::Empty; typename rclcpp::Client<ServiceT>::SharedPtr = std::shared_ptr<rclcpp::Client<std_srvs::srv::Empty> >; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s; rclcpp::CallbackGroup::SharedPtr = std::shared_ptr<rclcpp::CallbackGroup>][m[K[m[K’ is deprecated: use rclcpp::QoS instead of rmw_qos_profile_t [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   36 |   clnt_flush_ = [01;35m[Knode->create_client<std_srvs::srv::Empty>([m[K
+      |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   37 | [01;35m[K      prefix + SERIAL_SERVICE_FLUSH, ::rmw_qos_profile_default,[m[K
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   38 | [01;35m[K      callback_group_)[m[K;
+      |       [01;35m[K~~~~~~~~~~~~~~~~[m[K                                    
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:1663[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K,
+                 from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/include/remote_serial/interface_remote.hpp:18[m[K,
+                 from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/serial/src/interface_remote.cpp:10[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:159:1:[m[K [01;36m[Knote: [m[Kdeclared here
+  159 | [01;36m[KNode[m[K::create_client(
+      | [01;36m[K^~~~[m[K

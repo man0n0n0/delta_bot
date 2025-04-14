@@ -1,0 +1,56 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found geometry_msgs: 5.3.5 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+-- Configuring done (6.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/svevqx/delta_bot/software/ros_ws_delta/src/build/rock_stacking
+[ 50%] [32mBuilding CXX object CMakeFiles/rock_stacking.dir/src/rock_stacking.cpp.o[0m
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/rock_stacking/src/rock_stacking.cpp:[m[K In member function ‘[01m[Kvoid RockStacking::[01;32m[Kcenters_callback[m[K(geometry_msgs::msg::PoseArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/rock_stacking/src/rock_stacking.cpp:48:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcenter_z[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   48 |     double [01;35m[Kcenter_z[m[K = this->get_parameter("center_z").as_double();
+      |            [01;35m[K^~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable rock_stacking[0m
+[100%] Built target rock_stacking
+-- Install configuration: ""
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/lib/rock_stacking/rock_stacking
+-- Set non-toolchain portion of runtime path of "/home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/lib/rock_stacking/rock_stacking" to ""
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/rock_stacking//launch
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/rock_stacking//launch/rock_gcode_generator_launch.py
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/ament_index/resource_index/package_run_dependencies/rock_stacking
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/ament_index/resource_index/parent_prefix_path/rock_stacking
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/rock_stacking/environment/ament_prefix_path.sh
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/rock_stacking/environment/ament_prefix_path.dsv
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/rock_stacking/environment/path.sh
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/rock_stacking/environment/path.dsv
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/rock_stacking/local_setup.bash
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/rock_stacking/local_setup.sh
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/rock_stacking/local_setup.zsh
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/rock_stacking/local_setup.dsv
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/rock_stacking/package.dsv
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/ament_index/resource_index/packages/rock_stacking
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/rock_stacking/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/rock_stacking/cmake/rock_stackingConfig.cmake
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/rock_stacking/cmake/rock_stackingConfig-version.cmake
+-- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/rock_stacking/share/rock_stacking/package.xml

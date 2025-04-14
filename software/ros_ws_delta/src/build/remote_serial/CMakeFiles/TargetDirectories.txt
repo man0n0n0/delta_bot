@@ -1,0 +1,11 @@
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial/CMakeFiles/uninstall.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial/CMakeFiles/remote_serial_uninstall.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial/CMakeFiles/remote_serial_standalone.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial/CMakeFiles/remote_serial_native.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial/CMakeFiles/test.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial/CMakeFiles/edit_cache.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial/CMakeFiles/rebuild_cache.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial/CMakeFiles/list_install_components.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial/CMakeFiles/install.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial/CMakeFiles/install/local.dir
+/home/svevqx/delta_bot/software/ros_ws_delta/src/build/remote_serial/CMakeFiles/install/strip.dir

@@ -1,0 +1,4 @@
+source;share/rock_stacking/local_setup.bash
+source;share/rock_stacking/local_setup.dsv
+source;share/rock_stacking/local_setup.sh
+source;share/rock_stacking/local_setup.zsh

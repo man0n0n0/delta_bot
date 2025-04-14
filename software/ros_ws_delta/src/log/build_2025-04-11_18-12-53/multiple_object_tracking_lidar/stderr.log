@@ -1,0 +1,69 @@
+[33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  CMake variable FLANN_ROOT is set to:
+
+    /usr
+
+  For compatibility, find_package is ignoring the variable, but code in a
+  .cmake module might still use it.
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+  /opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+  /opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)
+  CMakeLists.txt:20 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+In file included from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:1[m[K:
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/include/multiple_object_tracking_lidar/multiple_object_tracking_lidar.hpp:74:71:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   74 |     void cloud_cb(const sensor_msgs::msg::PointCloud2::ConstPtr &input[01;35m[K)[m[K;
+      |                                                                       [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/point_cloud2.hpp:7[m[K,
+                 from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/include/multiple_object_tracking_lidar/multiple_object_tracking_lidar.hpp:14[m[K:
+[01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/point_cloud2__struct.hpp:197:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  197 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:[m[K In member function ‘[01m[Kstd::pair<int, int> multiple_object_tracking_lidar::MultipleObjectTrackingLidar::[01;32m[KfindIndexOfMin[m[K(std::vector<std::vector<float> >)[m[K’:
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:97:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<float> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   97 |   for (int i = 0; [01;35m[Ki < distMat.size()[m[K; i++)
+      |                   [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:98:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<float>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   98 |     for (int j = 0; [01;35m[Kj < distMat.at(0).size()[m[K; j++) {
+      |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:[m[K In member function ‘[01m[Kvoid multiple_object_tracking_lidar::MultipleObjectTrackingLidar::[01;32m[Kkft[m[K(std_msgs::msg::Float32MultiArray)[m[K’:
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:199:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<float> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  199 |     for (int row = 0; [01;35m[Krow < distMat.size()[m[K;
+      |                       [01;35m[K~~~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:125:7:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ki[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  125 |   int [01;35m[Ki[m[K = 0;
+      |       [01;35m[K^[m[K
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:[m[K At global scope:
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:312:96:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  312 | bjectTrackingLidar::cloud_cb(const sensor_msgs::msg::PointCloud2::ConstPtr &input[01;35m[K)[m[K
+      |                                                                                  [01;35m[K^[m[K
+
+[01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/point_cloud2__struct.hpp:197:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  197 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:[m[K In member function ‘[01m[Kvoid multiple_object_tracking_lidar::MultipleObjectTrackingLidar::[01;32m[Kcloud_cb[m[K(const sensor_msgs::msg::PointCloud2_<std::allocator<void> >::ConstPtr&)[m[K’:
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:610:10:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KpublishedCluster[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  610 |     bool [01;35m[KpublishedCluster[m[K[6];
+      |          [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:615:22:[m[K [01;35m[Kwarning: [m[Kstatement will never be executed [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-unreachable-Wswitch-unreachable]8;;[m[K]
+  615 |         std::cout << [01;35m[K"Inside the switch case\n"[m[K;
+      |                      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar_node.cpp:1[m[K:
+[01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/include/multiple_object_tracking_lidar/multiple_object_tracking_lidar.hpp:74:71:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   74 |     void cloud_cb(const sensor_msgs::msg::PointCloud2::ConstPtr &input[01;35m[K)[m[K;
+      |                                                                       [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/point_cloud2.hpp:7[m[K,
+                 from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/include/multiple_object_tracking_lidar/multiple_object_tracking_lidar.hpp:14[m[K:
+[01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/point_cloud2__struct.hpp:197:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  197 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K

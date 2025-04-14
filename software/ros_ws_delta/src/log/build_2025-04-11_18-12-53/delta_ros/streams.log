@@ -1,0 +1,52 @@
+[4.698s] Invoking command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/delta_ros': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/delta_ros build --build-base /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/build install --record /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/install.log --single-version-externally-managed install_data
+[6.744s] running egg_info
+[6.745s] creating ../build/delta_ros/delta_ros.egg-info
+[6.889s] writing ../build/delta_ros/delta_ros.egg-info/PKG-INFO
+[6.889s] writing dependency_links to ../build/delta_ros/delta_ros.egg-info/dependency_links.txt
+[6.889s] writing entry points to ../build/delta_ros/delta_ros.egg-info/entry_points.txt
+[6.890s] writing requirements to ../build/delta_ros/delta_ros.egg-info/requires.txt
+[6.890s] writing top-level names to ../build/delta_ros/delta_ros.egg-info/top_level.txt
+[6.892s] writing manifest file '../build/delta_ros/delta_ros.egg-info/SOURCES.txt'
+[7.532s] reading manifest file '../build/delta_ros/delta_ros.egg-info/SOURCES.txt'
+[7.539s] adding license file 'LICENSE'
+[7.554s] writing manifest file '../build/delta_ros/delta_ros.egg-info/SOURCES.txt'
+[7.555s] running build
+[7.555s] running build_py
+[7.563s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/build
+[7.564s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/build/lib
+[7.564s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/build/lib/delta_ros
+[7.564s] copying delta_ros/random_move.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/build/lib/delta_ros
+[7.565s] copying delta_ros/touch_onetime.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/build/lib/delta_ros
+[7.574s] copying delta_ros/effector_to_closest.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/build/lib/delta_ros
+[7.574s] copying delta_ros/over_closest.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/build/lib/delta_ros
+[7.574s] copying delta_ros/__init__.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/build/lib/delta_ros
+[7.576s] running install
+[7.674s] running install_lib
+[7.877s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/python3.12/site-packages/delta_ros
+[7.881s] copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/build/lib/delta_ros/random_move.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/python3.12/site-packages/delta_ros
+[7.882s] copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/build/lib/delta_ros/touch_onetime.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/python3.12/site-packages/delta_ros
+[7.882s] copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/build/lib/delta_ros/effector_to_closest.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/python3.12/site-packages/delta_ros
+[7.885s] copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/build/lib/delta_ros/over_closest.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/python3.12/site-packages/delta_ros
+[7.886s] copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/build/lib/delta_ros/__init__.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/python3.12/site-packages/delta_ros
+[7.886s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/python3.12/site-packages/delta_ros/random_move.py to random_move.cpython-312.pyc
+[7.890s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/python3.12/site-packages/delta_ros/touch_onetime.py to touch_onetime.cpython-312.pyc
+[7.896s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/python3.12/site-packages/delta_ros/effector_to_closest.py to effector_to_closest.cpython-312.pyc
+[7.898s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/python3.12/site-packages/delta_ros/over_closest.py to over_closest.cpython-312.pyc
+[7.904s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/python3.12/site-packages/delta_ros/__init__.py to __init__.cpython-312.pyc
+[7.905s] running install_data
+[7.905s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/share/ament_index
+[7.906s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/share/ament_index/resource_index
+[7.907s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/share/ament_index/resource_index/packages
+[7.908s] copying resource/delta_ros -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/share/ament_index/resource_index/packages
+[7.908s] copying package.xml -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/share/delta_ros
+[7.915s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/share/delta_ros/launch
+[7.915s] copying launch/wthTOF_launch.xml -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/share/delta_ros/launch
+[7.915s] copying launch/_launch.xml -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/share/delta_ros/launch
+[7.922s] running install_egg_info
+[8.067s] Copying ../build/delta_ros/delta_ros.egg-info to /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/python3.12/site-packages/delta_ros-0.0.0-py3.12.egg-info
+[8.070s] running install_scripts
+[8.785s] Installing effector_to_closest script to /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/delta_ros
+[8.790s] Installing over_closest script to /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/delta_ros
+[8.791s] Installing random_move script to /home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/delta_ros
+[8.791s] writing list of installed files to '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/install.log'
+[8.907s] Invoked command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/delta_ros' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/delta_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/delta_ros build --build-base /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/build install --record /home/svevqx/delta_bot/software/ros_ws_delta/src/build/delta_ros/install.log --single-version-externally-managed install_data

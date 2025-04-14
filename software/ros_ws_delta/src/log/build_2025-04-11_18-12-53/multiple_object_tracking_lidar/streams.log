@@ -1,0 +1,193 @@
+[1.613s] Invoking command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/multiple_object_tracking_lidar': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar
+[1.851s] -- The C compiler identification is GNU 13.3.0
+[2.099s] -- The CXX compiler identification is GNU 13.3.0
+[2.165s] -- Detecting C compiler ABI info
+[2.540s] -- Detecting C compiler ABI info - done
+[2.600s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.603s] -- Detecting C compile features
+[2.608s] -- Detecting C compile features - done
+[2.647s] -- Detecting CXX compiler ABI info
+[3.040s] -- Detecting CXX compiler ABI info - done
+[3.092s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.096s] -- Detecting CXX compile features
+[3.097s] -- Detecting CXX compile features - done
+[3.119s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.933s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[4.733s] -- Found pcl_ros: 2.6.2 (/opt/ros/jazzy/share/pcl_ros/cmake)
+[5.086s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[5.185s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[5.309s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.438s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.174s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[6.236s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[6.832s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[6.960s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[7.215s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[8.882s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+[8.883s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[8.883s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[8.883s]   cmake_policy command to set the policy and suppress this warning.
+[8.884s] 
+[8.886s]   CMake variable FLANN_ROOT is set to:
+[8.893s] 
+[8.893s]     /usr
+[8.893s] 
+[8.894s]   For compatibility, find_package is ignoring the variable, but code in a
+[8.894s]   .cmake module might still use it.
+[8.894s] Call Stack (most recent call first):
+[8.895s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+[8.895s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+[8.895s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+[8.903s]   /opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[8.903s]   /opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[8.904s]   /opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[8.904s]   /opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)
+[8.904s]   CMakeLists.txt:20 (find_package)
+[8.905s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[8.905s] [0m
+[8.905s] -- Found flann version 1.9.2
+[10.197s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[10.201s] -- Found OpenMP: TRUE (found version "4.5") found components: CXX 
+[17.544s] -- Checking for module 'libusb-1.0'
+[17.713s] --   Found libusb-1.0, version 1.0.27
+[17.983s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[18.002s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[18.518s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[18.563s] -- Could NOT find Pcap (missing: PCAP_LIBRARIES PCAP_INCLUDE_DIRS) 
+[18.726s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")  
+[19.053s] -- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.43") 
+[23.900s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[23.976s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[30.219s] -- Found Qhull version 8.0.2
+[35.332s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[39.548s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[39.553s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[39.562s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[39.576s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[39.585s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[39.592s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[39.604s] -- Found PCL_2D: /usr/include/pcl-1.14  
+[39.611s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.14  
+[39.618s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[39.633s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[39.640s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[39.648s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[39.669s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[39.678s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[39.700s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[39.708s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[39.725s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[39.736s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[39.742s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[39.762s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[39.770s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.14  
+[39.782s] -- Found PCL_MODELER: /usr/include/pcl-1.14  
+[39.795s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.14  
+[39.803s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[39.832s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[42.250s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[42.250s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[42.251s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[42.306s] -- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)
+[42.527s] -- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)
+[43.163s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[44.492s] -- Added test 'copyright' to check source files copyright and LICENSE
+[44.518s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[44.518s] -- Configured cppcheck include dirs: /home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/include;/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/include/multiple_object_tracking_lidar
+[44.519s] -- Configured cppcheck exclude dirs and/or files: 
+[44.553s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[44.553s] -- Configured cpplint exclude dirs and/or files: 
+[44.565s] -- Added test 'flake8' to check Python code syntax and style conventions
+[44.568s] -- Configured 'flake8' exclude dirs and/or files: 
+[44.582s] -- Added test 'lint_cmake' to check CMake code style
+[44.602s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[44.614s] -- Added test 'uncrustify' to check C / C++ code style
+[44.624s] -- Configured uncrustify additional arguments: 
+[44.628s] -- Added test 'xmllint' to check XML markup files
+[44.663s] -- Configuring done (43.0s)
+[45.323s] -- Generating done (0.5s)
+[45.405s] -- Build files have been written to: /home/svevqx/delta_bot/software/ros_ws_delta/src/build/multiple_object_tracking_lidar
+[45.537s] Invoked command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/multiple_object_tracking_lidar' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar
+[45.538s] Invoking command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/multiple_object_tracking_lidar': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/svevqx/delta_bot/software/ros_ws_delta/src/build/multiple_object_tracking_lidar -- -j4 -l4
+[46.007s] [ 25%] [32mBuilding CXX object CMakeFiles/multiple_object_tracking_lidar.dir/src/multiple_object_tracking_lidar.cpp.o[0m
+[88.910s] In file included from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:1[m[K:
+[88.911s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/include/multiple_object_tracking_lidar/multiple_object_tracking_lidar.hpp:74:71:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[88.912s]    74 |     void cloud_cb(const sensor_msgs::msg::PointCloud2::ConstPtr &input[01;35m[K)[m[K;
+[88.913s]       |                                                                       [01;35m[K^[m[K
+[88.916s] In file included from [01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/point_cloud2.hpp:7[m[K,
+[88.917s]                  from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/include/multiple_object_tracking_lidar/multiple_object_tracking_lidar.hpp:14[m[K:
+[88.917s] [01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/point_cloud2__struct.hpp:197:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[88.917s]   197 |     [01;36m[KConstPtr[m[K;
+[88.918s]       |     [01;36m[K^~~~~~~~[m[K
+[89.134s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:[m[K In member function ‘[01m[Kstd::pair<int, int> multiple_object_tracking_lidar::MultipleObjectTrackingLidar::[01;32m[KfindIndexOfMin[m[K(std::vector<std::vector<float> >)[m[K’:
+[89.134s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:97:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<float> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[89.135s]    97 |   for (int i = 0; [01;35m[Ki < distMat.size()[m[K; i++)
+[89.138s]       |                   [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[89.152s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:98:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<float>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[89.152s]    98 |     for (int j = 0; [01;35m[Kj < distMat.at(0).size()[m[K; j++) {
+[89.153s]       |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[89.220s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:[m[K In member function ‘[01m[Kvoid multiple_object_tracking_lidar::MultipleObjectTrackingLidar::[01;32m[Kkft[m[K(std_msgs::msg::Float32MultiArray)[m[K’:
+[89.220s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:199:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<float> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[89.221s]   199 |     for (int row = 0; [01;35m[Krow < distMat.size()[m[K;
+[89.221s]       |                       [01;35m[K~~~~^~~~~~~~~~~~~~~~[m[K
+[89.268s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:125:7:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ki[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[89.269s]   125 |   int [01;35m[Ki[m[K = 0;
+[89.269s]       |       [01;35m[K^[m[K
+[89.353s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:[m[K At global scope:
+[89.354s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:312:96:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[89.354s]   312 | bjectTrackingLidar::cloud_cb(const sensor_msgs::msg::PointCloud2::ConstPtr &input[01;35m[K)[m[K
+[89.355s]       |                                                                                  [01;35m[K^[m[K
+[89.355s] 
+[89.372s] [01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/point_cloud2__struct.hpp:197:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[89.372s]   197 |     [01;36m[KConstPtr[m[K;
+[89.372s]       |     [01;36m[K^~~~~~~~[m[K
+[89.701s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:[m[K In member function ‘[01m[Kvoid multiple_object_tracking_lidar::MultipleObjectTrackingLidar::[01;32m[Kcloud_cb[m[K(const sensor_msgs::msg::PointCloud2_<std::allocator<void> >::ConstPtr&)[m[K’:
+[89.701s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:610:10:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KpublishedCluster[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[89.702s]   610 |     bool [01;35m[KpublishedCluster[m[K[6];
+[89.702s]       |          [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[103.053s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar.cpp:615:22:[m[K [01;35m[Kwarning: [m[Kstatement will never be executed [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-unreachable-Wswitch-unreachable]8;;[m[K]
+[103.053s]   615 |         std::cout << [01;35m[K"Inside the switch case\n"[m[K;
+[103.053s]       |                      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[144.847s] [ 50%] [32m[1mLinking CXX shared library libmultiple_object_tracking_lidar.so[0m
+[152.648s] [ 50%] Built target multiple_object_tracking_lidar
+[152.733s] [ 75%] [32mBuilding CXX object CMakeFiles/multiple_object_tracking_lidar_node.dir/src/multiple_object_tracking_lidar_node.cpp.o[0m
+[195.640s] In file included from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/src/multiple_object_tracking_lidar_node.cpp:1[m[K:
+[195.641s] [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/include/multiple_object_tracking_lidar/multiple_object_tracking_lidar.hpp:74:71:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[195.641s]    74 |     void cloud_cb(const sensor_msgs::msg::PointCloud2::ConstPtr &input[01;35m[K)[m[K;
+[195.641s]       |                                                                       [01;35m[K^[m[K
+[195.652s] In file included from [01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/point_cloud2.hpp:7[m[K,
+[195.652s]                  from [01m[K/home/svevqx/delta_bot/software/ros_ws_delta/src/multiple_object_tracking_lidar_ros2/include/multiple_object_tracking_lidar/multiple_object_tracking_lidar.hpp:14[m[K:
+[195.653s] [01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/point_cloud2__struct.hpp:197:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[195.653s]   197 |     [01;36m[KConstPtr[m[K;
+[195.653s]       |     [01;36m[K^~~~~~~~[m[K
+[203.079s] [100%] [32m[1mLinking CXX executable multiple_object_tracking_lidar_node[0m
+[212.427s] [100%] Built target multiple_object_tracking_lidar_node
+[212.490s] Invoked command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/multiple_object_tracking_lidar' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/svevqx/delta_bot/software/ros_ws_delta/src/build/multiple_object_tracking_lidar -- -j4 -l4
+[212.501s] Invoking command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/multiple_object_tracking_lidar': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/svevqx/delta_bot/software/ros_ws_delta/src/build/multiple_object_tracking_lidar
+[212.547s] -- Install configuration: ""
+[212.548s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/include
+[212.548s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/include/multiple_object_tracking_lidar
+[212.548s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/include/multiple_object_tracking_lidar/multiple_object_tracking_lidar.hpp
+[212.558s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/lib/libmultiple_object_tracking_lidar.so
+[212.608s] -- Set non-toolchain portion of runtime path of "/home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/lib/libmultiple_object_tracking_lidar.so" to ""
+[212.608s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/lib/multiple_object_tracking_lidar/multiple_object_tracking_lidar_node
+[212.622s] -- Set non-toolchain portion of runtime path of "/home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/lib/multiple_object_tracking_lidar/multiple_object_tracking_lidar_node" to ""
+[212.624s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/multiple_object_tracking_lidar/launch
+[212.625s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/multiple_object_tracking_lidar/launch/multiple_object_tracking_lidar.launch.py
+[212.637s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/ament_index/resource_index/package_run_dependencies/multiple_object_tracking_lidar
+[212.646s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/ament_index/resource_index/parent_prefix_path/multiple_object_tracking_lidar
+[212.647s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/multiple_object_tracking_lidar/environment/ament_prefix_path.sh
+[212.651s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/multiple_object_tracking_lidar/environment/ament_prefix_path.dsv
+[212.655s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/multiple_object_tracking_lidar/environment/path.sh
+[212.662s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/multiple_object_tracking_lidar/environment/path.dsv
+[212.662s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/multiple_object_tracking_lidar/local_setup.bash
+[212.662s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/multiple_object_tracking_lidar/local_setup.sh
+[212.663s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/multiple_object_tracking_lidar/local_setup.zsh
+[212.664s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/multiple_object_tracking_lidar/local_setup.dsv
+[212.665s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/multiple_object_tracking_lidar/package.dsv
+[212.667s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/ament_index/resource_index/packages/multiple_object_tracking_lidar
+[212.668s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/ament_index/resource_index/rclcpp_components/multiple_object_tracking_lidar
+[212.669s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/multiple_object_tracking_lidar/cmake/multiple_object_tracking_lidarConfig.cmake
+[212.670s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/multiple_object_tracking_lidar/cmake/multiple_object_tracking_lidarConfig-version.cmake
+[212.677s] -- Installing: /home/svevqx/delta_bot/software/ros_ws_delta/src/install/multiple_object_tracking_lidar/share/multiple_object_tracking_lidar/package.xml
+[212.684s] Invoked command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/multiple_object_tracking_lidar' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/grbl_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/delta_ros:/home/svevqx/delta_bot/software/ros_ws_delta/install/cnc-interface:/home/svevqx/delta_bot/software/ros_ws_delta/install/arducam_rclpy_tof_pointcloud:/home/svevqx/ros2_ws/install/launch_testing_examples:/home/svevqx/ros2_ws/install/grbl_ros:/home/svevqx/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_service:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_publisher:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_client:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_server:/home/svevqx/ros2_ws/install/examples_rclpy_minimal_action_client:/home/svevqx/ros2_ws/install/examples_rclpy_guard_conditions:/home/svevqx/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/svevqx/delta_bot/software/ros_ws_delta/src/build/multiple_object_tracking_lidar

@@ -31,11 +31,11 @@ def generate_launch_description():
     config = os.path.join(
         get_package_share_directory('grbl_ros'),
         'config',
-        'cnc001.yaml')
+        'delta_marlin.yaml')
 
     node = Node(
         package='grbl_ros',
-        name='cnc_001',
+        name='delta_marlin',
         executable='grbl_node',
         parameters=[config])
 

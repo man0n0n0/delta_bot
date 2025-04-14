@@ -1,5 +1,4 @@
 LICENSE
-README.md
 package.xml
 setup.cfg
 setup.py
@@ -11,6 +10,7 @@ setup.py
 ../build/grbl_ros/grbl_ros.egg-info/top_level.txt
 ../build/grbl_ros/grbl_ros.egg-info/zip-safe
 config/cnc001.yaml
+config/delta_marlin.yaml
 grbl_ros/__init__.py
 grbl_ros/_command.py
 grbl_ros/_configure.py
