@@ -14,6 +14,7 @@ private:
   rclcpp::Subscription<geometry_msgs::msg::PoseArray>::SharedPtr subscription_;
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr gcode_publisher_;
   bool processing_rock_;
+  std::string machine_id_;
 
 public:
   RockStacking() : Node("rock_stacking")
@@ -31,6 +32,7 @@ public:
     this->declare_parameter("homing_command", "G28"); // Command for homing
     this->declare_parameter("pick_wait_time", 3); // Time to wait after picking (seconds)
     this->declare_parameter("home_wait_time", 10); // Time to wait at home position (seconds)
+    this->declare_parameter("machine_id", "delta_marlin"); // Machine ID for Marlin controller
     
     // Physical limits of the robot
     this->declare_parameter("x_min", -60.0); // Minimum X coordinate (mm)
@@ -40,12 +42,16 @@ public:
     this->declare_parameter("z_min", 0.0);   // Minimum Z coordinate (mm)
     this->declare_parameter("z_max", 100.0); // Maximum Z coordinate (mm)
 
+    // Get machine ID for topic name
+    machine_id_ = this->get_parameter("machine_id").as_string();
+
     // Subscribe to rock centers from rock detector
     subscription_ = this->create_subscription<geometry_msgs::msg::PoseArray>(
       "rock_centers", 10, std::bind(&RockStacking::centers_callback, this, std::placeholders::_1));
 
-    // Publisher for G-code commands
-    gcode_publisher_ = this->create_publisher<std_msgs::msg::String>("gcode_commands", 10);
+    // Publisher for G-code commands to Marlin controller topic
+    gcode_publisher_ = this->create_publisher<std_msgs::msg::String>(
+      "/" + machine_id_ + "/gcode", 10);
     
     // Flag to track whether we're currently processing a rock
     processing_rock_ = false;
@@ -54,6 +60,7 @@ public:
     send_homing_command();
 
     RCLCPP_INFO(this->get_logger(), "Rock Stacking node has started");
+    RCLCPP_INFO(this->get_logger(), "Publishing G-code to /%s/gcode", machine_id_.c_str());
   }
 
 private:
@@ -63,7 +70,7 @@ private:
     
     RCLCPP_INFO(this->get_logger(), "Sending homing command: %s", homing_command.c_str());
     
-    // Publish the homing command
+    // Publish the homing command to Marlin controller
     std_msgs::msg::String msg;
     msg.data = homing_command;
     gcode_publisher_->publish(msg);
@@ -117,7 +124,9 @@ private:
     size_t closest_index = find_closest_rock(msg, center_x, center_y);
     double rock_x = msg->poses[closest_index].position.x;
     double rock_y = msg->poses[closest_index].position.y;
+    // Declare rock_z but mark as used to prevent warning
     double rock_z = msg->poses[closest_index].position.z;
+    (void)rock_z; // Suppress unused variable warning
 
     // Convert point coordinates to machine coordinates (mm)
     double x_machine = rock_x * 1000.0; // Convert to mm
@@ -277,15 +286,15 @@ private:
   {
     for (const auto& cmd : commands)
     {
-      // Create message
+      // Create message for Marlin controller topic
       std_msgs::msg::String gcode_msg;
       gcode_msg.data = cmd;
       
-      // Publish command
+      // Publish command to Marlin controller topic
       gcode_publisher_->publish(gcode_msg);
       
       // Log the command being sent
-      RCLCPP_INFO(this->get_logger(), "Sending G-code: %s", cmd.c_str());
+      RCLCPP_INFO(this->get_logger(), "Sending G-code to /%s/gcode: %s", machine_id_.c_str(), cmd.c_str());
       
       // Wait a short time between commands to allow for processing
       std::this_thread::sleep_for(std::chrono::milliseconds(100));
