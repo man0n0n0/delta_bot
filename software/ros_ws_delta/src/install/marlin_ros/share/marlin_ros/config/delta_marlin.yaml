@@ -1,0 +1,6 @@
+marlin_controller:
+  ros__parameters:
+    machine_id: 'delta_marlin'
+    port: '/dev/ttyACM0'
+    baudrate: 250000
+    buffer_size: 128

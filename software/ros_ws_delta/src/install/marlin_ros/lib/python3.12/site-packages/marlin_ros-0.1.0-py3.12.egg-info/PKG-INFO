@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: marlin-ros
+Version: 0.1.0
+Summary: Fast, lightweight ROS2 package to interface with Marlin device
+Maintainer: Your Name
+Maintainer-email: user@example.com
+License: MIT

@@ -1,0 +1,2 @@
+[console_scripts]
+marlin_node = marlin_ros.controller:main

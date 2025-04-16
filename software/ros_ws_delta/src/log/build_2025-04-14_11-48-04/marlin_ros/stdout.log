@@ -1,0 +1,38 @@
+running egg_info
+creating ../build/marlin_ros/marlin_ros.egg-info
+writing ../build/marlin_ros/marlin_ros.egg-info/PKG-INFO
+writing dependency_links to ../build/marlin_ros/marlin_ros.egg-info/dependency_links.txt
+writing entry points to ../build/marlin_ros/marlin_ros.egg-info/entry_points.txt
+writing requirements to ../build/marlin_ros/marlin_ros.egg-info/requires.txt
+writing top-level names to ../build/marlin_ros/marlin_ros.egg-info/top_level.txt
+writing manifest file '../build/marlin_ros/marlin_ros.egg-info/SOURCES.txt'
+reading manifest file '../build/marlin_ros/marlin_ros.egg-info/SOURCES.txt'
+writing manifest file '../build/marlin_ros/marlin_ros.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build
+creating /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build/lib
+creating /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build/lib/marlin_ros
+copying marlin_ros/controller.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build/lib/marlin_ros
+copying marlin_ros/__init__.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build/lib/marlin_ros
+running install
+running install_lib
+creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/python3.12/site-packages/marlin_ros
+copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build/lib/marlin_ros/controller.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/python3.12/site-packages/marlin_ros
+copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build/lib/marlin_ros/__init__.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/python3.12/site-packages/marlin_ros
+byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/python3.12/site-packages/marlin_ros/controller.py to controller.cpython-312.pyc
+byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/python3.12/site-packages/marlin_ros/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/ament_index
+creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/ament_index/resource_index
+creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/ament_index/resource_index/packages
+copying resource/marlin_ros -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/ament_index/resource_index/packages
+copying package.xml -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/marlin_ros
+creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/marlin_ros/config
+copying config/delta_marlin.yaml -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/marlin_ros/config
+creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/marlin_ros/launch
+running install_egg_info
+Copying ../build/marlin_ros/marlin_ros.egg-info to /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/python3.12/site-packages/marlin_ros-0.1.0-py3.12.egg-info
+running install_scripts
+Installing marlin_node script to /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/marlin_ros
+writing list of installed files to '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/install.log'

@@ -1,0 +1,40 @@
+[1.750s] Invoking command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/marlin_ros': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/marlin_ros build --build-base /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build install --record /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/install.log --single-version-externally-managed install_data
+[2.264s] running egg_info
+[2.265s] creating ../build/marlin_ros/marlin_ros.egg-info
+[2.303s] writing ../build/marlin_ros/marlin_ros.egg-info/PKG-INFO
+[2.303s] writing dependency_links to ../build/marlin_ros/marlin_ros.egg-info/dependency_links.txt
+[2.304s] writing entry points to ../build/marlin_ros/marlin_ros.egg-info/entry_points.txt
+[2.304s] writing requirements to ../build/marlin_ros/marlin_ros.egg-info/requires.txt
+[2.304s] writing top-level names to ../build/marlin_ros/marlin_ros.egg-info/top_level.txt
+[2.304s] writing manifest file '../build/marlin_ros/marlin_ros.egg-info/SOURCES.txt'
+[2.393s] reading manifest file '../build/marlin_ros/marlin_ros.egg-info/SOURCES.txt'
+[2.394s] writing manifest file '../build/marlin_ros/marlin_ros.egg-info/SOURCES.txt'
+[2.395s] running build
+[2.395s] running build_py
+[2.395s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build
+[2.396s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build/lib
+[2.396s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build/lib/marlin_ros
+[2.396s] copying marlin_ros/controller.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build/lib/marlin_ros
+[2.396s] copying marlin_ros/__init__.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build/lib/marlin_ros
+[2.396s] running install
+[2.407s] running install_lib
+[2.454s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/python3.12/site-packages/marlin_ros
+[2.454s] copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build/lib/marlin_ros/controller.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/python3.12/site-packages/marlin_ros
+[2.454s] copying /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build/lib/marlin_ros/__init__.py -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/python3.12/site-packages/marlin_ros
+[2.455s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/python3.12/site-packages/marlin_ros/controller.py to controller.cpython-312.pyc
+[2.458s] byte-compiling /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/python3.12/site-packages/marlin_ros/__init__.py to __init__.cpython-312.pyc
+[2.458s] running install_data
+[2.459s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/ament_index
+[2.459s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/ament_index/resource_index
+[2.459s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/ament_index/resource_index/packages
+[2.459s] copying resource/marlin_ros -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/ament_index/resource_index/packages
+[2.460s] copying package.xml -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/marlin_ros
+[2.460s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/marlin_ros/config
+[2.460s] copying config/delta_marlin.yaml -> /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/marlin_ros/config
+[2.461s] creating /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/share/marlin_ros/launch
+[2.461s] running install_egg_info
+[2.506s] Copying ../build/marlin_ros/marlin_ros.egg-info to /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/python3.12/site-packages/marlin_ros-0.1.0-py3.12.egg-info
+[2.508s] running install_scripts
+[2.775s] Installing marlin_node script to /home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/marlin_ros
+[2.776s] writing list of installed files to '/home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/install.log'
+[2.820s] Invoked command in '/home/svevqx/delta_bot/software/ros_ws_delta/src/marlin_ros' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/svevqx/delta_bot/software/ros_ws_delta/src/install/marlin_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/marlin_ros build --build-base /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/build install --record /home/svevqx/delta_bot/software/ros_ws_delta/src/build/marlin_ros/install.log --single-version-externally-managed install_data
