@@ -286,30 +286,51 @@ private:
   {
     for (const auto& cmd : commands)
     {
+      // Skip comment-only lines
+      if (cmd.empty() || cmd[0] == ';') {
+        continue;
+      }
+      
+      // Extract the pure G-code command without comments
+      std::string pure_cmd = cmd;
+      size_t comment_pos = cmd.find(';');
+      if (comment_pos != std::string::npos) {
+        pure_cmd = cmd.substr(0, comment_pos);
+      }
+      
+      // Trim whitespace
+      pure_cmd.erase(0, pure_cmd.find_first_not_of(" \t"));
+      pure_cmd.erase(pure_cmd.find_last_not_of(" \t") + 1);
+      
+      // Skip empty commands after removing comments
+      if (pure_cmd.empty()) {
+        continue;
+      }
+      
       // Create message for Marlin controller topic
       std_msgs::msg::String gcode_msg;
-      gcode_msg.data = cmd;
+      gcode_msg.data = pure_cmd;
       
       // Publish command to Marlin controller topic
       gcode_publisher_->publish(gcode_msg);
       
       // Log the command being sent
-      RCLCPP_INFO(this->get_logger(), "Sending G-code to /%s/gcode: %s", machine_id_.c_str(), cmd.c_str());
+      RCLCPP_INFO(this->get_logger(), "Sending G-code to /%s/gcode: %s", machine_id_.c_str(), pure_cmd.c_str());
       
       // Wait a short time between commands to allow for processing
       std::this_thread::sleep_for(std::chrono::milliseconds(100));
       
       // Add additional wait time for movement commands (G0, G1) to complete
-      if (cmd.find("G0") != std::string::npos || cmd.find("G1") != std::string::npos) {
+      if (pure_cmd.find("G0") != std::string::npos || pure_cmd.find("G1") != std::string::npos) {
         std::this_thread::sleep_for(std::chrono::seconds(1));
       }
       
       // Add additional wait time for wait commands (G4)
-      if (cmd.find("G4") != std::string::npos) {
+      if (pure_cmd.find("G4") != std::string::npos) {
         // Extract the wait time from the command (P parameter is in milliseconds)
-        size_t p_pos = cmd.find("P");
+        size_t p_pos = pure_cmd.find("P");
         if (p_pos != std::string::npos) {
-          std::string p_value = cmd.substr(p_pos + 1);
+          std::string p_value = pure_cmd.substr(p_pos + 1);
           size_t space_pos = p_value.find(" ");
           if (space_pos != std::string::npos) {
             p_value = p_value.substr(0, space_pos);
