@@ -6,6 +6,8 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <chrono>
+#include <thread>
 
 class RockStacking : public rclcpp::Node
 {
@@ -22,6 +24,9 @@ public:
     this->declare_parameter("gcode_file", "rock_pick_place.gcode"); // Output file name
     this->declare_parameter("gripper_open_command", "M8"); // Command to open gripper
     this->declare_parameter("gripper_close_command", "M9"); // Command to close gripper
+    this->declare_parameter("homing_command", "G28"); // Command for homing
+    this->declare_parameter("pick_wait_time", 3); // Time to wait after picking (seconds)
+    this->declare_parameter("home_wait_time", 10); // Time to wait at home position (seconds)
     
     // Physical limits of the robot
     this->declare_parameter("x_min", -60.0); // Minimum X coordinate (mm)
@@ -37,20 +42,52 @@ public:
 
     // Publisher for G-code commands
     gcode_publisher_ = this->create_publisher<std_msgs::msg::String>("gcode_commands", 10);
+    
+    // Flag to track whether we're currently processing a rock
+    processing_rock_ = false;
+
+    // Send homing command at startup
+    send_homing_command();
 
     RCLCPP_INFO(this->get_logger(), "Rock Stacking node has started");
   }
 
 private:
+  void send_homing_command()
+  {
+    std::string homing_command = this->get_parameter("homing_command").as_string();
+    
+    RCLCPP_INFO(this->get_logger(), "Sending homing command: %s", homing_command.c_str());
+    
+    // Publish the homing command
+    std_msgs::msg::String msg;
+    msg.data = homing_command;
+    gcode_publisher_->publish(msg);
+    
+    // Wait for homing to complete (you might want to implement feedback in a real system)
+    std::this_thread::sleep_for(std::chrono::seconds(5)); 
+    
+    RCLCPP_INFO(this->get_logger(), "Homing completed. Ready to process rocks.");
+    processing_rock_ = false;
+  }
   void centers_callback(const geometry_msgs::msg::PoseArray::SharedPtr msg)
   {
+    // Skip if we're already processing a rock
+    if (processing_rock_) {
+      RCLCPP_INFO(this->get_logger(), "Already processing a rock, skipping new detection");
+      return;
+    }
+    
     if (msg->poses.empty())
     {
       RCLCPP_WARN(this->get_logger(), "Received empty PoseArray, no rocks detected");
       return;
     }
 
-    // Get the center position from parameters
+    processing_rock_ = true;
+    RCLCPP_INFO(this->get_logger(), "Starting new rock processing sequence");
+    
+    // Get parameters
     double center_x = this->get_parameter("center_x").as_double();
     double center_y = this->get_parameter("center_y").as_double();
     double center_z = this->get_parameter("center_z").as_double();
@@ -60,6 +97,8 @@ private:
     std::string gcode_file = this->get_parameter("gcode_file").as_string();
     std::string gripper_open = this->get_parameter("gripper_open_command").as_string();
     std::string gripper_close = this->get_parameter("gripper_close_command").as_string();
+    int pick_wait_time = this->get_parameter("pick_wait_time").as_int();
+    int home_wait_time = this->get_parameter("home_wait_time").as_int();
     
     // Get physical limits
     double x_min = this->get_parameter("x_min").as_double();
@@ -142,8 +181,41 @@ private:
     gcode_commands.push_back("G21 ; Set units to millimeters");
     gcode_commands.push_back("G90 ; Use absolute positioning");
     
-    // Open gripper
+    // Step 1: Open gripper first
     gcode_commands.push_back(gripper_open + " ; Open gripper");
+    
+    // Step 2: Move to approach height
+    double safe_z_approach = std::max(std::min(approach_height * 1000.0, z_max), z_min);
+    gcode_commands.push_back("G0 Z" + std::to_string(safe_z_approach) + " F" + std::to_string(feedrate) + " ; Move to safe height");
+
+    // Step 3: Move above the closest rock
+    size_t closest_index = find_closest_rock(msg, center_x, center_y);
+    double rock_x = msg->poses[closest_index].position.x;
+    double rock_y = msg->poses[closest_index].position.y;
+    double rock_z = msg->poses[closest_index].position.z;
+    
+    double x_machine = rock_x * 1000.0; // Convert to mm
+    double y_machine = rock_y * 1000.0; // Convert to mm
+    
+    double safe_x = std::max(std::min(x_machine, x_max), x_min);
+    double safe_y = std::max(std::min(y_machine, y_max), y_min);
+    
+    gcode_commands.push_back("G0 X" + std::to_string(safe_x) + " Y" + std::to_string(safe_y) + 
+                             " F" + std::to_string(feedrate) + " ; Move above rock");
+    
+    RCLCPP_INFO(this->get_logger(), "Moving to closest rock at (%.1f, %.1f)", safe_x, safe_y);
+    
+    // Step 4: Move down to pick the rock
+    double safe_z_pick = std::max(std::min(pick_height * 1000.0, z_max), z_min);
+    gcode_commands.push_back("G1 Z" + std::to_string(safe_z_pick) + " F" + std::to_string(feedrate/2) + " ; Move down to pick");
+    
+    // Step 5: Close gripper to grab rock
+    gcode_commands.push_back(gripper_close + " ; Close gripper to grab rock");
+    
+    // Step 6: Wait for the rock to be securely grasped
+    gcode_commands.push_back("G4 P" + std::to_string(pick_wait_time * 1000) + " ; Wait for " + std::to_string(pick_wait_time) + " seconds");
+    
+    RCLCPP_INFO(this->get_logger(), "Picking rock, waiting %d seconds to secure grasp", pick_wait_time);
     
     // Move to approach position above rock
     gcode_commands.push_back("G0 Z" + std::to_string(z_machine_approach) + " F" + std::to_string(feedrate) + " ; Move to safe height");
@@ -176,53 +248,56 @@ private:
     // Move down to place the rock - with limit check
     gcode_commands.push_back("G1 Z" + std::to_string(safe_z_pick) + " F" + std::to_string(feedrate/2) + " ; Move down to place");
     
-    // Open gripper to release
-    gcode_commands.push_back(gripper_open + " ; Open gripper to release rock");
-    
-    // Move back up to safe height - with limit check
-    gcode_commands.push_back("G0 Z" + std::to_string(safe_z_approach) + " F" + std::to_string(feedrate) + " ; Move back up to safe height");
-    
-    // Return to home position - ensuring it's within limits
-    double home_x = 0.0;
-    double home_y = 0.0;
-    
-    // Apply limits to home position if needed
-    home_x = std::max(std::min(home_x, x_max), x_min);
-    home_y = std::max(std::min(home_y, y_max), y_min);
-    
-    gcode_commands.push_back("G0 X" + std::to_string(home_x) + " Y" + std::to_string(home_y) + 
-                             " F" + std::to_string(feedrate) + " ; Return to home position");
-                             
-    RCLCPP_INFO(this->get_logger(), "Generated G-code with robot limit constraints applied [X: %.1f to %.1f, Y: %.1f to %.1f, Z: %.1f to %.1f]",
-                x_min, x_max, y_min, y_max, z_min, z_max);
-
-    // Save G-code to file
-    std::ofstream outfile(gcode_file);
-    if (outfile.is_open())
+  void execute_gcode_sequence(const std::vector<std::string>& commands)
+  {
+    for (const auto& cmd : commands)
     {
-      for (const auto& cmd : gcode_commands)
-      {
-        outfile << cmd << std::endl;
-      }
-      outfile.close();
-      RCLCPP_INFO(this->get_logger(), "G-code saved to %s", gcode_file.c_str());
-    }
-    else
-    {
-      RCLCPP_ERROR(this->get_logger(), "Failed to open G-code output file");
-    }
-
-    // Publish G-code commands
-    for (const auto& cmd : gcode_commands)
-    {
+      // Create message
       std_msgs::msg::String gcode_msg;
       gcode_msg.data = cmd;
+      
+      // Publish command
       gcode_publisher_->publish(gcode_msg);
+      
+      // Log the command being sent
+      RCLCPP_INFO(this->get_logger(), "Sending G-code: %s", cmd.c_str());
+      
+      // Wait a short time between commands to allow for processing
+      std::this_thread::sleep_for(std::chrono::milliseconds(100));
+      
+      // Add additional wait time for movement commands (G0, G1) to complete
+      if (cmd.find("G0") != std::string::npos || cmd.find("G1") != std::string::npos) {
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+      }
+      
+      // Add additional wait time for wait commands (G4)
+      if (cmd.find("G4") != std::string::npos) {
+        // Extract the wait time from the command (P parameter is in milliseconds)
+        size_t p_pos = cmd.find("P");
+        if (p_pos != std::string::npos) {
+          std::string p_value = cmd.substr(p_pos + 1);
+          size_t space_pos = p_value.find(" ");
+          if (space_pos != std::string::npos) {
+            p_value = p_value.substr(0, space_pos);
+          }
+          try {
+            int wait_ms = std::stoi(p_value);
+            std::this_thread::sleep_for(std::chrono::milliseconds(wait_ms));
+          } catch (const std::exception& e) {
+            RCLCPP_WARN(this->get_logger(), "Failed to parse wait time: %s", e.what());
+          }
+        }
+      }
     }
+    
+    // After executing all commands, reset the processing flag to allow new operations
+    processing_rock_ = false;
+    RCLCPP_INFO(this->get_logger(), "Rock stacking sequence completed, ready for next rock");
   }
 
   rclcpp::Subscription<geometry_msgs::msg::PoseArray>::SharedPtr subscription_;
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr gcode_publisher_;
+  bool processing_rock_;
 };
 
 int main(int argc, char * argv[])

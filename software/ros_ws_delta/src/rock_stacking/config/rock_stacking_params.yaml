@@ -14,6 +14,9 @@
     gcode_file: "rock_pick_place.gcode"
     gripper_open_command: "M8"
     gripper_close_command: "M9"
+    homing_command: "G28"
+    pick_wait_time: 3
+    home_wait_time: 10
     
     # Robot physical limits
     x_min: -60.0
