@@ -9,8 +9,12 @@
 #include <chrono>
 #include <thread>
 
-class RockStacking : public rclcpp::Node
-{
+class RockStacking : public rclcpp::Node {
+private:
+  rclcpp::Subscription<geometry_msgs::msg::PoseArray>::SharedPtr subscription_;
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr gcode_publisher_;
+  bool processing_rock_;
+
 public:
   RockStacking() : Node("rock_stacking")
   {
@@ -70,6 +74,7 @@ private:
     RCLCPP_INFO(this->get_logger(), "Homing completed. Ready to process rocks.");
     processing_rock_ = false;
   }
+
   void centers_callback(const geometry_msgs::msg::PoseArray::SharedPtr msg)
   {
     // Skip if we're already processing a rock
@@ -108,67 +113,47 @@ private:
     double z_min = this->get_parameter("z_min").as_double();
     double z_max = this->get_parameter("z_max").as_double();
 
-    // Find the closest rock to the center
-    size_t closest_index = 0;
-    double min_distance = std::numeric_limits<double>::max();
-    
-    for (size_t i = 0; i < msg->poses.size(); ++i)
-    {
-      double dx = msg->poses[i].position.x - center_x;
-      double dy = msg->poses[i].position.y - center_y;
-      double distance = std::sqrt(dx*dx + dy*dy);
-      
-      if (distance < min_distance)
-      {
-        min_distance = distance;
-        closest_index = i;
-      }
-    }
-
-    // Get the closest rock position
+    // Find the closest rock
+    size_t closest_index = find_closest_rock(msg, center_x, center_y);
     double rock_x = msg->poses[closest_index].position.x;
     double rock_y = msg->poses[closest_index].position.y;
     double rock_z = msg->poses[closest_index].position.z;
 
-    RCLCPP_INFO(this->get_logger(), 
-                "Closest rock found at (%.3f, %.3f, %.3f), distance: %.3f", 
-                rock_x, rock_y, rock_z, min_distance);
-
     // Convert point coordinates to machine coordinates (mm)
     double x_machine = rock_x * 1000.0; // Convert to mm
     double y_machine = rock_y * 1000.0; // Convert to mm
-    double z_machine_approach = approach_height * 1000.0; // Convert to mm
-    double z_machine_pick = pick_height * 1000.0; // Convert to mm
+    
+    // Check if rock position is within robot limits
+    bool rock_in_limits = (x_machine >= x_min && x_machine <= x_max &&
+                           y_machine >= y_min && y_machine <= y_max);
+                           
+    // Check if center position is within robot limits
     double center_x_mm = center_x * 1000.0; // Convert to mm
     double center_y_mm = center_y * 1000.0; // Convert to mm
     double center_z_mm = center_z * 1000.0; // Convert to mm
     
-    // Check if rock position is within robot limits
-    bool rock_in_limits = (x_machine >= x_min && x_machine <= x_max &&
-                           y_machine >= y_min && y_machine <= y_max &&
-                           z_machine_pick >= z_min && z_machine_approach <= z_max);
-                           
-    // Check if center position is within robot limits
     bool center_in_limits = (center_x_mm >= x_min && center_x_mm <= x_max &&
-                             center_y_mm >= y_min && center_y_mm <= y_max &&
-                             center_z_mm >= z_min && center_z_mm <= z_max);
+                           center_y_mm >= y_min && center_y_mm <= y_max &&
+                           center_z_mm >= z_min && center_z_mm <= z_max);
     
     if (!rock_in_limits)
     {
       RCLCPP_WARN(this->get_logger(), 
-                 "Rock position (%.3f, %.3f, %.3f) is outside robot limits [X: %.1f to %.1f, Y: %.1f to %.1f, Z: %.1f to %.1f]", 
-                 x_machine, y_machine, z_machine_pick, x_min, x_max, y_min, y_max, z_min, z_max);
+                "Rock position (%.3f, %.3f) is outside robot limits [X: %.1f to %.1f, Y: %.1f to %.1f]", 
+                x_machine, y_machine, x_min, x_max, y_min, y_max);
+      processing_rock_ = false;
       return;
     }
     
     if (!center_in_limits)
     {
       RCLCPP_WARN(this->get_logger(), 
-                 "Center position (%.3f, %.3f, %.3f) is outside robot limits [X: %.1f to %.1f, Y: %.1f to %.1f, Z: %.1f to %.1f]", 
-                 center_x_mm, center_y_mm, center_z_mm, x_min, x_max, y_min, y_max, z_min, z_max);
+                "Center position (%.3f, %.3f, %.3f) is outside robot limits [X: %.1f to %.1f, Y: %.1f to %.1f, Z: %.1f to %.1f]", 
+                center_x_mm, center_y_mm, center_z_mm, x_min, x_max, y_min, y_max, z_min, z_max);
+      processing_rock_ = false;
       return;
     }
-
+    
     // Generate G-code for picking and placing
     std::vector<std::string> gcode_commands;
     
@@ -189,14 +174,6 @@ private:
     gcode_commands.push_back("G0 Z" + std::to_string(safe_z_approach) + " F" + std::to_string(feedrate) + " ; Move to safe height");
 
     // Step 3: Move above the closest rock
-    size_t closest_index = find_closest_rock(msg, center_x, center_y);
-    double rock_x = msg->poses[closest_index].position.x;
-    double rock_y = msg->poses[closest_index].position.y;
-    double rock_z = msg->poses[closest_index].position.z;
-    
-    double x_machine = rock_x * 1000.0; // Convert to mm
-    double y_machine = rock_y * 1000.0; // Convert to mm
-    
     double safe_x = std::max(std::min(x_machine, x_max), x_min);
     double safe_y = std::max(std::min(y_machine, y_max), y_min);
     
@@ -217,37 +194,85 @@ private:
     
     RCLCPP_INFO(this->get_logger(), "Picking rock, waiting %d seconds to secure grasp", pick_wait_time);
     
-    // Move to approach position above rock
-    gcode_commands.push_back("G0 Z" + std::to_string(z_machine_approach) + " F" + std::to_string(feedrate) + " ; Move to safe height");
-    
-    // Apply limits to ensure we stay within robot's physical capabilities
-    double safe_x = std::max(std::min(x_machine, x_max), x_min);
-    double safe_y = std::max(std::min(y_machine, y_max), y_min);
-    
-    gcode_commands.push_back("G0 X" + std::to_string(safe_x) + " Y" + std::to_string(safe_y) + 
-                             " F" + std::to_string(feedrate) + " ; Move above rock");
-    
-    // Move down to pick the rock - with limit check
-    double safe_z_pick = std::max(std::min(z_machine_pick, z_max), z_min);
-    gcode_commands.push_back("G1 Z" + std::to_string(safe_z_pick) + " F" + std::to_string(feedrate/2) + " ; Move down to pick");
-    
-    // Close gripper
-    gcode_commands.push_back(gripper_close + " ; Close gripper to grab rock");
-    
-    // Move up with rock - with limit check
-    double safe_z_approach = std::max(std::min(z_machine_approach, z_max), z_min);
+    // Step 7: Move back up to safe height
     gcode_commands.push_back("G0 Z" + std::to_string(safe_z_approach) + " F" + std::to_string(feedrate) + " ; Move up with rock");
     
-    // Move to center position - with limit check
-    double safe_center_x = std::max(std::min(center_x_mm, x_max), x_min);
-    double safe_center_y = std::max(std::min(center_y_mm, y_max), y_min);
+    // Step 8: Move to center position
+    double safe_center_x = std::max(std::min(center_x * 1000.0, x_max), x_min);
+    double safe_center_y = std::max(std::min(center_y * 1000.0, y_max), y_min);
     
     gcode_commands.push_back("G0 X" + std::to_string(safe_center_x) + " Y" + std::to_string(safe_center_y) + 
                              " F" + std::to_string(feedrate) + " ; Move to center position");
     
-    // Move down to place the rock - with limit check
+    RCLCPP_INFO(this->get_logger(), "Moving to center position (%.1f, %.1f)", safe_center_x, safe_center_y);
+    
+    // Step 9: Move down to place the rock
     gcode_commands.push_back("G1 Z" + std::to_string(safe_z_pick) + " F" + std::to_string(feedrate/2) + " ; Move down to place");
     
+    // Step 10: Open gripper to release rock
+    gcode_commands.push_back(gripper_open + " ; Open gripper to release rock");
+    
+    // Step 11: Move back up to safe height
+    gcode_commands.push_back("G0 Z" + std::to_string(safe_z_approach) + " F" + std::to_string(feedrate) + " ; Move back up to safe height");
+    
+    // Step 12: Return to home position
+    gcode_commands.push_back(this->get_parameter("homing_command").as_string() + " ; Return to home position");
+    
+    RCLCPP_INFO(this->get_logger(), "Returning to home position");
+    
+    // Step 13: Wait at home position for specified time
+    gcode_commands.push_back("G4 P" + std::to_string(home_wait_time * 1000) + " ; Wait for " + std::to_string(home_wait_time) + " seconds at home");
+    
+    RCLCPP_INFO(this->get_logger(), "Waiting at home position for %d seconds", home_wait_time);
+
+    // Save G-code to file
+    std::ofstream outfile(gcode_file);
+    if (outfile.is_open())
+    {
+      for (const auto& cmd : gcode_commands)
+      {
+        outfile << cmd << std::endl;
+      }
+      outfile.close();
+      RCLCPP_INFO(this->get_logger(), "G-code saved to %s", gcode_file.c_str());
+    }
+    else
+    {
+      RCLCPP_ERROR(this->get_logger(), "Failed to open G-code output file");
+    }
+
+    // Execute G-code commands
+    execute_gcode_sequence(gcode_commands);
+  }
+  
+  size_t find_closest_rock(const geometry_msgs::msg::PoseArray::SharedPtr msg, double center_x, double center_y)
+  {
+    size_t closest_index = 0;
+    double min_distance = std::numeric_limits<double>::max();
+    
+    for (size_t i = 0; i < msg->poses.size(); ++i)
+    {
+      double dx = msg->poses[i].position.x - center_x;
+      double dy = msg->poses[i].position.y - center_y;
+      double distance = std::sqrt(dx*dx + dy*dy);
+      
+      if (distance < min_distance)
+      {
+        min_distance = distance;
+        closest_index = i;
+      }
+    }
+    
+    RCLCPP_INFO(this->get_logger(), 
+                "Closest rock found at (%.3f, %.3f, %.3f), distance: %.3f", 
+                msg->poses[closest_index].position.x,
+                msg->poses[closest_index].position.y,
+                msg->poses[closest_index].position.z,
+                min_distance);
+                
+    return closest_index;
+  }
+  
   void execute_gcode_sequence(const std::vector<std::string>& commands)
   {
     for (const auto& cmd : commands)
@@ -294,10 +319,6 @@ private:
     processing_rock_ = false;
     RCLCPP_INFO(this->get_logger(), "Rock stacking sequence completed, ready for next rock");
   }
-
-  rclcpp::Subscription<geometry_msgs::msg::PoseArray>::SharedPtr subscription_;
-  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr gcode_publisher_;
-  bool processing_rock_;
 };
 
 int main(int argc, char * argv[])
