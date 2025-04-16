@@ -35,6 +35,7 @@ install(TARGETS rock_stacking
 # Install launch files if any
 install(DIRECTORY
   launch
+  config
   DESTINATION share/${PROJECT_NAME}/
   PATTERN ".svn" EXCLUDE
 )

@@ -1,5 +1,4 @@
 # Rock Stacking
-@claude by anthropic generated 
 
 This ROS2 package subscribes to rock center positions published by the `rock_detector_node` and generates G-code commands to pick up the closest rock and place it in the center position. It enables a robotic system to perform rock stacking operations.
 
@@ -7,13 +6,14 @@ This ROS2 package subscribes to rock center positions published by the `rock_det
 
 - Subscribes to `rock_centers` topic (PoseArray) from the rock detector
 - Identifies the closest rock to a defined center position
+- Enforces robot physical limits for X, Y, and Z axes
 - Generates G-code commands for a pick-and-place operation
 - Saves G-code to a file and publishes commands to a ROS2 topic
 - Configurable parameters for positions, heights, and G-code settings
 
 ## Dependencies
 
-- ROS2 (tested with Humble)
+- ROS2 (tested with jazzy)
 - geometry_msgs
 - std_msgs
 
@@ -47,9 +47,9 @@ Launch the node with default parameters:
 ros2 launch rock_stacking rock_stacking_launch.py
 ```
 
-With custom parameters:
+With custom parameters including robot limits:
 ```
-ros2 launch rock_stacking rock_stacking_launch.py center_x:=0.1 center_y:=0.2 approach_height:=0.07
+ros2 launch rock_stacking rock_stacking_launch.py center_x:=0.1 center_y:=0.2 approach_height:=0.07 x_min:=-80.0 x_max:=80.0 z_max:=120.0
 ```
 
 ### Parameters
@@ -65,6 +65,12 @@ ros2 launch rock_stacking rock_stacking_launch.py center_x:=0.1 center_y:=0.2 ap
 | gcode_file | Output G-code filename | rock_pick_place.gcode |
 | gripper_open_command | G-code command to open gripper | M8 |
 | gripper_close_command | G-code command to close gripper | M9 |
+| x_min | Minimum X coordinate (robot limit) | -60.0 |
+| x_max | Maximum X coordinate (robot limit) | 60.0 |
+| y_min | Minimum Y coordinate (robot limit) | -60.0 |
+| y_max | Maximum Y coordinate (robot limit) | 60.0 |
+| z_min | Minimum Z coordinate (robot limit) | 0.0 |
+| z_max | Maximum Z coordinate (robot limit) | 100.0 |
 
 ### Published Topics
 
@@ -83,6 +89,14 @@ The generated G-code includes:
 - Gripper open/close commands (M8/M9 by default)
 - Movement to the center position
 - Return to home position
+- All positions are constrained to stay within the robot's physical limits
+
+## Safety Features
+
+- All coordinates are checked against the robot's physical limits
+- Movements outside the allowed range are clipped to safe values
+- Warning messages are logged when rocks or target positions are outside limits
+- G-code includes comments documenting the robot's physical constraints
 
 ## Integration with Rock Detector
 
