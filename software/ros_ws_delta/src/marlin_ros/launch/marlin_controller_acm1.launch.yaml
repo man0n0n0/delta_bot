@@ -5,4 +5,4 @@ launch:
       name: marlin_controller
       output: screen
       param:
-        - from: $(find-pkg-share marlin_ros)/config/delta_marlin.yaml
+        - from: $(find-pkg-share marlin_ros)/config/delta_marlin_acm1.yaml
