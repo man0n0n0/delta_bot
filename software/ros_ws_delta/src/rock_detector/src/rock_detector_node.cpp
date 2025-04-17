@@ -19,7 +19,7 @@ public:
   RockDetectorNode() : Node("rock_detector_node")
   {
     // Declare parameters with default values
-    this->declare_parameter("filter_z_min", 0.3);
+    this->declare_parameter("filter_z_min", 0.1);
     this->declare_parameter("filter_z_max", 1.0);
     this->declare_parameter("cluster_tolerance", 0.005);
     this->declare_parameter("min_cluster_size", 50);
