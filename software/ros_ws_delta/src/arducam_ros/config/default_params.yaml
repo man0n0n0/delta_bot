@@ -1,0 +1,6 @@
+/**:
+  ros__parameters:
+    # Camera orientation parameters
+    rotation_angle: 0.0  # Default rotation angle in degrees (0-360)
+    
+    # Optional camera parameters can be added here for convenience
