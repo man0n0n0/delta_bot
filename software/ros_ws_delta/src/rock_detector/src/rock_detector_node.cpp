@@ -29,7 +29,7 @@ public:
 
     // Subscribe to point cloud data
     subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
-      "input_cloud", 10, std::bind(&RockDetectorNode::cloud_callback, this, std::placeholders::_1));
+      "point_cloud", 10, std::bind(&RockDetectorNode::cloud_callback, this, std::placeholders::_1));
 
     // Publisher for processed point cloud showing rock surfaces
     publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("rock_surfaces", 10);
