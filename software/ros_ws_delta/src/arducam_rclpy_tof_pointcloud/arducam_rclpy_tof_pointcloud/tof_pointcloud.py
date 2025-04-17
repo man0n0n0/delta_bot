@@ -8,6 +8,7 @@ from std_msgs.msg import Float32MultiArray, Header
 import numpy as np
 from threading import Thread
 import sys
+import math
 
 from ArducamDepthCamera import (
     ArducamCamera,
@@ -24,6 +25,15 @@ class Option:
 class TOFPublisher(Node):
     def __init__(self, options: Option):
         super().__init__("arducam")
+
+        # Declare rotation parameter (in degrees)
+        self.declare_parameter('rotation_angle', 0.0)
+        
+        # Get rotation parameter and convert to radians
+        self.rotation_angle = self.get_parameter('rotation_angle').get_parameter_value().double_value
+        self.rotation_rad = math.radians(self.rotation_angle)
+        
+        self.get_logger().info(f"Point cloud rotation set to {self.rotation_angle} degrees")
 
         tof = self.__init_camera(options)
         if tof is None:
@@ -81,6 +91,34 @@ class TOFPublisher(Node):
         print("Pointcloud publisher start")
         return tof
 
+    def rotate_points(self, points):
+        """
+        Rotate the points around the Z axis by the specified angle in radians.
+        
+        Args:
+            points: Numpy array of shape (N, 3) containing point cloud coordinates
+            
+        Returns:
+            Rotated points
+        """
+        # Create rotation matrix around Z axis
+        cos_theta = np.cos(self.rotation_rad)
+        sin_theta = np.sin(self.rotation_rad)
+        
+        # Extract coordinates
+        x = points[:, 0]
+        y = points[:, 1]
+        z = points[:, 2]
+        
+        # Apply rotation
+        x_rotated = x * cos_theta - y * sin_theta
+        y_rotated = x * sin_theta + y * cos_theta
+        
+        # Construct rotated points
+        rotated_points = np.column_stack((x_rotated, y_rotated, z))
+        
+        return rotated_points
+
     def __generateSensorPointCloud(self):
         while self.running_:
             frame = self.tof_.requestFrame(200)
@@ -94,7 +132,7 @@ class TOFPublisher(Node):
 
                 self.depth_msg_.data = depth_buf.flatten() / 1000
 
-                # Convert depth values ​​from millimeters to meters
+                # Convert depth values from millimeters to meters
                 z = depth_buf / 1000.0
                 z[z <= 0] = np.nan  # Handling invalid depth values
 
@@ -109,9 +147,13 @@ class TOFPublisher(Node):
 
                 # Combined point cloud
                 points = np.stack((x, y, z), axis=-1)
-                self.points = points[
-                    ~np.isnan(points).any(axis=-1)
-                ]  # Filter invalid points
+                valid_points = points[~np.isnan(points).any(axis=-1)]  # Filter invalid points
+                
+                # Apply rotation to valid points
+                if len(valid_points) > 0:
+                    self.points = self.rotate_points(valid_points)
+                else:
+                    self.points = valid_points
 
                 self.tof_.releaseFrame(frame)
 
