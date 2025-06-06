@@ -22,10 +22,10 @@ public:
     this->declare_parameter("filter_z_min", 0.1);
     this->declare_parameter("filter_z_max", 1.0);
     this->declare_parameter("cluster_tolerance", 0.005);
-    this->declare_parameter("min_cluster_size", 50);
+    this->declare_parameter("min_cluster_size", 70);
     this->declare_parameter("max_cluster_size", 20000);
     this->declare_parameter("plane_threshold", 0.01);
-    this->declare_parameter("k_neighbors", 10);
+    this->declare_parameter("k_neighbors", 7);
 
 
     // Subscribe to point cloud data
