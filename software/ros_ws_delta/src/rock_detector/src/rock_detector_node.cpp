@@ -26,7 +26,7 @@ public:
     this->declare_parameter("max_cluster_size", 20000);
     this->declare_parameter("plane_threshold", 0.01);
     this->declare_parameter("k_neighbors", 20);
-    this->declare_parameter("min_height_above_plane", 0.005); // Minimum height above plane to consider as rock
+
 
     // Subscribe to point cloud data
     subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
@@ -51,41 +51,7 @@ public:
   }
 
 private:
-  // Function to calculate distance from point to plane
-  double distanceToPlane(const Eigen::Vector4f& point, const pcl::ModelCoefficients::Ptr& plane_coeffs)
-  {
-    // Plane equation: ax + by + cz + d = 0
-    // Distance = |ax + by + cz + d| / sqrt(a² + b² + c²)
-    double a = plane_coeffs->values[0];
-    double b = plane_coeffs->values[1]; 
-    double c = plane_coeffs->values[2];
-    double d = plane_coeffs->values[3];
-    
-    double numerator = std::abs(a * point[0] + b * point[1] + c * point[2] + d);
-    double denominator = std::sqrt(a*a + b*b + c*c);
-    
-    return numerator / denominator;
-  }
 
-  // Function to check if point is above the plane
-  bool isAbovePlane(const Eigen::Vector4f& point, const pcl::ModelCoefficients::Ptr& plane_coeffs, double min_height)
-  {
-    // Calculate signed distance to plane
-    double a = plane_coeffs->values[0];
-    double b = plane_coeffs->values[1];
-    double c = plane_coeffs->values[2];
-    double d = plane_coeffs->values[3];
-    
-    double signed_distance = (a * point[0] + b * point[1] + c * point[2] + d) / std::sqrt(a*a + b*b + c*c);
-    
-    // For a plane with normal pointing up, points above should have positive distance
-    // If the normal points down, we need to flip the sign
-    if (c < 0) {
-      signed_distance = -signed_distance;
-    }
-    
-    return signed_distance > min_height;
-  }
 
   void cloud_callback(const sensor_msgs::msg::PointCloud2::SharedPtr cloud_msg)
   {
@@ -98,8 +64,7 @@ private:
     int min_cluster_size = this->get_parameter("min_cluster_size").as_int();
     int max_cluster_size = this->get_parameter("max_cluster_size").as_int();
     double plane_threshold = this->get_parameter("plane_threshold").as_double();
-    int k_neighbors = this->get_parameter("k_neighbors").as_int();
-    double min_height_above_plane = this->get_parameter("min_height_above_plane").as_double();
+    double k_neighbors = this->get_parameter("k_neighbors").as_int();
 
     // Convert ROS message to PCL point cloud
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>());
@@ -129,10 +94,7 @@ private:
       return;
     }
 
-    // Log plane coefficients for debugging
-    RCLCPP_INFO(this->get_logger(), "Plane coefficients: a=%.3f, b=%.3f, c=%.3f, d=%.3f", 
-                coefficients->values[0], coefficients->values[1], 
-                coefficients->values[2], coefficients->values[3]);
+
 
     // Optional: Publish table plane
     pcl::PointCloud<pcl::PointXYZ>::Ptr table_cloud(new pcl::PointCloud<pcl::PointXYZ>());
@@ -179,7 +141,6 @@ private:
 
     // Process each cluster (rock)
     int cluster_id = 0;
-    int valid_clusters = 0;
     for (const auto& indices : cluster_indices) {
       RCLCPP_INFO(this->get_logger(), "Processing cluster %d with %ld points", 
                  cluster_id++, indices.indices.size());
@@ -197,9 +158,23 @@ private:
       Eigen::Vector4f centroid;
       pcl::compute3DCentroid(*cluster, centroid);
       
-      // Check if centroid is sufficiently above the detected plane
-      if (!isAbovePlane(centroid, coefficients, min_height_above_plane)) {
-        RCLCPP_INFO(this->get_logger(), "Cluster %d centroid is too close to plane, skipping", cluster_id-1);
+      // Check if centroid is below or at the plane level (exclude points above plane)
+      // Calculate signed distance to plane
+      double a = coefficients->values[0];
+      double b = coefficients->values[1];
+      double c = coefficients->values[2];
+      double d = coefficients->values[3];
+      
+      double signed_distance = (a * centroid[0] + b * centroid[1] + c * centroid[2] + d) / 
+                              std::sqrt(a*a + b*b + c*c);
+      
+      // If the plane normal points down (c < 0), flip the sign
+      if (c < 0) {
+        signed_distance = -signed_distance;
+      }
+      
+      // Skip centroids that are above the plane
+      if (signed_distance > 0) {
         continue;
       }
       
@@ -213,9 +188,8 @@ private:
       // Add the pose to our PoseArray
       centers_msg.poses.push_back(center_pose);
       
-      double distance_to_plane = distanceToPlane(centroid, coefficients);
-      RCLCPP_INFO(this->get_logger(), "Cluster %d center: x=%.3f, y=%.3f, z=%.3f, distance to plane: %.3f", 
-                  cluster_id-1, centroid[0], centroid[1], centroid[2], distance_to_plane);
+      RCLCPP_INFO(this->get_logger(), "Cluster %d center: x=%.3f, y=%.3f, z=%.3f", 
+                  cluster_id-1, centroid[0], centroid[1], centroid[2]);
 
       // Compute normals
       pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> ne;
@@ -233,7 +207,6 @@ private:
 
       // Add surface points to combined cloud
       *rock_surfaces_combined += *surface_hull;
-      valid_clusters++;
     }
 
     // Publish rock surfaces
@@ -245,8 +218,7 @@ private:
     // Publish cluster centers
     centers_publisher_->publish(centers_msg);
 
-    RCLCPP_INFO(this->get_logger(), "Found %d valid rock clusters out of %ld total clusters", 
-                valid_clusters, cluster_indices.size());
+    RCLCPP_INFO(this->get_logger(), "Found %ld rock clusters", cluster_indices.size());
   }
 
   rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr subscription_;
