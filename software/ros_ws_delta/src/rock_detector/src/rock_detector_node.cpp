@@ -18,15 +18,34 @@ class RockDetectorNode : public rclcpp::Node
 public:
   RockDetectorNode() : Node("rock_detector_node")
   {
-    // Declare parameters with default values
-    this->declare_parameter("filter_z_min", 0.1);
-    this->declare_parameter("filter_z_max", 1.0);
-    this->declare_parameter("cluster_tolerance", 0.005);
-    this->declare_parameter("min_cluster_size", 70);
-    this->declare_parameter("max_cluster_size", 20000);
-    this->declare_parameter("plane_threshold", 0.01);
-    this->declare_parameter("k_neighbors", 7);
-
+    // Declare parameters with default values and descriptions
+    auto filter_z_min_desc = rcl_interfaces::msg::ParameterDescriptor{};
+    filter_z_min_desc.description = "Minimum Z value for point cloud filtering (meters)";
+    this->declare_parameter("filter_z_min", 0.1, filter_z_min_desc);
+    
+    auto filter_z_max_desc = rcl_interfaces::msg::ParameterDescriptor{};
+    filter_z_max_desc.description = "Maximum Z value for point cloud filtering (meters)";
+    this->declare_parameter("filter_z_max", 1.0, filter_z_max_desc);
+    
+    auto cluster_tolerance_desc = rcl_interfaces::msg::ParameterDescriptor{};
+    cluster_tolerance_desc.description = "Clustering tolerance for separating objects (meters)";
+    this->declare_parameter("cluster_tolerance", 0.005, cluster_tolerance_desc);
+    
+    auto min_cluster_size_desc = rcl_interfaces::msg::ParameterDescriptor{};
+    min_cluster_size_desc.description = "Minimum number of points required for a cluster";
+    this->declare_parameter("min_cluster_size", 70, min_cluster_size_desc);
+    
+    auto max_cluster_size_desc = rcl_interfaces::msg::ParameterDescriptor{};
+    max_cluster_size_desc.description = "Maximum number of points allowed for a cluster";
+    this->declare_parameter("max_cluster_size", 20000, max_cluster_size_desc);
+    
+    auto plane_threshold_desc = rcl_interfaces::msg::ParameterDescriptor{};
+    plane_threshold_desc.description = "Distance threshold for plane segmentation (meters)";
+    this->declare_parameter("plane_threshold", 0.01, plane_threshold_desc);
+    
+    auto k_neighbors_desc = rcl_interfaces::msg::ParameterDescriptor{};
+    k_neighbors_desc.description = "Number of neighbors for normal estimation";
+    this->declare_parameter("k_neighbors", 7, k_neighbors_desc);
 
     // Subscribe to point cloud data
     subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
@@ -43,28 +62,44 @@ public:
 
     RCLCPP_INFO(this->get_logger(), "Rock detector node has started");
     
-    // Log the default parameter values
-    double cluster_tolerance = this->get_parameter("cluster_tolerance").as_double();
-    int min_cluster_size = this->get_parameter("min_cluster_size").as_int();
-    RCLCPP_INFO(this->get_logger(), "Default cluster_tolerance: %.3f", cluster_tolerance);
-    RCLCPP_INFO(this->get_logger(), "Default min_cluster_size: %d", min_cluster_size);
+    // Log all parameter values at startup
+    log_parameters();
   }
 
 private:
-
-
-  void cloud_callback(const sensor_msgs::msg::PointCloud2::SharedPtr cloud_msg)
+  void log_parameters()
   {
-    RCLCPP_INFO(this->get_logger(), "Received point cloud with %d points", cloud_msg->height * cloud_msg->width);
-
-    // Get parameters
     double filter_z_min = this->get_parameter("filter_z_min").as_double();
     double filter_z_max = this->get_parameter("filter_z_max").as_double();
     double cluster_tolerance = this->get_parameter("cluster_tolerance").as_double();
     int min_cluster_size = this->get_parameter("min_cluster_size").as_int();
     int max_cluster_size = this->get_parameter("max_cluster_size").as_int();
     double plane_threshold = this->get_parameter("plane_threshold").as_double();
-    double k_neighbors = this->get_parameter("k_neighbors").as_int();
+    int k_neighbors = this->get_parameter("k_neighbors").as_int();
+    
+    RCLCPP_INFO(this->get_logger(), "=== Rock Detector Parameters ===");
+    RCLCPP_INFO(this->get_logger(), "filter_z_min: %.3f", filter_z_min);
+    RCLCPP_INFO(this->get_logger(), "filter_z_max: %.3f", filter_z_max);
+    RCLCPP_INFO(this->get_logger(), "cluster_tolerance: %.3f", cluster_tolerance);
+    RCLCPP_INFO(this->get_logger(), "min_cluster_size: %d", min_cluster_size);
+    RCLCPP_INFO(this->get_logger(), "max_cluster_size: %d", max_cluster_size);
+    RCLCPP_INFO(this->get_logger(), "plane_threshold: %.3f", plane_threshold);
+    RCLCPP_INFO(this->get_logger(), "k_neighbors: %d", k_neighbors);
+    RCLCPP_INFO(this->get_logger(), "===============================");
+  }
+
+  void cloud_callback(const sensor_msgs::msg::PointCloud2::SharedPtr cloud_msg)
+  {
+    RCLCPP_INFO(this->get_logger(), "Received point cloud with %d points", cloud_msg->height * cloud_msg->width);
+
+    // Get parameters (retrieved fresh each time in case they were updated)
+    double filter_z_min = this->get_parameter("filter_z_min").as_double();
+    double filter_z_max = this->get_parameter("filter_z_max").as_double();
+    double cluster_tolerance = this->get_parameter("cluster_tolerance").as_double();
+    int min_cluster_size = this->get_parameter("min_cluster_size").as_int();
+    int max_cluster_size = this->get_parameter("max_cluster_size").as_int();
+    double plane_threshold = this->get_parameter("plane_threshold").as_double();
+    int k_neighbors = this->get_parameter("k_neighbors").as_int();
 
     // Convert ROS message to PCL point cloud
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>());
@@ -94,8 +129,6 @@ private:
       return;
     }
 
-
-
     // Optional: Publish table plane
     pcl::PointCloud<pcl::PointXYZ>::Ptr table_cloud(new pcl::PointCloud<pcl::PointXYZ>());
     pcl::ExtractIndices<pcl::PointXYZ> extract;
@@ -121,10 +154,6 @@ private:
     ec.setMinClusterSize(min_cluster_size);     // Using parameter
     ec.setMaxClusterSize(max_cluster_size);     // Using parameter
     ec.setInputCloud(objects);
-    
-    // Log the current parameter values being used
-    RCLCPP_INFO(this->get_logger(), "Using cluster_tolerance: %.3f", cluster_tolerance);
-    RCLCPP_INFO(this->get_logger(), "Using min_cluster_size: %d", min_cluster_size);
     
     // Create KdTree for search
     pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ>);
