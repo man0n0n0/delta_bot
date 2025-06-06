@@ -25,7 +25,7 @@ public:
     this->declare_parameter("min_cluster_size", 50);
     this->declare_parameter("max_cluster_size", 20000);
     this->declare_parameter("plane_threshold", 0.01);
-    this->declare_parameter("k_neighbors", 20);
+    this->declare_parameter("k_neighbors", 10);
 
 
     // Subscribe to point cloud data
