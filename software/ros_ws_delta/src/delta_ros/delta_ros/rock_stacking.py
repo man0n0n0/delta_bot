@@ -51,7 +51,7 @@ class RockStacking(Node):
         cairn_height = 0
         safe_movement_height = 100 #from the oming pos
         # height_correction = 0.5 * max(abs(rock_y),abs(rock_y)) #higher as the movmeent is away from center 
-        height_correction = 50
+        height_correction = 100
         tool_offset = (40,0,20) #in mm 
         
         self.get_logger().info(f'Processing rock at ({rock_x:.1f}, {rock_y:.1f}, {rock_z:.1f})')
