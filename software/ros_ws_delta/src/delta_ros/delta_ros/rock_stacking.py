@@ -72,7 +72,12 @@ class RockStacking(Node):
         self.send_gcode('M9')  # Close gripper
         time.sleep(10)  # Wait for grip
         
-        self.send_gcode('G1 Z200 F1000')  # Lift rock
+        self.send_gcode(f'G91')  # relative positioning
+        self.send_gcode(f'G1 Z{safe_movement_height:.1f} F500')  # Lift rock
+        cairn_height += rock_z 
+        self.send_gcode(f'G90')  # absolute positioning
+
+
         self.send_gcode('G1 X0 Y0 F2000')  # Move to center
 
         self.send_gcode(f'G91')  # relative positioning

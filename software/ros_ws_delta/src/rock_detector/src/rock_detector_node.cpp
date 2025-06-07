@@ -172,7 +172,7 @@ private:
     int cluster_id = 0;
     for (const auto& indices : cluster_indices) {
       RCLCPP_INFO(this->get_logger(), "Processing cluster %d with %ld points", 
-                 cluster_id++, indices.indices.size());
+                cluster_id++, indices.indices.size());
       
       // Extract cluster points
       pcl::PointCloud<pcl::PointXYZ>::Ptr cluster(new pcl::PointCloud<pcl::PointXYZ>);
@@ -183,18 +183,31 @@ private:
       cluster->height = 1;
       cluster->is_dense = true;
 
-      // Calculate the centroid of the cluster
+      // Calculate the centroid of the cluster (X,Y only) and find surface Z (minimum Z)
       Eigen::Vector4f centroid;
       pcl::compute3DCentroid(*cluster, centroid);
       
+      // Find the point with minimum Z value (closest to camera/surface)
+      float min_z = std::numeric_limits<float>::max();
+      for (const auto& point : cluster->points) {
+        if (point.z < min_z) {
+          min_z = point.z;
+        }
+      }
+      
+      // Use average X,Y but surface Z
+      float surface_x = centroid[0];  // Average X
+      float surface_y = centroid[1];  // Average Y
+      float surface_z = min_z;        // Surface Z (minimum Z)
+      
       // Check if centroid is below or at the plane level (exclude points above plane)
-      // Calculate signed distance to plane
+      // Calculate signed distance to plane using the surface point
       double a = coefficients->values[0];
       double b = coefficients->values[1];
       double c = coefficients->values[2];
       double d = coefficients->values[3];
       
-      double signed_distance = (a * centroid[0] + b * centroid[1] + c * centroid[2] + d) / 
+      double signed_distance = (a * surface_x + b * surface_y + c * surface_z + d) / 
                               std::sqrt(a*a + b*b + c*c);
       
       // If the plane normal points down (c < 0), flip the sign
@@ -207,19 +220,20 @@ private:
         continue;
       }
       
-      // Create a Pose message for this centroid
+      // Create a Pose message for this surface-based centroid
       geometry_msgs::msg::Pose center_pose;
-      center_pose.position.x = centroid[0];
-      center_pose.position.y = centroid[1];
-      center_pose.position.z = centroid[2];
+      center_pose.position.x = surface_x;
+      center_pose.position.y = surface_y;
+      center_pose.position.z = surface_z;
       center_pose.orientation.w = 1.0; // Default orientation (no rotation)
       
       // Add the pose to our PoseArray
       centers_msg.poses.push_back(center_pose);
       
-      RCLCPP_INFO(this->get_logger(), "Cluster %d center: x=%.3f, y=%.3f, z=%.3f", 
-                  cluster_id-1, centroid[0], centroid[1], centroid[2]);
+      RCLCPP_INFO(this->get_logger(), "Cluster %d surface center: x=%.3f, y=%.3f, z=%.3f (surface)", 
+                  cluster_id-1, surface_x, surface_y, surface_z);
 
+      // Rest of the processing (normals, convex hull, etc.) remains the same
       // Compute normals
       pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> ne;
       ne.setInputCloud(cluster);
