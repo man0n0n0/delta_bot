@@ -49,7 +49,8 @@ class RockStacking(Node):
 
         #init cairn height to zero
         cairn_height = 0
-        safe_movement_height = 200 #from the oming pos
+        safe_movement_height = 100 #from the oming pos
+        tool_offset = (0,40,-20) #in mm 
         
         self.get_logger().info(f'Processing rock at ({rock_x:.1f}, {rock_y:.1f}, {rock_z:.1f})')
         
@@ -60,30 +61,30 @@ class RockStacking(Node):
         self.send_gcode(f'G1 Z-{safe_movement_height:.1f} F500')  # Move to safe z heigh for x,y movement
         self.send_gcode(f'G90')  # absolute positioning
 
-        self.send_gcode(f'G0 X{rock_x:.1f} Y{rock_y:.1f}')  # Move above rock
+        self.send_gcode(f'G0 X{rock_x+tool_offset[0]:.1f} Y{rock_y+tool_offset[1]:.1f}')  # Move above rock
 
         self.send_gcode(f'G91')  # relative positioning
-        self.send_gcode(f'G1 Z-{rock_z - safe_movement_height - 10:.1f} F500')  # Move down to pick
+        self.send_gcode(f'G1 Z-{rock_z - safe_movement_height + tool_offset[2]:.1f} F500')  # Move down to pick
         self.send_gcode(f'G90')  # absolute positioning
 
         self.send_gcode('M9')  # Close gripper
-        time.sleep(5)  # Wait for grip
+        time.sleep(10)  # Wait for grip
         
         self.send_gcode('G1 Z200 F1000')  # Lift rock
         self.send_gcode('G0 X0 Y0')  # Move to center
 
         self.send_gcode(f'G91')  # relative positioning
-        self.send_gcode(f'G1 Z-{rock_z - safe_movement_height:.1f} F500')  # Move down to drop (here implement the last_rock pos for cairn making)
+        self.send_gcode(f'G1 Z-{rock_z - safe_movement_height + tool_offset[2]:.1f} F500')  # Move down to drop (here implement the last_rock pos for cairn making)
         cairn_height += rock_z 
         self.send_gcode(f'G90')  # absolute positioning
 
         self.send_gcode('G1 Z110 F500')  # Move down to place
         self.send_gcode('M8')  # Open gripper
         self.send_gcode('G0 Z200')  # Move up
-        time.sleep(5)  # Wait
+        time.sleep(10)  # Wait
 
         self.send_gcode('G28')
-        time.sleep(10)
+        time.sleep(20)
         
         self.get_logger().info(f'Rock stacking completed with a {cairn_height} mm cairn')
 
