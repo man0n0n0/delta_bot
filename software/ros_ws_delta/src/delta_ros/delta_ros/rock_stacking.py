@@ -1,5 +1,6 @@
 import rclpy
 from rclpy.node import Node
+from geometry_msgs.msg import PoseArray
 from std_msgs.msg import String
 import time
 
@@ -8,21 +9,19 @@ class RockStacking(Node):
     def __init__(self):
         super().__init__('rock_stacking')
         
-        # Subscribe to rock position as string (format: "x,y,z")
+        # Subscribe to rock centers from your C++ detector
         self.subscription = self.create_subscription(
-            String,
-            'rock_position',
-            self.position_callback,
+            PoseArray,
+            'rock_centers',
+            self.centers_callback,
             10
         )
         
         # Publisher for G-code commands
         self.gcode_publisher = self.create_publisher(String, '/delta_marlin/gcode', 10)
         
-        # Give marlin soem time to boot
-        time.sleep(1)
-
         # Send home command at startup
+        time.sleep(1) # wait for marlin warming
         self.send_gcode('G28')
         time.sleep(5)
         
