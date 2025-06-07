@@ -21,7 +21,7 @@ class RockStacking(Node):
         self.gcode_publisher = self.create_publisher(String, '/delta_marlin/gcode', 10)
         
         # Send home command at startup
-        time.sleep(1) # wait for marlin warming
+        time.sleep(5) # wait for marlin warming
         self.send_gcode('G28')
         time.sleep(10)
         
@@ -55,13 +55,14 @@ class RockStacking(Node):
         self.send_gcode(f'G0 X{rock_x:.1f} Y{rock_y:.1f}')  # Move above rock
         self.send_gcode(f'G1 Z{rock_z + 10:.1f} F500')  # Move down to pick
         self.send_gcode('M9')  # Close gripper
-        time.sleep(2)  # Wait for grip
+        time.sleep(5)  # Wait for grip
         
         self.send_gcode('G1 Z200 F1000')  # Lift rock
         self.send_gcode('G0 X0 Y0')  # Move to center
         self.send_gcode('G1 Z110 F500')  # Move down to place
         self.send_gcode('M8')  # Open gripper
         self.send_gcode('G0 Z200')  # Move up
+        time.sleep(5)  # Wait
         
         self.get_logger().info('Rock stacking completed')
 
