@@ -50,7 +50,7 @@ class RockStacking(Node):
         #init cairn height to zero
         cairn_height = 0
         safe_movement_height = 150 #from the oming pos
-        height_correction = 0.1 * max(abs(rock_y),abs(rock_y)) #higher as the movmeent is away from center 
+        height_correction = 50
         tool_offset = (0,-40,20) #in mm 
         
         self.get_logger().info(f'Processing rock at ({rock_x:.1f}, {rock_y:.1f}, {rock_z:.1f})')
@@ -84,7 +84,6 @@ class RockStacking(Node):
         cairn_height += rock_z 
         self.send_gcode(f'G90')  # absolute positioning
 
-        self.send_gcode('G1 Z110 F500')  # Move down to place
         self.send_gcode('M8')  # Open gripper
         time.sleep(10)  # Wait
 
