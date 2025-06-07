@@ -223,13 +223,15 @@
 //#define TOOL_OFFSET       0.000 // No offset
 //#define TOOL_OFFSET      40.000 // Distance between end effector ball joint plane and tip of tool (Z probe)
 #define TOOL_OFFSET      30.500 // Distance between end effector ball joint plane and tip of tool (PnP)
-#define Z_CALC_OFFSET  ((DELTA_Z_OFFSET - TOOL_OFFSET - DELTA_EE_OFFS) * -1)
+
+
+#define Z_CALC_OFFSET  ((DELTA_Z_OFFSET - TOOL_OFFSET + DELTA_EE_OFFS) * -1) //legacy
+
 
 #define Z_HOME_ANGLE    125 // This is the angle where the arms hit the endstop sensor
 #define Z_HOME_OFFS    (((DELTA_Z_OFFSET - TOOL_OFFSET - DELTA_EE_OFFS) - 182.002) - 0.5)
                                 // This is calculated from the above angle, after applying forward 
                                 // kinematics, and adding the Z calc offset to it.
-
 
 // Print surface diameter/2 minus unreachable space (avoid collisions with vertical towers).
 #define DELTA_PRINTABLE_RADIUS 1000

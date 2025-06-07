@@ -23,8 +23,8 @@ public:
     this->declare_parameter("center_x", 0.0);
     this->declare_parameter("center_y", 0.0);
     this->declare_parameter("center_z", 0.1); // Some height above the table
-    this->declare_parameter("approach_height", 0.05); // Height to approach rocks
-    this->declare_parameter("pick_height", 0.01); // Height to pick at
+    this->declare_parameter("approach_height", 200.0); // Height to approach rocks
+    this->declare_parameter("pick_height", 10.0); // Height to pick at (from the rock center) in mm
     this->declare_parameter("feedrate", 1000); // Feedrate for G-code
     this->declare_parameter("gcode_file", "rock_pick_place.gcode"); // Output file name
     this->declare_parameter("gripper_open_command", "M8"); // Command to open gripper
@@ -124,13 +124,14 @@ private:
     size_t closest_index = find_closest_rock(msg, center_x, center_y);
     double rock_x = msg->poses[closest_index].position.x;
     double rock_y = msg->poses[closest_index].position.y;
+    
     // Declare rock_z but mark as used to prevent warning
     double rock_z = msg->poses[closest_index].position.z;
-    (void)rock_z; // Suppress unused variable warning
 
     // Convert point coordinates to machine coordinates (mm)
     double x_machine = rock_x * 1000.0; // Convert to mm
     double y_machine = rock_y * 1000.0; // Convert to mm
+    double z_machine = rock_z * 1000.0;
     
     // Check if rock position is within robot limits
     bool rock_in_limits = (x_machine >= x_min && x_machine <= x_max &&
@@ -179,7 +180,7 @@ private:
     gcode_commands.push_back(gripper_open + " ; Open gripper");
     
     // Step 2: Move to approach height
-    double safe_z_approach = std::max(std::min(approach_height * 1000.0, z_max), z_min);
+    double safe_z_approach = std::max(std::min(approach_height, z_max), z_min);
     gcode_commands.push_back("G0 Z" + std::to_string(safe_z_approach) + " F" + std::to_string(feedrate) + " ; Move to safe height");
 
     // Step 3: Move above the closest rock
@@ -191,9 +192,10 @@ private:
     
     RCLCPP_INFO(this->get_logger(), "Moving to closest rock at (%.1f, %.1f)", safe_x, safe_y);
     
-    // Step 4: Move down to pick the rock
-    double safe_z_pick = std::max(std::min(pick_height * 1000.0, z_max), z_min);
-    gcode_commands.push_back("G1 Z" + std::to_string(safe_z_pick) + " F" + std::to_string(feedrate/2) + " ; Move down to pick");
+    // Step 4: Switch to relative positioning for Z movement and move down to pick the rock
+    gcode_commands.push_back("G91 ; Switch to relative positioning");
+    double relative_pick_distance = safe_z_approach - pick_height; // Distance to move down from approach height
+    gcode_commands.push_back("G1 Z-" + std::to_string(relative_pick_distance) + " F" + std::to_string(feedrate/2) + " ; Move down relative to pick (relative movement)");
     
     // Step 5: Close gripper to grab rock
     gcode_commands.push_back(gripper_close + " ; Close gripper to grab rock");
@@ -203,10 +205,11 @@ private:
     
     RCLCPP_INFO(this->get_logger(), "Picking rock, waiting %d seconds to secure grasp", pick_wait_time);
     
-    // Step 7: Move back up to safe height
-    gcode_commands.push_back("G0 Z" + std::to_string(safe_z_approach) + " F" + std::to_string(feedrate) + " ; Move up with rock");
+    // Step 7: Move back up to safe height (relative movement)
+    gcode_commands.push_back("G1 Z" + std::to_string(relative_pick_distance) + " F" + std::to_string(feedrate) + " ; Move up with rock (relative movement)");
     
-    // Step 8: Move to center position
+    // Step 8: Switch back to absolute positioning and move to center position
+    gcode_commands.push_back("G90 ; Switch back to absolute positioning");
     double safe_center_x = std::max(std::min(center_x * 1000.0, x_max), x_min);
     double safe_center_y = std::max(std::min(center_y * 1000.0, y_max), y_min);
     
@@ -215,16 +218,19 @@ private:
     
     RCLCPP_INFO(this->get_logger(), "Moving to center position (%.1f, %.1f)", safe_center_x, safe_center_y);
     
-    // Step 9: Move down to place the rock
-    gcode_commands.push_back("G1 Z" + std::to_string(safe_z_pick) + " F" + std::to_string(feedrate/2) + " ; Move down to place");
+    // Step 9: Switch to relative positioning and move down to place the rock
+    gcode_commands.push_back("G91 ; Switch to relative positioning");
+    double relative_place_distance = safe_z_approach - (center_z_mm + pick_height); // Distance to move down for placing
+    gcode_commands.push_back("G1 Z-" + std::to_string(relative_place_distance) + " F" + std::to_string(feedrate/2) + " ; Move down to place (relative movement)");
     
     // Step 10: Open gripper to release rock
     gcode_commands.push_back(gripper_open + " ; Open gripper to release rock");
     
-    // Step 11: Move back up to safe height
-    gcode_commands.push_back("G0 Z" + std::to_string(safe_z_approach) + " F" + std::to_string(feedrate) + " ; Move back up to safe height");
+    // Step 11: Move back up to safe height (relative movement)
+    gcode_commands.push_back("G1 Z" + std::to_string(relative_place_distance) + " F" + std::to_string(feedrate) + " ; Move back up to safe height (relative movement)");
     
-    // Step 12: Return to home position
+    // Step 12: Switch back to absolute positioning and return to home position
+    gcode_commands.push_back("G90 ; Switch back to absolute positioning");
     gcode_commands.push_back(this->get_parameter("homing_command").as_string() + " ; Return to home position");
     
     RCLCPP_INFO(this->get_logger(), "Returning to home position");
