@@ -49,7 +49,7 @@ class RockStacking(Node):
 
         #init cairn height to zero
         cairn_height = 0
-        safe_movement_height = 100 #from the oming pos
+        safe_movement_height = 150 #from the oming pos
         # height_correction = 0.5 * max(abs(rock_y),abs(rock_y)) #higher as the movmeent is away from center 
         height_correction = 100
         tool_offset = (40,0,20) #in mm 
