@@ -1,6 +1,41 @@
 <launch>
-  <node pkg="grbl_ros" exec="grbl_node">
-    <param name="grbl_ros/params-file" value="home/campo/delta_bot/software/ros_ws_delta/src/grbl_ros/config/delta_marlin.yaml"/>
-  </node>
-  <node pkg="delta_ros" exec="random_move"/>
+    <node pkg="marlin_ros" exec="marlin_node"/>
+
+    <node pkg="arducam_ros" exec="tof_pointcloud">
+      <param name="rotation_angle" value="-90.0" />
+    </node>
+
+    <node pkg="rock_detector" exec="rock_detector_node"/>
+
+    <node pkg="delta_ros" exec="rock_stacking" name="rock_stacking" output="screen">
+        <!-- Center position parameters (in meters) -->
+        <param name="center_x" value="0.0" />
+        <param name="center_y" value="0.0" />
+        <param name="center_z" value="0.1" />
+        
+        <!-- Movement parameters -->
+        <param name="approach_height" value="0.2" />
+        <param name="pick_height" value="0.01" />
+        <param name="feedrate" value="1000" />
+        
+        <!-- Gripper commands -->
+        <param name="gripper_open_command" value="M8" />
+        <param name="gripper_close_command" value="M9" />
+        <param name="homing_command" value="G28" />
+        
+        <!-- Timing parameters (seconds) -->
+        <param name="pick_wait_time" value="3" />
+        <param name="home_wait_time" value="10" />
+        
+        <!-- Machine configuration -->
+        <param name="machine_id" value="delta_marlin" />
+        
+        <!-- Physical limits (in meters) -->
+        <param name="x_min" value="-0.06" />
+        <param name="x_max" value="0.06" />
+        <param name="y_min" value="-0.06" />
+        <param name="y_max" value="0.06" />
+        <param name="z_min" value="0.0" />
+        <param name="z_max" value="0.1" />
+    </node>
 </launch>
