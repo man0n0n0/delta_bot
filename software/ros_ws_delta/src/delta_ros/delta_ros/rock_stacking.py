@@ -19,6 +19,9 @@ class RockStacking(Node):
         # Publisher for G-code commands
         self.gcode_publisher = self.create_publisher(String, '/delta_marlin/gcode', 10)
         
+        # Give marlin soem time to boot
+        time.sleep(1)
+
         # Send home command at startup
         self.send_gcode('G28')
         time.sleep(5)
