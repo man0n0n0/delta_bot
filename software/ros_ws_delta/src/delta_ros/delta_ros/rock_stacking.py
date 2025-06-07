@@ -280,7 +280,7 @@ class RockStacking(Node):
             # Handle wait commands
             if pure_cmd.startswith('G4'):
                 try:
-                    # Extract wait time from P parameter (in milliseconds)
+                    # Extract wait time from P paramete (in milliseconds)
                     p_index = pure_cmd.find('P')
                     if p_index != -1:
                         wait_ms = int(pure_cmd[p_index+1:].split()[0])
