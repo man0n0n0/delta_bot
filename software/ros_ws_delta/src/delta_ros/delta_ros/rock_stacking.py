@@ -72,7 +72,7 @@ class RockStacking(Node):
         time.sleep(10)  # Wait for grip
         
         self.send_gcode(f'G91')  # relative positioning
-        self.send_gcode(f'G1 Z{rock_z:.1f} F500')  # Lift rock
+        self.send_gcode(f'G1 Z{rock_z - safe_movement_height - height_correction - tool_offset[2]:.1f} F500')  # Lift rock
         cairn_height += rock_z 
         self.send_gcode(f'G90')  # absolute positioning
 
