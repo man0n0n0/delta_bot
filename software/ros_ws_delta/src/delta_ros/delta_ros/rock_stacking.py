@@ -46,7 +46,7 @@ class RockStacking(Node):
         )
         
         # Publisher for G-code commands
-        gcode_topic = f'/{self.machine_id}/gcode'
+        gcode_topic = f'/delta_marlin/gcode'
         self.gcode_publisher = self.create_publisher(String, gcode_topic, 10)
         
         # Processing flag
