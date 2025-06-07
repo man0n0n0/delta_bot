@@ -63,6 +63,9 @@ class RockStacking(Node):
         self.send_gcode('M8')  # Open gripper
         self.send_gcode('G0 Z200')  # Move up
         time.sleep(5)  # Wait
+
+        self.send_gcode('G28')
+        time.sleep(10)
         
         self.get_logger().info('Rock stacking completed')
 
