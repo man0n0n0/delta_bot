@@ -50,7 +50,8 @@ class RockStacking(Node):
         #init cairn height to zero
         cairn_height = 0
         safe_movement_height = 100 #from the oming pos
-        tool_offset = (40,0,-20) #in mm 
+        height_correction = 0.001 * max(abs(rock_y),abs(rock_y)) #higher as the movmeent is away from center 
+        tool_offset = (40,0,20) #in mm 
         
         self.get_logger().info(f'Processing rock at ({rock_x:.1f}, {rock_y:.1f}, {rock_z:.1f})')
         
@@ -64,7 +65,7 @@ class RockStacking(Node):
         self.send_gcode(f'G0 X{rock_x+tool_offset[0]:.1f} Y{rock_y+tool_offset[1]:.1f}')  # Move above rock
 
         self.send_gcode(f'G91')  # relative positioning
-        self.send_gcode(f'G1 Z-{rock_z - safe_movement_height - tool_offset[2]:.1f} F500')  # Move down to pick
+        self.send_gcode(f'G1 Z-{rock_z - safe_movement_height - {height_correction} - tool_offset[2]:.1f} F500')  # Move down to pick (with correction)
         self.send_gcode(f'G90')  # absolute positioning
 
         self.send_gcode('M9')  # Close gripper
@@ -74,7 +75,7 @@ class RockStacking(Node):
         self.send_gcode('G0 X0 Y0')  # Move to center
 
         self.send_gcode(f'G91')  # relative positioning
-        self.send_gcode(f'G1 Z-{rock_z - safe_movement_height + tool_offset[2]:.1f} F500')  # Move down to drop (here implement the last_rock pos for cairn making)
+        self.send_gcode(f'G1 Z-{rock_z - safe_movement_height -{height_correction} - tool_offset[2]:.1f} F500')  # Move down to drop (here implement the last_rock pos for cairn making)
         cairn_height += rock_z 
         self.send_gcode(f'G90')  # absolute positioning
 
