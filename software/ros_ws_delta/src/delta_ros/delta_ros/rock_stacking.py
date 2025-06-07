@@ -56,7 +56,7 @@ class RockStacking(Node):
         self.get_logger().info(f'Processing rock at ({rock_x:.1f}, {rock_y:.1f}, {rock_z:.1f})')
         
         # Pick and place sequence
-        self.send_gcode('M8')  # Open gripper
+        self.send_gcode('M5')  # Open gripper
 
         self.send_gcode(f'G91')  # relative positioning
         self.send_gcode(f'G1 Z-{safe_movement_height:.1f} F500')  # Move to safe z heigh for x,y movement
@@ -68,7 +68,7 @@ class RockStacking(Node):
         self.send_gcode(f'G1 Z-{rock_z - safe_movement_height - height_correction - tool_offset[2]:.1f} F500')  # Move down to pick (with correction)
         self.send_gcode(f'G90')  # absolute positioning
 
-        self.send_gcode('M9')  # Close gripper
+        self.send_gcode('M4')  # Close gripper
         time.sleep(10)  # Wait for grip
         
         self.send_gcode(f'G91')  # relative positioning
@@ -84,7 +84,7 @@ class RockStacking(Node):
         cairn_height += rock_z 
         self.send_gcode(f'G90')  # absolute positioning
 
-        self.send_gcode('M8')  # Open gripper
+        self.send_gcode('M5')  # Open gripper
         time.sleep(10)  # Wait
 
         self.send_gcode('G28')
