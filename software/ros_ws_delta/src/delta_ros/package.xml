@@ -4,8 +4,8 @@
   <name>delta_ros</name>
   <version>1.0.0</version>
   <description>Delta robot rock stacking package</description>
-  <maintainer email="your_email@example.com">Your Name</maintainer>
-  <license>MIT</license>
+  <maintainer email="your_email@example.com">your_name</maintainer>
+  <license>Apache License 2.0</license>
 
   <depend>rclpy</depend>
   <depend>geometry_msgs</depend>
