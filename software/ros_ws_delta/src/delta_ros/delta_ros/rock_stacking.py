@@ -48,14 +48,18 @@ class RockStacking(Node):
         rock_z = rock.position.z * 1000
 
         #init cairn height to zero
-        cairn_height =0
-        safe_movement_height = 110
+        cairn_height = 0
+        safe_movement_height = 200 #from the oming pos
         
         self.get_logger().info(f'Processing rock at ({rock_x:.1f}, {rock_y:.1f}, {rock_z:.1f})')
         
         # Pick and place sequence
         self.send_gcode('M8')  # Open gripper
-        self.send_gcode(f'G0 Z{safe_movement_height} F1000')  # Move to safe height
+
+        self.send_gcode(f'G91')  # relative positioning
+        self.send_gcode(f'G1 Z-{safe_movement_height:.1f} F500')  # Move to safe z heigh for x,y movement
+        self.send_gcode(f'G90')  # absolute positioning
+
         self.send_gcode(f'G0 X{rock_x:.1f} Y{rock_y:.1f}')  # Move above rock
 
         self.send_gcode(f'G91')  # relative positioning
