@@ -53,13 +53,11 @@ class RockStacking(Node):
         rock_y = rock.position.y * 1000
         rock_z = rock.position.z * 1000
 
-        
-
         #init cairn height to zero
         cairn_height = 0
         safe_movement_height = 150 #from the oming pos
         height_correction = 50
-        tool_offset = (0,35,20) #in mm 
+        tool_offset = (0,0,20) #in mm 
         
         self.get_logger().info(f'Processing rock at ({rock_x:.1f}, {rock_y:.1f}, {rock_z:.1f})')
         
