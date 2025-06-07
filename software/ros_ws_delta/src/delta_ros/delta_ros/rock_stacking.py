@@ -40,12 +40,20 @@ class RockStacking(Node):
         if not msg.poses:
             self.get_logger().warn('No rocks detected')
             return
-        
-        # Get first rock position from PoseArray
+
+        # Get highest rock position from PoseArray
         rock = msg.poses[0]
+        placing_x = rock.position.x * 1000  # Convert to mm
+        placing_y = rock.position.y * 1000
+        placing_z = rock.position.z * 1000
+        
+        # Get second higest rock position from PoseArray
+        rock = msg.poses[1]
         rock_x = rock.position.x * 1000  # Convert to mm
         rock_y = rock.position.y * 1000
         rock_z = rock.position.z * 1000
+
+        
 
         #init cairn height to zero
         cairn_height = 0
@@ -77,10 +85,10 @@ class RockStacking(Node):
         self.send_gcode(f'G90')  # absolute positioning
 
 
-        self.send_gcode('G1 X0 Y0 F2000')  # Move to center
+        self.send_gcode(f'G1 X{placing_x} Y{placing_y} F1000')  # Move to center
 
         self.send_gcode(f'G91')  # relative positioning
-        self.send_gcode(f'G1 Z-{rock_z - safe_movement_height - height_correction - tool_offset[2]:.1f} F500')  # Move down to drop (here implement the last_rock pos for cairn making)
+        self.send_gcode(f'G1 Z-{placing_z - safe_movement_height - height_correction - tool_offset[2]:.1f} F500')  # Move down to drop (here implement the last_rock pos for cairn making)
         cairn_height += rock_z 
         self.send_gcode(f'G90')  # absolute positioning
 
