@@ -57,7 +57,7 @@ class RockStacking(Node):
         cairn_height = 0
         safe_movement_height = 150 #from the oming pos
         height_correction = 50
-        tool_offset = (0,-35,20) #in mm 
+        tool_offset = (0,35,20) #in mm 
         
         self.get_logger().info(f'Processing rock at ({rock_x:.1f}, {rock_y:.1f}, {rock_z:.1f})')
         
@@ -71,23 +71,22 @@ class RockStacking(Node):
         self.send_gcode(f'G1 X{rock_x+tool_offset[0]:.1f} Y{rock_y+tool_offset[1]:.1f} F2000')  # Move above rock
 
         self.send_gcode(f'G91')  # relative positioning
-        self.send_gcode(f'G1 Z-{rock_z - safe_movement_height - height_correction - tool_offset[2]:.1f} F500')  # Move down to pick (with correction)
+        pick_plunge = rock_z - safe_movement_height - height_correction - tool_offset[2]
+        self.send_gcode(f'G1 Z-{pick_plunge:.1f} F500')  # Move down to pick (with correction)
         self.send_gcode(f'G90')  # absolute positioning
 
         self.send_gcode('M4')  # Close gripper
         time.sleep(10)  # Wait for grip
         
         self.send_gcode(f'G91')  # relative positioning
-        self.send_gcode(f'G1 Z{rock_z - safe_movement_height - height_correction - tool_offset[2]:.1f} F500')  # Lift rock
+        self.send_gcode(f'G1 Z{pick_plunge:.1f} F500')  # Lift rock
         cairn_height += rock_z 
         self.send_gcode(f'G90')  # absolute positioning
 
-
-        self.send_gcode(f'G1 X{placing_x} Y{placing_y} F1000')  # Move to center
+        self.send_gcode(f'G1 X{placing_x} Y{placing_y} F1000')  # Move to placing spot (over the highest centroid)
 
         self.send_gcode(f'G91')  # relative positioning
-        self.send_gcode(f'G1 Z-{placing_z - safe_movement_height - height_correction - tool_offset[2]:.1f} F500')  # Move down to drop (here implement the last_rock pos for cairn making)
-        cairn_height += rock_z 
+        self.send_gcode(f'G1 Z-{placing_z - pick_plunge:.1f} F500')  # Move down to drop (here implement the last_rock pos for cairn making)
         self.send_gcode(f'G90')  # absolute positioning
 
         self.send_gcode('M5')  # Open gripper
@@ -96,7 +95,7 @@ class RockStacking(Node):
         self.send_gcode('G28')
         time.sleep(20)
         
-        self.get_logger().info(f'Rock stacking completed with a {cairn_height} mm cairn')
+        self.get_logger().info(f'Rock stacking completed')
 
 
 def main(args=None):
