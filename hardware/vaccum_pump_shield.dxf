@@ -1,0 +1,20516 @@
+  0
+SECTION
+  2
+HEADER
+  9
+$ACADVER
+  1
+AC1027
+  9
+$ACADMAINTVER
+ 70
+   105
+  9
+$DWGCODEPAGE
+  3
+ANSI_1252
+  9
+$LASTSAVEDBY
+  1
+man0n0
+  9
+$REQUIREDVERSIONS
+160
+                 0
+  9
+$INSBASE
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$EXTMIN
+ 10
+83.863
+ 20
+-109.193
+ 30
+0.0
+  9
+$EXTMAX
+ 10
+186.298
+ 20
+-54.8746
+ 30
+0.0
+  9
+$LIMMIN
+ 10
+0.0
+ 20
+0.0
+  9
+$LIMMAX
+ 10
+12.0
+ 20
+9.0
+  9
+$ORTHOMODE
+ 70
+     0
+  9
+$REGENMODE
+ 70
+     1
+  9
+$FILLMODE
+ 70
+     1
+  9
+$QTEXTMODE
+ 70
+     0
+  9
+$MIRRTEXT
+ 70
+     1
+  9
+$LTSCALE
+ 40
+1.0
+  9
+$ATTMODE
+ 70
+     1
+  9
+$TEXTSIZE
+ 40
+2.5
+  9
+$TRACEWID
+ 40
+0.05
+  9
+$TEXTSTYLE
+  7
+Standard
+  9
+$CLAYER
+  8
+0
+  9
+$CELTYPE
+  6
+ByLayer
+  9
+$CECOLOR
+ 62
+   256
+  9
+$CELTSCALE
+ 40
+1.0
+  9
+$DISPSILH
+ 70
+     0
+  9
+$DIMSCALE
+ 40
+1.0
+  9
+$DIMASZ
+ 40
+0.18
+  9
+$DIMEXO
+ 40
+0.0625
+  9
+$DIMDLI
+ 40
+0.38
+  9
+$DIMRND
+ 40
+0.0
+  9
+$DIMDLE
+ 40
+0.0
+  9
+$DIMEXE
+ 40
+0.18
+  9
+$DIMTP
+ 40
+0.0
+  9
+$DIMTM
+ 40
+0.0
+  9
+$DIMTXT
+ 40
+0.18
+  9
+$DIMCEN
+ 40
+0.09
+  9
+$DIMTSZ
+ 40
+0.0
+  9
+$DIMTOL
+ 70
+     0
+  9
+$DIMLIM
+ 70
+     0
+  9
+$DIMTIH
+ 70
+     1
+  9
+$DIMTOH
+ 70
+     1
+  9
+$DIMSE1
+ 70
+     0
+  9
+$DIMSE2
+ 70
+     0
+  9
+$DIMTAD
+ 70
+     0
+  9
+$DIMZIN
+ 70
+     0
+  9
+$DIMBLK
+  1
+
+  9
+$DIMASO
+ 70
+     1
+  9
+$DIMSHO
+ 70
+     1
+  9
+$DIMPOST
+  1
+
+  9
+$DIMAPOST
+  1
+
+  9
+$DIMALT
+ 70
+     0
+  9
+$DIMALTD
+ 70
+     2
+  9
+$DIMALTF
+ 40
+25.4
+  9
+$DIMLFAC
+ 40
+1.0
+  9
+$DIMTOFL
+ 70
+     0
+  9
+$DIMTVP
+ 40
+0.0
+  9
+$DIMTIX
+ 70
+     0
+  9
+$DIMSOXD
+ 70
+     0
+  9
+$DIMSAH
+ 70
+     0
+  9
+$DIMBLK1
+  1
+
+  9
+$DIMBLK2
+  1
+
+  9
+$DIMSTYLE
+  2
+Standard
+  9
+$DIMCLRD
+ 70
+     0
+  9
+$DIMCLRE
+ 70
+     0
+  9
+$DIMCLRT
+ 70
+     0
+  9
+$DIMTFAC
+ 40
+1.0
+  9
+$DIMGAP
+ 40
+0.09
+  9
+$DIMJUST
+ 70
+     0
+  9
+$DIMSD1
+ 70
+     0
+  9
+$DIMSD2
+ 70
+     0
+  9
+$DIMTOLJ
+ 70
+     1
+  9
+$DIMTZIN
+ 70
+     0
+  9
+$DIMALTZ
+ 70
+     0
+  9
+$DIMALTTZ
+ 70
+     0
+  9
+$DIMUPT
+ 70
+     0
+  9
+$DIMDEC
+ 70
+     4
+  9
+$DIMTDEC
+ 70
+     4
+  9
+$DIMALTU
+ 70
+     2
+  9
+$DIMALTTD
+ 70
+     2
+  9
+$DIMTXSTY
+  7
+Standard
+  9
+$DIMAUNIT
+ 70
+     0
+  9
+$DIMADEC
+ 70
+     0
+  9
+$DIMALTRND
+ 40
+0.0
+  9
+$DIMAZIN
+ 70
+     0
+  9
+$DIMDSEP
+ 70
+    46
+  9
+$DIMATFIT
+ 70
+     3
+  9
+$DIMFRAC
+ 70
+     0
+  9
+$DIMLDRBLK
+  1
+
+  9
+$DIMLUNIT
+ 70
+     2
+  9
+$DIMLWD
+ 70
+    -2
+  9
+$DIMLWE
+ 70
+    -2
+  9
+$DIMTMOVE
+ 70
+     0
+  9
+$DIMFXL
+ 40
+1.0
+  9
+$DIMFXLON
+ 70
+     0
+  9
+$DIMJOGANG
+ 40
+0.7853981633974483
+  9
+$DIMTFILL
+ 70
+     0
+  9
+$DIMTFILLCLR
+ 70
+     0
+  9
+$DIMARCSYM
+ 70
+     0
+  9
+$DIMLTYPE
+  6
+
+  9
+$DIMLTEX1
+  6
+
+  9
+$DIMLTEX2
+  6
+
+  9
+$DIMTXTDIRECTION
+ 70
+     0
+  9
+$LUNITS
+ 70
+     2
+  9
+$LUPREC
+ 70
+     4
+  9
+$SKETCHINC
+ 40
+0.1
+  9
+$FILLETRAD
+ 40
+0.5
+  9
+$AUNITS
+ 70
+     0
+  9
+$AUPREC
+ 70
+     0
+  9
+$MENU
+  1
+.
+  9
+$ELEVATION
+ 40
+0.0
+  9
+$PELEVATION
+ 40
+0.0
+  9
+$THICKNESS
+ 40
+0.0
+  9
+$LIMCHECK
+ 70
+     0
+  9
+$CHAMFERA
+ 40
+0.0
+  9
+$CHAMFERB
+ 40
+0.0
+  9
+$CHAMFERC
+ 40
+0.0
+  9
+$CHAMFERD
+ 40
+0.0
+  9
+$SKPOLY
+ 70
+     0
+  9
+$TDCREATE
+ 40
+2460835.68482169
+  9
+$TDUCREATE
+ 40
+2460835.643155023
+  9
+$TDUPDATE
+ 40
+2460835.684821829
+  9
+$TDUUPDATE
+ 40
+2460835.643155162
+  9
+$TDINDWG
+ 40
+0.0000000116
+  9
+$TDUSRTIMER
+ 40
+0.0000000116
+  9
+$USRTIMER
+ 70
+     1
+  9
+$ANGBASE
+ 50
+0.0
+  9
+$ANGDIR
+ 70
+     0
+  9
+$PDMODE
+ 70
+     0
+  9
+$PDSIZE
+ 40
+0.0
+  9
+$PLINEWID
+ 40
+0.0
+  9
+$SPLFRAME
+ 70
+     0
+  9
+$SPLINETYPE
+ 70
+     6
+  9
+$SPLINESEGS
+ 70
+     8
+  9
+$HANDSEED
+  5
+1012E
+  9
+$SURFTAB1
+ 70
+     6
+  9
+$SURFTAB2
+ 70
+     6
+  9
+$SURFTYPE
+ 70
+     6
+  9
+$SURFU
+ 70
+     6
+  9
+$SURFV
+ 70
+     6
+  9
+$UCSBASE
+  2
+
+  9
+$UCSNAME
+  2
+
+  9
+$UCSORG
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSXDIR
+ 10
+1.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSYDIR
+ 10
+0.0
+ 20
+1.0
+ 30
+0.0
+  9
+$UCSORTHOREF
+  2
+
+  9
+$UCSORTHOVIEW
+ 70
+     0
+  9
+$UCSORGTOP
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGBOTTOM
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGLEFT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGRIGHT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGFRONT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGBACK
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSBASE
+  2
+
+  9
+$PUCSNAME
+  2
+
+  9
+$PUCSORG
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSXDIR
+ 10
+1.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSYDIR
+ 10
+0.0
+ 20
+1.0
+ 30
+0.0
+  9
+$PUCSORTHOREF
+  2
+
+  9
+$PUCSORTHOVIEW
+ 70
+     0
+  9
+$PUCSORGTOP
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGBOTTOM
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGLEFT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGRIGHT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGFRONT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGBACK
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$USERI1
+ 70
+     0
+  9
+$USERI2
+ 70
+     0
+  9
+$USERI3
+ 70
+     0
+  9
+$USERI4
+ 70
+     0
+  9
+$USERI5
+ 70
+     0
+  9
+$USERR1
+ 40
+0.0
+  9
+$USERR2
+ 40
+0.0
+  9
+$USERR3
+ 40
+0.0
+  9
+$USERR4
+ 40
+0.0
+  9
+$USERR5
+ 40
+0.0
+  9
+$WORLDVIEW
+ 70
+     1
+  9
+$SHADEDGE
+ 70
+     3
+  9
+$SHADEDIF
+ 70
+    70
+  9
+$TILEMODE
+ 70
+     1
+  9
+$MAXACTVP
+ 70
+    64
+  9
+$PINSBASE
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PLIMCHECK
+ 70
+     0
+  9
+$PEXTMIN
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PEXTMAX
+ 10
+50.0
+ 20
+50.0
+ 30
+50.0
+  9
+$PLIMMIN
+ 10
+-0.25
+ 20
+-0.25
+  9
+$PLIMMAX
+ 10
+10.75
+ 20
+8.25
+  9
+$UNITMODE
+ 70
+     0
+  9
+$VISRETAIN
+ 70
+     1
+  9
+$PLINEGEN
+ 70
+     0
+  9
+$PSLTSCALE
+ 70
+     1
+  9
+$TREEDEPTH
+ 70
+  3020
+  9
+$CMLSTYLE
+  2
+Standard
+  9
+$CMLJUST
+ 70
+     0
+  9
+$CMLSCALE
+ 40
+1.0
+  9
+$PROXYGRAPHICS
+ 70
+     1
+  9
+$MEASUREMENT
+ 70
+     0
+  9
+$CELWEIGHT
+370
+    -1
+  9
+$ENDCAPS
+280
+     0
+  9
+$JOINSTYLE
+280
+     0
+  9
+$LWDISPLAY
+290
+     0
+  9
+$INSUNITS
+ 70
+     4
+  9
+$HYPERLINKBASE
+  1
+
+  9
+$STYLESHEET
+  1
+
+  9
+$XEDIT
+290
+     1
+  9
+$CEPSNTYPE
+380
+     0
+  9
+$PSTYLEMODE
+290
+     1
+  9
+$FINGERPRINTGUID
+  2
+{30773063-71b4-7465-7373-7836737834b2}
+  9
+$VERSIONGUID
+  2
+{FAEB1C32-E019-11D5-929B-00C0DF256EC4}
+  9
+$EXTNAMES
+290
+     1
+  9
+$PSVPSCALE
+ 40
+0.0
+  9
+$OLESTARTUP
+290
+     0
+  9
+$SORTENTS
+280
+   127
+  9
+$INDEXCTL
+280
+     0
+  9
+$HIDETEXT
+280
+     1
+  9
+$XCLIPFRAME
+280
+     2
+  9
+$HALOGAP
+280
+     0
+  9
+$OBSCOLOR
+ 70
+   257
+  9
+$OBSLTYPE
+280
+     0
+  9
+$INTERSECTIONDISPLAY
+280
+     0
+  9
+$INTERSECTIONCOLOR
+ 70
+   257
+  9
+$DIMASSOC
+280
+     2
+  9
+$PROJECTNAME
+  1
+
+  9
+$CAMERADISPLAY
+290
+     0
+  9
+$LENSLENGTH
+ 40
+50.0
+  9
+$CAMERAHEIGHT
+ 40
+0.0
+  9
+$STEPSPERSEC
+ 40
+2.0
+  9
+$STEPSIZE
+ 40
+6.0
+  9
+$3DDWFPREC
+ 40
+2.0
+  9
+$PSOLWIDTH
+ 40
+0.25
+  9
+$PSOLHEIGHT
+ 40
+4.0
+  9
+$LOFTANG1
+ 40
+1.570796326794897
+  9
+$LOFTANG2
+ 40
+1.570796326794897
+  9
+$LOFTMAG1
+ 40
+0.0
+  9
+$LOFTMAG2
+ 40
+0.0
+  9
+$LOFTPARAM
+ 70
+     7
+  9
+$LOFTNORMALS
+280
+     1
+  9
+$LATITUDE
+ 40
+37.795
+  9
+$LONGITUDE
+ 40
+-122.394
+  9
+$NORTHDIRECTION
+ 40
+0.0
+  9
+$TIMEZONE
+ 70
+ -8000
+  9
+$LIGHTGLYPHDISPLAY
+280
+     1
+  9
+$TILEMODELIGHTSYNCH
+280
+     1
+  9
+$CMATERIAL
+347
+10074
+  9
+$SOLIDHIST
+280
+     0
+  9
+$SHOWHIST
+280
+     1
+  9
+$DWFFRAME
+280
+     2
+  9
+$DGNFRAME
+280
+     2
+  9
+$REALWORLDSCALE
+290
+     1
+  9
+$INTERFERECOLOR
+ 62
+   256
+  9
+$CSHADOW
+280
+     0
+  9
+$SHADOWPLANELOCATION
+ 40
+0.0
+  0
+ENDSEC
+  0
+SECTION
+  2
+CLASSES
+  0
+CLASS
+  1
+ACDBDICTIONARYWDFLT
+  2
+AcDbDictionaryWithDefault
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        3
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+VISUALSTYLE
+  2
+AcDbVisualStyle
+  3
+ObjectDBX Classes
+ 90
+     4095
+ 91
+        3
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+MATERIAL
+  2
+AcDbMaterial
+  3
+ObjectDBX Classes
+ 90
+     1153
+ 91
+        3
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+SCALE
+  2
+AcDbScale
+  3
+ObjectDBX Classes
+ 90
+     1153
+ 91
+        3
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+TABLESTYLE
+  2
+AcDbTableStyle
+  3
+ObjectDBX Classes
+ 90
+     4095
+ 91
+        3
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+MLEADERSTYLE
+  2
+AcDbMLeaderStyle
+  3
+ACDB_MLEADERSTYLE_CLASS
+ 90
+     4095
+ 91
+        3
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+SUN
+  2
+AcDbSun
+  3
+SCENEOE
+ 90
+     1153
+ 91
+        3
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+DICTIONARYVAR
+  2
+AcDbDictionaryVar
+  3
+ObjectDBX Classes
+ 90
+        0
+ 91
+        3
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+CELLSTYLEMAP
+  2
+AcDbCellStyleMap
+  3
+ObjectDBX Classes
+ 90
+     1152
+ 91
+        3
+280
+     0
+281
+     0
+  0
+ENDSEC
+  0
+SECTION
+  2
+TABLES
+  0
+TABLE
+  2
+VPORT
+  5
+10039
+330
+0
+100
+AcDbSymbolTable
+ 70
+     1
+  0
+VPORT
+  5
+10059
+330
+10039
+100
+AcDbSymbolTableRecord
+100
+AcDbViewportTableRecord
+  2
+*Active
+ 70
+     0
+ 10
+0.0
+ 20
+0.0
+ 11
+1.0
+ 21
+1.0
+ 12
+139.6230310844107
+ 22
+-79.99923123528616
+ 13
+0.0
+ 23
+0.0
+ 14
+0.5
+ 24
+0.5
+ 15
+0.5
+ 25
+0.5
+ 16
+0.0
+ 26
+0.0
+ 36
+1.0
+ 17
+0.0
+ 27
+0.0
+ 37
+0.0
+ 40
+82.46027994793923
+ 41
+2.048353909465021
+ 42
+50.0
+ 43
+0.0
+ 44
+0.0
+ 50
+0.0
+ 51
+0.0
+ 71
+     0
+ 72
+   100
+ 73
+     1
+ 74
+     3
+ 75
+     0
+ 76
+     0
+ 77
+     0
+ 78
+     0
+281
+     0
+ 65
+     1
+110
+0.0
+120
+0.0
+130
+0.0
+111
+1.0
+121
+0.0
+131
+0.0
+112
+0.0
+122
+1.0
+132
+0.0
+ 79
+     0
+146
+0.0
+348
+1005F
+ 60
+     3
+ 61
+     5
+292
+     1
+282
+     1
+141
+0.0
+142
+0.0
+ 63
+   250
+361
+1009D
+  0
+ENDTAB
+  0
+TABLE
+  2
+LTYPE
+  5
+10036
+330
+0
+100
+AcDbSymbolTable
+ 70
+    52
+  0
+LTYPE
+  5
+10044
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByBlock
+ 70
+     0
+  3
+
+ 72
+    65
+ 73
+     0
+ 40
+0.0
+  0
+LTYPE
+  5
+10045
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByLayer
+ 70
+     0
+  3
+
+ 72
+    65
+ 73
+     0
+ 40
+0.0
+  0
+LTYPE
+  5
+10046
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+Continuous
+ 70
+     0
+  3
+Solid line
+ 72
+    65
+ 73
+     0
+ 40
+0.0
+  0
+LTYPE
+  5
+100D9
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHDOTX2
+ 70
+     0
+  3
+Dash dot (2x) ____  .  ____  .  ____  .  ___
+ 72
+    65
+ 73
+     4
+ 40
+50.8
+ 49
+25.4
+ 74
+     0
+ 49
+-12.7
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-12.7
+ 74
+     0
+  0
+LTYPE
+  5
+100DB
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+CUTRIGHT2
+ 70
+     0
+  3
+G42 reversed----\----\----\----
+ 72
+    65
+ 73
+     2
+ 40
+10.16
+ 49
+5.08
+ 74
+     2
+ 75
+     0
+340
+100DA
+ 46
+2.54
+ 50
+0.0
+ 44
+0.0
+ 45
+0.0
+  9
+HRIGHT_ARROW
+ 49
+5.08
+ 74
+     0
+  0
+LTYPE
+  5
+100DC
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHDOT
+ 70
+     0
+  3
+Dash dot __ . __ . __ . __ . __ . __ . __ . __
+ 72
+    65
+ 73
+     4
+ 40
+25.4
+ 49
+12.7
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+  0
+LTYPE
+  5
+100DE
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DRAINAGE2
+ 70
+     0
+  3
+Drainage reversed----<----<----<----
+ 72
+    65
+ 73
+     2
+ 40
+10.16
+ 49
+5.08
+ 74
+     2
+ 75
+     0
+340
+100DD
+ 46
+2.54
+ 50
+0.0
+ 44
+0.0
+ 45
+0.0
+  9
+RIGHT_ARROW
+ 49
+5.08
+ 74
+     0
+  0
+LTYPE
+  5
+100E0
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+FENCELINE1
+ 70
+     0
+  3
+Fenceline circle ----0-----0----0-----0----0-----0--
+ 72
+    65
+ 73
+     4
+ 40
+36.83
+ 49
+6.35
+ 74
+     0
+ 49
+-2.54
+ 74
+     2
+ 75
+     0
+340
+100DF
+ 46
+2.54
+ 50
+0.0
+ 44
+-2.54
+ 45
+0.0
+  9
+CIRC1
+ 49
+-2.54
+ 74
+     0
+ 49
+25.4
+ 74
+     0
+  0
+LTYPE
+  5
+100E1
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DOTX2
+ 70
+     0
+  3
+Dot (2x) .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 72
+    65
+ 73
+     2
+ 40
+12.7
+ 49
+0.0
+ 74
+     0
+ 49
+-12.7
+ 74
+     0
+  0
+LTYPE
+  5
+100E3
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DRAINAGE
+ 70
+     0
+  3
+Drainage ---->---->---->----
+ 72
+    65
+ 73
+     2
+ 40
+10.16
+ 49
+5.08
+ 74
+     2
+ 75
+     0
+340
+100E2
+ 46
+2.54
+ 50
+180.0
+ 44
+0.0
+ 45
+0.0
+  9
+RIGHT_ARROW
+ 49
+5.08
+ 74
+     0
+  0
+LTYPE
+  5
+100E4
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DOT
+ 70
+     0
+  3
+Dot . . . . . . . . . . . . . . . . . . . . . . . .
+ 72
+    65
+ 73
+     2
+ 40
+6.35
+ 49
+0.0
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+  0
+LTYPE
+  5
+100E5
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DOT2
+ 70
+     0
+  3
+Dot (.5x) ........................................
+ 72
+    65
+ 73
+     2
+ 40
+3.175
+ 49
+0.0
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+  0
+LTYPE
+  5
+100E6
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DIVIDE2
+ 70
+     0
+  3
+Divide (.5x) __..__..__..__..__..__..__..__.._
+ 72
+    65
+ 73
+     6
+ 40
+15.875
+ 49
+6.35
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+  0
+LTYPE
+  5
+100E7
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DIVIDEX2
+ 70
+     0
+  3
+Divide (2x) ________  .  .  ________  .  .  _
+ 72
+    65
+ 73
+     6
+ 40
+63.5
+ 49
+25.4
+ 74
+     0
+ 49
+-12.7
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-12.7
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-12.7
+ 74
+     0
+  0
+LTYPE
+  5
+100EA
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+BATTING
+ 70
+     0
+  3
+Batting SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+ 72
+    65
+ 73
+     4
+ 40
+10.16254
+ 49
+0.00254
+ 74
+     0
+ 49
+-2.54
+ 74
+     2
+ 75
+     0
+340
+100E8
+ 46
+2.54
+ 50
+0.0
+ 44
+-2.54
+ 45
+0.0
+  9
+BAT
+ 49
+-5.08
+ 74
+     2
+ 75
+     0
+340
+100E9
+ 46
+2.54
+ 50
+180.0
+ 44
+2.54
+ 45
+0.0
+  9
+BAT
+ 49
+-2.54
+ 74
+     0
+  0
+LTYPE
+  5
+100EB
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+BORDER
+ 70
+     0
+  3
+Border __ __ . __ __ . __ __ . __ __ . __ __ .
+ 72
+    65
+ 73
+     6
+ 40
+44.45
+ 49
+12.7
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+ 49
+12.7
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+  0
+LTYPE
+  5
+100EC
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO14W100
+ 70
+     0
+  3
+ISO dash triple-dot __ . . . __ . . . __ . . . _
+ 72
+    65
+ 73
+     8
+ 40
+24.0
+ 49
+12.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+  0
+LTYPE
+  5
+100ED
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO15W100
+ 70
+     0
+  3
+ISO double-dash triple-dot __ __ . . . __ __ . .
+ 72
+    65
+ 73
+    10
+ 40
+39.0
+ 49
+12.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+12.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+  0
+LTYPE
+  5
+100EE
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO12W100
+ 70
+     0
+  3
+ISO dash double-dot __ . . __ . . __ . . __ . . 
+ 72
+    65
+ 73
+     6
+ 40
+21.0
+ 49
+12.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+  0
+LTYPE
+  5
+100EF
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO13W100
+ 70
+     0
+  3
+ISO double-dash double-dot __ __ . . __ __ . . _
+ 72
+    65
+ 73
+     8
+ 40
+36.0
+ 49
+12.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+12.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+  0
+LTYPE
+  5
+100F0
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO10W100
+ 70
+     0
+  3
+ISO dash dot __ . __ . __ . __ . __ . __ . __ . 
+ 72
+    65
+ 73
+     4
+ 40
+18.0
+ 49
+12.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+  0
+LTYPE
+  5
+100F1
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO11W100
+ 70
+     0
+  3
+ISO double-dash dot __ __ . __ __ . __ __ . __ _
+ 72
+    65
+ 73
+     6
+ 40
+33.0
+ 49
+12.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+12.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+  0
+LTYPE
+  5
+100F3
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+CUTLEFT2
+ 70
+     0
+  3
+G41 reversed----/----/----/----
+ 72
+    65
+ 73
+     2
+ 40
+10.16
+ 49
+5.08
+ 74
+     2
+ 75
+     0
+340
+100F2
+ 46
+2.54
+ 50
+0.0
+ 44
+0.0
+ 45
+0.0
+  9
+LRIGHT_ARROW
+ 49
+5.08
+ 74
+     0
+  0
+LTYPE
+  5
+100F5
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+CUTRIGHT
+ 70
+     0
+  3
+G42 ----/----/-----/---
+ 72
+    65
+ 73
+     2
+ 40
+10.16
+ 49
+5.08
+ 74
+     2
+ 75
+     0
+340
+100F4
+ 46
+2.54
+ 50
+180.0
+ 44
+0.0
+ 45
+0.0
+  9
+HRIGHT_ARROW
+ 49
+5.08
+ 74
+     0
+  0
+LTYPE
+  5
+100F6
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+CENTERX2
+ 70
+     0
+  3
+Center (2x) ________  __  ________  __  _____
+ 72
+    65
+ 73
+     4
+ 40
+101.6
+ 49
+63.5
+ 74
+     0
+ 49
+-12.7
+ 74
+     0
+ 49
+12.7
+ 74
+     0
+ 49
+-12.7
+ 74
+     0
+  0
+LTYPE
+  5
+100F8
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+CUTLEFT
+ 70
+     0
+  3
+G41 ----\----\----\----
+ 72
+    65
+ 73
+     2
+ 40
+10.16
+ 49
+5.08
+ 74
+     2
+ 75
+     0
+340
+100F7
+ 46
+2.54
+ 50
+180.0
+ 44
+0.0
+ 45
+0.0
+  9
+LRIGHT_ARROW
+ 49
+5.08
+ 74
+     0
+  0
+LTYPE
+  5
+100F9
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+CENTER
+ 70
+     0
+  3
+Center ____ _ ____ _ ____ _ ____ _ ____ _ ____
+ 72
+    65
+ 73
+     4
+ 40
+50.8
+ 49
+31.75
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+ 49
+6.35
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+  0
+LTYPE
+  5
+100FA
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+CENTER2
+ 70
+     0
+  3
+Center (.5x) ___ _ ___ _ ___ _ ___ _ ___ _ ___
+ 72
+    65
+ 73
+     4
+ 40
+28.575
+ 49
+19.05
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+ 49
+3.175
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+  0
+LTYPE
+  5
+100FB
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+BORDER2
+ 70
+     0
+  3
+Border (.5x) __.__.__.__.__.__.__.__.__.__.__.
+ 72
+    65
+ 73
+     6
+ 40
+22.225
+ 49
+6.35
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+ 49
+6.35
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+  0
+LTYPE
+  5
+100FC
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+BORDERX2
+ 70
+     0
+  3
+Border (2x) ____  ____  .  ____  ____  .  ___
+ 72
+    65
+ 73
+     6
+ 40
+88.89999999999999
+ 49
+25.4
+ 74
+     0
+ 49
+-12.7
+ 74
+     0
+ 49
+25.4
+ 74
+     0
+ 49
+-12.7
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-12.7
+ 74
+     0
+  0
+LTYPE
+  5
+100FD
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO08W100
+ 70
+     0
+  3
+ISO long-dash short-dash ____ __ ____ __ ____ _
+ 72
+    65
+ 73
+     4
+ 40
+36.0
+ 49
+24.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+6.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+  0
+LTYPE
+  5
+100FE
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO09W100
+ 70
+     0
+  3
+ISO long-dash double-short-dash ____ __ __ ____
+ 72
+    65
+ 73
+     6
+ 40
+45.0
+ 49
+24.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+6.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+6.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+  0
+LTYPE
+  5
+100FF
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO06W100
+ 70
+     0
+  3
+ISO long-dash triple-dot ____ ... ____ ... ____
+ 72
+    65
+ 73
+     8
+ 40
+36.0
+ 49
+24.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+  0
+LTYPE
+  5
+10100
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO07W100
+ 70
+     0
+  3
+ISO dot . . . . . . . . . . . . . . . . . . . . 
+ 72
+    65
+ 73
+     2
+ 40
+3.0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+  0
+LTYPE
+  5
+10101
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO04W100
+ 70
+     0
+  3
+ISO long-dash dot ____ . ____ . ____ . ____ . _
+ 72
+    65
+ 73
+     4
+ 40
+30.0
+ 49
+24.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+  0
+LTYPE
+  5
+10102
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO05W100
+ 70
+     0
+  3
+ISO long-dash double-dot ____ .. ____ .. ____ . 
+ 72
+    65
+ 73
+     6
+ 40
+33.0
+ 49
+24.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+  0
+LTYPE
+  5
+10103
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO02W100
+ 70
+     0
+  3
+ISO dash __ __ __ __ __ __ __ __ __ __ __ __ __
+ 72
+    65
+ 73
+     2
+ 40
+15.0
+ 49
+12.0
+ 74
+     0
+ 49
+-3.0
+ 74
+     0
+  0
+LTYPE
+  5
+10104
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO03W100
+ 70
+     0
+  3
+ISO dash space __    __    __    __    __    __
+ 72
+    65
+ 73
+     2
+ 40
+30.0
+ 49
+12.0
+ 74
+     0
+ 49
+-18.0
+ 74
+     0
+  0
+LTYPE
+  5
+10105
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+PHANTOM
+ 70
+     0
+  3
+Phantom ______  __  __  ______  __  __  ______ 
+ 72
+    65
+ 73
+     6
+ 40
+63.50000000000001
+ 49
+31.75
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+ 49
+6.35
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+ 49
+6.35
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+  0
+LTYPE
+  5
+10106
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+PHANTOM2
+ 70
+     0
+  3
+Phantom (.5x) ___ _ _ ___ _ _ ___ _ _ ___ _ _
+ 72
+    65
+ 73
+     6
+ 40
+31.75
+ 49
+15.875
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+ 49
+3.175
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+ 49
+3.175
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+  0
+LTYPE
+  5
+10107
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+HIDDENX2
+ 70
+     0
+  3
+Hidden (2x) ____ ____ ____ ____ ____ ____ ____ 
+ 72
+    65
+ 73
+     2
+ 40
+19.05
+ 49
+12.7
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+  0
+LTYPE
+  5
+10109
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+HOT_WATER_SUPPLY
+ 70
+     0
+  3
+Hot water supply ---- HW ---- HW ---- HW ----
+ 72
+    65
+ 73
+     3
+ 40
+22.86
+ 49
+12.7
+ 74
+     0
+ 49
+-5.08
+ 74
+     2
+ 75
+     0
+340
+10108
+ 46
+2.54
+ 50
+0.0
+ 44
+-2.54
+ 45
+-1.27
+  9
+HW
+ 49
+-5.08
+ 74
+     0
+  0
+LTYPE
+  5
+1010A
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+HIDDEN
+ 70
+     0
+  3
+Hidden __ __ __ __ __ __ __ __ __ __ __ __ __ __
+ 72
+    65
+ 73
+     2
+ 40
+9.524999999999999
+ 49
+6.35
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+  0
+LTYPE
+  5
+1010B
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+HIDDEN2
+ 70
+     0
+  3
+Hidden (.5x) _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+ 72
+    65
+ 73
+     2
+ 40
+4.762499999999999
+ 49
+3.175
+ 74
+     0
+ 49
+-1.5875
+ 74
+     0
+  0
+LTYPE
+  5
+1010D
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+FENCELINE2
+ 70
+     0
+  3
+Fenceline square ----[]-----[]----[]-----[]----[]---
+ 72
+    65
+ 73
+     4
+ 40
+36.83
+ 49
+6.35
+ 74
+     0
+ 49
+-2.54
+ 74
+     2
+ 75
+     0
+340
+1010C
+ 46
+2.54
+ 50
+0.0
+ 44
+-2.54
+ 45
+0.0
+  9
+BOX
+ 49
+-2.54
+ 74
+     0
+ 49
+25.4
+ 74
+     0
+  0
+LTYPE
+  5
+1010F
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+GAS_LINE
+ 70
+     0
+  3
+Gas line ----GAS----GAS----GAS----GAS----GAS----GAS--
+ 72
+    65
+ 73
+     3
+ 40
+24.13
+ 49
+12.7
+ 74
+     0
+ 49
+-5.08
+ 74
+     2
+ 75
+     0
+340
+1010E
+ 46
+2.54
+ 50
+0.0
+ 44
+-2.54
+ 45
+-1.27
+  9
+GAS
+ 49
+-6.35
+ 74
+     0
+  0
+LTYPE
+  5
+10112
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ZIGZAG
+ 70
+     0
+  3
+Zig zag /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+ 72
+    65
+ 73
+     4
+ 40
+20.32254
+ 49
+0.00254
+ 74
+     0
+ 49
+-5.08
+ 74
+     2
+ 75
+     0
+340
+10110
+ 46
+5.08
+ 50
+0.0
+ 44
+-5.08
+ 45
+0.0
+  9
+ZIG
+ 49
+-10.16
+ 74
+     2
+ 75
+     0
+340
+10111
+ 46
+5.08
+ 50
+180.0
+ 44
+5.08
+ 45
+0.0
+  9
+ZIG
+ 49
+-5.08
+ 74
+     0
+  0
+LTYPE
+  5
+10113
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+PHANTOMX2
+ 70
+     0
+  3
+Phantom (2x) ____________    ____    ____   _
+ 72
+    65
+ 73
+     6
+ 40
+127.0
+ 49
+63.5
+ 74
+     0
+ 49
+-12.7
+ 74
+     0
+ 49
+12.7
+ 74
+     0
+ 49
+-12.7
+ 74
+     0
+ 49
+12.7
+ 74
+     0
+ 49
+-12.7
+ 74
+     0
+  0
+LTYPE
+  5
+10115
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+TRACKS
+ 70
+     0
+  3
+Tracks -|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-
+ 72
+    65
+ 73
+     2
+ 40
+7.62
+ 49
+3.81
+ 74
+     2
+ 75
+     0
+340
+10114
+ 46
+6.35
+ 50
+0.0
+ 44
+0.0
+ 45
+0.0
+  9
+TRACK1
+ 49
+3.81
+ 74
+     0
+  0
+LTYPE
+  5
+10116
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHEDX2
+ 70
+     0
+  3
+Dashed (2x) ____  ____  ____  ____  ____  ___
+ 72
+    65
+ 73
+     2
+ 40
+38.09999999999999
+ 49
+25.4
+ 74
+     0
+ 49
+-12.7
+ 74
+     0
+  0
+LTYPE
+  5
+10117
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DIVIDE
+ 70
+     0
+  3
+Divide ____ . . ____ . . ____ . . ____ . . ____
+ 72
+    65
+ 73
+     6
+ 40
+31.75
+ 49
+12.7
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+  0
+LTYPE
+  5
+10118
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHED
+ 70
+     0
+  3
+Dashed __ __ __ __ __ __ __ __ __ __ __ __ __ _
+ 72
+    65
+ 73
+     2
+ 40
+19.05
+ 49
+12.7
+ 74
+     0
+ 49
+-6.35
+ 74
+     0
+  0
+LTYPE
+  5
+10119
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHED2
+ 70
+     0
+  3
+Dashed (.5x) _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+ 72
+    65
+ 73
+     2
+ 40
+9.524999999999999
+ 49
+6.35
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+  0
+LTYPE
+  5
+1011A
+330
+10036
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHDOT2
+ 70
+     0
+  3
+Dash dot (.5x) _._._._._._._._._._._._._._._.
+ 72
+    65
+ 73
+     4
+ 40
+12.7
+ 49
+6.35
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+ 49
+0.0
+ 74
+     0
+ 49
+-3.175
+ 74
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LAYER
+  5
+10034
+330
+0
+100
+AcDbSymbolTable
+ 70
+     9
+  0
+LAYER
+  5
+10041
+330
+10034
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+0
+ 70
+     0
+ 62
+     7
+  6
+Continuous
+370
+    -3
+390
+10040
+347
+10076
+348
+0
+  0
+LAYER
+  5
+1011B
+330
+10034
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+none
+ 70
+     0
+ 62
+     7
+  6
+Continuous
+370
+    -3
+390
+10040
+347
+10076
+348
+0
+  0
+LAYER
+  5
+1011C
+330
+10034
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Shape
+ 70
+     0
+ 62
+     7
+  6
+Continuous
+370
+    -3
+390
+10040
+347
+10076
+348
+0
+  0
+LAYER
+  5
+1011D
+330
+10034
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Shape002
+ 70
+     0
+ 62
+     7
+  6
+Continuous
+370
+    -3
+390
+10040
+347
+10076
+348
+0
+  0
+LAYER
+  5
+1011E
+330
+10034
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Shape004
+ 70
+     0
+ 62
+     7
+  6
+Continuous
+370
+    -3
+390
+10040
+347
+10076
+348
+0
+  0
+LAYER
+  5
+1011F
+330
+10034
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Shape006
+ 70
+     0
+ 62
+     7
+  6
+Continuous
+370
+    -3
+390
+10040
+347
+10076
+348
+0
+  0
+LAYER
+  5
+10120
+330
+10034
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Shape008
+ 70
+     0
+ 62
+     7
+  6
+Continuous
+370
+    -3
+390
+10040
+347
+10076
+348
+0
+  0
+LAYER
+  5
+10121
+330
+10034
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Shape010
+ 70
+     0
+ 62
+     7
+  6
+Continuous
+370
+    -3
+390
+10040
+347
+10076
+348
+0
+  0
+LAYER
+  5
+10122
+330
+10034
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Shape012
+ 70
+     0
+ 62
+     7
+  6
+Continuous
+370
+    -3
+390
+10040
+347
+10076
+348
+0
+  0
+ENDTAB
+  0
+TABLE
+  2
+STYLE
+  5
+10035
+330
+0
+100
+AcDbSymbolTable
+ 70
+    17
+  0
+STYLE
+  5
+10042
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+Standard
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+txt
+  4
+
+  0
+STYLE
+  5
+100D7
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+QCADDimTextStyle
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+
+  4
+
+  0
+STYLE
+  5
+100DA
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+textstyle0
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+qcadshp.shx
+  4
+
+  0
+STYLE
+  5
+100DD
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+textstyle1
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+qcadshp.shx
+  4
+
+  0
+STYLE
+  5
+100DF
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+textstyle2
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+ltypeshp.shx
+  4
+
+  0
+STYLE
+  5
+100E2
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+textstyle3
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+qcadshp.shx
+  4
+
+  0
+STYLE
+  5
+100E8
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+textstyle4
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+ltypeshp.shx
+  4
+
+  0
+STYLE
+  5
+100E9
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+textstyle5
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+ltypeshp.shx
+  4
+
+  0
+STYLE
+  5
+100F2
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+textstyle6
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+qcadshp.shx
+  4
+
+  0
+STYLE
+  5
+100F4
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+textstyle7
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+qcadshp.shx
+  4
+
+  0
+STYLE
+  5
+100F7
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+textstyle8
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+qcadshp.shx
+  4
+
+  0
+STYLE
+  5
+10108
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+textstyle9
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+STANDARD
+  4
+
+  0
+STYLE
+  5
+1010C
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+textstyle10
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+ltypeshp.shx
+  4
+
+  0
+STYLE
+  5
+1010E
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+textstyle11
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+STANDARD
+  4
+
+  0
+STYLE
+  5
+10110
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+textstyle12
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+ltypeshp.shx
+  4
+
+  0
+STYLE
+  5
+10111
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+textstyle13
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+ltypeshp.shx
+  4
+
+  0
+STYLE
+  5
+10114
+330
+10035
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+textstyle14
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+2.5
+  3
+ltypeshp.shx
+  4
+
+  0
+ENDTAB
+  0
+TABLE
+  2
+VIEW
+  5
+10037
+330
+0
+100
+AcDbSymbolTable
+ 70
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+UCS
+  5
+10038
+330
+0
+100
+AcDbSymbolTable
+ 70
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+APPID
+  5
+1003A
+330
+0
+100
+AcDbSymbolTable
+ 70
+     2
+  0
+APPID
+  5
+10043
+330
+1003A
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+ACAD
+ 70
+     0
+  0
+APPID
+  5
+1009E
+330
+1003A
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+QCAD
+ 70
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+DIMSTYLE
+  5
+1003B
+330
+0
+100
+AcDbSymbolTable
+ 70
+     2
+100
+AcDbDimStyleTable
+  0
+DIMSTYLE
+105
+10057
+330
+1003B
+100
+AcDbSymbolTableRecord
+100
+AcDbDimStyleTableRecord
+  2
+Standard
+ 70
+     0
+178
+     0
+340
+10042
+  0
+DIMSTYLE
+105
+100D8
+330
+1003B
+100
+AcDbSymbolTableRecord
+100
+AcDbDimStyleTableRecord
+  2
+QCADDimStyle
+ 70
+     0
+ 73
+     0
+ 77
+     1
+178
+     0
+340
+100D7
+  0
+ENDTAB
+  0
+TABLE
+  2
+BLOCK_RECORD
+  5
+10033
+330
+0
+100
+AcDbSymbolTable
+ 70
+     0
+  0
+BLOCK_RECORD
+  5
+1004F
+330
+10033
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Model_Space
+340
+10052
+ 70
+     0
+280
+     1
+281
+     0
+  0
+BLOCK_RECORD
+  5
+1004B
+330
+10033
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Paper_Space
+340
+1004E
+ 70
+     0
+280
+     1
+281
+     0
+  0
+ENDTAB
+  0
+ENDSEC
+  0
+SECTION
+  2
+BLOCKS
+  0
+BLOCK
+  5
+10050
+330
+1004F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Model_Space
+ 70
+     0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*Model_Space
+  1
+
+  0
+ENDBLK
+  5
+10051
+330
+1004F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1004C
+330
+1004B
+100
+AcDbEntity
+ 67
+     1
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Paper_Space
+ 70
+     0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*Paper_Space
+  1
+
+  0
+ENDBLK
+  5
+1004D
+330
+1004B
+100
+AcDbEntity
+ 67
+     1
+  8
+0
+100
+AcDbBlockEnd
+  0
+ENDSEC
+  0
+SECTION
+  2
+ENTITIES
+  0
+LINE
+  5
+A08
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+98.2343
+ 20
+-57.5927
+ 30
+0.0
+ 11
+98.2991
+ 21
+-57.359
+ 31
+0.0
+  0
+LINE
+  5
+A09
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+98.2991
+ 20
+-57.359
+ 30
+0.0
+ 11
+98.4012
+ 21
+-57.139
+ 31
+0.0
+  0
+LINE
+  5
+A0A
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+98.4012
+ 20
+-57.139
+ 30
+0.0
+ 11
+98.5379
+ 21
+-56.9387
+ 31
+0.0
+  0
+LINE
+  5
+A0B
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+98.5379
+ 20
+-56.9387
+ 30
+0.0
+ 11
+98.7055
+ 21
+-56.7633
+ 31
+0.0
+  0
+LINE
+  5
+A0C
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+98.7055
+ 20
+-56.7633
+ 30
+0.0
+ 11
+98.8994
+ 21
+-56.6177
+ 31
+0.0
+  0
+LINE
+  5
+A0D
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+98.8994
+ 20
+-56.6177
+ 30
+0.0
+ 11
+99.1145
+ 21
+-56.5057
+ 31
+0.0
+  0
+LINE
+  5
+A0E
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+99.1145
+ 20
+-56.5057
+ 30
+0.0
+ 11
+99.345
+ 21
+-56.4304
+ 31
+0.0
+  0
+LINE
+  5
+A0F
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+99.345
+ 20
+-56.4304
+ 30
+0.0
+ 11
+99.5848
+ 21
+-56.3937
+ 31
+0.0
+  0
+LINE
+  5
+A10
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+99.5848
+ 20
+-56.3937
+ 30
+0.0
+ 11
+99.8273
+ 21
+-56.3967
+ 31
+0.0
+  0
+LINE
+  5
+A11
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+99.8273
+ 20
+-56.3967
+ 30
+0.0
+ 11
+100.066
+ 21
+-56.4392
+ 31
+0.0
+  0
+LINE
+  5
+A12
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+100.066
+ 20
+-56.4392
+ 30
+0.0
+ 11
+100.295
+ 21
+-56.5202
+ 31
+0.0
+  0
+LINE
+  5
+A13
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+100.295
+ 20
+-56.5202
+ 30
+0.0
+ 11
+100.507
+ 21
+-56.6374
+ 31
+0.0
+  0
+LINE
+  5
+A14
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+100.507
+ 20
+-56.6374
+ 30
+0.0
+ 11
+100.697
+ 21
+-56.7877
+ 31
+0.0
+  0
+LINE
+  5
+A15
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+100.697
+ 20
+-56.7877
+ 30
+0.0
+ 11
+100.861
+ 21
+-56.967
+ 31
+0.0
+  0
+LINE
+  5
+A16
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+100.861
+ 20
+-56.967
+ 30
+0.0
+ 11
+100.992
+ 21
+-57.1707
+ 31
+0.0
+  0
+LINE
+  5
+A17
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+100.992
+ 20
+-57.1707
+ 30
+0.0
+ 11
+101.089
+ 21
+-57.3931
+ 31
+0.0
+  0
+LINE
+  5
+A18
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+101.089
+ 20
+-57.3931
+ 30
+0.0
+ 11
+101.148
+ 21
+-57.6283
+ 31
+0.0
+  0
+LINE
+  5
+A19
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+101.148
+ 20
+-57.6283
+ 30
+0.0
+ 11
+101.168
+ 21
+-57.87
+ 31
+0.0
+  0
+LINE
+  5
+A1A
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+101.168
+ 20
+-57.87
+ 30
+0.0
+ 11
+101.166
+ 21
+-57.9423
+ 31
+0.0
+  0
+LINE
+  5
+A1B
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+101.166
+ 20
+-57.9423
+ 30
+0.0
+ 11
+101.134
+ 21
+-58.1827
+ 31
+0.0
+  0
+LINE
+  5
+A1C
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+101.134
+ 20
+-58.1827
+ 30
+0.0
+ 11
+101.064
+ 21
+-58.4148
+ 31
+0.0
+  0
+LINE
+  5
+A1D
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+101.064
+ 20
+-58.4148
+ 30
+0.0
+ 11
+100.957
+ 21
+-58.6322
+ 31
+0.0
+  0
+LINE
+  5
+A1E
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+100.957
+ 20
+-58.6322
+ 30
+0.0
+ 11
+100.815
+ 21
+-58.8292
+ 31
+0.0
+  0
+LINE
+  5
+A1F
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+100.815
+ 20
+-58.8292
+ 30
+0.0
+ 11
+100.643
+ 21
+-59.0003
+ 31
+0.0
+  0
+LINE
+  5
+A20
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+100.643
+ 20
+-59.0003
+ 30
+0.0
+ 11
+100.446
+ 21
+-59.1412
+ 31
+0.0
+  0
+LINE
+  5
+A21
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+100.446
+ 20
+-59.1412
+ 30
+0.0
+ 11
+100.228
+ 21
+-59.2479
+ 31
+0.0
+  0
+LINE
+  5
+A22
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+100.228
+ 20
+-59.2479
+ 30
+0.0
+ 11
+99.9957
+ 21
+-59.3176
+ 31
+0.0
+  0
+LINE
+  5
+A23
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+99.9957
+ 20
+-59.3176
+ 30
+0.0
+ 11
+99.7551
+ 21
+-59.3484
+ 31
+0.0
+  0
+LINE
+  5
+A24
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+99.7551
+ 20
+-59.3484
+ 30
+0.0
+ 11
+99.5128
+ 21
+-59.3395
+ 31
+0.0
+  0
+LINE
+  5
+A25
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+99.5128
+ 20
+-59.3395
+ 30
+0.0
+ 11
+99.2751
+ 21
+-59.2911
+ 31
+0.0
+  0
+LINE
+  5
+A26
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+99.2751
+ 20
+-59.2911
+ 30
+0.0
+ 11
+99.0486
+ 21
+-59.2046
+ 31
+0.0
+  0
+LINE
+  5
+A27
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+99.0486
+ 20
+-59.2046
+ 30
+0.0
+ 11
+98.8392
+ 21
+-59.0823
+ 31
+0.0
+  0
+LINE
+  5
+A28
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+98.8392
+ 20
+-59.0823
+ 30
+0.0
+ 11
+98.6526
+ 21
+-58.9273
+ 31
+0.0
+  0
+LINE
+  5
+A29
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+98.6526
+ 20
+-58.9273
+ 30
+0.0
+ 11
+98.4938
+ 21
+-58.744
+ 31
+0.0
+  0
+LINE
+  5
+A2A
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+98.4938
+ 20
+-58.744
+ 30
+0.0
+ 11
+98.3671
+ 21
+-58.5373
+ 31
+0.0
+  0
+LINE
+  5
+A2B
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+98.3671
+ 20
+-58.5373
+ 30
+0.0
+ 11
+98.2758
+ 21
+-58.3126
+ 31
+0.0
+  0
+LINE
+  5
+A2C
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+98.2758
+ 20
+-58.3126
+ 30
+0.0
+ 11
+98.2225
+ 21
+-58.076
+ 31
+0.0
+  0
+LINE
+  5
+A2D
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+98.2225
+ 20
+-58.076
+ 30
+0.0
+ 11
+98.2087
+ 21
+-57.8367
+ 31
+0.0
+  0
+LINE
+  5
+A2E
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+98.2087
+ 20
+-57.8367
+ 30
+0.0
+ 11
+98.2085
+ 21
+-57.8338
+ 31
+0.0
+  0
+LINE
+  5
+A2F
+330
+1004F
+100
+AcDbEntity
+  8
+Shape012
+100
+AcDbLine
+ 10
+98.2085
+ 20
+-57.8338
+ 30
+0.0
+ 11
+98.2343
+ 21
+-57.5927
+ 31
+0.0
+  0
+LINE
+  5
+A30
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+173.134
+ 20
+-57.5927
+ 30
+0.0
+ 11
+173.199
+ 21
+-57.359
+ 31
+0.0
+  0
+LINE
+  5
+A31
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+173.199
+ 20
+-57.359
+ 30
+0.0
+ 11
+173.301
+ 21
+-57.139
+ 31
+0.0
+  0
+LINE
+  5
+A32
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+173.301
+ 20
+-57.139
+ 30
+0.0
+ 11
+173.438
+ 21
+-56.9387
+ 31
+0.0
+  0
+LINE
+  5
+A33
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+173.438
+ 20
+-56.9387
+ 30
+0.0
+ 11
+173.605
+ 21
+-56.7633
+ 31
+0.0
+  0
+LINE
+  5
+A34
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+173.605
+ 20
+-56.7633
+ 30
+0.0
+ 11
+173.799
+ 21
+-56.6177
+ 31
+0.0
+  0
+LINE
+  5
+A35
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+173.799
+ 20
+-56.6177
+ 30
+0.0
+ 11
+174.015
+ 21
+-56.5057
+ 31
+0.0
+  0
+LINE
+  5
+A36
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+174.015
+ 20
+-56.5057
+ 30
+0.0
+ 11
+174.245
+ 21
+-56.4304
+ 31
+0.0
+  0
+LINE
+  5
+A37
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+174.245
+ 20
+-56.4304
+ 30
+0.0
+ 11
+174.485
+ 21
+-56.3937
+ 31
+0.0
+  0
+LINE
+  5
+A38
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+174.485
+ 20
+-56.3937
+ 30
+0.0
+ 11
+174.727
+ 21
+-56.3967
+ 31
+0.0
+  0
+LINE
+  5
+A39
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+174.727
+ 20
+-56.3967
+ 30
+0.0
+ 11
+174.966
+ 21
+-56.4392
+ 31
+0.0
+  0
+LINE
+  5
+A3A
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+174.966
+ 20
+-56.4392
+ 30
+0.0
+ 11
+175.195
+ 21
+-56.5202
+ 31
+0.0
+  0
+LINE
+  5
+A3B
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+175.195
+ 20
+-56.5202
+ 30
+0.0
+ 11
+175.407
+ 21
+-56.6374
+ 31
+0.0
+  0
+LINE
+  5
+A3C
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+175.407
+ 20
+-56.6374
+ 30
+0.0
+ 11
+175.597
+ 21
+-56.7877
+ 31
+0.0
+  0
+LINE
+  5
+A3D
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+175.597
+ 20
+-56.7877
+ 30
+0.0
+ 11
+175.761
+ 21
+-56.967
+ 31
+0.0
+  0
+LINE
+  5
+A3E
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+175.761
+ 20
+-56.967
+ 30
+0.0
+ 11
+175.892
+ 21
+-57.1707
+ 31
+0.0
+  0
+LINE
+  5
+A3F
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+175.892
+ 20
+-57.1707
+ 30
+0.0
+ 11
+175.989
+ 21
+-57.3931
+ 31
+0.0
+  0
+LINE
+  5
+A40
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+175.989
+ 20
+-57.3931
+ 30
+0.0
+ 11
+176.048
+ 21
+-57.6283
+ 31
+0.0
+  0
+LINE
+  5
+A41
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+176.048
+ 20
+-57.6283
+ 30
+0.0
+ 11
+176.068
+ 21
+-57.87
+ 31
+0.0
+  0
+LINE
+  5
+A42
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+176.068
+ 20
+-57.87
+ 30
+0.0
+ 11
+176.066
+ 21
+-57.9423
+ 31
+0.0
+  0
+LINE
+  5
+A43
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+176.066
+ 20
+-57.9423
+ 30
+0.0
+ 11
+176.034
+ 21
+-58.1827
+ 31
+0.0
+  0
+LINE
+  5
+A44
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+176.034
+ 20
+-58.1827
+ 30
+0.0
+ 11
+175.964
+ 21
+-58.4148
+ 31
+0.0
+  0
+LINE
+  5
+A45
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+175.964
+ 20
+-58.4148
+ 30
+0.0
+ 11
+175.857
+ 21
+-58.6322
+ 31
+0.0
+  0
+LINE
+  5
+A46
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+175.857
+ 20
+-58.6322
+ 30
+0.0
+ 11
+175.715
+ 21
+-58.8292
+ 31
+0.0
+  0
+LINE
+  5
+A47
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+175.715
+ 20
+-58.8292
+ 30
+0.0
+ 11
+175.543
+ 21
+-59.0003
+ 31
+0.0
+  0
+LINE
+  5
+A48
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+175.543
+ 20
+-59.0003
+ 30
+0.0
+ 11
+175.346
+ 21
+-59.1412
+ 31
+0.0
+  0
+LINE
+  5
+A49
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+175.346
+ 20
+-59.1412
+ 30
+0.0
+ 11
+175.128
+ 21
+-59.2479
+ 31
+0.0
+  0
+LINE
+  5
+A4A
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+175.128
+ 20
+-59.2479
+ 30
+0.0
+ 11
+174.896
+ 21
+-59.3176
+ 31
+0.0
+  0
+LINE
+  5
+A4B
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+174.896
+ 20
+-59.3176
+ 30
+0.0
+ 11
+174.655
+ 21
+-59.3484
+ 31
+0.0
+  0
+LINE
+  5
+A4C
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+174.655
+ 20
+-59.3484
+ 30
+0.0
+ 11
+174.413
+ 21
+-59.3395
+ 31
+0.0
+  0
+LINE
+  5
+A4D
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+174.413
+ 20
+-59.3395
+ 30
+0.0
+ 11
+174.175
+ 21
+-59.2911
+ 31
+0.0
+  0
+LINE
+  5
+A4E
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+174.175
+ 20
+-59.2911
+ 30
+0.0
+ 11
+173.949
+ 21
+-59.2046
+ 31
+0.0
+  0
+LINE
+  5
+A4F
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+173.949
+ 20
+-59.2046
+ 30
+0.0
+ 11
+173.739
+ 21
+-59.0823
+ 31
+0.0
+  0
+LINE
+  5
+A50
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+173.739
+ 20
+-59.0823
+ 30
+0.0
+ 11
+173.553
+ 21
+-58.9273
+ 31
+0.0
+  0
+LINE
+  5
+A51
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+173.553
+ 20
+-58.9273
+ 30
+0.0
+ 11
+173.394
+ 21
+-58.744
+ 31
+0.0
+  0
+LINE
+  5
+A52
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+173.394
+ 20
+-58.744
+ 30
+0.0
+ 11
+173.267
+ 21
+-58.5373
+ 31
+0.0
+  0
+LINE
+  5
+A53
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+173.267
+ 20
+-58.5373
+ 30
+0.0
+ 11
+173.176
+ 21
+-58.3126
+ 31
+0.0
+  0
+LINE
+  5
+A54
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+173.176
+ 20
+-58.3126
+ 30
+0.0
+ 11
+173.122
+ 21
+-58.076
+ 31
+0.0
+  0
+LINE
+  5
+A55
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+173.122
+ 20
+-58.076
+ 30
+0.0
+ 11
+173.109
+ 21
+-57.8367
+ 31
+0.0
+  0
+LINE
+  5
+A56
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+173.109
+ 20
+-57.8367
+ 30
+0.0
+ 11
+173.109
+ 21
+-57.8338
+ 31
+0.0
+  0
+LINE
+  5
+A57
+330
+1004F
+100
+AcDbEntity
+  8
+Shape010
+100
+AcDbLine
+ 10
+173.109
+ 20
+-57.8338
+ 30
+0.0
+ 11
+173.134
+ 21
+-57.5927
+ 31
+0.0
+  0
+LINE
+  5
+AA8
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+179.505
+ 20
+-105.784
+ 30
+0.0
+ 11
+179.57
+ 21
+-105.55
+ 31
+0.0
+  0
+LINE
+  5
+AA9
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+179.57
+ 20
+-105.55
+ 30
+0.0
+ 11
+179.672
+ 21
+-105.33
+ 31
+0.0
+  0
+LINE
+  5
+AAA
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+179.672
+ 20
+-105.33
+ 30
+0.0
+ 11
+179.809
+ 21
+-105.13
+ 31
+0.0
+  0
+LINE
+  5
+AAB
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+179.809
+ 20
+-105.13
+ 30
+0.0
+ 11
+179.977
+ 21
+-104.954
+ 31
+0.0
+  0
+LINE
+  5
+AAC
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+179.977
+ 20
+-104.954
+ 30
+0.0
+ 11
+180.17
+ 21
+-104.809
+ 31
+0.0
+  0
+LINE
+  5
+AAD
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+180.17
+ 20
+-104.809
+ 30
+0.0
+ 11
+180.386
+ 21
+-104.697
+ 31
+0.0
+  0
+LINE
+  5
+AAE
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+180.386
+ 20
+-104.697
+ 30
+0.0
+ 11
+180.616
+ 21
+-104.621
+ 31
+0.0
+  0
+LINE
+  5
+AAF
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+180.616
+ 20
+-104.621
+ 30
+0.0
+ 11
+180.856
+ 21
+-104.585
+ 31
+0.0
+  0
+LINE
+  5
+AB0
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+180.856
+ 20
+-104.585
+ 30
+0.0
+ 11
+181.098
+ 21
+-104.588
+ 31
+0.0
+  0
+LINE
+  5
+AB1
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+181.098
+ 20
+-104.588
+ 30
+0.0
+ 11
+181.337
+ 21
+-104.63
+ 31
+0.0
+  0
+LINE
+  5
+AB2
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+181.337
+ 20
+-104.63
+ 30
+0.0
+ 11
+181.566
+ 21
+-104.711
+ 31
+0.0
+  0
+LINE
+  5
+AB3
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+181.566
+ 20
+-104.711
+ 30
+0.0
+ 11
+181.778
+ 21
+-104.828
+ 31
+0.0
+  0
+LINE
+  5
+AB4
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+181.778
+ 20
+-104.828
+ 30
+0.0
+ 11
+181.968
+ 21
+-104.979
+ 31
+0.0
+  0
+LINE
+  5
+AB5
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+181.968
+ 20
+-104.979
+ 30
+0.0
+ 11
+182.132
+ 21
+-105.158
+ 31
+0.0
+  0
+LINE
+  5
+AB6
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+182.132
+ 20
+-105.158
+ 30
+0.0
+ 11
+182.263
+ 21
+-105.362
+ 31
+0.0
+  0
+LINE
+  5
+AB7
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+182.263
+ 20
+-105.362
+ 30
+0.0
+ 11
+182.36
+ 21
+-105.584
+ 31
+0.0
+  0
+LINE
+  5
+AB8
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+182.36
+ 20
+-105.584
+ 30
+0.0
+ 11
+182.419
+ 21
+-105.819
+ 31
+0.0
+  0
+LINE
+  5
+AB9
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+182.419
+ 20
+-105.819
+ 30
+0.0
+ 11
+182.439
+ 21
+-106.061
+ 31
+0.0
+  0
+LINE
+  5
+ABA
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+182.439
+ 20
+-106.061
+ 30
+0.0
+ 11
+182.437
+ 21
+-106.133
+ 31
+0.0
+  0
+LINE
+  5
+ABB
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+182.437
+ 20
+-106.133
+ 30
+0.0
+ 11
+182.406
+ 21
+-106.374
+ 31
+0.0
+  0
+LINE
+  5
+ABC
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+182.406
+ 20
+-106.374
+ 30
+0.0
+ 11
+182.335
+ 21
+-106.606
+ 31
+0.0
+  0
+LINE
+  5
+ABD
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+182.335
+ 20
+-106.606
+ 30
+0.0
+ 11
+182.228
+ 21
+-106.823
+ 31
+0.0
+  0
+LINE
+  5
+ABE
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+182.228
+ 20
+-106.823
+ 30
+0.0
+ 11
+182.086
+ 21
+-107.02
+ 31
+0.0
+  0
+LINE
+  5
+ABF
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+182.086
+ 20
+-107.02
+ 30
+0.0
+ 11
+181.914
+ 21
+-107.191
+ 31
+0.0
+  0
+LINE
+  5
+AC0
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+181.914
+ 20
+-107.191
+ 30
+0.0
+ 11
+181.717
+ 21
+-107.332
+ 31
+0.0
+  0
+LINE
+  5
+AC1
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+181.717
+ 20
+-107.332
+ 30
+0.0
+ 11
+181.499
+ 21
+-107.439
+ 31
+0.0
+  0
+LINE
+  5
+AC2
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+181.499
+ 20
+-107.439
+ 30
+0.0
+ 11
+181.267
+ 21
+-107.509
+ 31
+0.0
+  0
+LINE
+  5
+AC3
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+181.267
+ 20
+-107.509
+ 30
+0.0
+ 11
+181.026
+ 21
+-107.539
+ 31
+0.0
+  0
+LINE
+  5
+AC4
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+181.026
+ 20
+-107.539
+ 30
+0.0
+ 11
+180.784
+ 21
+-107.53
+ 31
+0.0
+  0
+LINE
+  5
+AC5
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+180.784
+ 20
+-107.53
+ 30
+0.0
+ 11
+180.546
+ 21
+-107.482
+ 31
+0.0
+  0
+LINE
+  5
+AC6
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+180.546
+ 20
+-107.482
+ 30
+0.0
+ 11
+180.32
+ 21
+-107.396
+ 31
+0.0
+  0
+LINE
+  5
+AC7
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+180.32
+ 20
+-107.396
+ 30
+0.0
+ 11
+180.11
+ 21
+-107.273
+ 31
+0.0
+  0
+LINE
+  5
+AC8
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+180.11
+ 20
+-107.273
+ 30
+0.0
+ 11
+179.924
+ 21
+-107.118
+ 31
+0.0
+  0
+LINE
+  5
+AC9
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+179.924
+ 20
+-107.118
+ 30
+0.0
+ 11
+179.765
+ 21
+-106.935
+ 31
+0.0
+  0
+LINE
+  5
+ACA
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+179.765
+ 20
+-106.935
+ 30
+0.0
+ 11
+179.638
+ 21
+-106.728
+ 31
+0.0
+  0
+LINE
+  5
+ACB
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+179.638
+ 20
+-106.728
+ 30
+0.0
+ 11
+179.547
+ 21
+-106.504
+ 31
+0.0
+  0
+LINE
+  5
+ACC
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+179.547
+ 20
+-106.504
+ 30
+0.0
+ 11
+179.494
+ 21
+-106.267
+ 31
+0.0
+  0
+LINE
+  5
+ACD
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+179.494
+ 20
+-106.267
+ 30
+0.0
+ 11
+179.48
+ 21
+-106.028
+ 31
+0.0
+  0
+LINE
+  5
+ACE
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+179.48
+ 20
+-106.028
+ 30
+0.0
+ 11
+179.48
+ 21
+-106.025
+ 31
+0.0
+  0
+LINE
+  5
+ACF
+330
+1004F
+100
+AcDbEntity
+  8
+Shape004
+100
+AcDbLine
+ 10
+179.48
+ 20
+-106.025
+ 30
+0.0
+ 11
+179.505
+ 21
+-105.784
+ 31
+0.0
+  0
+LINE
+  5
+AD0
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+96.9554
+ 20
+-105.784
+ 30
+0.0
+ 11
+97.0202
+ 21
+-105.55
+ 31
+0.0
+  0
+LINE
+  5
+AD1
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+97.0202
+ 20
+-105.55
+ 30
+0.0
+ 11
+97.1223
+ 21
+-105.33
+ 31
+0.0
+  0
+LINE
+  5
+AD2
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+97.1223
+ 20
+-105.33
+ 30
+0.0
+ 11
+97.259
+ 21
+-105.13
+ 31
+0.0
+  0
+LINE
+  5
+AD3
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+97.259
+ 20
+-105.13
+ 30
+0.0
+ 11
+97.4266
+ 21
+-104.954
+ 31
+0.0
+  0
+LINE
+  5
+AD4
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+97.4266
+ 20
+-104.954
+ 30
+0.0
+ 11
+97.6205
+ 21
+-104.809
+ 31
+0.0
+  0
+LINE
+  5
+AD5
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+97.6205
+ 20
+-104.809
+ 30
+0.0
+ 11
+97.8356
+ 21
+-104.697
+ 31
+0.0
+  0
+LINE
+  5
+AD6
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+97.8356
+ 20
+-104.697
+ 30
+0.0
+ 11
+98.0661
+ 21
+-104.621
+ 31
+0.0
+  0
+LINE
+  5
+AD7
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+98.0661
+ 20
+-104.621
+ 30
+0.0
+ 11
+98.3059
+ 21
+-104.585
+ 31
+0.0
+  0
+LINE
+  5
+AD8
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+98.3059
+ 20
+-104.585
+ 30
+0.0
+ 11
+98.5484
+ 21
+-104.588
+ 31
+0.0
+  0
+LINE
+  5
+AD9
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+98.5484
+ 20
+-104.588
+ 30
+0.0
+ 11
+98.7871
+ 21
+-104.63
+ 31
+0.0
+  0
+LINE
+  5
+ADA
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+98.7871
+ 20
+-104.63
+ 30
+0.0
+ 11
+99.0157
+ 21
+-104.711
+ 31
+0.0
+  0
+LINE
+  5
+ADB
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+99.0157
+ 20
+-104.711
+ 30
+0.0
+ 11
+99.2281
+ 21
+-104.828
+ 31
+0.0
+  0
+LINE
+  5
+ADC
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+99.2281
+ 20
+-104.828
+ 30
+0.0
+ 11
+99.4184
+ 21
+-104.979
+ 31
+0.0
+  0
+LINE
+  5
+ADD
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+99.4184
+ 20
+-104.979
+ 30
+0.0
+ 11
+99.5816
+ 21
+-105.158
+ 31
+0.0
+  0
+LINE
+  5
+ADE
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+99.5816
+ 20
+-105.158
+ 30
+0.0
+ 11
+99.7133
+ 21
+-105.362
+ 31
+0.0
+  0
+LINE
+  5
+ADF
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+99.7133
+ 20
+-105.362
+ 30
+0.0
+ 11
+99.81
+ 21
+-105.584
+ 31
+0.0
+  0
+LINE
+  5
+AE0
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+99.81
+ 20
+-105.584
+ 30
+0.0
+ 11
+99.8691
+ 21
+-105.819
+ 31
+0.0
+  0
+LINE
+  5
+AE1
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+99.8691
+ 20
+-105.819
+ 30
+0.0
+ 11
+99.889
+ 21
+-106.061
+ 31
+0.0
+  0
+LINE
+  5
+AE2
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+99.889
+ 20
+-106.061
+ 30
+0.0
+ 11
+99.8872
+ 21
+-106.133
+ 31
+0.0
+  0
+LINE
+  5
+AE3
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+99.8872
+ 20
+-106.133
+ 30
+0.0
+ 11
+99.8556
+ 21
+-106.374
+ 31
+0.0
+  0
+LINE
+  5
+AE4
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+99.8556
+ 20
+-106.374
+ 30
+0.0
+ 11
+99.7851
+ 21
+-106.606
+ 31
+0.0
+  0
+LINE
+  5
+AE5
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+99.7851
+ 20
+-106.606
+ 30
+0.0
+ 11
+99.6776
+ 21
+-106.823
+ 31
+0.0
+  0
+LINE
+  5
+AE6
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+99.6776
+ 20
+-106.823
+ 30
+0.0
+ 11
+99.5361
+ 21
+-107.02
+ 31
+0.0
+  0
+LINE
+  5
+AE7
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+99.5361
+ 20
+-107.02
+ 30
+0.0
+ 11
+99.3643
+ 21
+-107.191
+ 31
+0.0
+  0
+LINE
+  5
+AE8
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+99.3643
+ 20
+-107.191
+ 30
+0.0
+ 11
+99.1669
+ 21
+-107.332
+ 31
+0.0
+  0
+LINE
+  5
+AE9
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+99.1669
+ 20
+-107.332
+ 30
+0.0
+ 11
+98.9491
+ 21
+-107.439
+ 31
+0.0
+  0
+LINE
+  5
+AEA
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+98.9491
+ 20
+-107.439
+ 30
+0.0
+ 11
+98.7168
+ 21
+-107.509
+ 31
+0.0
+  0
+LINE
+  5
+AEB
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+98.7168
+ 20
+-107.509
+ 30
+0.0
+ 11
+98.4762
+ 21
+-107.539
+ 31
+0.0
+  0
+LINE
+  5
+AEC
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+98.4762
+ 20
+-107.539
+ 30
+0.0
+ 11
+98.2339
+ 21
+-107.53
+ 31
+0.0
+  0
+LINE
+  5
+AED
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+98.2339
+ 20
+-107.53
+ 30
+0.0
+ 11
+97.9962
+ 21
+-107.482
+ 31
+0.0
+  0
+LINE
+  5
+AEE
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+97.9962
+ 20
+-107.482
+ 30
+0.0
+ 11
+97.7697
+ 21
+-107.396
+ 31
+0.0
+  0
+LINE
+  5
+AEF
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+97.7697
+ 20
+-107.396
+ 30
+0.0
+ 11
+97.5603
+ 21
+-107.273
+ 31
+0.0
+  0
+LINE
+  5
+AF0
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+97.5603
+ 20
+-107.273
+ 30
+0.0
+ 11
+97.3737
+ 21
+-107.118
+ 31
+0.0
+  0
+LINE
+  5
+AF1
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+97.3737
+ 20
+-107.118
+ 30
+0.0
+ 11
+97.2149
+ 21
+-106.935
+ 31
+0.0
+  0
+LINE
+  5
+AF2
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+97.2149
+ 20
+-106.935
+ 30
+0.0
+ 11
+97.0882
+ 21
+-106.728
+ 31
+0.0
+  0
+LINE
+  5
+AF3
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+97.0882
+ 20
+-106.728
+ 30
+0.0
+ 11
+96.9969
+ 21
+-106.504
+ 31
+0.0
+  0
+LINE
+  5
+AF4
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+96.9969
+ 20
+-106.504
+ 30
+0.0
+ 11
+96.9436
+ 21
+-106.267
+ 31
+0.0
+  0
+LINE
+  5
+AF5
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+96.9436
+ 20
+-106.267
+ 30
+0.0
+ 11
+96.9298
+ 21
+-106.028
+ 31
+0.0
+  0
+LINE
+  5
+AF6
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+96.9298
+ 20
+-106.028
+ 30
+0.0
+ 11
+96.9296
+ 21
+-106.025
+ 31
+0.0
+  0
+LINE
+  5
+AF7
+330
+1004F
+100
+AcDbEntity
+  8
+Shape002
+100
+AcDbLine
+ 10
+96.9296
+ 20
+-106.025
+ 30
+0.0
+ 11
+96.9554
+ 21
+-105.784
+ 31
+0.0
+  0
+LINE
+  5
+AF8
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+84.772
+ 20
+-109.176
+ 30
+0.0
+ 11
+84.5868
+ 21
+-109.127
+ 31
+0.0
+  0
+LINE
+  5
+AF9
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+84.5868
+ 20
+-109.127
+ 30
+0.0
+ 11
+84.413
+ 21
+-109.046
+ 31
+0.0
+  0
+LINE
+  5
+AFA
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+84.413
+ 20
+-109.046
+ 30
+0.0
+ 11
+84.2559
+ 21
+-108.936
+ 31
+0.0
+  0
+LINE
+  5
+AFB
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+84.2559
+ 20
+-108.936
+ 30
+0.0
+ 11
+84.1204
+ 21
+-108.8
+ 31
+0.0
+  0
+LINE
+  5
+AFC
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+84.1204
+ 20
+-108.8
+ 30
+0.0
+ 11
+84.0104
+ 21
+-108.643
+ 31
+0.0
+  0
+LINE
+  5
+AFD
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+84.0104
+ 20
+-108.643
+ 30
+0.0
+ 11
+83.9293
+ 21
+-108.469
+ 31
+0.0
+  0
+LINE
+  5
+AFE
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+83.9293
+ 20
+-108.469
+ 30
+0.0
+ 11
+83.8797
+ 21
+-108.284
+ 31
+0.0
+  0
+LINE
+  5
+AFF
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+83.8797
+ 20
+-108.284
+ 30
+0.0
+ 11
+83.863
+ 21
+-108.093
+ 31
+0.0
+  0
+LINE
+  5
+B00
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+83.863
+ 20
+-108.093
+ 30
+0.0
+ 11
+83.863
+ 21
+-55.9746
+ 31
+0.0
+  0
+LINE
+  5
+B01
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+83.863
+ 20
+-55.9746
+ 30
+0.0
+ 11
+83.8797
+ 21
+-55.7836
+ 31
+0.0
+  0
+LINE
+  5
+B02
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+83.8797
+ 20
+-55.7836
+ 30
+0.0
+ 11
+83.9293
+ 21
+-55.5984
+ 31
+0.0
+  0
+LINE
+  5
+B03
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+83.9293
+ 20
+-55.5984
+ 30
+0.0
+ 11
+84.0104
+ 21
+-55.4246
+ 31
+0.0
+  0
+LINE
+  5
+B04
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+84.0104
+ 20
+-55.4246
+ 30
+0.0
+ 11
+84.1204
+ 21
+-55.2675
+ 31
+0.0
+  0
+LINE
+  5
+B05
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+84.1204
+ 20
+-55.2675
+ 30
+0.0
+ 11
+84.2559
+ 21
+-55.132
+ 31
+0.0
+  0
+LINE
+  5
+B06
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+84.2559
+ 20
+-55.132
+ 30
+0.0
+ 11
+84.413
+ 21
+-55.022
+ 31
+0.0
+  0
+LINE
+  5
+B07
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+84.413
+ 20
+-55.022
+ 30
+0.0
+ 11
+84.5868
+ 21
+-54.9409
+ 31
+0.0
+  0
+LINE
+  5
+B08
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+84.5868
+ 20
+-54.9409
+ 30
+0.0
+ 11
+84.772
+ 21
+-54.8913
+ 31
+0.0
+  0
+LINE
+  5
+B09
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+84.772
+ 20
+-54.8913
+ 30
+0.0
+ 11
+84.963
+ 21
+-54.8746
+ 31
+0.0
+  0
+LINE
+  5
+B0A
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+84.963
+ 20
+-54.8746
+ 30
+0.0
+ 11
+182.134
+ 21
+-54.8746
+ 31
+0.0
+  0
+LINE
+  5
+B0B
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+182.134
+ 20
+-54.8746
+ 30
+0.0
+ 11
+182.142
+ 21
+-54.8771
+ 31
+0.0
+  0
+LINE
+  5
+B0C
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+182.142
+ 20
+-54.8771
+ 30
+0.0
+ 11
+182.15
+ 21
+-54.8758
+ 31
+0.0
+  0
+LINE
+  5
+B0D
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+182.15
+ 20
+-54.8758
+ 30
+0.0
+ 11
+182.17
+ 21
+-54.8865
+ 31
+0.0
+  0
+LINE
+  5
+B0E
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+182.17
+ 20
+-54.8865
+ 30
+0.0
+ 11
+182.193
+ 21
+-54.8937
+ 31
+0.0
+  0
+LINE
+  5
+B0F
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+182.193
+ 20
+-54.8937
+ 30
+0.0
+ 11
+182.197
+ 21
+-54.9002
+ 31
+0.0
+  0
+LINE
+  5
+B10
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+182.197
+ 20
+-54.9002
+ 30
+0.0
+ 11
+182.205
+ 21
+-54.9039
+ 31
+0.0
+  0
+LINE
+  5
+B11
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+182.205
+ 20
+-54.9039
+ 30
+0.0
+ 11
+183.729
+ 21
+-56.4279
+ 31
+0.0
+  0
+LINE
+  5
+B12
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.729
+ 20
+-56.4279
+ 30
+0.0
+ 11
+183.732
+ 21
+-56.4351
+ 31
+0.0
+  0
+LINE
+  5
+B13
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.732
+ 20
+-56.4351
+ 30
+0.0
+ 11
+183.739
+ 21
+-56.4398
+ 31
+0.0
+  0
+LINE
+  5
+B14
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.739
+ 20
+-56.4398
+ 30
+0.0
+ 11
+183.746
+ 21
+-56.4621
+ 31
+0.0
+  0
+LINE
+  5
+B15
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.746
+ 20
+-56.4621
+ 30
+0.0
+ 11
+183.757
+ 21
+-56.483
+ 31
+0.0
+  0
+LINE
+  5
+B16
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.757
+ 20
+-56.483
+ 30
+0.0
+ 11
+183.755
+ 21
+-56.4909
+ 31
+0.0
+  0
+LINE
+  5
+B17
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.755
+ 20
+-56.4909
+ 30
+0.0
+ 11
+183.758
+ 21
+-56.4986
+ 31
+0.0
+  0
+LINE
+  5
+B18
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.758
+ 20
+-56.4986
+ 30
+0.0
+ 11
+183.758
+ 21
+-67.8872
+ 31
+0.0
+  0
+LINE
+  5
+B19
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.758
+ 20
+-67.8872
+ 30
+0.0
+ 11
+186.269
+ 21
+-70.3979
+ 31
+0.0
+  0
+LINE
+  5
+B1A
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+186.269
+ 20
+-70.3979
+ 30
+0.0
+ 11
+186.272
+ 21
+-70.4051
+ 31
+0.0
+  0
+LINE
+  5
+B1B
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+186.272
+ 20
+-70.4051
+ 30
+0.0
+ 11
+186.279
+ 21
+-70.4098
+ 31
+0.0
+  0
+LINE
+  5
+B1C
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+186.279
+ 20
+-70.4098
+ 30
+0.0
+ 11
+186.286
+ 21
+-70.4321
+ 31
+0.0
+  0
+LINE
+  5
+B1D
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+186.286
+ 20
+-70.4321
+ 30
+0.0
+ 11
+186.297
+ 21
+-70.453
+ 31
+0.0
+  0
+LINE
+  5
+B1E
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+186.297
+ 20
+-70.453
+ 30
+0.0
+ 11
+186.295
+ 21
+-70.4609
+ 31
+0.0
+  0
+LINE
+  5
+B1F
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+186.295
+ 20
+-70.4609
+ 30
+0.0
+ 11
+186.298
+ 21
+-70.4686
+ 31
+0.0
+  0
+LINE
+  5
+B20
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+186.298
+ 20
+-70.4686
+ 30
+0.0
+ 11
+186.298
+ 21
+-103.235
+ 31
+0.0
+  0
+LINE
+  5
+B21
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+186.298
+ 20
+-103.235
+ 30
+0.0
+ 11
+186.295
+ 21
+-103.243
+ 31
+0.0
+  0
+LINE
+  5
+B22
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+186.295
+ 20
+-103.243
+ 30
+0.0
+ 11
+186.297
+ 21
+-103.251
+ 31
+0.0
+  0
+LINE
+  5
+B23
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+186.297
+ 20
+-103.251
+ 30
+0.0
+ 11
+186.286
+ 21
+-103.272
+ 31
+0.0
+  0
+LINE
+  5
+B24
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+186.286
+ 20
+-103.272
+ 30
+0.0
+ 11
+186.279
+ 21
+-103.294
+ 31
+0.0
+  0
+LINE
+  5
+B25
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+186.279
+ 20
+-103.294
+ 30
+0.0
+ 11
+186.272
+ 21
+-103.299
+ 31
+0.0
+  0
+LINE
+  5
+B26
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+186.272
+ 20
+-103.299
+ 30
+0.0
+ 11
+186.269
+ 21
+-103.306
+ 31
+0.0
+  0
+LINE
+  5
+B27
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+186.269
+ 20
+-103.306
+ 30
+0.0
+ 11
+183.758
+ 21
+-105.816
+ 31
+0.0
+  0
+LINE
+  5
+B28
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.758
+ 20
+-105.816
+ 30
+0.0
+ 11
+183.758
+ 21
+-108.093
+ 31
+0.0
+  0
+LINE
+  5
+B29
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.758
+ 20
+-108.093
+ 30
+0.0
+ 11
+183.741
+ 21
+-108.284
+ 31
+0.0
+  0
+LINE
+  5
+B2A
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.741
+ 20
+-108.284
+ 30
+0.0
+ 11
+183.692
+ 21
+-108.469
+ 31
+0.0
+  0
+LINE
+  5
+B2B
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.692
+ 20
+-108.469
+ 30
+0.0
+ 11
+183.611
+ 21
+-108.643
+ 31
+0.0
+  0
+LINE
+  5
+B2C
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.611
+ 20
+-108.643
+ 30
+0.0
+ 11
+183.501
+ 21
+-108.8
+ 31
+0.0
+  0
+LINE
+  5
+B2D
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.501
+ 20
+-108.8
+ 30
+0.0
+ 11
+183.365
+ 21
+-108.936
+ 31
+0.0
+  0
+LINE
+  5
+B2E
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.365
+ 20
+-108.936
+ 30
+0.0
+ 11
+183.208
+ 21
+-109.046
+ 31
+0.0
+  0
+LINE
+  5
+B2F
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.208
+ 20
+-109.046
+ 30
+0.0
+ 11
+183.034
+ 21
+-109.127
+ 31
+0.0
+  0
+LINE
+  5
+B30
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+183.034
+ 20
+-109.127
+ 30
+0.0
+ 11
+182.849
+ 21
+-109.176
+ 31
+0.0
+  0
+LINE
+  5
+B31
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+182.849
+ 20
+-109.176
+ 30
+0.0
+ 11
+182.658
+ 21
+-109.193
+ 31
+0.0
+  0
+LINE
+  5
+B32
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+182.658
+ 20
+-109.193
+ 30
+0.0
+ 11
+84.963
+ 21
+-109.193
+ 31
+0.0
+  0
+LINE
+  5
+B33
+330
+1004F
+100
+AcDbEntity
+  8
+Shape
+100
+AcDbLine
+ 10
+84.963
+ 20
+-109.193
+ 30
+0.0
+ 11
+84.772
+ 21
+-109.176
+ 31
+0.0
+  0
+CIRCLE
+  5
+1002A
+330
+1004F
+100
+AcDbEntity
+  8
+0
+100
+AcDbCircle
+ 10
+90.0
+ 20
+-95.0
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+1002B
+330
+1004F
+100
+AcDbEntity
+  8
+0
+100
+AcDbCircle
+ 10
+102.0
+ 20
+-95.0
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+1002D
+330
+1004F
+100
+AcDbEntity
+  8
+0
+100
+AcDbCircle
+ 10
+110.0
+ 20
+-89.0
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+1002E
+330
+1004F
+100
+AcDbEntity
+  8
+0
+100
+AcDbCircle
+ 10
+110.0
+ 20
+-77.0
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+10030
+330
+1004F
+100
+AcDbEntity
+  8
+0
+100
+AcDbCircle
+ 10
+110.0
+ 20
+-58.0
+ 30
+0.0
+ 40
+1.5
+  0
+CIRCLE
+  5
+10031
+330
+1004F
+100
+AcDbEntity
+  8
+0
+100
+AcDbCircle
+ 10
+110.0
+ 20
+-107.0
+ 30
+0.0
+ 40
+1.5
+  0
+VIEWPORT
+  5
+10123
+330
+1004B
+100
+AcDbEntity
+ 67
+     1
+  8
+0
+100
+AcDbViewport
+ 10
+5.25
+ 20
+4.0
+ 30
+0.0
+ 40
+11.638
+ 41
+8.993
+ 68
+     1
+ 69
+     1
+ 12
+5.25
+ 22
+4.0
+ 13
+0.0
+ 23
+0.0
+ 14
+0.5
+ 24
+0.5
+ 15
+0.5
+ 25
+0.5
+ 16
+0.0
+ 26
+0.0
+ 36
+1.0
+ 17
+0.0
+ 27
+0.0
+ 37
+0.0
+ 42
+50.0
+ 43
+0.0
+ 44
+0.0
+ 45
+8.993
+ 50
+0.0
+ 51
+0.0
+ 72
+   100
+ 90
+   557152
+  1
+
+281
+     0
+ 71
+     1
+ 74
+     0
+110
+0.0
+120
+0.0
+130
+0.0
+111
+1.0
+121
+0.0
+131
+0.0
+112
+0.0
+122
+1.0
+132
+0.0
+ 79
+     0
+146
+0.0
+170
+     0
+ 61
+     5
+348
+1005F
+292
+     1
+282
+     1
+141
+0.0
+142
+0.0
+ 63
+   256
+361
+10124
+  0
+ENDSEC
+  0
+SECTION
+  2
+OBJECTS
+  0
+DICTIONARY
+  5
+1003D
+330
+0
+100
+AcDbDictionary
+281
+     1
+  3
+ACAD_DETAILVIEWSTYLE
+350
+1012C
+  3
+ACAD_GROUP
+350
+1003E
+  3
+ACAD_LAYOUT
+350
+1004A
+  3
+ACAD_MATERIAL
+350
+10073
+  3
+ACAD_MLEADERSTYLE
+350
+1009B
+  3
+ACAD_MLINESTYLE
+350
+10047
+  3
+ACAD_PLOTSETTINGS
+350
+10049
+  3
+ACAD_PLOTSTYLENAME
+350
+1003F
+  3
+ACAD_SCALELIST
+350
+10077
+  3
+ACAD_SECTIONVIEWSTYLE
+350
+1012D
+  3
+ACAD_TABLESTYLE
+350
+10099
+  3
+ACAD_VISUALSTYLE
+350
+1005A
+  3
+ACDB_RECOMPOSE_DATA
+350
+10129
+  3
+AcDbVariableDictionary
+350
+10125
+  3
+QCAD_OBJECTS
+350
+1009F
+  0
+SUN
+  5
+1009D
+330
+10059
+100
+AcDbSun
+ 90
+        1
+290
+     0
+ 63
+     7
+421
+ 16777215
+ 40
+1.0
+291
+     1
+ 91
+  2455826
+ 92
+ 54000000
+292
+     0
+ 70
+     2
+ 71
+   256
+280
+     1
+  0
+SUN
+  5
+10124
+330
+10123
+100
+AcDbSun
+ 90
+        1
+290
+     0
+ 63
+     7
+421
+ 16777215
+ 40
+1.0
+291
+     1
+ 91
+  2455826
+ 92
+ 54000000
+292
+     0
+ 70
+     2
+ 71
+   256
+280
+     1
+  0
+DICTIONARY
+  5
+1012C
+102
+{ACAD_REACTORS
+330
+1003D
+102
+}
+330
+1003D
+100
+AcDbDictionary
+281
+     1
+  0
+DICTIONARY
+  5
+1003E
+102
+{ACAD_REACTORS
+330
+1003D
+102
+}
+330
+1003D
+100
+AcDbDictionary
+281
+     1
+  0
+DICTIONARY
+  5
+1004A
+102
+{ACAD_REACTORS
+330
+1003D
+102
+}
+330
+1003D
+100
+AcDbDictionary
+281
+     1
+  3
+Layout1
+350
+1004E
+  3
+Model
+350
+10052
+  0
+DICTIONARY
+  5
+10073
+102
+{ACAD_REACTORS
+330
+1003D
+102
+}
+330
+1003D
+100
+AcDbDictionary
+281
+     1
+  3
+ByBlock
+350
+10075
+  3
+ByLayer
+350
+10074
+  3
+Global
+350
+10076
+  0
+DICTIONARY
+  5
+1009B
+102
+{ACAD_REACTORS
+330
+1003D
+102
+}
+330
+1003D
+100
+AcDbDictionary
+281
+     1
+  3
+Standard
+350
+1009C
+  0
+DICTIONARY
+  5
+10047
+102
+{ACAD_REACTORS
+330
+1003D
+102
+}
+330
+1003D
+100
+AcDbDictionary
+281
+     1
+  3
+Standard
+350
+10048
+  0
+DICTIONARY
+  5
+10049
+102
+{ACAD_REACTORS
+330
+1003D
+102
+}
+330
+1003D
+100
+AcDbDictionary
+281
+     1
+  0
+ACDBDICTIONARYWDFLT
+  5
+1003F
+102
+{ACAD_REACTORS
+330
+1003D
+102
+}
+330
+1003D
+100
+AcDbDictionary
+281
+     1
+  3
+Normal
+350
+10040
+100
+AcDbDictionaryWithDefault
+340
+10040
+  0
+DICTIONARY
+  5
+10077
+102
+{ACAD_REACTORS
+330
+1003D
+102
+}
+330
+1003D
+100
+AcDbDictionary
+281
+     1
+  3
+A0
+350
+10078
+  3
+A1
+350
+10079
+  3
+A2
+350
+1007A
+  3
+A3
+350
+1007B
+  3
+A4
+350
+1007C
+  3
+A5
+350
+1007D
+  3
+A6
+350
+1007E
+  3
+A7
+350
+1007F
+  3
+A8
+350
+10080
+  3
+A9
+350
+10081
+  3
+B0
+350
+10082
+  3
+B1
+350
+10083
+  3
+B2
+350
+10084
+  3
+B3
+350
+10085
+  3
+B4
+350
+10086
+  3
+B5
+350
+10087
+  3
+B6
+350
+10088
+  3
+B7
+350
+10089
+  3
+B8
+350
+1008A
+  3
+B9
+350
+1008B
+  3
+C0
+350
+1008C
+  3
+C1
+350
+1008D
+  3
+C2
+350
+1008E
+  3
+C3
+350
+1008F
+  3
+C4
+350
+10090
+  3
+C5
+350
+10091
+  3
+C6
+350
+10092
+  3
+C7
+350
+10093
+  3
+C8
+350
+10094
+  3
+C9
+350
+10095
+  3
+D0
+350
+10096
+  3
+D1
+350
+10097
+  3
+D2
+350
+10098
+  0
+DICTIONARY
+  5
+1012D
+102
+{ACAD_REACTORS
+330
+1003D
+102
+}
+330
+1003D
+100
+AcDbDictionary
+281
+     1
+  0
+DICTIONARY
+  5
+10099
+102
+{ACAD_REACTORS
+330
+1003D
+102
+}
+330
+1003D
+100
+AcDbDictionary
+281
+     1
+  3
+Standard
+350
+1009A
+  0
+DICTIONARY
+  5
+1005A
+102
+{ACAD_REACTORS
+330
+1003D
+102
+}
+330
+1003D
+100
+AcDbDictionary
+281
+     1
+  3
+2dWireframe
+350
+1005F
+  3
+Basic
+350
+10062
+  3
+Brighten
+350
+10066
+  3
+ColorChange
+350
+1006A
+  3
+Conceptual
+350
+10064
+  3
+Dim
+350
+10065
+  3
+EdgeColorOff
+350
+1006D
+  3
+Facepattern
+350
+10069
+  3
+Flat
+350
+1005B
+  3
+FlatWithEdges
+350
+1005C
+  3
+Gouraud
+350
+1005D
+  3
+GouraudWithEdges
+350
+1005E
+  3
+Hidden
+350
+10061
+  3
+JitterOff
+350
+1006B
+  3
+Linepattern
+350
+10068
+  3
+OverhangOff
+350
+1006C
+  3
+Realistic
+350
+10063
+  3
+Shaded
+350
+10072
+  3
+Shaded with edges
+350
+10071
+  3
+Shades of Gray
+350
+1006E
+  3
+Sketchy
+350
+1006F
+  3
+Thicken
+350
+10067
+  3
+Wireframe
+350
+10060
+  3
+X-Ray
+350
+10070
+  0
+XRECORD
+  5
+10129
+102
+{ACAD_REACTORS
+330
+1003D
+102
+}
+330
+1003D
+100
+AcDbXrecord
+280
+     1
+ 90
+        1
+330
+1009A
+  0
+DICTIONARY
+  5
+10125
+102
+{ACAD_REACTORS
+330
+1003D
+102
+}
+330
+1003D
+100
+AcDbDictionary
+281
+     1
+  3
+CANNOSCALE
+350
+10126
+  3
+CMLEADERSTYLE
+350
+1012B
+  3
+CTABLESTYLE
+350
+1012A
+  0
+DICTIONARY
+  5
+1009F
+102
+{ACAD_REACTORS
+330
+1003D
+102
+}
+330
+1003D
+100
+AcDbDictionary
+281
+     1
+  3
+CamExport/ConfigV2
+350
+100A1
+  3
+ColorSettings/BackgroundColor
+350
+100A2
+  3
+ColorSettings/ColorMode
+350
+100A3
+  3
+Grid/DisplayGrid00
+350
+100A4
+  3
+Grid/DisplayGrid01
+350
+100A5
+  3
+Grid/DisplayGrid02
+350
+100A6
+  3
+Grid/DisplayGrid03
+350
+100A7
+  3
+Grid/GridSpacingX00
+350
+100A8
+  3
+Grid/GridSpacingX01
+350
+100A9
+  3
+Grid/GridSpacingX02
+350
+100AA
+  3
+Grid/GridSpacingX03
+350
+100AB
+  3
+Grid/GridSpacingY00
+350
+100AC
+  3
+Grid/GridSpacingY01
+350
+100AD
+  3
+Grid/GridSpacingY02
+350
+100AE
+  3
+Grid/GridSpacingY03
+350
+100AF
+  3
+Grid/IsometricGrid00
+350
+100B0
+  3
+Grid/IsometricGrid01
+350
+100B1
+  3
+Grid/IsometricGrid02
+350
+100B2
+  3
+Grid/IsometricGrid03
+350
+100B3
+  3
+Grid/IsometricProjection00
+350
+100B4
+  3
+Grid/IsometricProjection01
+350
+100B5
+  3
+Grid/IsometricProjection02
+350
+100B6
+  3
+Grid/IsometricProjection03
+350
+100B7
+  3
+Grid/MetaGridSpacingX00
+350
+100B8
+  3
+Grid/MetaGridSpacingX01
+350
+100B9
+  3
+Grid/MetaGridSpacingX02
+350
+100BA
+  3
+Grid/MetaGridSpacingX03
+350
+100BB
+  3
+Grid/MetaGridSpacingY00
+350
+100BC
+  3
+Grid/MetaGridSpacingY01
+350
+100BD
+  3
+Grid/MetaGridSpacingY02
+350
+100BE
+  3
+Grid/MetaGridSpacingY03
+350
+100BF
+  3
+MultiPageSettings/Columns
+350
+100C0
+  3
+MultiPageSettings/GlueMarginsBottom
+350
+100C1
+  3
+MultiPageSettings/GlueMarginsLeft
+350
+100C2
+  3
+MultiPageSettings/GlueMarginsRight
+350
+100C3
+  3
+MultiPageSettings/GlueMarginsTop
+350
+100C4
+  3
+MultiPageSettings/PrintCropMarks
+350
+100C5
+  3
+MultiPageSettings/Rows
+350
+100C6
+  3
+PageSettings/OffsetX
+350
+100C7
+  3
+PageSettings/OffsetY
+350
+100C8
+  3
+PageSettings/PageOrientation
+350
+100C9
+  3
+PageSettings/PaperHeight
+350
+100CA
+  3
+PageSettings/PaperWidth
+350
+100CB
+  3
+PageSettings/Scale
+350
+100CC
+  3
+PageSettings/ShowPaperBorders
+350
+100CD
+  3
+PageTagSettings/EnablePageTags
+350
+100CE
+  3
+PageTagSettings/TagAlignment
+350
+100CF
+  3
+PageTagSettings/TagFont
+350
+100D0
+  3
+PageTagSettings/TagPosition
+350
+100D1
+  3
+QCADVersion
+350
+100D2
+  3
+UnitSettings/PaperUnit
+350
+100D3
+  3
+ViewportCenter
+350
+100D4
+  3
+ViewportHeight
+350
+100D5
+  3
+ViewportWidth
+350
+100D6
+  0
+LAYOUT
+  5
+1004E
+102
+{ACAD_REACTORS
+330
+1004A
+102
+}
+330
+1004A
+100
+AcDbPlotSettings
+  1
+
+  2
+none_device
+  4
+Letter_(8.50_x_11.00_Inches)
+  6
+
+ 40
+6.35
+ 41
+6.35
+ 42
+6.35001
+ 43
+6.35001
+ 44
+215.9
+ 45
+279.4
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+   688
+ 72
+     0
+ 73
+     1
+ 74
+     5
+  7
+
+ 75
+    16
+ 76
+     0
+ 77
+     2
+ 78
+   300
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Layout1
+ 70
+     1
+ 71
+     1
+ 10
+-0.25
+ 20
+-0.25
+ 11
+10.75
+ 21
+8.25
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+0.0
+ 24
+0.0
+ 34
+0.0
+ 15
+50.0
+ 25
+50.0
+ 35
+50.0
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+1.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+1.0
+ 37
+0.0
+ 76
+     0
+330
+1004B
+331
+10123
+  0
+LAYOUT
+  5
+10052
+102
+{ACAD_REACTORS
+330
+1004A
+102
+}
+330
+1004A
+100
+AcDbPlotSettings
+  1
+
+  2
+none_device
+  4
+Letter_(8.50_x_11.00_Inches)
+  6
+
+ 40
+6.35
+ 41
+6.35
+ 42
+6.35000508
+ 43
+6.35000508
+ 44
+215.9
+ 45
+279.4
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+  1712
+ 72
+     0
+ 73
+     0
+ 74
+     0
+  7
+
+ 75
+     0
+ 76
+     0
+ 77
+     2
+ 78
+   300
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Model
+ 70
+     1
+ 71
+     0
+ 10
+0.0
+ 20
+0.0
+ 11
+12.0
+ 21
+9.0
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+83.863
+ 24
+-109.193
+ 34
+0.0
+ 15
+186.298
+ 25
+-54.8746
+ 35
+0.0
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+1.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+1.0
+ 37
+0.0
+ 76
+     0
+330
+1004F
+331
+10059
+  0
+MATERIAL
+  5
+10075
+102
+{ACAD_REACTORS
+330
+10073
+102
+}
+330
+10073
+100
+AcDbMaterial
+  1
+ByBlock
+ 72
+     1
+ 94
+      127
+  0
+MATERIAL
+  5
+10074
+102
+{ACAD_REACTORS
+330
+10073
+102
+}
+330
+10073
+100
+AcDbMaterial
+  1
+ByLayer
+ 72
+     1
+ 94
+      127
+  0
+MATERIAL
+  5
+10076
+102
+{ACAD_REACTORS
+330
+10073
+102
+}
+330
+10073
+100
+AcDbMaterial
+  1
+Global
+ 72
+     1
+ 94
+      127
+  0
+MLEADERSTYLE
+  5
+1009C
+102
+{ACAD_REACTORS
+330
+1009B
+102
+}
+330
+1009B
+100
+AcDbMLeaderStyle
+179
+     2
+170
+     2
+171
+     1
+172
+     0
+ 90
+        2
+ 40
+0.0
+ 41
+0.0
+173
+     1
+ 91
+-1056964608
+340
+10044
+ 92
+       -2
+290
+     1
+ 42
+0.09
+291
+     1
+ 43
+0.36
+  3
+Standard
+341
+0
+ 44
+0.18
+300
+
+342
+10042
+174
+     1
+178
+     6
+175
+     1
+176
+     0
+ 93
+-1056964608
+ 45
+0.18
+292
+     0
+297
+     0
+ 46
+0.18
+343
+0
+ 94
+-1056964608
+ 47
+1.0
+ 49
+1.0
+140
+1.0
+293
+     1
+141
+0.0
+294
+     1
+177
+     0
+142
+1.0
+295
+     0
+296
+     0
+143
+0.125
+271
+     0
+272
+     9
+273
+     9
+298
+     0
+  0
+MLINESTYLE
+  5
+10048
+102
+{ACAD_REACTORS
+330
+10047
+102
+}
+330
+10047
+100
+AcDbMlineStyle
+  2
+Standard
+ 70
+     0
+  3
+
+ 62
+   256
+ 51
+90.0
+ 52
+90.0
+ 71
+     2
+ 49
+0.5
+ 62
+   256
+  6
+BYLAYER
+ 49
+-0.5
+ 62
+   256
+  6
+BYLAYER
+  0
+ACDBPLACEHOLDER
+  5
+10040
+102
+{ACAD_REACTORS
+330
+1003F
+102
+}
+330
+1003F
+  0
+SCALE
+  5
+10078
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1:1
+140
+1.0
+141
+1.0
+290
+     1
+  0
+SCALE
+  5
+10079
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1:2
+140
+1.0
+141
+2.0
+290
+     0
+  0
+SCALE
+  5
+1007A
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1:4
+140
+1.0
+141
+4.0
+290
+     0
+  0
+SCALE
+  5
+1007B
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1:5
+140
+1.0
+141
+5.0
+290
+     0
+  0
+SCALE
+  5
+1007C
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1:8
+140
+1.0
+141
+8.0
+290
+     0
+  0
+SCALE
+  5
+1007D
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1:10
+140
+1.0
+141
+10.0
+290
+     0
+  0
+SCALE
+  5
+1007E
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1:16
+140
+1.0
+141
+16.0
+290
+     0
+  0
+SCALE
+  5
+1007F
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1:20
+140
+1.0
+141
+20.0
+290
+     0
+  0
+SCALE
+  5
+10080
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1:30
+140
+1.0
+141
+30.0
+290
+     0
+  0
+SCALE
+  5
+10081
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1:40
+140
+1.0
+141
+40.0
+290
+     0
+  0
+SCALE
+  5
+10082
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1:50
+140
+1.0
+141
+50.0
+290
+     0
+  0
+SCALE
+  5
+10083
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1:100
+140
+1.0
+141
+100.0
+290
+     0
+  0
+SCALE
+  5
+10084
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+2:1
+140
+2.0
+141
+1.0
+290
+     0
+  0
+SCALE
+  5
+10085
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+4:1
+140
+4.0
+141
+1.0
+290
+     0
+  0
+SCALE
+  5
+10086
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+8:1
+140
+8.0
+141
+1.0
+290
+     0
+  0
+SCALE
+  5
+10087
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+10:1
+140
+10.0
+141
+1.0
+290
+     0
+  0
+SCALE
+  5
+10088
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+100:1
+140
+100.0
+141
+1.0
+290
+     0
+  0
+SCALE
+  5
+10089
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1/128" = 1'-0"
+140
+0.0078125
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+1008A
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1/64" = 1'-0"
+140
+0.015625
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+1008B
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1/32" = 1'-0"
+140
+0.03125
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+1008C
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1/16" = 1'-0"
+140
+0.0625
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+1008D
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+3/32" = 1'-0"
+140
+0.09375
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+1008E
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1/8" = 1'-0"
+140
+0.125
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+1008F
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+3/16" = 1'-0"
+140
+0.1875
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+10090
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1/4" = 1'-0"
+140
+0.25
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+10091
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+3/8" = 1'-0"
+140
+0.375
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+10092
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1/2" = 1'-0"
+140
+0.5
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+10093
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+3/4" = 1'-0"
+140
+0.75
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+10094
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1" = 1'-0"
+140
+1.0
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+10095
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1-1/2" = 1'-0"
+140
+1.5
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+10096
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+3" = 1'-0"
+140
+3.0
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+10097
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+6" = 1'-0"
+140
+6.0
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+10098
+102
+{ACAD_REACTORS
+330
+10077
+102
+}
+330
+10077
+100
+AcDbScale
+ 70
+     0
+300
+1'-0" = 1'-0"
+140
+12.0
+141
+12.0
+290
+     0
+  0
+TABLESTYLE
+  5
+1009A
+102
+{ACAD_REACTORS
+330
+10099
+102
+}
+102
+{ACAD_XDICTIONARY
+360
+10127
+102
+}
+330
+10099
+100
+AcDbTableStyle
+  3
+Standard
+ 70
+     0
+ 71
+     0
+ 40
+0.06
+ 41
+0.06
+280
+     0
+281
+     0
+  7
+Standard
+140
+0.18
+170
+     2
+ 62
+     0
+ 63
+   257
+283
+     0
+ 90
+        4
+ 91
+        0
+  1
+
+274
+    -2
+284
+     1
+ 64
+     0
+275
+    -2
+285
+     1
+ 65
+     0
+276
+    -2
+286
+     1
+ 66
+     0
+277
+    -2
+287
+     1
+ 67
+     0
+278
+    -2
+288
+     1
+ 68
+     0
+279
+    -2
+289
+     1
+ 69
+     0
+  7
+Standard
+140
+0.25
+170
+     5
+ 62
+     0
+ 63
+   257
+283
+     0
+ 90
+        4
+ 91
+        0
+  1
+
+274
+    -2
+284
+     1
+ 64
+     0
+275
+    -2
+285
+     1
+ 65
+     0
+276
+    -2
+286
+     1
+ 66
+     0
+277
+    -2
+287
+     1
+ 67
+     0
+278
+    -2
+288
+     1
+ 68
+     0
+279
+    -2
+289
+     1
+ 69
+     0
+  7
+Standard
+140
+0.18
+170
+     5
+ 62
+     0
+ 63
+   257
+283
+     0
+ 90
+        4
+ 91
+        0
+  1
+
+274
+    -2
+284
+     1
+ 64
+     0
+275
+    -2
+285
+     1
+ 65
+     0
+276
+    -2
+286
+     1
+ 66
+     0
+277
+    -2
+287
+     1
+ 67
+     0
+278
+    -2
+288
+     1
+ 68
+     0
+279
+    -2
+289
+     1
+ 69
+     0
+  0
+VISUALSTYLE
+  5
+1005F
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+2dWireframe
+ 70
+     4
+177
+     3
+291
+     0
+ 70
+    58
+ 90
+        0
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        4
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   257
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        5
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+10062
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Basic
+ 70
+     7
+177
+     3
+291
+     1
+ 70
+    58
+ 90
+        1
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        0
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        4
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        8
+176
+     1
+ 62
+     7
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        5
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+10066
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Brighten
+ 70
+    12
+177
+     3
+291
+     1
+ 70
+    58
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        4
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        8
+176
+     1
+ 62
+     7
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        5
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+50.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+1006A
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+ColorChange
+ 70
+    16
+177
+     3
+291
+     1
+ 70
+    58
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        3
+176
+     1
+ 90
+        0
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     8
+420
+  8421504
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        4
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        8
+176
+     1
+ 62
+     8
+420
+  8421504
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        5
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+10064
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Conceptual
+ 70
+     9
+177
+     3
+291
+     0
+ 70
+    58
+ 90
+        3
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+179.0
+176
+     1
+ 90
+        8
+176
+     1
+ 62
+     7
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        3
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+10065
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Dim
+ 70
+    11
+177
+     3
+291
+     1
+ 70
+    58
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        4
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        8
+176
+     1
+ 62
+     7
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        5
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+-50.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+1006D
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+EdgeColorOff
+ 70
+    22
+177
+     3
+291
+     1
+ 70
+    58
+ 90
+        2
+176
+     0
+ 90
+        2
+176
+     0
+ 90
+        0
+176
+     0
+ 90
+        0
+176
+     0
+ 40
+0.6
+176
+     0
+ 40
+30.0
+176
+     0
+ 62
+     7
+420
+ 16777215
+176
+     0
+ 90
+        1
+176
+     0
+ 90
+        4
+176
+     0
+ 62
+     7
+176
+     0
+ 62
+   257
+176
+     0
+ 90
+        1
+176
+     0
+ 90
+        1
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        8
+176
+     2
+ 62
+     7
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        1
+176
+     0
+ 90
+        6
+176
+     0
+ 90
+        2
+176
+     0
+ 62
+     7
+176
+     0
+ 90
+        5
+176
+     0
+ 90
+        0
+176
+     0
+ 90
+        0
+176
+     0
+290
+     0
+176
+     0
+ 90
+        1
+176
+     0
+ 40
+0.0
+176
+     0
+ 90
+        0
+176
+     0
+290
+     0
+176
+     0
+290
+     1
+176
+     0
+290
+     1
+176
+     0
+290
+     0
+176
+     0
+290
+     0
+176
+     0
+290
+     0
+176
+     0
+290
+     0
+176
+     0
+290
+     0
+176
+     0
+290
+     0
+176
+     0
+ 90
+       50
+176
+     0
+ 40
+0.0
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        0
+176
+     0
+ 62
+   178
+420
+        0
+176
+     0
+ 90
+       50
+176
+     0
+ 90
+        3
+176
+     0
+ 62
+     5
+420
+      255
+176
+     0
+290
+     0
+176
+     0
+ 90
+       50
+176
+     0
+ 90
+       50
+176
+     0
+ 90
+       50
+176
+     0
+290
+     0
+176
+     0
+ 90
+       50
+176
+     0
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     0
+  1
+strokes_ogs.tif
+176
+     0
+290
+     0
+176
+     0
+ 40
+1.0
+176
+     0
+ 40
+1.0
+176
+     0
+  0
+VISUALSTYLE
+  5
+10069
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Facepattern
+ 70
+    15
+177
+     3
+291
+     1
+ 70
+    58
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        4
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        8
+176
+     1
+ 62
+     7
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        5
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+1005B
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Flat
+ 70
+     0
+177
+     3
+291
+     1
+ 70
+    58
+ 90
+        2
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        2
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        8
+176
+     1
+ 62
+     7
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        5
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       13
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+1005C
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+FlatWithEdges
+ 70
+     1
+177
+     3
+291
+     1
+ 70
+    58
+ 90
+        2
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        2
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   257
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        5
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       13
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+1005D
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Gouraud
+ 70
+     2
+177
+     3
+291
+     1
+ 70
+    58
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        2
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+     7
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        5
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       13
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+1005E
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+GouraudWithEdges
+ 70
+     3
+177
+     3
+291
+     1
+ 70
+    58
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        2
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   257
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        5
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       13
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+10061
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Hidden
+ 70
+     6
+177
+     3
+291
+     0
+ 70
+    58
+ 90
+        1
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        0
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+40.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   257
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        3
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+1006B
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+JitterOff
+ 70
+    20
+177
+     3
+291
+     1
+ 70
+    58
+ 90
+        2
+176
+     0
+ 90
+        2
+176
+     0
+ 90
+        0
+176
+     0
+ 90
+        0
+176
+     0
+ 40
+0.6
+176
+     0
+ 40
+30.0
+176
+     0
+ 62
+     7
+420
+ 16777215
+176
+     0
+ 90
+        1
+176
+     0
+ 90
+        4
+176
+     0
+ 62
+     7
+176
+     0
+ 62
+   257
+176
+     0
+ 90
+        1
+176
+     0
+ 90
+        1
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+       10
+176
+     2
+ 62
+     7
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        1
+176
+     0
+ 90
+        6
+176
+     0
+ 90
+        2
+176
+     0
+ 62
+     7
+176
+     0
+ 90
+        5
+176
+     0
+ 90
+        0
+176
+     0
+ 90
+        0
+176
+     0
+290
+     0
+176
+     0
+ 90
+        1
+176
+     0
+ 40
+0.0
+176
+     0
+ 90
+        0
+176
+     0
+290
+     0
+176
+     0
+290
+     1
+176
+     0
+290
+     1
+176
+     0
+290
+     0
+176
+     0
+290
+     0
+176
+     0
+290
+     0
+176
+     0
+290
+     0
+176
+     0
+290
+     0
+176
+     0
+290
+     0
+176
+     0
+ 90
+       50
+176
+     0
+ 40
+0.0
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        0
+176
+     0
+ 62
+   178
+420
+        0
+176
+     0
+ 90
+       50
+176
+     0
+ 90
+        3
+176
+     0
+ 62
+     5
+420
+      255
+176
+     0
+290
+     0
+176
+     0
+ 90
+       50
+176
+     0
+ 90
+       50
+176
+     0
+ 90
+       50
+176
+     0
+290
+     0
+176
+     0
+ 90
+       50
+176
+     0
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     0
+  1
+strokes_ogs.tif
+176
+     0
+290
+     0
+176
+     0
+ 40
+1.0
+176
+     0
+ 40
+1.0
+176
+     0
+  0
+VISUALSTYLE
+  5
+10068
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Linepattern
+ 70
+    14
+177
+     3
+291
+     1
+ 70
+    58
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        4
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        7
+176
+     1
+ 90
+        7
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        8
+176
+     1
+ 62
+     7
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        5
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+1006C
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+OverhangOff
+ 70
+    21
+177
+     3
+291
+     1
+ 70
+    58
+ 90
+        2
+176
+     0
+ 90
+        2
+176
+     0
+ 90
+        0
+176
+     0
+ 90
+        0
+176
+     0
+ 40
+0.6
+176
+     0
+ 40
+30.0
+176
+     0
+ 62
+     7
+420
+ 16777215
+176
+     0
+ 90
+        1
+176
+     0
+ 90
+        4
+176
+     0
+ 62
+     7
+176
+     0
+ 62
+   257
+176
+     0
+ 90
+        1
+176
+     0
+ 90
+        1
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        9
+176
+     2
+ 62
+     7
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        1
+176
+     0
+ 90
+        6
+176
+     0
+ 90
+        2
+176
+     0
+ 62
+     7
+176
+     0
+ 90
+        5
+176
+     0
+ 90
+        0
+176
+     0
+ 90
+        0
+176
+     0
+290
+     0
+176
+     0
+ 90
+        1
+176
+     0
+ 40
+0.0
+176
+     0
+ 90
+        0
+176
+     0
+290
+     0
+176
+     0
+290
+     1
+176
+     0
+290
+     1
+176
+     0
+290
+     0
+176
+     0
+290
+     0
+176
+     0
+290
+     0
+176
+     0
+290
+     0
+176
+     0
+290
+     0
+176
+     0
+290
+     0
+176
+     0
+ 90
+       50
+176
+     0
+ 40
+0.0
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        0
+176
+     0
+ 62
+   178
+420
+        0
+176
+     0
+ 90
+       50
+176
+     0
+ 90
+        3
+176
+     0
+ 62
+     5
+420
+      255
+176
+     0
+290
+     0
+176
+     0
+ 90
+       50
+176
+     0
+ 90
+       50
+176
+     0
+ 90
+       50
+176
+     0
+290
+     0
+176
+     0
+ 90
+       50
+176
+     0
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     0
+  1
+strokes_ogs.tif
+176
+     0
+290
+     0
+176
+     0
+ 40
+1.0
+176
+     0
+ 40
+1.0
+176
+     0
+  0
+VISUALSTYLE
+  5
+10063
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Realistic
+ 70
+     8
+177
+     3
+291
+     0
+ 70
+    58
+ 90
+        2
+176
+     1
+ 90
+        3
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        2
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        8
+176
+     1
+ 62
+   257
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        3
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       13
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+10072
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Shaded
+ 70
+    27
+177
+     3
+291
+     0
+ 70
+    58
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        2
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        4
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        8
+176
+     1
+ 62
+   257
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     8
+420
+  7895160
+176
+     1
+ 90
+        3
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+        5
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+10071
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Shaded with edges
+ 70
+    26
+177
+     3
+291
+     0
+ 70
+    58
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        2
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+       10
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        8
+176
+     1
+ 62
+   257
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        3
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+        5
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+1006E
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Shades of Gray
+ 70
+    23
+177
+     3
+291
+     0
+ 70
+    58
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        3
+176
+     1
+ 90
+        0
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+40.0
+176
+     1
+ 90
+        8
+176
+     1
+ 62
+     7
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        3
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+1006F
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Sketchy
+ 70
+    24
+177
+     3
+291
+     0
+ 70
+    58
+ 90
+        1
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        0
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+40.0
+176
+     1
+ 90
+       11
+176
+     1
+ 62
+     7
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+10067
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Thicken
+ 70
+    13
+177
+     3
+291
+     1
+ 70
+    58
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        4
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+       12
+176
+     1
+ 62
+     7
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        5
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+10060
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+Wireframe
+ 70
+     5
+177
+     3
+291
+     0
+ 70
+    58
+ 90
+        0
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+ 40
+0.6
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        4
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   257
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        3
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+VISUALSTYLE
+  5
+10070
+102
+{ACAD_REACTORS
+330
+1005A
+102
+}
+330
+1005A
+100
+AcDbVisualStyle
+  2
+X-Ray
+ 70
+    25
+177
+     3
+291
+     0
+ 70
+    58
+ 90
+        2
+176
+     1
+ 90
+        2
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+0.5
+176
+     1
+ 40
+30.0
+176
+     1
+ 62
+     7
+420
+ 16777215
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+     7
+176
+     1
+ 62
+   257
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        1
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        8
+176
+     1
+ 62
+     7
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        1
+176
+     1
+ 90
+        6
+176
+     1
+ 90
+        2
+176
+     1
+ 62
+     7
+176
+     1
+ 90
+        3
+176
+     1
+ 90
+        0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       13
+176
+     1
+ 40
+0.0
+176
+     1
+ 90
+        0
+176
+     1
+290
+     0
+176
+     1
+290
+     1
+176
+     1
+290
+     1
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 40
+0.0
+176
+     1
+ 40
+1.0
+176
+     1
+ 90
+        0
+176
+     1
+ 62
+   178
+420
+        0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+        3
+176
+     1
+ 62
+     5
+420
+      255
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+ 90
+       50
+176
+     1
+290
+     0
+176
+     1
+ 90
+       50
+176
+     1
+ 62
+   256
+176
+     0
+ 40
+1.0
+176
+     0
+ 90
+        2
+176
+     1
+  1
+strokes_ogs.tif
+176
+     1
+290
+     0
+176
+     1
+ 40
+1.0
+176
+     1
+ 40
+1.0
+176
+     1
+  0
+DICTIONARYVAR
+  5
+10126
+102
+{ACAD_REACTORS
+330
+10125
+102
+}
+330
+10125
+100
+DictionaryVariables
+280
+     0
+  1
+1:1
+  0
+DICTIONARYVAR
+  5
+1012B
+102
+{ACAD_REACTORS
+330
+10125
+102
+}
+330
+10125
+100
+DictionaryVariables
+280
+     0
+  1
+Standard
+  0
+DICTIONARYVAR
+  5
+1012A
+102
+{ACAD_REACTORS
+330
+10125
+102
+}
+330
+10125
+100
+DictionaryVariables
+280
+     0
+  1
+Standard
+  0
+XRECORD
+  5
+100A1
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+GCodeIN
+  0
+XRECORD
+  5
+100A2
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+#ffffff
+  0
+XRECORD
+  5
+100A3
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+FullColor
+  0
+XRECORD
+  5
+100A4
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+290
+     1
+  0
+XRECORD
+  5
+100A5
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+290
+     1
+  0
+XRECORD
+  5
+100A6
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+290
+     1
+  0
+XRECORD
+  5
+100A7
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+290
+     1
+  0
+XRECORD
+  5
+100A8
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100A9
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100AA
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100AB
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100AC
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100AD
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100AE
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100AF
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100B0
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+290
+     0
+  0
+XRECORD
+  5
+100B1
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+290
+     0
+  0
+XRECORD
+  5
+100B2
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+290
+     0
+  0
+XRECORD
+  5
+100B3
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+290
+     0
+  0
+XRECORD
+  5
+100B4
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 90
+    65537
+  0
+XRECORD
+  5
+100B5
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 90
+    65537
+  0
+XRECORD
+  5
+100B6
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 90
+    65537
+  0
+XRECORD
+  5
+100B7
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 90
+    65537
+  0
+XRECORD
+  5
+100B8
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100B9
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100BA
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100BB
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100BC
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100BD
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100BE
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100BF
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+auto
+  0
+XRECORD
+  5
+100C0
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 90
+        1
+  0
+XRECORD
+  5
+100C1
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 40
+10.0
+  0
+XRECORD
+  5
+100C2
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 40
+10.0
+  0
+XRECORD
+  5
+100C3
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 40
+10.0
+  0
+XRECORD
+  5
+100C4
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 40
+10.0
+  0
+XRECORD
+  5
+100C5
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+290
+     0
+  0
+XRECORD
+  5
+100C6
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 90
+        1
+  0
+XRECORD
+  5
+100C7
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 40
+0.0
+  0
+XRECORD
+  5
+100C8
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 40
+0.0
+  0
+XRECORD
+  5
+100C9
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+Portrait
+  0
+XRECORD
+  5
+100CA
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 40
+297.0
+  0
+XRECORD
+  5
+100CB
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 40
+210.0
+  0
+XRECORD
+  5
+100CC
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+1:1
+  0
+XRECORD
+  5
+100CD
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+290
+     1
+  0
+XRECORD
+  5
+100CE
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+290
+     0
+  0
+XRECORD
+  5
+100CF
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+Inside
+  0
+XRECORD
+  5
+100D0
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+Arial,10,-1,5,50,0,0,0,0,0
+  0
+XRECORD
+  5
+100D1
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+TopLeft
+  0
+XRECORD
+  5
+100D2
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+1000
+3.26.4
+  0
+XRECORD
+  5
+100D3
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 90
+        4
+  0
+XRECORD
+  5
+100D4
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+  0
+XRECORD
+  5
+100D5
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 40
+82.46027994793923
+  0
+XRECORD
+  5
+100D6
+102
+{ACAD_REACTORS
+330
+1009F
+102
+}
+330
+1009F
+100
+AcDbXrecord
+280
+     1
+ 40
+168.9078368069414
+  0
+DICTIONARY
+  5
+10127
+330
+1009A
+100
+AcDbDictionary
+280
+     1
+281
+     1
+  3
+ACAD_ROUNDTRIP_2008_TABLESTYLE_CELLSTYLEMAP
+360
+10128
+  0
+CELLSTYLEMAP
+  5
+10128
+102
+{ACAD_REACTORS
+330
+10127
+102
+}
+330
+10127
+100
+AcDbCellStyleMap
+ 90
+        3
+300
+CELLSTYLE
+  1
+TABLEFORMAT_BEGIN
+ 90
+        5
+170
+     1
+ 91
+        0
+ 92
+    32768
+ 62
+   257
+ 93
+        1
+300
+CONTENTFORMAT
+  1
+CONTENTFORMAT_BEGIN
+ 90
+        0
+ 91
+        0
+ 92
+        4
+ 93
+        0
+300
+
+ 40
+0.0
+140
+1.0
+ 94
+        5
+ 62
+     0
+340
+10042
+144
+0.25
+309
+CONTENTFORMAT_END
+171
+     1
+301
+MARGIN
+  1
+CELLMARGIN_BEGIN
+ 40
+0.06
+ 40
+0.06
+ 40
+0.06
+ 40
+0.06
+ 40
+0.06
+ 40
+0.06
+309
+CELLMARGIN_END
+ 94
+        6
+ 95
+        1
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+ 95
+        2
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+ 95
+        4
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+ 95
+        8
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+ 95
+       16
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+ 95
+       32
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+309
+TABLEFORMAT_END
+  1
+CELLSTYLE_BEGIN
+ 90
+        1
+ 91
+        1
+300
+_TITLE
+309
+CELLSTYLE_END
+300
+CELLSTYLE
+  1
+TABLEFORMAT_BEGIN
+ 90
+        5
+170
+     1
+ 91
+        0
+ 92
+        0
+ 62
+   257
+ 93
+        1
+300
+CONTENTFORMAT
+  1
+CONTENTFORMAT_BEGIN
+ 90
+        0
+ 91
+        0
+ 92
+        4
+ 93
+        0
+300
+
+ 40
+0.0
+140
+1.0
+ 94
+        5
+ 62
+     0
+340
+10042
+144
+0.18
+309
+CONTENTFORMAT_END
+171
+     1
+301
+MARGIN
+  1
+CELLMARGIN_BEGIN
+ 40
+0.06
+ 40
+0.06
+ 40
+0.06
+ 40
+0.06
+ 40
+0.06
+ 40
+0.06
+309
+CELLMARGIN_END
+ 94
+        6
+ 95
+        1
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+ 95
+        2
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+ 95
+        4
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+ 95
+        8
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+ 95
+       16
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+ 95
+       32
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+309
+TABLEFORMAT_END
+  1
+CELLSTYLE_BEGIN
+ 90
+        2
+ 91
+        1
+300
+_HEADER
+309
+CELLSTYLE_END
+300
+CELLSTYLE
+  1
+TABLEFORMAT_BEGIN
+ 90
+        5
+170
+     1
+ 91
+        0
+ 92
+        0
+ 62
+   257
+ 93
+        1
+300
+CONTENTFORMAT
+  1
+CONTENTFORMAT_BEGIN
+ 90
+        0
+ 91
+        0
+ 92
+        4
+ 93
+        0
+300
+
+ 40
+0.0
+140
+1.0
+ 94
+        2
+ 62
+     0
+340
+10042
+144
+0.18
+309
+CONTENTFORMAT_END
+171
+     1
+301
+MARGIN
+  1
+CELLMARGIN_BEGIN
+ 40
+0.06
+ 40
+0.06
+ 40
+0.06
+ 40
+0.06
+ 40
+0.06
+ 40
+0.06
+309
+CELLMARGIN_END
+ 94
+        6
+ 95
+        1
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+ 95
+        2
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+ 95
+        4
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+ 95
+        8
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+ 95
+       16
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+ 95
+       32
+302
+GRIDFORMAT
+  1
+GRIDFORMAT_BEGIN
+ 90
+        0
+ 91
+        1
+ 62
+     0
+ 92
+       -2
+340
+10044
+ 93
+        0
+ 40
+0.045
+309
+GRIDFORMAT_END
+309
+TABLEFORMAT_END
+  1
+CELLSTYLE_BEGIN
+ 90
+        3
+ 91
+        2
+300
+_DATA
+309
+CELLSTYLE_END
+  0
+ENDSEC
+  0
+EOF
