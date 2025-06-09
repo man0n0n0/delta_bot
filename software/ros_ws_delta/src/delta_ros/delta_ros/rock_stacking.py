@@ -19,6 +19,7 @@ class RockStacking(Node):
         
         # Variable to store new measurements
         self.new_measurement = None
+        self.operation_in_progress = False
         
         # Send home command at startup
         time.sleep(5)
@@ -34,16 +35,20 @@ class RockStacking(Node):
         self.get_logger().info(f'Sent: {command}')
         time.sleep(0.1)
 
-    def get_updated_z_measurement(self):
+    def get_updated_z_measurement(self, rock_index=1):
         """Wait for one new measurement and return the Z height"""
+        # Clear any existing measurement
         self.new_measurement = None
         start_time = time.time()
         
+        # Wait for a fresh measurement
         while self.new_measurement is None and (time.time() - start_time) < 5.0:
             rclpy.spin_once(self, timeout_sec=0.1)
         
         if self.new_measurement and self.new_measurement.poses:
-            return self.new_measurement.poses[0].position.z * 1000  # Convert to mm
+            # Return the specified rock index
+            if len(self.new_measurement.poses) > rock_index:
+                return self.new_measurement.poses[rock_index].position.z * 1000  # Convert to mm
         return None
 
     def centers_callback(self, msg):
@@ -54,8 +59,8 @@ class RockStacking(Node):
         if not msg.poses:
             self.get_logger().warn('No rocks detected')
             return
-        
-        if len(msg.poses) < 2:
+
+        if msg.poses < 2:
             self.get_logger().warn('Only one rock detected')
             return
 
@@ -71,7 +76,7 @@ class RockStacking(Node):
         rock_z = rock.position.z * 1000
 
         # Constants
-        safe_height = 200
+        safe_height = 150
         height_correction = 50
         tool_offset = (0, 35, 20)
 
@@ -91,33 +96,28 @@ class RockStacking(Node):
             rock_z = updated_pick_z
             self.get_logger().info(f'Updated pick height: {rock_z:.1f} mm')
         else:
-            rock_z = rock_z - safe_height
-            self.get_logger().warn('Using original pick Z measurement')
-        time.sleep(10)
-
+            self.get_logger().error('Failed to get updated Z measurement for placement - aborting')
+            self.send_gcode('G28')  # Return home
+            time.sleep(20)
+            return
+        
         self.send_gcode('G91')
-        pick_plunge = rock_z - height_correction - tool_offset[2]
+        pick_plunge = rock_z - safe_height - height_correction - tool_offset[2]
         self.send_gcode(f'G1 Z-{pick_plunge:.1f} F500')
+        self.send_gcode('G90')
         self.send_gcode('M4')  # Close gripper
         time.sleep(10)
+        self.send_gcode('G91')
         self.send_gcode(f'G1 Z{pick_plunge:.1f} F500')  # Lift rock
-        self.send_gcode('G90')
 
         # Move over placement location
+        self.send_gcode('G90')
         self.send_gcode(f'G1 X{placing_x+tool_offset[0]:.1f} Y{placing_y+tool_offset[1]:.1f} F1000')
-
-        # Get updated Z measurement while over placement rock
-        self.get_logger().info('Getting updated Z measurement for placement...')
-        updated_placement_z = self.get_updated_z_measurement()
-        if updated_placement_z:
-            placing_z = updated_placement_z
-            self.get_logger().info(f'Updated placement height: {placing_z:.1f} mm')
-        else:
-            self.get_logger().warn('Using original placement Z measurement')
-
-        # Drop rock using variable z for second plunge
-        drop_plunge = pick_plunge - placing_z
         self.send_gcode('G91')
+        self.send_gcode(f'G1 Z-{safe_height:.1f} F500')
+        
+        # Drop rock using variable z for second plunge
+        drop_plunge = placing_z + safe_height - height_correction - tool_offset[2]
         self.send_gcode(f'G1 Z-{drop_plunge:.1f} F500')
         self.send_gcode('G90')
         self.send_gcode('M5')  # Open gripper
@@ -127,6 +127,9 @@ class RockStacking(Node):
         self.send_gcode('G28')
         time.sleep(20)
         self.get_logger().info('Rock stacking completed')
+        
+        # Reset operation flag
+        self.operation_in_progress = False
 
 def main(args=None):
     rclpy.init(args=args)
