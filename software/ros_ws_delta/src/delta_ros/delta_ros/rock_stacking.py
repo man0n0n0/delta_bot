@@ -111,7 +111,7 @@ class RockStacking(Node):
             self.get_logger().warn('Using original placement Z measurement')
 
         # Drop rock using variable z for second plunge
-        drop_plunge = pick_plunge - placing_z
+        drop_plunge = placing_z - pick_plunge
         self.send_gcode('G91')
         self.send_gcode(f'G1 Z-{drop_plunge:.1f} F500')
         self.send_gcode('G90')
