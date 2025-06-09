@@ -87,11 +87,12 @@ class RockStacking(Node):
             rock_z = updated_pick_z
             self.get_logger().info(f'Updated pick height: {rock_z:.1f} mm')
         else:
+            rock_z = rock_z - safe_height
             self.get_logger().warn('Using original pick Z measurement')
         time.sleep(10)
 
         self.send_gcode('G91')
-        pick_plunge = rock_z - safe_height - height_correction - tool_offset[2]
+        pick_plunge = rock_z - height_correction - tool_offset[2]
         self.send_gcode(f'G1 Z-{pick_plunge:.1f} F500')
         self.send_gcode('M4')  # Close gripper
         time.sleep(10)
@@ -111,7 +112,7 @@ class RockStacking(Node):
             self.get_logger().warn('Using original placement Z measurement')
 
         # Drop rock using variable z for second plunge
-        drop_plunge = placing_z - pick_plunge
+        drop_plunge = pick_plunge - placing_z
         self.send_gcode('G91')
         self.send_gcode(f'G1 Z-{drop_plunge:.1f} F500')
         self.send_gcode('G90')
