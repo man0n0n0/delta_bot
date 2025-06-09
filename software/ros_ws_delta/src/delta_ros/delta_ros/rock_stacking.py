@@ -58,7 +58,7 @@ class RockStacking(Node):
         # Constants
         safe_height = 150
         height_correction = 50
-        tool_offset = (0, 35, 20)
+        tool_offset = (0, -35, 20)
 
         self.get_logger().info(f'Picking rock at ({rock_x:.1f}, {rock_y:.1f}, {rock_z:.1f})')
 
