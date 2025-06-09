@@ -54,6 +54,10 @@ class RockStacking(Node):
         if not msg.poses:
             self.get_logger().warn('No rocks detected')
             return
+        
+        if len(msg.poses) < 2:
+            self.get_logger().warn('Only one rock detected')
+            return
 
         # Get rock positions
         placing_rock = msg.poses[0]  # Highest rock (placement location)
