@@ -4,11 +4,9 @@ from geometry_msgs.msg import PoseArray
 from std_msgs.msg import String
 import time
 
-
 class RockStacking(Node):
     def __init__(self):
         super().__init__('rock_stacking')
-        
         # Subscribe to rock centers from your C++ detector
         self.subscription = self.create_subscription(
             PoseArray,
@@ -16,17 +14,15 @@ class RockStacking(Node):
             self.centers_callback,
             10
         )
-        
         # Publisher for G-code commands
         self.gcode_publisher = self.create_publisher(String, '/delta_marlin/gcode', 10)
         
         # Send home command at startup
-        time.sleep(5) # wait for marlin warming
+        time.sleep(5)
         self.send_gcode('G28')
         time.sleep(10)
-        
         self.get_logger().info('Rock Stacking node started')
-    
+
     def send_gcode(self, command):
         """Send G-code command"""
         msg = String()
@@ -34,74 +30,93 @@ class RockStacking(Node):
         self.gcode_publisher.publish(msg)
         self.get_logger().info(f'Sent: {command}')
         time.sleep(0.1)
-    
+
+    def get_updated_z_measurement(self):
+        """Wait for one new measurement and return the Z height"""
+        msg = rclpy.wait_for_message(self, PoseArray, 'rock_centers', timeout_sec=5.0)
+        if msg and msg.poses:
+            return msg.poses[0].position.z * 1000  # Convert to mm
+        return None
+
     def centers_callback(self, msg):
         """Process rock centers when received from C++ detector"""
         if not msg.poses:
             self.get_logger().warn('No rocks detected')
             return
 
-        # Get highest rock position from PoseArray
-        rock = msg.poses[0]
-        placing_x = rock.position.x * 1000  # Convert to mm
-        placing_y = rock.position.y * 1000
-        placing_z = rock.position.z * 1000
-        
-        # Get second higest rock position from PoseArray
-        rock = msg.poses[1]
-        rock_x = rock.position.x * 1000  # Convert to mm
+        # Get rock positions
+        placing_rock = msg.poses[0]  # Highest rock (placement location)
+        placing_x = placing_rock.position.x * 1000
+        placing_y = placing_rock.position.y * 1000
+        placing_z = placing_rock.position.z * 1000
+
+        rock = msg.poses[1]  # Second highest rock (to pick)
+        rock_x = rock.position.x * 1000
         rock_y = rock.position.y * 1000
         rock_z = rock.position.z * 1000
 
-        #init cairn height to zero
-        cairn_height = 0
-        safe_movement_height = 150 #from the oming pos
+        # Constants
+        safe_height = 150
         height_correction = 50
-        tool_offset = (0,35,20) #in mm 
-        
-        self.get_logger().info(f'Processing rock at ({rock_x:.1f}, {rock_y:.1f}, {rock_z:.1f})')
-        
-        # Pick and place sequence
+        tool_offset = (0, 35, 20)
+
+        self.get_logger().info(f'Picking rock at ({rock_x:.1f}, {rock_y:.1f}, {rock_z:.1f})')
+
+        # Pick rock with updated Z measurement
         self.send_gcode('M5')  # Open gripper
-
-        self.send_gcode(f'G91')  # relative positioning
-        self.send_gcode(f'G1 Z-{safe_movement_height:.1f} F500')  # Move to safe z heigh for x,y movement
-        self.send_gcode(f'G90')  # absolute positioning
-
-        self.send_gcode(f'G1 X{rock_x+tool_offset[0]:.1f} Y{rock_y+tool_offset[1]:.1f} F2000')  # Move above rock
-
-        self.send_gcode(f'G91')  # relative positioning
-        pick_plunge = rock_z - safe_movement_height - height_correction - tool_offset[2]
-        self.send_gcode(f'G1 Z-{pick_plunge:.1f} F500')  # Move down to pick (with correction)
-        self.send_gcode(f'G90')  # absolute positioning
-
+        self.send_gcode('G91')
+        self.send_gcode(f'G1 Z-{safe_height:.1f} F500')
+        self.send_gcode('G90')
+        self.send_gcode(f'G1 X{rock_x+tool_offset[0]:.1f} Y{rock_y+tool_offset[1]:.1f} F2000')
+        
+        # Get updated Z measurement for picking
+        self.get_logger().info('Getting updated Z measurement for picking...')
+        updated_pick_z = self.get_updated_z_measurement()
+        if updated_pick_z:
+            rock_z = updated_pick_z
+            self.get_logger().info(f'Updated pick height: {rock_z:.1f} mm')
+        else:
+            self.get_logger().warn('Using original pick Z measurement')
+        
+        self.send_gcode('G91')
+        pick_plunge = rock_z - safe_height - height_correction - tool_offset[2]
+        self.send_gcode(f'G1 Z-{pick_plunge:.1f} F500')
+        self.send_gcode('G90')
         self.send_gcode('M4')  # Close gripper
-        time.sleep(10)  # Wait for grip
-        
-        self.send_gcode(f'G91')  # relative positioning
+        time.sleep(10)
+        self.send_gcode('G91')
         self.send_gcode(f'G1 Z{pick_plunge:.1f} F500')  # Lift rock
-        cairn_height += rock_z 
-        self.send_gcode(f'G90')  # absolute positioning
 
-        self.send_gcode(f'G1 X{placing_x} Y{placing_y} F1000')  # Move to placing spot (over the highest centroid)
+        # Move over placement location
+        self.send_gcode('G90')
+        self.send_gcode(f'G1 X{placing_x+tool_offset[0]:.1f} Y{placing_y+tool_offset[1]:.1f} F1000')
+        self.send_gcode('G91')
+        self.send_gcode(f'G1 Z-{safe_height:.1f} F500')
+        
+        # Get updated Z measurement while over placement rock
+        self.get_logger().info('Getting updated Z measurement for placement...')
+        updated_placement_z = self.get_updated_z_measurement()
+        if updated_placement_z:
+            placing_z = updated_placement_z
+            self.get_logger().info(f'Updated placement height: {placing_z:.1f} mm')
+        else:
+            self.get_logger().warn('Using original placement Z measurement')
 
-        self.send_gcode(f'G91')  # relative positioning
-        self.send_gcode(f'G1 Z-{placing_z - pick_plunge:.1f} F500')  # Move down to drop (here implement the last_rock pos for cairn making)
-        self.send_gcode(f'G90')  # absolute positioning
-
+        # Drop rock using variable z for second plunge
+        drop_plunge = placing_z + safe_height - height_correction - tool_offset[2]
+        self.send_gcode(f'G1 Z-{drop_plunge:.1f} F500')
+        self.send_gcode('G90')
         self.send_gcode('M5')  # Open gripper
-        time.sleep(10)  # Wait
-
+        time.sleep(10)
+        
+        # Return home
         self.send_gcode('G28')
         time.sleep(20)
-        
-        self.get_logger().info(f'Rock stacking completed')
-
+        self.get_logger().info('Rock stacking completed')
 
 def main(args=None):
     rclpy.init(args=args)
     node = RockStacking()
-    
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
@@ -109,7 +124,6 @@ def main(args=None):
     finally:
         node.destroy_node()
         rclpy.shutdown()
-
 
 if __name__ == '__main__':
     main()
