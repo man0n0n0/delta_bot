@@ -67,7 +67,7 @@ class RockStacking(Node):
         rock_z = rock.position.z * 1000
 
         # Constants
-        safe_height = 200
+        safe_height = 300
         height_correction = 50
         tool_offset = (0, 35, 20)
 
@@ -88,7 +88,8 @@ class RockStacking(Node):
             self.get_logger().info(f'Updated pick height: {rock_z:.1f} mm')
         else:
             self.get_logger().warn('Using original pick Z measurement')
-        
+        time.sleep(10)
+
         self.send_gcode('G91')
         pick_plunge = rock_z - safe_height - height_correction - tool_offset[2]
         self.send_gcode(f'G1 Z-{pick_plunge:.1f} F500')
