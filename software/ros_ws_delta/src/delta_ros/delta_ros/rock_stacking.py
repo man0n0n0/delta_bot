@@ -17,6 +17,9 @@ class RockStacking(Node):
         # Publisher for G-code commands
         self.gcode_publisher = self.create_publisher(String, '/delta_marlin/gcode', 10)
         
+        # Variable to store new measurements
+        self.new_measurement = None
+        
         # Send home command at startup
         time.sleep(5)
         self.send_gcode('G28')
@@ -33,13 +36,21 @@ class RockStacking(Node):
 
     def get_updated_z_measurement(self):
         """Wait for one new measurement and return the Z height"""
-        msg = rclpy.wait_for_message(self, PoseArray, 'rock_centers', timeout_sec=5.0)
-        if msg and msg.poses:
-            return msg.poses[0].position.z * 1000  # Convert to mm
+        self.new_measurement = None
+        start_time = time.time()
+        
+        while self.new_measurement is None and (time.time() - start_time) < 5.0:
+            rclpy.spin_once(self, timeout_sec=0.1)
+        
+        if self.new_measurement and self.new_measurement.poses:
+            return self.new_measurement.poses[0].position.z * 1000  # Convert to mm
         return None
 
     def centers_callback(self, msg):
         """Process rock centers when received from C++ detector"""
+        # Store the latest measurement for get_updated_z_measurement()
+        self.new_measurement = msg
+        
         if not msg.poses:
             self.get_logger().warn('No rocks detected')
             return
@@ -58,7 +69,7 @@ class RockStacking(Node):
         # Constants
         safe_height = 150
         height_correction = 50
-        tool_offset = (0, -35, 20)
+        tool_offset = (0, 35, 20)
 
         self.get_logger().info(f'Picking rock at ({rock_x:.1f}, {rock_y:.1f}, {rock_z:.1f})')
 
@@ -93,6 +104,15 @@ class RockStacking(Node):
         self.send_gcode('G91')
         self.send_gcode(f'G1 Z-{safe_height:.1f} F500')
         
+        # Get updated Z measurement while over placement rock
+        self.get_logger().info('Getting updated Z measurement for placement...')
+        updated_placement_z = self.get_updated_z_measurement()
+        if updated_placement_z:
+            placing_z = updated_placement_z
+            self.get_logger().info(f'Updated placement height: {placing_z:.1f} mm')
+        else:
+            self.get_logger().warn('Using original placement Z measurement')
+
         # Drop rock using variable z for second plunge
         drop_plunge = placing_z + safe_height - height_correction - tool_offset[2]
         self.send_gcode(f'G1 Z-{drop_plunge:.1f} F500')
