@@ -67,7 +67,7 @@ class RockStacking(Node):
         rock_z = rock.position.z * 1000
 
         # Constants
-        safe_height = 300
+        safe_height = 200
         height_correction = 50
         tool_offset = (0, 35, 20)
 
