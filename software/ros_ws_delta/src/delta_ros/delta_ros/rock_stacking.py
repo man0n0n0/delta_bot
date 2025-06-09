@@ -93,15 +93,6 @@ class RockStacking(Node):
         self.send_gcode('G91')
         self.send_gcode(f'G1 Z-{safe_height:.1f} F500')
         
-        # Get updated Z measurement while over placement rock
-        self.get_logger().info('Getting updated Z measurement for placement...')
-        updated_placement_z = self.get_updated_z_measurement()
-        if updated_placement_z:
-            placing_z = updated_placement_z
-            self.get_logger().info(f'Updated placement height: {placing_z:.1f} mm')
-        else:
-            self.get_logger().warn('Using original placement Z measurement')
-
         # Drop rock using variable z for second plunge
         drop_plunge = placing_z + safe_height - height_correction - tool_offset[2]
         self.send_gcode(f'G1 Z-{drop_plunge:.1f} F500')
