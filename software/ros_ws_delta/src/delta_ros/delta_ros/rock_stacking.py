@@ -16,7 +16,7 @@ class RockStacking(Node):
         )
         # Subscribe to plane distance - try different topic names
         self.plane_subscription = self.create_subscription(
-            Float32,
+            Float64,
             'plane_distance',  # Removed leading slash
             self.plane_distance_callback,
             10
