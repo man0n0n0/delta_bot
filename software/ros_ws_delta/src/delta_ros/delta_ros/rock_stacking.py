@@ -33,7 +33,7 @@ class RockStacking(Node):
         # Constants
         self.safe_height = 150
         self.height_correction = 0
-        self.tool_offset = (0, 35, 20)
+        self.tool_offset = (0, -35, 20)
         
         # Send home command at startup
         time.sleep(5)
