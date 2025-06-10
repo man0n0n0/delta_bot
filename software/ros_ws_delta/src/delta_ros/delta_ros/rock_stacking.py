@@ -32,7 +32,7 @@ class RockStacking(Node):
         
         # Constants
         self.safe_height = 150
-        self.height_correction = 50
+        self.height_correction = 0
         self.tool_offset = (0, 35, 20)
         
         # Send home command at startup
@@ -92,9 +92,8 @@ class RockStacking(Node):
         self.send_gcode('G91')
         self.send_gcode(f'G1 Z-{self.safe_height:.1f} F500')
         self.send_gcode('G90')
-        self.send_gcode(f'G1 X{self.rock_x+self.tool_offset[0]:.1f} Y{self.rock_y+self.tool_offset[1]:.1f} F2000')
+        self.send_gcode(f'G1 X{self.rock_x:.1f} Y{self.rock_y:.1f} F2000')
         time.sleep(10)
-
                
         self.get_logger().info('Stage 1 completed - rock picked and positioned over picking location')
         self.get_logger().info('Waiting for Stage 2 callback to get updated placement Z and complete drop...')
@@ -105,10 +104,10 @@ class RockStacking(Node):
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
 
-        # # Correct the rock placement
-        # self.get_logger().info('Correction the rock placement : moving to newly mesured')
-        # self.send_gcode('G91')
-        # self.send_gcode(f'G1 X{self.rock_x+self.tool_offset[0]:.1f} Y{self.rock_y+self.tool_offset[1]:.1f} F2000')
+        # Correct the rock placement
+        self.get_logger().info('Correction the rock placement : moving to newly mesured')
+        self.send_gcode('G91')
+        self.send_gcode(f'G1 X{self.rock_x+self.tool_offset[0]:.1f} Y{self.rock_y+self.tool_offset[1]:.1f} F2000')
 
         # Complete picking sequence
         self.send_gcode('G91')
@@ -124,10 +123,9 @@ class RockStacking(Node):
         self.send_gcode('G90')
         self.send_gcode(f'G1 X{self.placing_x+self.tool_offset[0]:.1f} Y{self.placing_y+self.tool_offset[1]:.1f} F1000')
         self.send_gcode('G91')
-        self.send_gcode(f'G1 Z-{self.safe_height:.1f} F500')
         
         # Complete placement sequence
-        drop_plunge = self.placing_z + self.safe_height - self.height_correction - self.tool_offset[2]
+        drop_plunge = pick_plunge - self.placing_z - self.height_correction - self.tool_offset[2]
         self.send_gcode(f'G1 Z-{drop_plunge:.1f} F500')
         self.send_gcode('G90')
         self.send_gcode('M5')  # Open gripper
