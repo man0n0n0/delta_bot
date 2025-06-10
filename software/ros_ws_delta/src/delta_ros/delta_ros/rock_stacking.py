@@ -125,7 +125,7 @@ class RockStacking(Node):
         self.send_gcode('G91')
         
         # Complete placement sequence
-        drop_plunge = pick_plunge - self.placing_z - self.height_correction - self.tool_offset[2]
+        drop_plunge = self.placing_z - pick_plunge - self.height_correction - self.tool_offset[2]
         self.send_gcode(f'G1 Z-{drop_plunge:.1f} F500')
         self.send_gcode('G90')
         self.send_gcode('M5')  # Open gripper
