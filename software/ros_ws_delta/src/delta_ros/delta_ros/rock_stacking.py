@@ -142,11 +142,11 @@ class RockStacking(Node):
         
         # Complete placement sequence - use saved plane distance for drop calculation
         if self.saved_plane_distance is not None:
-            drop_plunge = pick_plunge - (self.placing_z - self.safe_height) + self.saved_plane_distance
+            drop_plunge = self.saved_plane_distance - (self.saved_plane_distance-(pick_plunge+safe_height) - (self.saved_plane_distance - self.placing_z)
             self.get_logger().info(f'Drop plunge calculated with saved plane distance: {drop_plunge:.1f} (plane distance: {self.saved_plane_distance:.3f})')
         else:
-            drop_plunge = pick_plunge - (self.placing_z - self.safe_height)
-            self.get_logger().warn('Drop plunge calculated without plane distance correction')
+            drop_plunge = 0
+            self.get_logger().warn('Drop plunge calculated without plane distance correction : leaving the rock on air')
         
         self.send_gcode(f'G1 Z-{drop_plunge:.1f} F500')
         self.send_gcode('G90')
