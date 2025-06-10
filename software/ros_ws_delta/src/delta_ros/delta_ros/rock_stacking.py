@@ -60,7 +60,7 @@ class RockStacking(Node):
             self.get_logger().warn('No rocks detected')
             return
 
-        if msg.poses < 2:
+        if len(msg.poses) < 2:
             self.get_logger().warn('Only one rock detected')
             return
 
