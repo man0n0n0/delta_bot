@@ -103,10 +103,10 @@ class RockStacking(Node):
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
 
-        # Correct the rock placement
-        self.get_logger().info('Correction the rock placement : moving to newly mesured')
-        self.send_gcode('G91')
-        self.send_gcode(f'G1 X{self.rock_x+self.tool_offset[0]:.1f} Y{self.rock_y+self.tool_offset[1]:.1f} F2000')
+        # # Correct the rock placement
+        # self.get_logger().info('Correction the rock placement : moving to newly mesured')
+        # self.send_gcode('G91')
+        # self.send_gcode(f'G1 X{self.rock_x+self.tool_offset[0]:.1f} Y{self.rock_y+self.tool_offset[1]:.1f} F2000')
 
         # Complete picking sequence
         self.send_gcode('G91')
