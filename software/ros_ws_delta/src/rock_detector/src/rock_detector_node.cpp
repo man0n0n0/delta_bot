@@ -2,6 +2,7 @@
 #include <sensor_msgs/msg/point_cloud2.hpp>
 #include <geometry_msgs/msg/pose_array.hpp>  // For publishing cluster centers
 #include <geometry_msgs/msg/pose.hpp>
+#include <std_msgs/msg/float64.hpp>  // For publishing plane distance
 #include <pcl_conversions/pcl_conversions.h>
 #include <pcl/point_types.h>
 #include <pcl/filters/passthrough.h>
@@ -59,6 +60,9 @@ public:
     
     // Publisher for cluster centers
     centers_publisher_ = this->create_publisher<geometry_msgs::msg::PoseArray>("rock_centers", 10);
+
+    // Publisher for plane distance from sensor
+    plane_distance_publisher_ = this->create_publisher<std_msgs::msg::Float64>("plane_distance", 10);
 
     RCLCPP_INFO(this->get_logger(), "Rock detector node has started");
     
@@ -128,6 +132,23 @@ private:
       RCLCPP_WARN(this->get_logger(), "Could not find a table plane");
       return;
     }
+
+    // Calculate and publish plane distance from sensor origin (0,0,0)
+    double a = coefficients->values[0];
+    double b = coefficients->values[1];
+    double c = coefficients->values[2];
+    double d = coefficients->values[3];
+    
+    // Distance from origin (sensor position) to plane: |ax + by + cz + d| / sqrt(a² + b² + c²)
+    // where (x,y,z) = (0,0,0) for sensor origin
+    double plane_distance_from_sensor = std::abs(d) / std::sqrt(a*a + b*b + c*c);
+    
+    // Publish plane distance
+    std_msgs::msg::Float64 distance_msg;
+    distance_msg.data = plane_distance_from_sensor;
+    plane_distance_publisher_->publish(distance_msg);
+    
+    RCLCPP_INFO(this->get_logger(), "Plane distance from sensor: %.3f meters", plane_distance_from_sensor);
 
     // Optional: Publish table plane
     pcl::PointCloud<pcl::PointXYZ>::Ptr table_cloud(new pcl::PointCloud<pcl::PointXYZ>());
@@ -202,11 +223,6 @@ private:
       
       // Check if centroid is below or at the plane level (exclude points above plane)
       // Calculate signed distance to plane using the surface point
-      double a = coefficients->values[0];
-      double b = coefficients->values[1];
-      double c = coefficients->values[2];
-      double d = coefficients->values[3];
-      
       double signed_distance = (a * surface_x + b * surface_y + c * surface_z + d) / 
                               std::sqrt(a*a + b*b + c*c);
       
@@ -268,6 +284,7 @@ private:
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr publisher_;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr table_publisher_;
   rclcpp::Publisher<geometry_msgs::msg::PoseArray>::SharedPtr centers_publisher_;
+  rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr plane_distance_publisher_;
 };
 
 int main(int argc, char * argv[])
