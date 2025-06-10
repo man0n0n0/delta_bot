@@ -33,7 +33,7 @@ public:
     
     auto min_cluster_size_desc = rcl_interfaces::msg::ParameterDescriptor{};
     min_cluster_size_desc.description = "Minimum number of points required for a cluster";
-    this->declare_parameter("min_cluster_size", 90, min_cluster_size_desc);
+    this->declare_parameter("min_cluster_size", 75, min_cluster_size_desc);
     
     auto max_cluster_size_desc = rcl_interfaces::msg::ParameterDescriptor{};
     max_cluster_size_desc.description = "Maximum number of points allowed for a cluster";
@@ -41,7 +41,7 @@ public:
     
     auto plane_threshold_desc = rcl_interfaces::msg::ParameterDescriptor{};
     plane_threshold_desc.description = "Distance threshold for plane segmentation (meters)";
-    this->declare_parameter("plane_threshold", 0.03, plane_threshold_desc);
+    this->declare_parameter("plane_threshold", 0.025, plane_threshold_desc);
     
     auto k_neighbors_desc = rcl_interfaces::msg::ParameterDescriptor{};
     k_neighbors_desc.description = "Number of neighbors for normal estimation";
