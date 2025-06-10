@@ -14,10 +14,10 @@ class RockStacking(Node):
             self.centers_callback,
             10
         )
-        # Subscribe to plane distance
+        # Subscribe to plane distance - try different topic names
         self.plane_subscription = self.create_subscription(
             Float32,
-            '/plane_distance',
+            'plane_distance',  # Removed leading slash
             self.plane_distance_callback,
             10
         )
@@ -44,11 +44,25 @@ class RockStacking(Node):
         self.height_correction = 0
         self.tool_offset = (0, -35, 20)
         
+        # Debug: Log subscription info
+        self.get_logger().info('Rock Stacking node initializing...')
+        self.get_logger().info('Subscribed to: rock_centers and plane_distance')
+        
+        # Create a timer to periodically check for plane distance
+        self.debug_timer = self.create_timer(5.0, self.debug_callback)
+        
         # Send home command at startup
         time.sleep(5)
         self.send_gcode('G28')
         time.sleep(10)
         self.get_logger().info('Rock Stacking node started')
+
+    def debug_callback(self):
+        """Debug callback to check plane distance status"""
+        if self.plane_distance is not None:
+            self.get_logger().info(f'Plane distance available: {self.plane_distance:.3f}')
+        else:
+            self.get_logger().warn('No plane distance received yet - check if topic is publishing')
 
     def send_gcode(self, command):
         """Send G-code command"""
@@ -61,6 +75,7 @@ class RockStacking(Node):
     def plane_distance_callback(self, msg):
         """Process plane distance measurement"""
         self.plane_distance = msg.data
+        self.get_logger().info(f'Received plane distance: {self.plane_distance:.3f}')
 
     def centers_callback(self, msg):
         """Process rock centers - handles both stage 1 and stage 2"""
@@ -69,6 +84,11 @@ class RockStacking(Node):
         
         # Save the current plane distance for use in calculations
         self.saved_plane_distance = self.plane_distance
+        
+        if self.saved_plane_distance is not None:
+            self.get_logger().info(f'Saved plane distance for this operation: {self.saved_plane_distance:.3f}')
+        else:
+            self.get_logger().error('No plane distance available! Check if plane_distance topic is publishing')
         
         if not msg.poses:
             self.get_logger().warn('No rocks detected')
@@ -142,13 +162,18 @@ class RockStacking(Node):
         
         # Complete placement sequence - use saved plane distance for drop calculation
         if self.saved_plane_distance is not None:
-            drop_plunge = self.saved_plane_distance - (self.saved_plane_distance-(pick_plunge+safe_height) - (self.saved_plane_distance - self.placing_z))
-            self.get_logger().info(f'Drop plunge calculated with saved plane distance: {drop_plunge:.1f} (plane distance: {self.saved_plane_distance:.3f})')
+            # Simplified drop calculation using plane distance
+            drop_plunge = self.saved_plane_distance - (self.placing_z/1000)  # Convert placing_z back to meters
+            self.get_logger().info(f'Drop plunge calculated: {drop_plunge:.3f}m = {drop_plunge*1000:.1f}mm')
+            self.get_logger().info(f'Using plane distance: {self.saved_plane_distance:.3f}m, placing_z: {self.placing_z/1000:.3f}m')
+            
+            # Convert to mm for G-code
+            drop_plunge_mm = abs(drop_plunge * 1000)
         else:
-            drop_plunge = 0
-            self.get_logger().warn('Drop plunge calculated without plane distance correction : leaving the rock on air')
+            drop_plunge_mm = 0
+            self.get_logger().error('No plane distance available - cannot calculate drop! Leaving rock in air')
         
-        self.send_gcode(f'G1 Z-{drop_plunge:.1f} F500')
+        self.send_gcode(f'G1 Z-{drop_plunge_mm:.1f} F500')
         self.send_gcode('G90')
         self.send_gcode('M5')  # Open gripper
         time.sleep(10)
