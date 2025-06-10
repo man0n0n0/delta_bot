@@ -35,7 +35,7 @@ class RockStacking(Node):
         self.get_logger().info(f'Sent: {command}')
         time.sleep(0.1)
 
-    def get_updated_z_measurement(self, rock_index=1):
+    def get_updated_z_measurement(self, rock_index=0):
         """Wait for one new measurement and return the Z height"""
         # Clear any existing measurement
         self.new_measurement = None
