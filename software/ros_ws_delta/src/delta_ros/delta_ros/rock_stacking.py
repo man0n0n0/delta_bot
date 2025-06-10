@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseArray
-from std_msgs.msg import String, Float32
+from std_msgs.msg import String, Float64
 import time
 
 class RockStacking(Node):
