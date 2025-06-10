@@ -93,6 +93,8 @@ class RockStacking(Node):
         self.send_gcode(f'G1 Z-{self.safe_height:.1f} F500')
         self.send_gcode('G90')
         self.send_gcode(f'G1 X{self.rock_x+self.tool_offset[0]:.1f} Y{self.rock_y+self.tool_offset[1]:.1f} F2000')
+        time.sleep(10)
+
                
         self.get_logger().info('Stage 1 completed - rock picked and positioned over picking location')
         self.get_logger().info('Waiting for Stage 2 callback to get updated placement Z and complete drop...')
