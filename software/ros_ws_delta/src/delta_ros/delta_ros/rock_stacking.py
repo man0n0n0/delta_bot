@@ -85,7 +85,7 @@ class RockStacking(Node):
         self.rock_y = rock.position.y * 1000
 
         self.get_logger().info(f'Placement location: ({self.placing_x:.1f}, {self.placing_y:.1f}, {self.placing_z:.1f})')
-        self.get_logger().info(f'Picking rock at: ({self.rock_x:.1f}, {self.rock_y:.1f}, {self.rock_z:.1f})')
+        self.get_logger().info(f'Picking rock at: ({self.rock_x:.1f}, {self.rock_y:.1f})')
 
         # Pick rock sequence
         self.send_gcode('M5')  # Open gripper
