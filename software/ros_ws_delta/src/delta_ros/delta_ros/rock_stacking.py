@@ -81,25 +81,29 @@ class RockStacking(Node):
         """Process rock centers - handles both stage 1 and stage 2"""
         # Store the latest measurement for get_updated_z_measurement()
         self.new_measurement = msg
-        
-        # Save the current plane distance for use in calculations
-        self.saved_plane_distance = self.plane_distance
-        
-        if self.saved_plane_distance is not None:
-            self.get_logger().info(f'Saved plane distance for this operation: {self.saved_plane_distance:.3f}')
-        else:
-            self.get_logger().error('No plane distance available! Check if plane_distance topic is publishing')
-        
+                
         if not msg.poses:
             self.get_logger().warn('No rocks detected')
             return
 
         # Stage 1: Get placement values and pick rock
         if self.stage == 'idle':
+
             if len(msg.poses) < 2:
                 self.get_logger().warn('Only one rock detected')
                 return
+
+            # Save the current plane distance for use in calculations (do it at homing pose and before holding rock to have a complete view)
+            self.saved_plane_distance = self.plane_distance
+            
+            if self.saved_plane_distance is not None:
+                self.get_logger().info(f'Saved plane distance for this operation: {self.saved_plane_distance:.3f}')
+            else:
+                self.get_logger().error('No plane distance available! Check if plane_distance topic is publishing')
+
             self.stage1_callback(msg)
+
+
         # Stage 2: Get updated rock_z and complete placement
         elif self.stage == 'stage1':
             self.stage2_callback(msg)
