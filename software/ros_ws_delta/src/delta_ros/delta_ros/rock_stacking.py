@@ -40,7 +40,7 @@ class RockStacking(Node):
         self.rock_z = None
         
         # Constants
-        self.safe_height = 150
+        self.safe_height = 100
         self.height_correction = 0
         self.tool_offset = (0, 35, 5)
         
@@ -94,7 +94,7 @@ class RockStacking(Node):
                 return
 
             # Save the current plane distance for use in calculations (do it at homing pose and before holding rock to have a complete view)
-            self.saved_plane_distance = self.plane_distance
+            self.saved_plane_distance = self.plane_distance * 1000
             
             if self.saved_plane_distance is not None:
                 self.get_logger().info(f'Saved plane distance for this operation: {self.saved_plane_distance:.3f}')
@@ -102,7 +102,6 @@ class RockStacking(Node):
                 self.get_logger().error('No plane distance available! Check if plane_distance topic is publishing')
 
             self.stage1_callback(msg)
-
 
         # Stage 2: Get updated rock_z and complete placement
         elif self.stage == 'stage1':
@@ -166,17 +165,15 @@ class RockStacking(Node):
         # Complete placement sequence - use saved plane distance for drop calculation
         if self.saved_plane_distance is not None:
             # Simplified drop calculation using plane distance
-            drop_plunge = self.saved_plane_distance - (self.placing_z/1000) - (self.safe_height+self.rock_z) # Convert placing_z back to meters
-            self.get_logger().info(f'Drop plunge calculated: {drop_plunge:.3f}m = {drop_plunge*1000:.1f}mm')
-            self.get_logger().info(f'Using plane distance: {self.saved_plane_distance:.3f}m, placing_z: {self.placing_z/1000:.3f}m')
+            drop_plunge = (self.saved_plane_distance - (self.saved_plane_distance - self.placing_z) - (self.saved_plane_distance - (self.safe_height+self.rock_z)) #in mm
+            self.get_logger().info(f'Drop plunge calculated: {drop_plunge:.1f}mm')
+            self.get_logger().info(f'Using plane distance: {self.saved_plane_distance:.3f}mm, placing_z: {self.placing_z:.3f}mm')
             
-            # Convert to mm for G-code
-            drop_plunge_mm = abs(drop_plunge * 1000)
         else:
-            drop_plunge_mm = 0
+            drop_plunge = 0
             self.get_logger().error('No plane distance available - cannot calculate drop! Leaving rock in air')
         
-        self.send_gcode(f'G1 Z-{drop_plunge_mm:.1f} F500')
+        self.send_gcode(f'G1 Z{drop_plunge * -1:.1f} F500') #reverted for proper logic
         self.send_gcode('G90')
         self.send_gcode('M5')  # Open gripper
         time.sleep(10)
