@@ -135,7 +135,7 @@ class RockStacking(Node):
         # Correct the rock placement
         self.get_logger().info('Correction the rock placement : moving to newly measured')
         self.send_gcode('G91')
-        self.send_gcode(f'G1 X{self.rock_x+self.tool_offset[0]:.1f} Y{self.rock_y+self.tool_offset[1]:.1f} F2000')
+        self.send_gcode(f'G1 X{(-1*self.rock_x)+self.tool_offset[0]:.1f} Y{(-1*self.rock_y)+self.tool_offset[1]:.1f} F2000') #correction with negative value because of the relative movement
 
         # Complete picking sequence
         self.send_gcode('G91')
