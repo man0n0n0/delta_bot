@@ -42,7 +42,7 @@ class RockStacking(Node):
         # Constants
         self.safe_height = 100
         self.height_correction = 0
-        self.tool_offset = (0, 45, 5)
+        self.tool_offset = (0, -45, 5)
         
         # Debug: Log subscription info
         self.get_logger().info('Rock Stacking node initializing...')
