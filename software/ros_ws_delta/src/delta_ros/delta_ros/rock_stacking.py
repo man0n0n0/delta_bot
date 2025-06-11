@@ -42,7 +42,7 @@ class RockStacking(Node):
         # Constants
         self.safe_height = 150
         self.height_correction = 0
-        self.tool_offset = (0, -35, 20)
+        self.tool_offset = (0, -35, 5)
         
         # Debug: Log subscription info
         self.get_logger().info('Rock Stacking node initializing...')
@@ -157,13 +157,13 @@ class RockStacking(Node):
 
         # Move over placement location
         self.send_gcode('G90')
-        self.send_gcode(f'G1 X{self.placing_x+self.tool_offset[0]:.1f} Y{self.placing_y+self.tool_offset[1]:.1f} F1000')
+        self.send_gcode(f'G1 X{self.placing_x:.1f} Y{self.placing_y:.1f} F1000')
         self.send_gcode('G91')
         
         # Complete placement sequence - use saved plane distance for drop calculation
         if self.saved_plane_distance is not None:
             # Simplified drop calculation using plane distance
-            drop_plunge = self.saved_plane_distance - (self.placing_z/1000)  # Convert placing_z back to meters
+            drop_plunge = self.saved_plane_distance - (self.placing_z/1000) - (safe_height+rock_z) # Convert placing_z back to meters
             self.get_logger().info(f'Drop plunge calculated: {drop_plunge:.3f}m = {drop_plunge*1000:.1f}mm')
             self.get_logger().info(f'Using plane distance: {self.saved_plane_distance:.3f}m, placing_z: {self.placing_z/1000:.3f}m')
             

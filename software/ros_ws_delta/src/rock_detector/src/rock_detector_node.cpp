@@ -42,7 +42,7 @@ public:
     
     auto plane_threshold_desc = rcl_interfaces::msg::ParameterDescriptor{};
     plane_threshold_desc.description = "Distance threshold for plane segmentation (meters)";
-    this->declare_parameter("plane_threshold", 0.025, plane_threshold_desc);
+    this->declare_parameter("plane_threshold", 0.02, plane_threshold_desc);
     
     auto k_neighbors_desc = rcl_interfaces::msg::ParameterDescriptor{};
     k_neighbors_desc.description = "Number of neighbors for normal estimation";
