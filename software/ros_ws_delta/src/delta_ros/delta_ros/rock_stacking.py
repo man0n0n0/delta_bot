@@ -149,7 +149,7 @@ class RockStacking(Node):
 
         # Move over placement location
         self.send_gcode('G90')
-        self.send_gcode(f'G1 X{self.placing_x:.1f} Y{self.placing_y:.1f} F1000')
+        self.send_gcode(f'G1 X{self.placing_x+self.tool_offset[0]:.1f} Y{self.placing_y+self.tool_offset[1]:.1f} F1000')
         self.send_gcode('G91')
         
         # Complete placement sequence - use saved plane distance for drop calculation
