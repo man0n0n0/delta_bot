@@ -209,11 +209,10 @@
 // and processor overload (too many expensive sqrt calls).
 #define DELTA_SEGMENTS_PER_SECOND 50
 
-#define DELTA_E         50.500 // End effector length
-#define DELTA_F         137.000 // Base length 
-#define DELTA_RE        557.000 // Carbon rod length
-#define DELTA_RF         535.500 // Servo horn length
-//#define DELTA_Z_OFFSET  293.000 // Distance from delta 8mm rod/pulley to table/bed.
+#define DELTA_E         96.130 // End effector length
+#define DELTA_F         237.000 // Base length 
+#define DELTA_RE        670.000 // Carbon rod length
+#define DELTA_RF         530.000 // Servo horn length
 
 //NOTE: For OpenPnP, set the zero to be about 25mm above the bed...
 #define DELTA_Z_OFFSET  780.000 // Distance from delta 8mm rod/pulley to table/bed.
@@ -424,7 +423,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 //For Delta configuration: Units are degrees! That is, steps per degree
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {XYZ_STEPS, XYZ_STEPS, XYZ_STEPS, E_STEPS_FPD}
-#define DEFAULT_MAX_FEEDRATE          {5000, 5000, 5000, E_FEEDRATE_FPD}    // (mm/sec)
+#define DEFAULT_MAX_FEEDRATE          {10000, 10000, 10000, E_FEEDRATE_FPD}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {2500,2500,2500,100}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          50    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
