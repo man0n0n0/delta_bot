@@ -8,17 +8,17 @@ class RockStacking(Node):
     def __init__(self):
         super().__init__('rock_stacking')
         # Subscribe to rock centers from your C++ detector
-        self.subscription = self.create_subscription(
-            PoseArray,
-            'rock_centers',
-            self.centers_callback,
-            10
-        )
-        # Subscribe to plane distance - try different topic names
         self.plane_subscription = self.create_subscription(
             Float64,
             'plane_distance',  # Removed leading slash
             self.plane_distance_callback,
+            10
+        )
+
+        self.subscription = self.create_subscription(
+            PoseArray,
+            'rock_centers',
+            self.centers_callback,
             10
         )
         # Publisher for G-code commands
@@ -48,21 +48,11 @@ class RockStacking(Node):
         self.get_logger().info('Rock Stacking node initializing...')
         self.get_logger().info('Subscribed to: rock_centers and plane_distance')
         
-        # Create a timer to periodically check for plane distance
-        self.debug_timer = self.create_timer(5.0, self.debug_callback)
-        
         # Send home command at startup
         time.sleep(5)
         self.send_gcode('G28')
-        time.sleep(40)
+        time.sleep(20)
         self.get_logger().info('Rock Stacking node started')
-
-    def debug_callback(self):
-        """Debug callback to check plane distance status"""
-        if self.plane_distance is not None:
-            self.get_logger().info(f'Plane distance available: {self.plane_distance:.3f}')
-        else:
-            self.get_logger().warn('No plane distance received yet - check if topic is publishing')
 
     def send_gcode(self, command):
         """Send G-code command"""
