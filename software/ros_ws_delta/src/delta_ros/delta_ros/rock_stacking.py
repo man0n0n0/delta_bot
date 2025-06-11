@@ -94,12 +94,11 @@ class RockStacking(Node):
             self.get_logger().warn('No rocks detected')
             return
 
-        if len(msg.poses) < 2:
-            self.get_logger().warn('Only one rock detected')
-            return
-
         # Stage 1: Get placement values and pick rock
         if self.stage == 'idle':
+            if len(msg.poses) < 2:
+                self.get_logger().warn('Only one rock detected')
+                return
             self.stage1_callback(msg)
         # Stage 2: Get updated rock_z and complete placement
         elif self.stage == 'stage1':
@@ -163,7 +162,7 @@ class RockStacking(Node):
         # Complete placement sequence - use saved plane distance for drop calculation
         if self.saved_plane_distance is not None:
             # Simplified drop calculation using plane distance
-            drop_plunge = self.saved_plane_distance - (self.placing_z/1000) - (safe_height+rock_z) # Convert placing_z back to meters
+            drop_plunge = self.saved_plane_distance - (self.placing_z/1000) - (self.safe_height+rock_z) # Convert placing_z back to meters
             self.get_logger().info(f'Drop plunge calculated: {drop_plunge:.3f}m = {drop_plunge*1000:.1f}mm')
             self.get_logger().info(f'Using plane distance: {self.saved_plane_distance:.3f}m, placing_z: {self.placing_z/1000:.3f}m')
             
