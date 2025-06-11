@@ -54,7 +54,7 @@ class RockStacking(Node):
         # Send home command at startup
         time.sleep(5)
         self.send_gcode('G28')
-        time.sleep(20)
+        time.sleep(40)
         self.get_logger().info('Rock Stacking node started')
 
     def debug_callback(self):
