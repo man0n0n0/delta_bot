@@ -42,7 +42,7 @@ class RockStacking(Node):
         # Constants
         self.safe_height = 150
         self.height_correction = 0
-        self.tool_offset = (0, -35, 5)
+        self.tool_offset = (0, 35, 5)
         
         # Debug: Log subscription info
         self.get_logger().info('Rock Stacking node initializing...')
@@ -54,7 +54,7 @@ class RockStacking(Node):
         # Send home command at startup
         time.sleep(5)
         self.send_gcode('G28')
-        time.sleep(10)
+        time.sleep(20)
         self.get_logger().info('Rock Stacking node started')
 
     def debug_callback(self):
