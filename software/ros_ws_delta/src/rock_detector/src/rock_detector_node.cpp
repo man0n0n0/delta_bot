@@ -30,7 +30,7 @@ public:
     
     auto cluster_tolerance_desc = rcl_interfaces::msg::ParameterDescriptor{};
     cluster_tolerance_desc.description = "Clustering tolerance for separating objects (meters)";
-    this->declare_parameter("cluster_tolerance", 0.005, cluster_tolerance_desc);
+    this->declare_parameter("cluster_tolerance", 0.0045, cluster_tolerance_desc);
     
     auto min_cluster_size_desc = rcl_interfaces::msg::ParameterDescriptor{};
     min_cluster_size_desc.description = "Minimum number of points required for a cluster";
