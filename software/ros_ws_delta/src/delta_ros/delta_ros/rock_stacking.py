@@ -93,9 +93,13 @@ class RockStacking(Node):
 
             self.stage1_callback(msg)
 
-        # Stage 2: Get updated rock_z and complete placement
+        # Stage 2: intermediate rock compensation
         elif self.stage == 'stage1':
             self.stage2_callback(msg)
+
+        # Stage 3: Get updated rock_z and complete placement
+        elif self.stage == 'stage2':
+            self.stage3_callback(msg)
 
     def stage1_callback(self, msg):
         self.get_logger().info('Starting Stage 1: Getting placement values and picking rock')
@@ -127,6 +131,9 @@ class RockStacking(Node):
         self.get_logger().info('Waiting for Stage 2 callback to get updated placement Z and complete drop...')
 
     def stage2_callback(self, msg):
+        self.get_logger().info('Starting Stage 2: Getting closer to the rock')
+        self.stage = 'stage2'
+
         rock = msg.poses[0]  # Second measure for rock picking (suppose that we pick the higher is the pool)
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
@@ -135,7 +142,18 @@ class RockStacking(Node):
         # Correct the rock placement
         self.get_logger().info('Correction the rock placement : moving to newly measured')
         self.send_gcode('G91')
-        self.send_gcode(f'G1 X{self.rock_x+self.tool_offset[0]:.1f} Y{self.rock_y+self.tool_offset[1]:.1f} F2000') #correction with negative value because of the relative movement
+        self.send_gcode(f'G1 X{self.rock_x:.1f} Y{self.rock_y:.1f} F2000')
+
+    def stage3_callback(self, msg):
+        rock = msg.poses[0]  # Second measure for rock picking (suppose that we pick the higher is the pool)
+        self.rock_x = rock.position.x * 1000
+        self.rock_y = rock.position.y * 1000
+        self.rock_z = rock.position.z * 1000
+
+        # Correct the rock placement
+        self.get_logger().info('Correction the rock placement : moving to newly measured')
+        self.send_gcode('G91')
+        self.send_gcode(f'G1 X{self.rock_x+self.tool_offset[0]:.1f} Y{self.rock_y+self.tool_offset[1]:.1f} F2000')
 
         # Complete picking sequence
         self.send_gcode('G91')
