@@ -22,7 +22,7 @@ public:
     // Declare parameters with default values and descriptions
     auto filter_z_min_desc = rcl_interfaces::msg::ParameterDescriptor{};
     filter_z_min_desc.description = "Minimum Z value for point cloud filtering (meters)";
-    this->declare_parameter("filter_z_min", 0.1, filter_z_min_desc);
+    this->declare_parameter("filter_z_min", 0.01, filter_z_min_desc);
     
     auto filter_z_max_desc = rcl_interfaces::msg::ParameterDescriptor{};
     filter_z_max_desc.description = "Maximum Z value for point cloud filtering (meters)";
@@ -38,11 +38,11 @@ public:
     
     auto max_cluster_size_desc = rcl_interfaces::msg::ParameterDescriptor{};
     max_cluster_size_desc.description = "Maximum number of points allowed for a cluster";
-    this->declare_parameter("max_cluster_size", 20000, max_cluster_size_desc);
+    this->declare_parameter("max_cluster_size", 100000, max_cluster_size_desc);
     
     auto plane_threshold_desc = rcl_interfaces::msg::ParameterDescriptor{};
     plane_threshold_desc.description = "Distance threshold for plane segmentation (meters)";
-    this->declare_parameter("plane_threshold", 0.02, plane_threshold_desc);
+    this->declare_parameter("plane_threshold", 0.01, plane_threshold_desc);
     
     auto k_neighbors_desc = rcl_interfaces::msg::ParameterDescriptor{};
     k_neighbors_desc.description = "Number of neighbors for normal estimation";
