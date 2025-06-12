@@ -42,7 +42,7 @@ class RockStacking(Node):
         # Constants
         self.safe_height = 100
         self.height_correction = 0
-        self.tool_offset = (0, -45, -30)
+        self.tool_offset = (0, -45, -10)
         
         # Debug: Log subscription info
         self.get_logger().info('Rock Stacking node initializing...')
@@ -125,7 +125,7 @@ class RockStacking(Node):
         self.send_gcode(f'G1 Z-{self.safe_height:.1f} F500')
         self.send_gcode('G90')
         self.send_gcode(f'G1 X{self.rock_x:.1f} Y{self.rock_y:.1f} F2000')
-        time.sleep(10)
+        time.sleep(20)
                
         self.get_logger().info('Stage 1 completed - rock picked and positioned over picking location')
         self.get_logger().info('Waiting for Stage 2 callback to get updated placement Z and complete drop...')
@@ -143,6 +143,7 @@ class RockStacking(Node):
         self.get_logger().info('Correction the rock placement : moving to newly measured')
         self.send_gcode('G91')
         self.send_gcode(f'G1 X{self.rock_x:.1f} Y{self.rock_y:.1f} F2000')
+        time.sleep(10)
 
     def stage3_callback(self, msg):
         rock = msg.poses[0]  # Second measure for rock picking (suppose that we pick the higher is the pool)
