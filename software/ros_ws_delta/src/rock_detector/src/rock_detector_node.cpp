@@ -22,7 +22,7 @@ public:
     // Declare parameters with default values and descriptions
     auto filter_z_min_desc = rcl_interfaces::msg::ParameterDescriptor{};
     filter_z_min_desc.description = "Minimum Z value for point cloud filtering (meters)";
-    this->declare_parameter("filter_z_min", 0.01, filter_z_min_desc);
+    this->declare_parameter("filter_z_min", 0.005, filter_z_min_desc);
     
     auto filter_z_max_desc = rcl_interfaces::msg::ParameterDescriptor{};
     filter_z_max_desc.description = "Maximum Z value for point cloud filtering (meters)";
