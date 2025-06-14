@@ -8,7 +8,7 @@
     <node pkg="rock_detector" exec="rock_detector_node">
         <param name="k_neighbors" value="250" />
         <param name="min_cluster_size" value="400" /> 
-        
+        <param name="plane_threshold" value="0.3" /> 
     </node>
 
     <node pkg="delta_ros" exec="rock_stacking" name="rock_stacking" output="screen">
