@@ -133,7 +133,7 @@ class RockStacking(Node):
         self.get_logger().info('Starting Stage 2: Getting closer to the rock')
         self.stage = 'stage2'
 
-        rock = msg.poses[1]  # Second measure for rock picking
+        rock = msg.poses[0]  # Second measure for rock picking
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
