@@ -212,7 +212,7 @@
 #define DELTA_E         90.000 // End effector length
 #define DELTA_F         550.000 // Base length 
 #define DELTA_RE        560.000 // Carbon rod length
-#define DELTA_RF         450.000 // Servo horn length
+#define DELTA_RF         500.000 // Servo horn length
 
 //NOTE: For OpenPnP, set the zero to be about 25mm above the bed...
 #define DELTA_Z_OFFSET  780.000 // Distance from delta 8mm rod/pulley to table/bed.
