@@ -119,7 +119,7 @@ class RockStacking(Node):
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
 
-        self.rock_first_approch = self.rock_z * 0.3
+        self.rock_first_approch = self.rock_z * 0.4
 
         # Pick rock sequence
         self.send_gcode('M5')  # Open gripper
@@ -144,7 +144,7 @@ class RockStacking(Node):
         # Correct the rock placement
         self.get_logger().info('Correction the rock placement : moving to newly measured')
         self.send_gcode('G91')
-        self.rock_second_approch = self.rock_z/5
+        self.rock_second_approch = self.rock_z * 0.3
         self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff:.1f} Y{(self.rock_y*self.approch_coeff):.1f} Z-{self.rock_second_approch} F{self.unloaded_speed}')
         time.sleep(5)
 
