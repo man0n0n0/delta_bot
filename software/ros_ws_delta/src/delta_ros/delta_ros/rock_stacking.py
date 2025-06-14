@@ -140,7 +140,7 @@ class RockStacking(Node):
         self.placing_y = placing_rock.position.y * 1000
         self.placing_z = placing_rock.position.z * 1000
 
-        rock = msg.poses[1]  # second
+        rock = msg.poses[len(msg.poses)//2-1]  # second (pic the median point)
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
