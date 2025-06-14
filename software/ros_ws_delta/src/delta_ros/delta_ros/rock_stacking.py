@@ -141,7 +141,8 @@ class RockStacking(Node):
         # Correct the rock placement
         self.get_logger().info('Correction the rock placement : moving to newly measured')
         self.send_gcode('G91')
-        self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff:.1f} Y{(self.rock_y*self.approch_coeff):.1f} Z-{self.rock_z/3} F{self.unloaded_speed}')
+        self.rock_first_approch = self.rock_z/3
+        self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff:.1f} Y{(self.rock_y*self.approch_coeff):.1f} Z-{self.rock_first_approch} F{self.unloaded_speed}')
         time.sleep(5)
 
     def stage3_callback(self, msg):
@@ -164,7 +165,7 @@ class RockStacking(Node):
         self.send_gcode('M4')  # Close gripper
         time.sleep(10)
         self.send_gcode('G91')
-        self.send_gcode(f'G1 Z{pick_plunge:.1f} F500')  # Lift rock
+        self.send_gcode(f'G1 Z{pick_plunge + self.rock_first_approch :.1f} F500')  # Lift rock
 
         # Move over placement location
         self.send_gcode('G90')
