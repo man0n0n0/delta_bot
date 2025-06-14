@@ -5,7 +5,10 @@
       <param name="rotation_angle" value="-90.0" />
     </node>
 
-    <node pkg="rock_detector" exec="rock_detector_node"/>
+    <node pkg="rock_detector" exec="rock_detector_node">
+        <param name="k_neighbors" value="250" />
+        <param name="min_cluster_size" value="200" /> 
+    </node>
 
     <node pkg="delta_ros" exec="rock_stacking" name="rock_stacking" output="screen">
         <!-- Center position parameters (in meters) -->
