@@ -36,7 +36,7 @@ public:
     
     auto filter_z_max_desc = rcl_interfaces::msg::ParameterDescriptor{};
     filter_z_max_desc.description = "Maximum Z value for point cloud filtering (meters)";
-    this->declare_parameter("filter_z_max", 0.4, filter_z_max_desc);
+    this->declare_parameter("filter_z_max", 0.6, filter_z_max_desc);
     
     auto cluster_tolerance_desc = rcl_interfaces::msg::ParameterDescriptor{};
     cluster_tolerance_desc.description = "Clustering tolerance for separating objects (meters)";
