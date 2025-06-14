@@ -119,7 +119,7 @@ class RockStacking(Node):
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
 
-        self.rock_first_approch = self.rock_z * 0.75
+        self.rock_first_approch = self.rock_z / 4
 
         # Pick rock sequence
         self.send_gcode('M5')  # Open gripper
