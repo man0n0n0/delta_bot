@@ -42,7 +42,7 @@ class RockStacking(Node):
         # Constants
         self.safe_height = 100
         self.height_correction = 0
-        self.tool_offset = (0, -35, -50)
+        self.tool_offset = (0, -35, -60)
         self.approch_coeff = 0.1
         self.unloaded_speed = 5000
 
@@ -158,7 +158,7 @@ class RockStacking(Node):
 
         # Complete picking sequence
         self.send_gcode('G91')
-        pick_plunge = self.rock_z - self.height_correction - self.tool_offset[2]
+        pick_plunge = self.rock_z - self.height_correction + self.tool_offset[2]
         self.send_gcode(f'G1 Z-{pick_plunge:.1f} F{self.unloaded_speed}')
         self.send_gcode('G90')
         self.send_gcode('M4')  # Close gripper
