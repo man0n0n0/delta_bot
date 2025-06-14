@@ -42,7 +42,7 @@ class RockStacking(Node):
         # Constants
         self.safe_height = 75
         self.height_correction = 0
-        self.tool_offset = (0, -50, -10)
+        self.tool_offset = (0, -50, 20)
         self.approch_coeff = 1
         self.unloaded_speed = 5000
 
