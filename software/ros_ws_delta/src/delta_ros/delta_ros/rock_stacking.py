@@ -133,7 +133,7 @@ class RockStacking(Node):
         self.get_logger().info('Starting Stage 2: Getting closer to the rock')
         self.stage = 'stage2'
 
-        rock = msg.poses[0]  # Second measure for rock picking (suppose that we pick the higher is the pool)
+        rock = msg.poses[1] if len(msg.poses) > 1 else msg.poses[0]# Second measure for rock picking (suppose that we pick the higher is the pool)
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
@@ -145,7 +145,7 @@ class RockStacking(Node):
         time.sleep(5)
 
     def stage3_callback(self, msg):
-        rock = msg.poses[0]  # Second measure for rock picking (suppose that we pick the higher is the pool)
+        rock = msg.poses[1] if len(msg.poses) > 1 else msg.poses[0]  # Second measure for rock picking (suppose that we pick the higher is the pool)
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
