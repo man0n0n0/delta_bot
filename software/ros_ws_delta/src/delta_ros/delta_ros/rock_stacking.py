@@ -114,7 +114,7 @@ class RockStacking(Node):
         self.placing_y = placing_rock.position.y * 1000
         self.placing_z = placing_rock.position.z * 1000
 
-        rock = msg.poses[len(msg.poses)-1]  # Second highest rock (to pick)
+        rock = msg.poses[len(msg.poses)-1]  # smallest rock
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
 
