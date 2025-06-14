@@ -146,7 +146,7 @@ class RockStacking(Node):
         time.sleep(5)
 
     def stage3_callback(self, msg):
-        rock = msg.poses[1]  # third measure for rock picking 
+        rock = msg.poses[0]  # third measure for rock picking 
 
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
