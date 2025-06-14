@@ -209,10 +209,10 @@
 // and processor overload (too many expensive sqrt calls).
 #define DELTA_SEGMENTS_PER_SECOND 50
 
-#define DELTA_E         150 // End effector length
-#define DELTA_F         500.000 // Base length 
-#define DELTA_RE        670.000 // Carbon rod length
-#define DELTA_RF         530.000 // Servo horn length
+#define DELTA_E         90.000 // End effector length
+#define DELTA_F         550.000 // Base length 
+#define DELTA_RE        560.000 // Carbon rod length
+#define DELTA_RF         450.000 // Servo horn length
 
 //NOTE: For OpenPnP, set the zero to be about 25mm above the bed...
 #define DELTA_Z_OFFSET  780.000 // Distance from delta 8mm rod/pulley to table/bed.
@@ -410,7 +410,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 //#define PULLEY_REDUCTION BIG_PULLEY_TEETH/SMALL_PULLEY_TEETH
 
 // FOR DM860I (manoah camporini edit)
-#define PULSE_b_REV 51200
+#define PULSE_b_REV 40000
 #define XYZ_STEPS (PULSE_b_REV)/360.0 
 
 #ifdef FPD_3DPRINTING
