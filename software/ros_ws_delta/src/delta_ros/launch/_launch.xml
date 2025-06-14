@@ -2,7 +2,7 @@
     <node pkg="marlin_ros" exec="marlin_node"/>
 
     <node pkg="arducam_ros" exec="tof_pointcloud">
-      <param name="rotation_angle" value="90.0" />
+      <param name="rotation_angle" value="-90.0" />
     </node>
 
     <node pkg="rock_detector" exec="rock_detector_node"/>
