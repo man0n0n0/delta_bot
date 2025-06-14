@@ -124,7 +124,7 @@ class RockStacking(Node):
         # Pick rock sequence
         self.send_gcode('M5')  # Open gripper
         self.send_gcode('G91')
-        self.send_gcode(f'G1 Z-{self.safe_height:.1f} F{self.unloaded_speed}')
+        self.send_gcode(f'G1 Z-{self.rock_first_approch:.1f} F{self.unloaded_speed}')
         self.send_gcode('G90')
         self.send_gcode(f'G1 X{self.rock_x:.1f} Y{self.rock_y:.1f} F{self.unloaded_speed}')
         time.sleep(7)
