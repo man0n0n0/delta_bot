@@ -114,7 +114,7 @@ class RockStacking(Node):
         self.placing_y = placing_rock.position.y * 1000
         self.placing_z = placing_rock.position.z * 1000
 
-        rock = msg.poses[len(msg.poses)-1]  # smallest rock
+        rock = msg.poses[1]  # smallest rock == random selection ? 
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
 
@@ -133,7 +133,7 @@ class RockStacking(Node):
         self.get_logger().info('Starting Stage 2: Getting closer to the rock')
         self.stage = 'stage2'
 
-        rock = msg.poses[len(msg.poses)-1] # Second measure for rock picking (suppose that we pick the smallest is the pool)
+        rock = msg.poses[1]  # Second measure for rock picking
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
@@ -146,7 +146,7 @@ class RockStacking(Node):
         time.sleep(5)
 
     def stage3_callback(self, msg):
-        rock = msg.poses[len(msg.poses)-1] # third measure for rock picking (suppose that we pick the smallest is the pool)
+        rock = msg.poses[1]  # third measure for rock picking 
 
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
