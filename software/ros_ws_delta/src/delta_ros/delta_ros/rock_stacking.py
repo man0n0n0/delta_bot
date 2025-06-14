@@ -133,9 +133,6 @@ class RockStacking(Node):
         self.get_logger().info('Waiting for Stage 2 callback to get updated placement Z and complete drop...')
 
     def stage2_callback(self, msg):
-        if approch_coeff == 0 :
-            return
-
         self.get_logger().info('Starting Stage 2: Getting closer to the rock')
         self.stage = 'stage2'
 
