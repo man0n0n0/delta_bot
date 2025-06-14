@@ -209,8 +209,8 @@
 // and processor overload (too many expensive sqrt calls).
 #define DELTA_SEGMENTS_PER_SECOND 50
 
-#define DELTA_E         96.130 // End effector length
-#define DELTA_F         237.000 // Base length 
+#define DELTA_E         150 // End effector length
+#define DELTA_F         500.000 // Base length 
 #define DELTA_RE        670.000 // Carbon rod length
 #define DELTA_RF         530.000 // Servo horn length
 
