@@ -13,6 +13,16 @@
 #include <pcl/surface/convex_hull.h>
 #include <pcl_ros/transforms.hpp>
 #include <pcl/common/centroid.h>  // For computing centroids
+#include <algorithm>  // For sorting
+
+// Structure to hold cluster information for sorting
+struct ClusterInfo {
+  pcl::PointIndices indices;
+  float min_z;
+  
+  // Constructor
+  ClusterInfo(const pcl::PointIndices& idx, float z) : indices(idx), min_z(z) {}
+};
 
 class RockDetectorNode : public rclcpp::Node
 {
@@ -182,6 +192,26 @@ private:
     ec.setSearchMethod(tree);
     ec.extract(cluster_indices);
 
+    // Create vector of cluster info with min_z values for sorting
+    std::vector<ClusterInfo> sorted_clusters;
+    
+    for (const auto& indices : cluster_indices) {
+      // Find minimum Z value for this cluster
+      float min_z = std::numeric_limits<float>::max();
+      for (const auto& idx : indices.indices) {
+        if (objects->points[idx].z < min_z) {
+          min_z = objects->points[idx].z;
+        }
+      }
+      sorted_clusters.emplace_back(indices, min_z);
+    }
+    
+    // Sort clusters by min_z (smallest to biggest)
+    std::sort(sorted_clusters.begin(), sorted_clusters.end(), 
+              [](const ClusterInfo& a, const ClusterInfo& b) {
+                return a.min_z < b.min_z;
+              });
+
     // Prepare combined cloud for all rock surfaces
     pcl::PointCloud<pcl::PointXYZ>::Ptr rock_surfaces_combined(new pcl::PointCloud<pcl::PointXYZ>);
     
@@ -189,11 +219,14 @@ private:
     geometry_msgs::msg::PoseArray centers_msg;
     centers_msg.header = cloud_msg->header;
 
-    // Process each cluster (rock)
+    // Process each sorted cluster (rock)
     int cluster_id = 0;
-    for (const auto& indices : cluster_indices) {
-      RCLCPP_INFO(this->get_logger(), "Processing cluster %d with %ld points", 
-                cluster_id++, indices.indices.size());
+    for (const auto& cluster_info : sorted_clusters) {
+      const auto& indices = cluster_info.indices;
+      float min_z = cluster_info.min_z;
+      
+      RCLCPP_INFO(this->get_logger(), "Processing cluster %d with %ld points (min_z: %.3f)", 
+                cluster_id++, indices.indices.size(), min_z);
       
       // Extract cluster points
       pcl::PointCloud<pcl::PointXYZ>::Ptr cluster(new pcl::PointCloud<pcl::PointXYZ>);
@@ -208,15 +241,7 @@ private:
       Eigen::Vector4f centroid;
       pcl::compute3DCentroid(*cluster, centroid);
       
-      // Find the point with minimum Z value (closest to camera/surface)
-      float min_z = std::numeric_limits<float>::max();
-      for (const auto& point : cluster->points) {
-        if (point.z < min_z) {
-          min_z = point.z;
-        }
-      }
-      
-      // Use average X,Y but surface Z
+      // Use the already computed min_z from sorting
       float surface_x = centroid[0];  // Average X
       float surface_y = centroid[1];  // Average Y
       float surface_z = min_z;        // Surface Z (minimum Z)
@@ -277,7 +302,7 @@ private:
     // Publish cluster centers
     centers_publisher_->publish(centers_msg);
 
-    RCLCPP_INFO(this->get_logger(), "Found %ld rock clusters", cluster_indices.size());
+    RCLCPP_INFO(this->get_logger(), "Found %ld rock clusters (sorted by min_z)", sorted_clusters.size());
   }
 
   rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr subscription_;
