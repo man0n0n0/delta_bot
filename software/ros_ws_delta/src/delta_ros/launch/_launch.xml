@@ -7,7 +7,7 @@
 
     <node pkg="rock_detector" exec="rock_detector_node">
         <param name="k_neighbors" value="250" />
-        <param name="min_cluster_size" value="200" /> 
+        <param name="min_cluster_size" value="150" /> 
         <param name="plane_threshold" value="0.017" /> 
     </node>
 
