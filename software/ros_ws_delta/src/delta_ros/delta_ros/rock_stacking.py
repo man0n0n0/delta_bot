@@ -43,7 +43,7 @@ class RockStacking(Node):
         self.safe_height = 100
         self.height_correction = 0
         self.tool_offset = (0, -35, -60)
-        self.approch_coeff = 0.1
+        self.approch_coeff = 0
         self.unloaded_speed = 5000
 
         # Debug: Log subscription info
@@ -140,7 +140,7 @@ class RockStacking(Node):
         # Correct the rock placement
         self.get_logger().info('Correction the rock placement : moving to newly measured')
         self.send_gcode('G91')
-        self.rock_first_approch = self.rock_z/10
+        self.rock_first_approch = self.rock_z/5
         self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff:.1f} Y{(self.rock_y*self.approch_coeff):.1f} Z-{self.rock_first_approch} F{self.unloaded_speed}')
         time.sleep(5)
 
