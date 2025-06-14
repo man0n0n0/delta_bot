@@ -140,6 +140,7 @@ class RockStacking(Node):
         self.stage = 'stage2'
 
         rock = msg.poses[1] if len(msg.poses) > 1 else msg.poses[0]  
+        self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
 
