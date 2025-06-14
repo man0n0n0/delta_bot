@@ -46,7 +46,7 @@ public:
     
     auto k_neighbors_desc = rcl_interfaces::msg::ParameterDescriptor{};
     k_neighbors_desc.description = "Number of neighbors for normal estimation";
-    this->declare_parameter("k_neighbors", 1000, k_neighbors_desc);
+    this->declare_parameter("k_neighbors", 500, k_neighbors_desc);
 
     // Subscribe to point cloud data
     subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
