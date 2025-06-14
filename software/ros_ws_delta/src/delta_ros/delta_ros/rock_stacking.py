@@ -44,6 +44,7 @@ class RockStacking(Node):
         self.height_correction = 0
         self.tool_offset = (0, -55, -10)
         self.approch_coeff = 1.2
+        self.unloaded_speed = 5000
 
         # Debug: Log subscription info
         self.get_logger().info('Rock Stacking node initializing...')
@@ -117,15 +118,12 @@ class RockStacking(Node):
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
 
-        self.get_logger().info(f'Placement location: ({self.placing_x:.1f}, {self.placing_y:.1f}, {self.placing_z:.1f})')
-        self.get_logger().info(f'Picking rock at: ({self.rock_x:.1f}, {self.rock_y:.1f})')
-
         # Pick rock sequence
         self.send_gcode('M5')  # Open gripper
         self.send_gcode('G91')
         self.send_gcode(f'G1 Z-{self.safe_height:.1f} F500')
         self.send_gcode('G90')
-        self.send_gcode(f'G1 X{self.rock_x:.1f} Y{self.rock_y:.1f} F2000')
+        self.send_gcode(f'G1 X{self.rock_x:.1f} Y{self.rock_y:.1f} F{self.unloaded_speed}')
         time.sleep(15)
                
         self.get_logger().info('Stage 1 completed - rock picked and positioned over picking location')
@@ -143,7 +141,7 @@ class RockStacking(Node):
         # Correct the rock placement
         self.get_logger().info('Correction the rock placement : moving to newly measured')
         self.send_gcode('G91')
-        self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff:.1f} Y{(self.rock_y*self.approch_coeff):.1f} Z-{self.rock_z/10:.1f} F2000')
+        self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff:.1f} Y{(self.rock_y*self.approch_coeff):.1f} F{self.unloaded_speed}')
         time.sleep(15)
 
     def stage3_callback(self, msg):
@@ -155,7 +153,7 @@ class RockStacking(Node):
         # Correct the rock placement
         self.get_logger().info('Correction the rock placement : moving to newly measured')
         self.send_gcode('G91')
-        self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff+self.tool_offset[0]:.1f} Y{(self.rock_y*self.approch_coeff)+self.tool_offset[1]:.1f} F2000')
+        self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff+self.tool_offset[0]:.1f} Y{(self.rock_y*self.approch_coeff)+self.tool_offset[1]:.1f} F{self.unloaded_speed} ')
 
         # Complete picking sequence
         self.send_gcode('G91')
