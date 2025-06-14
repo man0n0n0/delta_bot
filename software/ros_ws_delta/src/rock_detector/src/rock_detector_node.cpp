@@ -26,15 +26,15 @@ public:
     
     auto filter_z_max_desc = rcl_interfaces::msg::ParameterDescriptor{};
     filter_z_max_desc.description = "Maximum Z value for point cloud filtering (meters)";
-    this->declare_parameter("filter_z_max", 1.0, filter_z_max_desc);
+    this->declare_parameter("filter_z_max", 0.4, filter_z_max_desc);
     
     auto cluster_tolerance_desc = rcl_interfaces::msg::ParameterDescriptor{};
     cluster_tolerance_desc.description = "Clustering tolerance for separating objects (meters)";
-    this->declare_parameter("cluster_tolerance", 0.0045, cluster_tolerance_desc);
+    this->declare_parameter("cluster_tolerance", 0.004, cluster_tolerance_desc);
     
     auto min_cluster_size_desc = rcl_interfaces::msg::ParameterDescriptor{};
     min_cluster_size_desc.description = "Minimum number of points required for a cluster";
-    this->declare_parameter("min_cluster_size", 75, min_cluster_size_desc);
+    this->declare_parameter("min_cluster_size", 150, min_cluster_size_desc);
     
     auto max_cluster_size_desc = rcl_interfaces::msg::ParameterDescriptor{};
     max_cluster_size_desc.description = "Maximum number of points allowed for a cluster";
@@ -42,11 +42,11 @@ public:
     
     auto plane_threshold_desc = rcl_interfaces::msg::ParameterDescriptor{};
     plane_threshold_desc.description = "Distance threshold for plane segmentation (meters)";
-    this->declare_parameter("plane_threshold", 0.015, plane_threshold_desc);
+    this->declare_parameter("plane_threshold", 0.01, plane_threshold_desc);
     
     auto k_neighbors_desc = rcl_interfaces::msg::ParameterDescriptor{};
     k_neighbors_desc.description = "Number of neighbors for normal estimation";
-    this->declare_parameter("k_neighbors", 20, k_neighbors_desc);
+    this->declare_parameter("k_neighbors", 1000, k_neighbors_desc);
 
     // Subscribe to point cloud data
     subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
