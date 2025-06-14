@@ -114,14 +114,17 @@ class RockStacking(Node):
         self.placing_y = placing_rock.position.y * 1000
         self.placing_z = placing_rock.position.z * 1000
 
-        rock = msg.poses[1]  # smallest rock == random selection ? 
+        rock = msg.poses[1]  
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
+        self.rock_z = rock.position.z * 1000
+
+        self.rock_first_approch = self.rock_z * 0.75
 
         # Pick rock sequence
         self.send_gcode('M5')  # Open gripper
         self.send_gcode('G91')
-        self.send_gcode(f'G1 Z-{self.safe_height:.1f} F{self.unloaded_speed}')
+        self.send_gcode(f'G1 Z-{self.safe_height + self.rock_first_approch:.1f} F{self.unloaded_speed}')
         self.send_gcode('G90')
         self.send_gcode(f'G1 X{self.rock_x:.1f} Y{self.rock_y:.1f} F{self.unloaded_speed}')
         time.sleep(7)
@@ -130,6 +133,9 @@ class RockStacking(Node):
         self.get_logger().info('Waiting for Stage 2 callback to get updated placement Z and complete drop...')
 
     def stage2_callback(self, msg):
+        if approch_coeff == 0 :
+            return
+
         self.get_logger().info('Starting Stage 2: Getting closer to the rock')
         self.stage = 'stage2'
 
@@ -140,8 +146,8 @@ class RockStacking(Node):
         # Correct the rock placement
         self.get_logger().info('Correction the rock placement : moving to newly measured')
         self.send_gcode('G91')
-        self.rock_first_approch = self.rock_z/5
-        self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff:.1f} Y{(self.rock_y*self.approch_coeff):.1f} Z-{self.rock_first_approch} F{self.unloaded_speed}')
+        self.rock_second_approch = self.rock_z/5
+        self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff:.1f} Y{(self.rock_y*self.approch_coeff):.1f} Z-{self.rock_second_approch} F{self.unloaded_speed}')
         time.sleep(5)
 
     def stage3_callback(self, msg):
@@ -164,7 +170,7 @@ class RockStacking(Node):
         self.send_gcode('M4')  # Close gripper
         time.sleep(10)
         self.send_gcode('G91')
-        self.send_gcode(f'G1 Z{pick_plunge + self.rock_first_approch :.1f} F500')  # Lift rock
+        self.send_gcode(f'G1 Z{pick_plunge + self.rock_second_approch + self.rock_first_approch:.1f} F500')  # Lift rock
 
         # Move over placement location
         self.send_gcode('G90')
