@@ -3,6 +3,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import PoseArray
 from std_msgs.msg import String, Float64
 import time
+import math
 
 class RockStacking(Node):
     def __init__(self):
@@ -68,6 +69,28 @@ class RockStacking(Node):
         """Process plane distance measurement"""
         self.plane_distance = msg.data
         self.get_logger().info(f'Received plane distance: {self.plane_distance:.3f}')
+
+    def find_closest_to_center(self, poses):
+        """Find the rock center closest to [0,0]"""
+        if not poses:
+            return None
+        
+        min_distance = float('inf')
+        closest_rock = None
+        closest_index = -1
+        
+        for i, pose in enumerate(poses):
+            # Calculate distance from center [0,0]
+            distance = math.sqrt(pose.position.x**2 + pose.position.y**2)
+            self.get_logger().info(f'Rock {i}: position ({pose.position.x:.3f}, {pose.position.y:.3f}), distance from center: {distance:.3f}')
+            
+            if distance < min_distance:
+                min_distance = distance
+                closest_rock = pose
+                closest_index = i
+        
+        self.get_logger().info(f'Selected rock {closest_index} as closest to center with distance: {min_distance:.3f}')
+        return closest_rock
 
     def centers_callback(self, msg):
         """Process rock centers - handles both stage 1 and stage 2"""
@@ -135,7 +158,12 @@ class RockStacking(Node):
         self.get_logger().info('Starting Stage 2: Getting closer to the rock')
         self.stage = 'stage2'
 
-        rock = msg.poses[0] 
+        # Find the rock closest to center [0,0]
+        rock = self.find_closest_to_center(msg.poses)
+        if rock is None:
+            self.get_logger().error('No rocks found in stage 2')
+            return
+            
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
@@ -148,8 +176,13 @@ class RockStacking(Node):
         time.sleep(5)
 
     def stage3_callback(self, msg):
+        self.get_logger().info('Starting Stage 3: Final positioning and rock placement')
 
-        rock = msg.poses[0]
+        # Find the rock closest to center [0,0]
+        rock = self.find_closest_to_center(msg.poses)
+        if rock is None:
+            self.get_logger().error('No rocks found in stage 3')
+            return
 
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
