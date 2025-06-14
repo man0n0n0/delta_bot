@@ -43,7 +43,7 @@ class RockStacking(Node):
         self.safe_height = 100
         self.height_correction = 0
         self.tool_offset = (0, -35, -60)
-        self.approch_coeff = 1
+        self.approch_coeff = -1
         self.unloaded_speed = 5000
 
         # Debug: Log subscription info
