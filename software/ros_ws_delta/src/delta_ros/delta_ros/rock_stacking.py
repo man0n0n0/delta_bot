@@ -55,7 +55,7 @@ class RockStacking(Node):
         time.sleep(5)
         self.send_gcode('G28')
         self.send_gcode('G91')
-        self.send_gcode(f'G0 Z-166')
+        self.send_gcode(f'G0 Z-100')
         self.send_gcode('G90')
         time.sleep(30)
         self.get_logger().info('Rock Stacking node started')
@@ -229,6 +229,9 @@ class RockStacking(Node):
         
         # Return home
         self.send_gcode('G28')
+        self.send_gcode('G91')
+        self.send_gcode(f'G0 Z-100')
+        self.send_gcode('G90')
         time.sleep(20)
         self.get_logger().info('Rock stacking completed - returning to idle state')
         
