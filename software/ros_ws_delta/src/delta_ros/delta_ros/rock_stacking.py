@@ -42,7 +42,7 @@ class RockStacking(Node):
         # Constants
         self.safe_height = 100
         self.height_correction = 0
-        self.tool_offset = (0, -35, 60)
+        self.tool_offset = (0, -35, 20)
         self.approch_coeff = 1.1
         self.unloaded_speed = 5000
 
@@ -119,7 +119,7 @@ class RockStacking(Node):
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
 
-        self.rock_first_approch = self.rock_z * 0.2
+        self.rock_first_approch = self.rock_z * 0.5
 
         # Pick rock sequence
         self.send_gcode('M5')  # Open gripper
