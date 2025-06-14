@@ -169,7 +169,7 @@ class RockStacking(Node):
         self.send_gcode('M4')  # Close gripper
         time.sleep(10)
         self.send_gcode('G91')
-        self.send_gcode(f'G1 Z{pick_plunge + self.rock_second_approch + self.rock_first_approch - self.safe_height:.1f} F500')  # Lift rock
+        self.send_gcode(f'G1 Z{pick_plunge + self.rock_second_approch + self.safe_height:.1f} F500')  # Lift rock
 
         # Move over placement location
         self.send_gcode('G90')
