@@ -34,7 +34,7 @@ public:
     
     auto min_cluster_size_desc = rcl_interfaces::msg::ParameterDescriptor{};
     min_cluster_size_desc.description = "Minimum number of points required for a cluster";
-    this->declare_parameter("min_cluster_size", 150, min_cluster_size_desc);
+    this->declare_parameter("min_cluster_size", 300, min_cluster_size_desc);
     
     auto max_cluster_size_desc = rcl_interfaces::msg::ParameterDescriptor{};
     max_cluster_size_desc.description = "Maximum number of points allowed for a cluster";
