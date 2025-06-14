@@ -43,7 +43,7 @@ class RockStacking(Node):
         self.safe_height = 100
         self.height_correction = 0
         self.tool_offset = (0, -45, -10)
-        self.approch_coeff = 1
+        self.approch_coeff = -1
         
         # Debug: Log subscription info
         self.get_logger().info('Rock Stacking node initializing...')
@@ -125,7 +125,7 @@ class RockStacking(Node):
         self.send_gcode('G91')
         self.send_gcode(f'G1 Z-{self.safe_height:.1f} F500')
         self.send_gcode('G90')
-        self.send_gcode(f'G1 X{self.rock_x:.1f} Y{self.rock_y:.1f} F2000')
+        self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff:.1f} Y{self.rock_y*self.approch_coeff:.1f} F2000')
         time.sleep(15)
                
         self.get_logger().info('Stage 1 completed - rock picked and positioned over picking location')
