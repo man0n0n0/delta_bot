@@ -212,7 +212,7 @@ class RockStacking(Node):
         self.send_gcode('M4')  # Close gripper
         time.sleep(10)
         self.send_gcode('G91')
-        self.send_gcode(f'G1 Z{pick_plunge + self.rock_second_approch + self.rock_first_approch - self.safe_height:.1f} F500')  # Lift rock
+        self.send_gcode(f'G1 Z{pick_plunge + self.rock_second_approch + self.rock_first_approch + self.safe_height:.1f} F500')  # Lift rock
 
         # Move over placement location
         self.send_gcode('G90')
@@ -222,7 +222,7 @@ class RockStacking(Node):
         # Complete placement sequence - use saved plane distance for drop calculation
         if self.saved_plane_distance is not None:
             # Simplified drop calculation using plane distance
-            drop_plunge = (self.placing_z - self.safe_height - (self.saved_plane_distance - self.safe_height - self.rock_z) ) #in mm
+            drop_plunge = (self.placing_z - self.safe_height - (self.saved_plane_distance - self.safe_height - self.rock_z) - tool_offset[2]) #in mm
             self.get_logger().info(f'Drop plunge calculated: {drop_plunge:.1f}mm')
             self.get_logger().info(f'Using plane distance: {self.saved_plane_distance:.3f}mm, placing_z: {self.placing_z:.3f}mm')
             
