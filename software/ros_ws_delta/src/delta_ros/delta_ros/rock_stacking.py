@@ -200,7 +200,7 @@ class RockStacking(Node):
         # Correct the rock placement
         self.get_logger().info('Correction the rock placement : moving to newly measured')
         self.send_gcode('G91')
-        self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff+self.tool_offset[0]:.1f} Y{(self.rock_y*self.approch_coeff)+self.tool_offset[1]:.1f} F{self.unloaded_speed} ')
+        self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff+self.tool_offset[0]:.1f} Y{(self.rock_y*self.approch_coeff)+(self.tool_offset[1]*(self.rock_y*0.3)):.1f} F{self.unloaded_speed} ') #correctected offset
 
         # Complete picking sequence
         self.send_gcode('G91')
@@ -214,7 +214,7 @@ class RockStacking(Node):
 
         # Move over placement location
         self.send_gcode('G90')
-        self.send_gcode(f'G1 X{self.placing_x*self.approch_coeff+self.tool_offset[0]:.1f} Y{self.placing_y*self.approch_coeff+self.tool_offset[1]:.1f} F1000') #bring the piece back to the center of the tower
+        self.send_gcode(f'G1 X{self.placing_x*self.approch_coeff+self.tool_offset[0]:.1f} Y{self.placing_y*self.approch_coeff+(self.tool_offset[1]*(self.rock_y*0.3)):.1f} F1000') #bring the piece back to the center of the tower
         self.send_gcode('G91')
         
         # Complete placement sequence - use saved plane distance for drop calculation
