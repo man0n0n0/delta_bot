@@ -43,7 +43,7 @@ class RockStacking(Node):
         # Constants
         self.safe_height = 100
         self.height_correction = 0
-        self.tool_offset = (0, -45,-20)
+        self.tool_offset = (0, 45,-20)
         self.approch_coeff = 1.2
         self.unloaded_speed = 5000
 
@@ -145,7 +145,7 @@ class RockStacking(Node):
         self.rock_z = rock.position.z * 1000
 
         self.rock_first_approch = self.rock_z * 0.4
-        self.corrected_y_tool_offset = self.tool_offset[1] + self.tool_offset[1] * 1.5 * (self.tool_offset[1] / max(self.rock_x,self.rock_y))
+        self.corrected_y_tool_offset = self.tool_offset[1] + self.tool_offset[1] * (self.tool_offset[1] / max(self.rock_x,self.rock_y))
 
         # Correct the rock placement
         self.send_gcode('M5')  # Open gripper
@@ -201,7 +201,7 @@ class RockStacking(Node):
         # Correct the rock placement
         self.get_logger().info('Correction the rock placement : moving to newly measured')
         self.send_gcode('G91')
-        self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff+self.tool_offset[0]:.1f} Y{(self.rock_y*self.approch_coeff)+self.corrected_y_tool_offset:.1f} F{self.unloaded_speed} ') #correctected offset
+        self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff+self.tool_offset[0]:.1f} Y{(self.rock_y*self.approch_coeff)-self.corrected_y_tool_offset:.1f} F{self.unloaded_speed} ') #correctected offset
 
         # Complete picking sequence
         self.send_gcode('G91')
@@ -215,7 +215,7 @@ class RockStacking(Node):
 
         # Move over placement location
         self.send_gcode('G90')
-        self.send_gcode(f'G1 X{self.placing_x*self.approch_coeff+self.tool_offset[0]:.1f} Y{self.placing_y*self.approch_coeff+self.tool_offset[1]:.1f} F1000') #bring the piece back to the center of the tower
+        self.send_gcode(f'G1 X{self.placing_x*self.approch_coeff+self.tool_offset[0]:.1f} Y{self.placing_y*self.approch_coeff-self.tool_offset[1]:.1f} F1000') #bring the piece back to the center of the tower
         self.send_gcode('G91')
         
         # Complete placement sequence - use saved plane distance for drop calculation
