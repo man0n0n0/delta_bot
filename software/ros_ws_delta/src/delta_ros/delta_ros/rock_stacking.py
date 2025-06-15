@@ -44,7 +44,7 @@ class RockStacking(Node):
         self.safe_height = 100
         self.height_correction = 0
         self.tool_offset = (0, -45,-20)
-        self.approch_coeff = 1.3
+        self.approch_coeff = 1.2
         self.unloaded_speed = 5000
 
         # Debug: Log subscription info
@@ -85,7 +85,6 @@ class RockStacking(Node):
         for i, pose in enumerate(poses):
             # Calculate distance from center [0,0]
             distance = math.sqrt(pose.position.x**2 + pose.position.y**2)
-            self.get_logger().info(f'Rock {i}: position ({pose.position.x:.3f}, {pose.position.y:.3f}), distance from center: {distance:.3f}')
             
             if distance < min_distance:
                 min_distance = distance
@@ -158,12 +157,15 @@ class RockStacking(Node):
         self.get_logger().info('Starting Stage 2: Getting closer to the rock')
         self.stage = 'stage2'
 
-        # Find the rock closest to center [0,0]
-        rock = self.find_closest_to_center(msg.poses)
-        if rock is None:
-            self.get_logger().error('No rocks found in stage 2')
-            return
+        # # Find the rock closest to center [0,0]
+        # rock = self.find_closest_to_center(msg.poses)
+        # if rock is None:
+        #     self.get_logger().error('No rocks found in stage 2')
+        #     return
             
+        # select the higher formation 
+        rock = msg.poses[0]
+
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
@@ -178,11 +180,14 @@ class RockStacking(Node):
     def stage3_callback(self, msg):
         self.get_logger().info('Starting Stage 3: Final positioning and rock placement')
 
-        # Find the rock closest to center [0,0]
-        rock = self.find_closest_to_center(msg.poses)
-        if rock is None:
-            self.get_logger().error('No rocks found in stage 3')
-            return
+        # # Find the rock closest to center [0,0]
+        # rock = self.find_closest_to_center(msg.poses)
+        # if rock is None:
+        #     self.get_logger().error('No rocks found in stage 3')
+        #     return
+
+        # select the higher formation 
+        rock = msg.poses[0]
 
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
