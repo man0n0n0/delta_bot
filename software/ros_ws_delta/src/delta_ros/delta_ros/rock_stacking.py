@@ -145,7 +145,7 @@ class RockStacking(Node):
         self.rock_z = rock.position.z * 1000
 
         self.rock_first_approch = self.rock_z * 0.4
-        self.corrected_y_tool_offset = self.tool_offset[1] + self.tool_offset[1] * (self.tool_offset[1] * 2 / max(self.rock_x,self.rock_y))
+        self.corrected_y_tool_offset = self.tool_offset[1] + self.tool_offset[1] * 1.5 * (self.tool_offset[1] / max(self.rock_x,self.rock_y))
 
         # Correct the rock placement
         self.send_gcode('M5')  # Open gripper
