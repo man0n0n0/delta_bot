@@ -144,7 +144,7 @@ class RockStacking(Node):
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
 
-        self.rock_first_approch = self.rock_z * 0.3
+        self.rock_first_approch = self.rock_z * 0.4
 
         # Correct the rock placement
         self.send_gcode('M5')  # Open gripper
@@ -157,16 +157,16 @@ class RockStacking(Node):
         self.get_logger().info('Starting Stage 2: Getting closer to the rock')
         self.stage = 'stage2'
 
-        # # Find the rock closest to center [0,0]
-        # rock = self.find_closest_to_center(msg.poses)
-        # if rock is None:
-        #     self.get_logger().error('No rocks found in stage 2')
-        #     return
+        # Find the rock closest to center [0,0]
+        rock = self.find_closest_to_center(msg.poses)
+        if rock is None:
+            self.get_logger().error('No rocks found in stage 2')
+            return
             
         # # select the higher formation 
         # rock = msg.poses[0]
 
-        rock = msg.poses[len(msg.poses)-1]  # go toward the smallest
+        # rock = msg.poses[len(msg.poses)-1]  # go toward the smallest
 
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
@@ -182,16 +182,16 @@ class RockStacking(Node):
     def stage3_callback(self, msg):
         self.get_logger().info('Starting Stage 3: Final positioning and rock placement')
 
-        # # Find the rock closest to center [0,0]
-        # rock = self.find_closest_to_center(msg.poses)
-        # if rock is None:
-        #     self.get_logger().error('No rocks found in stage 3')
-        #     return
+        # Find the rock closest to center [0,0]
+        rock = self.find_closest_to_center(msg.poses)
+        if rock is None:
+            self.get_logger().error('No rocks found in stage 3')
+            return
 
         # # select the higher formation 
         # rock = msg.poses[0]
 
-        rock = msg.poses[len(msg.poses)-1]  # go toward the smallest
+        # rock = msg.poses[len(msg.poses)-1]  # go toward the smallest
 
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
