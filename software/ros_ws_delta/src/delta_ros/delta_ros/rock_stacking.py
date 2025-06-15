@@ -151,7 +151,7 @@ class RockStacking(Node):
         self.send_gcode('M5')  # Open gripper
         self.send_gcode('G91')
         self.send_gcode(f'G1 Z-{self.rock_first_approch:.1f} F{self.unloaded_speed}')
-        self.send_gcode(f'G1 X{self.rock_x:.1f} Y{self.rock_y:.1f} F{self.unloaded_speed}')
+        self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff:.1f} Y{self.rock_y*self.approch_coeff:.1f} F{self.unloaded_speed}')
         time.sleep(7)
 
     def stage2_callback(self, msg):
@@ -205,7 +205,7 @@ class RockStacking(Node):
 
         # Move over placement location
         self.send_gcode('G90')
-        self.send_gcode(f'G1 X{self.placing_x+self.tool_offset[0]:.1f} Y{self.placing_y+self.tool_offset[1]:.1f} F1000') #bring the piece back to the center of the tower
+        self.send_gcode(f'G1 X{self.placing_x*self.approch_coeff+self.tool_offset[0]:.1f} Y{self.placing_y*self.approch_coeff+self.tool_offset[1]:.1f} F1000') #bring the piece back to the center of the tower
         self.send_gcode('G91')
         
         # Complete placement sequence - use saved plane distance for drop calculation
