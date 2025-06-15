@@ -84,7 +84,7 @@ class RockStacking(Node):
         
         for i, pose in enumerate(poses):
             # Calculate distance from center [0,0]
-            distance = math.sqrt(pose.position.x**2 + pose.position.y-self.tool_offset[1]**2)
+            distance = math.sqrt(pose.position.x**2 + (pose.position.y-self.tool_offset[1])**2)
             
             if distance < min_distance:
                 min_distance = distance
