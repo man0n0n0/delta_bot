@@ -130,7 +130,7 @@ class RockStacking(Node):
             self.stage3_callback(msg)
 
     def stage1_callback(self, msg):
-        self.get_logger().info('Starting Stage 1: Getting placement values and picking rock')
+        self.get_logger().info('Starting Stage 1: Getting placement values and first approch')
         self.stage = 'stage1'
         self.operation_in_progress = True
         
@@ -147,15 +147,12 @@ class RockStacking(Node):
 
         self.rock_first_approch = self.rock_z * 0.3
 
-        # Pick rock sequence
+        # Correct the rock placement
         self.send_gcode('M5')  # Open gripper
         self.send_gcode('G91')
         self.send_gcode(f'G1 Z-{self.rock_first_approch:.1f} F{self.unloaded_speed}')
-        self.send_gcode('G90')
         self.send_gcode(f'G1 X{self.rock_x:.1f} Y{self.rock_y:.1f} F{self.unloaded_speed}')
         time.sleep(7)
-               
-        self.get_logger().info('Stage 1 completed - rock picked and positioned over picking location')
 
     def stage2_callback(self, msg):
         self.get_logger().info('Starting Stage 2: Getting closer to the rock')
