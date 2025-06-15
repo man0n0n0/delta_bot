@@ -41,7 +41,7 @@ class RockStacking(Node):
         self.rock_z = None
         
         # Constants
-        self.safe_height = 100
+        self.safe_height = 50
         self.height_correction = 0
         self.tool_offset = (0,45,-20)
         self.approch_coeff = 1.2
@@ -212,7 +212,7 @@ class RockStacking(Node):
         self.send_gcode('M4')  # Close gripper
         time.sleep(10)
         self.send_gcode('G91')
-        self.send_gcode(f'G1 Z{pick_plunge + self.rock_second_approch + self.rock_first_approch + self.safe_height:.1f} F500')  # Lift rock
+        self.send_gcode(f'G1 Z{pick_plunge + self.rock_second_approch + self.rock_first_approch - self.safe_height:.1f} F500')  # Lift rock
 
         # Move over placement location
         self.send_gcode('G90')
