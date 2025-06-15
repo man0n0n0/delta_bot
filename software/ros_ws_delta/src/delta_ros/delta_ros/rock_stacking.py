@@ -163,8 +163,10 @@ class RockStacking(Node):
         #     self.get_logger().error('No rocks found in stage 2')
         #     return
             
-        # select the higher formation 
-        rock = msg.poses[0]
+        # # select the higher formation 
+        # rock = msg.poses[0]
+
+        rock = msg.poses[len(msg.poses)-1]  # go toward the smallest
 
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
@@ -186,8 +188,10 @@ class RockStacking(Node):
         #     self.get_logger().error('No rocks found in stage 3')
         #     return
 
-        # select the higher formation 
-        rock = msg.poses[0]
+        # # select the higher formation 
+        # rock = msg.poses[0]
+
+        rock = msg.poses[len(msg.poses)-1]  # go toward the smallest
 
         self.rock_x = rock.position.x * 1000
         self.rock_y = rock.position.y * 1000
