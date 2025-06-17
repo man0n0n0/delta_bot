@@ -144,7 +144,7 @@ class RockStacking(Node):
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
 
-        self.rock_first_approch = self.rock_z * 0.5
+        self.rock_first_approch = self.rock_z * 0.40
         self.corrected_y_tool_offset = self.tool_offset[1] + self.tool_offset[1] * (math.sqrt(self.rock_x**2 + self.rock_y**2)/100)
 
         # Correct the rock placement
@@ -233,7 +233,7 @@ class RockStacking(Node):
         self.send_gcode(f'G1 Z{drop_plunge * -1:.1f} F500') #reverted for proper logic
         self.send_gcode('G90')
         self.send_gcode('M5')  # Open gripper
-        time.sleep(10)
+        time.sleep(7)
         
         # Return home
         self.send_gcode('G28')
