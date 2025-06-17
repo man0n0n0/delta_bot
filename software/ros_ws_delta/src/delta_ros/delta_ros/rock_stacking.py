@@ -144,7 +144,7 @@ class RockStacking(Node):
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
 
-        self.rock_first_approch = self.rock_z * 0.4
+        self.rock_first_approch = self.rock_z * 0.5
         self.corrected_y_tool_offset = self.tool_offset[1] + self.tool_offset[1] * (math.sqrt(self.rock_x**2 + self.rock_y**2)/100)
 
         # Correct the rock placement
