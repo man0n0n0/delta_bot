@@ -101,6 +101,11 @@ class RockStacking(Node):
                 
         if not msg.poses:
             self.get_logger().warn('No rocks detected')
+            self.send_gcode('G28')
+            self.send_gcode('G91')
+            self.send_gcode(f'G0 Z-100')
+            self.send_gcode('G90')
+            time.sleep(20)
             return
 
         # Stage 1: Get placement values and pick rock
