@@ -178,7 +178,7 @@ class RockStacking(Node):
         self.send_gcode('G91')
         self.rock_second_approch = 0
         self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff:.1f} Y{(self.rock_y*self.approch_coeff-self.tool_offset[1]):.1f} Z-{self.rock_second_approch} F{self.unloaded_speed}')
-        time.sleep(10)
+        time.sleep(7)
 
     def stage3_callback(self, msg):
         self.get_logger().info('Starting Stage 3: Final positioning and rock placement')
