@@ -164,8 +164,8 @@ class RockStacking(Node):
         #     self.get_logger().error('No rocks found in stage 2')
         #     return
             
-        # select the median formation 
-        rock = msg.poses[len(msg.poses)//2-1]
+        # select the quartile formation 
+        rock = msg.poses[len(msg.poses)//4-1]
 
         # rock = msg.poses[len(msg.poses)-1]  # go toward the smallest
 
@@ -189,8 +189,8 @@ class RockStacking(Node):
         #     self.get_logger().error('No rocks found in stage 3')
         #     return
 
-        # select the median formation 
-        rock = msg.poses[len(msg.poses)//2-1]
+        # select the quartile formation 
+        rock = msg.poses[len(msg.poses)//4-1]
 
         # # select the higher formation 
         # rock = msg.poses[0]
