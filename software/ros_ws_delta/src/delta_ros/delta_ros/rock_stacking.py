@@ -209,7 +209,7 @@ class RockStacking(Node):
 
         # rock = msg.poses[len(msg.poses)-1]  # go toward the smallest
 
-        self.rock_x = rock.position.x * 1000
+        self.rock_x = rock.position.x * 1000 
         self.rock_y = rock.position.y * 1000
         self.rock_z = rock.position.z * 1000
 
