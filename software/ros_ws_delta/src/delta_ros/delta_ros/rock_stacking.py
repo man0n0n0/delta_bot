@@ -46,6 +46,7 @@ class RockStacking(Node):
         self.tool_offset = (0,45,-20)
         self.approch_coeff = 1.2
         self.unloaded_speed = 5000
+        self.locked_counter = 0
 
         # Debug: Log subscription info
         self.get_logger().info('Rock Stacking node initializing...')
@@ -101,6 +102,13 @@ class RockStacking(Node):
                 
         if not msg.poses:
             self.get_logger().warn('No rocks detected')
+            self.locked_counter += 1
+            if self.locked_counter > 20 :
+                self.send_gcode('G28')
+                self.send_gcode('G91')
+                self.send_gcode(f'G0 Z-100')
+                self.send_gcode('G90')
+                time.sleep(20)                
             return
 
         # Stage 1: Get placement values and pick rock
@@ -108,11 +116,7 @@ class RockStacking(Node):
 
             if len(msg.poses) < 2:
                 self.get_logger().warn('Only one rock detected')
-                self.send_gcode('G91')
-                self.send_gcode(f'G0 Z50')
-                self.send_gcode(f'G0 Z-50')            
-                self.send_gcode('G90')
-                time.sleep(20)
+
                 return
 
             # Save the current plane distance for use in calculations (do it at homing pose and before holding rock to have a complete view)
