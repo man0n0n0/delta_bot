@@ -101,11 +101,6 @@ class RockStacking(Node):
                 
         if not msg.poses:
             self.get_logger().warn('No rocks detected')
-            self.send_gcode('G91')
-            self.send_gcode(f'G0 Z50')
-            self.send_gcode(f'G0 Z-50')            
-            self.send_gcode('G90')
-            time.sleep(20)
             return
 
         # Stage 1: Get placement values and pick rock
@@ -113,6 +108,11 @@ class RockStacking(Node):
 
             if len(msg.poses) < 2:
                 self.get_logger().warn('Only one rock detected')
+                self.send_gcode('G91')
+                self.send_gcode(f'G0 Z50')
+                self.send_gcode(f'G0 Z-50')            
+                self.send_gcode('G90')
+                time.sleep(20)
                 return
 
             # Save the current plane distance for use in calculations (do it at homing pose and before holding rock to have a complete view)
