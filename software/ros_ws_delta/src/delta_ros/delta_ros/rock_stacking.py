@@ -158,14 +158,14 @@ class RockStacking(Node):
         self.get_logger().info('Starting Stage 2: Getting closer to the rock')
         self.stage = 'stage2'
 
-        # # Find the rock closest to center [0,0]
-        # rock = self.find_closest_to_center(msg.poses)
-        # if rock is None:
-        #     self.get_logger().error('No rocks found in stage 2')
-        #     return
+        # Find the rock closest to center [0,0]
+        rock = self.find_closest_to_center(msg.poses)
+        if rock is None:
+            self.get_logger().error('No rocks found in stage 2')
+            return
             
-        # select the quartile formation 
-        rock = msg.poses[len(msg.poses)//4-1]
+        # # select the quartile formation 
+        # rock = msg.poses[len(msg.poses)//4-1]
 
         # rock = msg.poses[len(msg.poses)-1]  # go toward the smallest
 
@@ -183,14 +183,14 @@ class RockStacking(Node):
     def stage3_callback(self, msg):
         self.get_logger().info('Starting Stage 3: Final positioning and rock placement')
 
-        # # Find the rock closest to center [0,0]
-        # rock = self.find_closest_to_center(msg.poses)
-        # if rock is None:
-        #     self.get_logger().error('No rocks found in stage 3')
-        #     return
+        # Find the rock closest to center [0,0]
+        rock = self.find_closest_to_center(msg.poses)
+        if rock is None:
+            self.get_logger().error('No rocks found in stage 3')
+            return
 
-        # select the quartile formation 
-        rock = msg.poses[len(msg.poses)//4-1]
+        # # select the quartile formation 
+        # rock = msg.poses[len(msg.poses)//4-1]
 
         # # select the higher formation 
         # rock = msg.poses[0]
