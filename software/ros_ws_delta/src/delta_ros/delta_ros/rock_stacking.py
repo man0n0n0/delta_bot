@@ -44,7 +44,7 @@ class RockStacking(Node):
         self.safe_height = 50
         self.height_correction = 0
         self.tool_offset = (0,45,-20)
-        self.approch_coeff = 1
+        self.approch_coeff = 1.2
         self.unloaded_speed = 5000
 
         # Debug: Log subscription info
@@ -101,9 +101,9 @@ class RockStacking(Node):
                 
         if not msg.poses:
             self.get_logger().warn('No rocks detected')
-            self.send_gcode('G28')
             self.send_gcode('G91')
-            self.send_gcode(f'G0 Z-100')
+            self.send_gcode(f'G0 Z50')
+            self.send_gcode(f'G0 Z-50')            
             self.send_gcode('G90')
             time.sleep(20)
             return
