@@ -178,7 +178,7 @@ class RockStacking(Node):
         self.send_gcode('G91')
         self.rock_second_approch = 0
         self.send_gcode(f'G1 X{self.rock_x*self.approch_coeff:.1f} Y{(self.rock_y*self.approch_coeff-self.tool_offset[1]):.1f} Z-{self.rock_second_approch} F{self.unloaded_speed}')
-        time.sleep(5)
+        time.sleep(10)
 
     def stage3_callback(self, msg):
         self.get_logger().info('Starting Stage 3: Final positioning and rock placement')
@@ -236,14 +236,14 @@ class RockStacking(Node):
         self.send_gcode(f'G1 Z{drop_plunge * -1:.1f} F500') #reverted for proper logic
         self.send_gcode('G90')
         self.send_gcode('M5')  # Open gripper
-        time.sleep(7)
+        time.sleep(10)
         
         # Return home
         self.send_gcode('G28')
         self.send_gcode('G91')
         self.send_gcode(f'G0 Z-100')
         self.send_gcode('G90')
-        time.sleep(17)
+        time.sleep(20)
         self.get_logger().info('Rock stacking completed - returning to idle state')
         
         # Reset for next operation
