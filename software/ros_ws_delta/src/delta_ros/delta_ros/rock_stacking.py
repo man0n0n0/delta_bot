@@ -104,6 +104,7 @@ class RockStacking(Node):
             self.get_logger().warn('No rocks detected')
             self.locked_counter += 1
             if self.locked_counter > 20 :
+                self.locked_counter = 0
                 self.send_gcode('G28')
                 self.send_gcode('G91')
                 self.send_gcode(f'G0 Z-100')
