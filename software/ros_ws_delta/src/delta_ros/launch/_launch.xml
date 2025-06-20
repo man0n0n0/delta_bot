@@ -7,10 +7,10 @@
 
     <node pkg="rock_detector" exec="rock_detector_node">
         <param name="k_neighbors" value="40" />
-        <param name="min_cluster_size" value="50" /> 
+        <param name="min_cluster_size" value="20" /> 
         <param name="max_cluster_size" value="10000" /> 
         <param name="filter_z_max" value="0.5" /> 
-        <param name="plane_threshold" value="0.02" />
+        <param name="plane_threshold" value="0.01" />
         <param name="cluster_tolerance" value="0.003" />
         
     </node>
