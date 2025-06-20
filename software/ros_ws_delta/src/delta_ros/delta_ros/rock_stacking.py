@@ -130,12 +130,12 @@ class RockStacking(Node):
 
             self.stage1_callback(msg)
 
-        # Stage 2: intermediate rock compensation
-        elif self.stage == 'stage1':
-            self.stage2_callback(msg)
+        # # Stage 2: intermediate rock compensation
+        # elif self.stage == 'stage1':
+        #     self.stage2_callback(msg)
 
         # Stage 3: Get updated rock_z and complete placement
-        elif self.stage == 'stage2':
+        elif self.stage == 'stage1':
             self.stage3_callback(msg)
 
     def stage1_callback(self, msg):
