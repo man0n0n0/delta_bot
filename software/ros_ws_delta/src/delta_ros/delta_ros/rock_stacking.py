@@ -140,7 +140,7 @@ class RockStacking(Node):
 
     def stage1_callback(self, msg):
         self.get_logger().info('Starting Stage 1: Getting placement values and first approch')
-        self.stage = 'stage2'
+        self.stage = 'stage1'
         self.operation_in_progress = True
         
         # Get rock positions
